@@ -1,6 +1,9 @@
 <?php
 $unreadNotifications = unread_notifications();
-$recentNotifications = recent_notifications();
+$allNotifications = notifications_data();
+$visibleNotifications = array_slice($allNotifications, 0, 10);
+$extraNotifications = array_slice($allNotifications, 10);
+$hasMoreNotifications = count($extraNotifications) > 0;
 
 $groups = [
     'QUẢN LÝ NHÂN SỰ' => [
@@ -51,7 +54,8 @@ $groups = [
     <link rel="icon" type="image/svg+xml" href="public/assets/novaone-mark.svg">
     <link rel="shortcut icon" href="public/assets/novaone-logo.png">
     <link rel="apple-touch-icon" href="public/assets/novaone-logo.png">
-    <link rel="stylesheet" href="public/assets/app.css">
+    <link rel="stylesheet" href="public/assets/app.css?v=<?= filemtime(BASE_PATH . '/public/assets/app.css') ?>">
+    <link rel="stylesheet" href="public/assets/mobile.css?v=<?= filemtime(BASE_PATH . '/public/assets/mobile.css') ?>">
 </head>
 <body>
 <div class="app-shell">
@@ -107,12 +111,12 @@ $groups = [
                     <div class="notification-dropdown">
                         <div class="notification-head">
                             <strong>Thông báo hoạt động</strong>
-                            <small><?= count($unreadNotifications) ?> mới</small>
+                            <small><?= count($unreadNotifications) ?> mới / <?= count($allNotifications) ?> tất cả</small>
                         </div>
-                        <?php if (count($recentNotifications) === 0): ?>
+                        <?php if (count($allNotifications) === 0): ?>
                             <div class="notification-empty">Chưa có thông báo hoạt động.</div>
                         <?php endif; ?>
-                        <?php foreach ($recentNotifications as $notification): ?>
+                        <?php foreach ($visibleNotifications as $notification): ?>
                             <a class="<?= empty($notification['read_at']) ? 'unread' : '' ?>" href="?route=notification.read&id=<?= e($notification['id']) ?>">
                                 <span class="activity-dot <?= e($notification['type'] ?? 'info') ?>"></span>
                                 <span>
@@ -121,6 +125,18 @@ $groups = [
                                 </span>
                             </a>
                         <?php endforeach; ?>
+                        <?php foreach ($extraNotifications as $notification): ?>
+                            <a class="notification-extra <?= empty($notification['read_at']) ? 'unread' : '' ?>" href="?route=notification.read&id=<?= e($notification['id']) ?>">
+                                <span class="activity-dot <?= e($notification['type'] ?? 'info') ?>"></span>
+                                <span>
+                                    <strong><?= e($notification['title'] ?? 'Thông báo') ?></strong>
+                                    <small><?= e($notification['message'] ?? '') ?></small>
+                                </span>
+                            </a>
+                        <?php endforeach; ?>
+                        <?php if ($hasMoreNotifications): ?>
+                            <button class="notification-show-all" type="button">Hiển thị tất cả thông báo</button>
+                        <?php endif; ?>
                         <?php if (count($unreadNotifications) > 0): ?>
                             <a class="notification-read-all" href="?route=notification.readAll">Đánh dấu đã đọc tất cả</a>
                         <?php endif; ?>
@@ -160,6 +176,8 @@ $groups = [
   const shell = document.querySelector('.app-shell');
   const toggle = document.querySelector('.sidebar-toggle');
   if (!shell || !toggle) return;
+  const notificationMenu = document.querySelector('.notification-menu');
+  const notificationShowAll = document.querySelector('.notification-show-all');
 
   if (localStorage.getItem('novaone-sidebar-collapsed') === '1') {
     shell.classList.add('sidebar-collapsed');
@@ -186,8 +204,28 @@ $groups = [
   window.addEventListener('resize', () => {
     if (!isMobileNav()) {
       shell.classList.remove('sidebar-mobile-open');
+      document.body.classList.remove('notification-open');
+    } else if (notificationMenu?.open) {
+      document.body.classList.add('notification-open');
     }
   });
+
+  if (notificationMenu) {
+    notificationMenu.addEventListener('toggle', () => {
+      document.body.classList.toggle('notification-open', notificationMenu.open && isMobileNav());
+      if (!notificationMenu.open) {
+        notificationMenu.classList.remove('show-all');
+        if (notificationShowAll) notificationShowAll.hidden = false;
+      }
+    });
+  }
+
+  if (notificationShowAll && notificationMenu) {
+    notificationShowAll.addEventListener('click', () => {
+      notificationMenu.classList.add('show-all');
+      notificationShowAll.hidden = true;
+    });
+  }
 
   document.querySelectorAll('.nav-item.has-children > .nav-link').forEach((link) => {
     link.addEventListener('click', (event) => {

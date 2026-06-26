@@ -3,7 +3,7 @@
   "appName": "Novaone",
   "webDir": "mobile-www",
   "server": {
-    "androidScheme": "https",
-    "cleartext": true
+    "url": "https://history-incredible-musicians-handles.trycloudflare.com",
+    "cleartext": false
   }
 }

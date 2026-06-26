@@ -2331,18 +2331,25 @@ th {
   right: -20px;
   z-index: 30;
   width: 330px;
-  overflow: hidden;
+  max-height: min(560px, calc(100vh - 78px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
   border-radius: 4px;
   background: #fff;
   box-shadow: 0 8px 24px rgba(20, 30, 55, 0.18);
+  -webkit-overflow-scrolling: touch;
 }
 
 .notification-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #e5e7eb;
   padding: 14px 16px;
+  background: #fff;
 }
 
 .notification-head strong {
@@ -2420,6 +2427,32 @@ th {
   color: #1595bd !important;
   font-weight: 800;
   text-align: center;
+}
+
+.notification-dropdown a.notification-extra {
+  display: none;
+}
+
+.notification-menu.show-all .notification-dropdown a.notification-extra {
+  display: grid;
+}
+
+.notification-show-all {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #eef2f7;
+  padding: 12px 16px;
+  background: #f0f9ff;
+  color: #0284c7;
+  font: inherit;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+}
+
+.notification-show-all:hover {
+  background: #e0f2fe;
 }
 
 /* Employee directory */
@@ -3797,13 +3830,16 @@ th {
 .user-chip {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 9px;
   border: 0;
-  padding: 0;
+  border-radius: 999px;
+  padding: 4px 8px 4px 4px;
   color: #1f2937;
   background: transparent;
-  font-size: 22px;
+  font-size: 16px;
+  font-weight: 500;
   list-style: none;
+  cursor: pointer;
 }
 
 .user-chip::-webkit-details-marker {
@@ -3812,8 +3848,8 @@ th {
 
 .avatar {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   place-items: center;
   border-radius: 50%;
   color: #fff;
@@ -3831,32 +3867,35 @@ th {
 
 .user-dropdown {
   position: absolute;
-  top: 56px;
+  top: 50px;
   right: 0;
   z-index: 30;
-  width: 200px;
+  width: 178px;
   overflow: hidden;
-  border-radius: 2px;
+  border: 1px solid #edf1f5;
+  border-radius: 8px;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(20, 30, 55, 0.18);
+  box-shadow: 0 12px 28px rgba(20, 30, 55, 0.16);
 }
 
 .user-dropdown a,
 .user-dropdown button {
   display: grid;
-  grid-template-columns: 30px 1fr;
+  grid-template-columns: 22px minmax(0, 1fr);
   align-items: center;
-  gap: 14px;
+  gap: 10px;
   width: 100%;
-  min-height: 76px;
+  min-height: 46px;
   border: 0;
   border-bottom: 1px solid #e5e7eb;
-  padding: 15px 20px;
-  color: #777;
+  padding: 10px 12px;
+  color: #5f6875;
   text-align: left;
   background: #fff;
-  font-size: 21px;
-  line-height: 1.35;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .user-dropdown form {
@@ -3870,8 +3909,8 @@ th {
 }
 
 .user-dropdown .ui-icon {
-  width: 25px;
-  height: 25px;
+  width: 19px;
+  height: 19px;
 }
 
 .content {

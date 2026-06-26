@@ -1,0 +1,664 @@
+/* Mobile app polish: loaded after app.css for Android WebView and small tablets. */
+@media (max-width: 980px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body.notification-open {
+    overflow: hidden;
+  }
+
+  .app-shell,
+  .app-shell.sidebar-collapsed {
+    display: block;
+    min-width: 0;
+  }
+
+  .main,
+  .content {
+    min-width: 0;
+  }
+
+  .topbar,
+  .content,
+  .main,
+  .app-dashboard,
+  .employee-panel,
+  .contract-panel,
+  .insurance-panel,
+  .violation-panel,
+  .project-panel,
+  .work-panel,
+  .daily-panel,
+  .payroll-panel,
+  .request-panel,
+  .machine-panel,
+  .recruitment-panel {
+    max-width: 100vw;
+  }
+
+  .app-shell::before,
+  .app-shell.sidebar-collapsed::before {
+    display: none;
+  }
+
+  .brand-mark,
+  .sidebar-collapsed .brand-mark {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    z-index: 41;
+    width: 88px;
+    height: 40px;
+    background: url("novaone-logo.png") left center/contain no-repeat;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    min-height: 60px;
+    height: auto;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 8px 10px 8px 108px;
+    width: 100vw;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    gap: 6px;
+  }
+
+  .topbar-right {
+    min-width: 0;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
+  .top-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .top-icon .ui-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .global-search {
+    position: relative;
+    flex: 0 0 34px;
+    width: 34px;
+    min-width: 34px;
+  }
+
+  .global-search input {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    z-index: 42;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+  }
+
+  .global-search:hover input,
+  .global-search:focus-within input,
+  .global-search input:not(:placeholder-shown) {
+    width: auto;
+    padding: 11px 14px;
+    opacity: 1;
+    pointer-events: auto;
+    border-color: #dbe4ee;
+  }
+
+  .user-chip {
+    min-width: 0;
+    gap: 6px;
+    padding: 2px;
+  }
+
+  .user-chip > span:last-child {
+    display: none;
+  }
+
+  .notification-menu,
+  .user-menu {
+    position: static;
+  }
+
+  .user-dropdown {
+    position: fixed;
+    top: 58px;
+    right: 8px;
+    z-index: 43;
+    width: 174px;
+    max-width: calc(100vw - 16px);
+    border-radius: 10px;
+    box-shadow: 0 18px 34px rgba(15, 23, 42, 0.2);
+  }
+
+  .user-dropdown a,
+  .user-dropdown button {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .notification-dropdown {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    z-index: 43;
+    width: auto;
+    max-width: none;
+    max-height: min(420px, calc(100dvh - 76px));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    border-radius: 10px;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.24);
+  }
+
+  .notification-head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 12px 14px;
+    background: #fff;
+  }
+
+  .notification-dropdown a {
+    grid-template-columns: 10px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .notification-dropdown strong,
+  .notification-dropdown small {
+    overflow-wrap: anywhere;
+  }
+
+  .notification-read-all {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+  }
+
+  .sidebar,
+  .sidebar-collapsed .sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 39;
+    width: min(310px, 88vw);
+    height: calc(100dvh - 60px);
+    padding: 12px 10px 24px;
+    transform: translateX(-110%);
+    box-shadow: 18px 0 40px rgba(15, 23, 42, 0.16);
+  }
+
+  .sidebar-mobile-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-mobile-open::after {
+    content: "";
+    position: fixed;
+    inset: 60px 0 0;
+    z-index: 38;
+    background: rgba(15, 23, 42, 0.28);
+  }
+
+  .sidebar-collapsed .nav-heading,
+  .sidebar-collapsed .nav-link span,
+  .sidebar-collapsed .nav-chevron,
+  .sidebar-collapsed .nav-submenu {
+    display: initial;
+  }
+
+  .nav-heading,
+  .sidebar-collapsed .nav-heading {
+    height: auto;
+    margin: 18px 0 8px;
+    overflow: visible;
+    color: #b0b0b0;
+    font-size: 12px;
+  }
+
+  .nav-link,
+  .sidebar-collapsed .nav-link {
+    justify-content: flex-start;
+    min-height: 46px;
+    gap: 12px;
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+
+  .nav-link .ui-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .nav-submenu {
+    padding: 2px 0 8px;
+  }
+
+  .sidebar-collapsed .nav-submenu {
+    display: none;
+  }
+
+  .sidebar-collapsed .nav-item.open > .nav-submenu {
+    display: grid;
+  }
+
+  .nav-submenu a {
+    min-height: 40px;
+    padding: 7px 8px 7px 14px;
+    font-size: 13px;
+  }
+
+  .content {
+    min-height: calc(100dvh - 60px);
+    padding: 12px;
+    width: 100vw;
+    overflow-x: clip;
+  }
+
+  .app-dashboard,
+  .employee-panel,
+  .contract-panel,
+  .insurance-panel,
+  .violation-panel,
+  .project-panel,
+  .work-panel,
+  .daily-panel,
+  .payroll-panel,
+  .request-panel,
+  .machine-panel,
+  .recruitment-panel,
+  .account-panel,
+  .search-panel {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 8px;
+  }
+
+  .app-dashboard {
+    min-height: auto;
+    padding: 18px 10px;
+  }
+
+  .app-dashboard h1 {
+    margin: 0 0 18px;
+    font-size: 22px;
+  }
+
+  .app-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 96px;
+    gap: 10px;
+  }
+
+  .app-tile {
+    height: 96px;
+    grid-template-rows: 38px 34px;
+    border-radius: 12px;
+    padding: 11px 9px;
+  }
+
+  .tile-corner {
+    top: -30px;
+    right: -30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-tile .ui-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .app-tile strong {
+    height: 34px;
+    font-size: 13px;
+    line-height: 1.16;
+  }
+
+  .employee-head,
+  .contract-head,
+  .insurance-head,
+  .violation-head,
+  .project-head,
+  .work-head,
+  .daily-head,
+  .payroll-head,
+  .request-head,
+  .machine-head,
+  .recruitment-panel .request-head,
+  .panel-head {
+    min-height: 0;
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .employee-head-actions,
+  .request-head-actions,
+  .machine-head-actions,
+  .project-head-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .employee-body,
+  .contract-body,
+  .insurance-body,
+  .violation-body,
+  .project-body,
+  .work-body,
+  .daily-body,
+  .payroll-body,
+  .request-body,
+  .machine-body,
+  .panel-body {
+    padding: 14px;
+  }
+
+  .employee-filter-band,
+  .employee-filters,
+  .employee-upload,
+  .contract-filter,
+  .insurance-filter,
+  .violation-filter,
+  .project-filter,
+  .work-filter-grid,
+  .daily-filter,
+  .daily-entry,
+  .payroll-filter,
+  .request-filter,
+  .purchase-filter,
+  .machine-filter,
+  .recruitment-filter,
+  .employee-form-grid,
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .contract-note,
+  .daily-detail-field,
+  .span-2,
+  .wide {
+    grid-column: 1 / -1;
+  }
+
+  .employee-table-wrap,
+  .contract-table-wrap,
+  .insurance-table-wrap,
+  .violation-table-wrap,
+  .project-table-wrap,
+  .work-table-wrap,
+  .daily-table-wrap,
+  .payroll-table-wrap,
+  .request-table-wrap,
+  .machine-table-wrap,
+  .purchase-table-wrap,
+  .recruitment-table-wrap {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .employee-table,
+  .contract-table,
+  .insurance-table,
+  .violation-table,
+  .project-table,
+  .work-table,
+  .daily-table,
+  .payroll-table,
+  .request-table,
+  .machine-table,
+  .purchase-table,
+  .recruitment-table {
+    min-width: 0;
+    table-layout: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    min-height: 56px;
+    padding-left: 92px;
+  }
+
+  .brand-mark,
+  .sidebar-collapsed .brand-mark {
+    width: 72px;
+    height: 34px;
+  }
+
+  .global-search input {
+    top: 56px;
+  }
+
+  .topbar-right .top-icon[aria-label="Email"],
+  .topbar-right .top-icon[aria-label="Äiá»‡n thoáº¡i"] {
+    display: none;
+  }
+
+  .sidebar,
+  .sidebar-collapsed .sidebar {
+    top: 56px;
+    height: calc(100dvh - 56px);
+  }
+
+  .notification-dropdown {
+    top: 56px;
+    left: 8px;
+    right: 8px;
+    max-height: min(410px, calc(100dvh - 70px));
+  }
+
+  .sidebar-mobile-open::after {
+    inset: 56px 0 0;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .app-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 92px;
+  }
+
+  .app-tile {
+    height: 92px;
+    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: start;
+    text-align: left;
+    padding: 12px 14px;
+  }
+
+  .app-tile .ui-icon {
+    margin: 0;
+  }
+
+  .app-tile strong {
+    justify-content: flex-start;
+    height: auto;
+    font-size: 15px;
+  }
+
+  .employee-head,
+  .contract-head,
+  .insurance-head,
+  .violation-head,
+  .project-head,
+  .work-head,
+  .daily-head,
+  .payroll-head,
+  .request-head,
+  .machine-head,
+  .recruitment-panel .request-head,
+  .panel-head {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .employee-head-actions,
+  .request-head-actions,
+  .machine-head-actions,
+  .project-head-actions {
+    width: 100%;
+  }
+
+  .employee-head-actions > *,
+  .request-head-actions > *,
+  .machine-head-actions > *,
+  .project-head-actions > *,
+  .employee-action,
+  .request-action {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 38px;
+  }
+
+  .employee-body,
+  .contract-body,
+  .insurance-body,
+  .violation-body,
+  .project-body,
+  .work-body,
+  .daily-body,
+  .payroll-body,
+  .request-body,
+  .machine-body,
+  .panel-body {
+    padding: 12px;
+  }
+
+  .employee-filter-band,
+  .employee-filters,
+  .employee-upload,
+  .contract-filter,
+  .insurance-filter,
+  .violation-filter,
+  .project-filter,
+  .work-filter-grid,
+  .daily-filter,
+  .daily-entry,
+  .payroll-filter,
+  .request-filter,
+  .purchase-filter,
+  .machine-filter,
+  .recruitment-filter,
+  .employee-form-grid,
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    padding: 10px;
+  }
+
+  .employee-table-tools,
+  .contract-tools,
+  .insurance-tools,
+  .violation-tools,
+  .project-tools,
+  .work-tools,
+  .daily-tools,
+  .payroll-tools,
+  .request-tools,
+  .machine-tools,
+  .employee-pagination,
+  .contract-pagination,
+  .insurance-pagination,
+  .violation-pagination,
+  .project-pagination,
+  .work-pagination,
+  .daily-pagination,
+  .payroll-pagination,
+  .request-pagination,
+  .machine-pagination {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .employee-table-tools input,
+  .contract-tools input,
+  .insurance-tools input,
+  .violation-tools input,
+  .project-tools input,
+  .work-tools input,
+  .daily-tools input,
+  .payroll-tools input,
+  .request-tools input,
+  .machine-tools input,
+  .employee-table-tools form,
+  .request-tools form,
+  .machine-tools form {
+    width: 100%;
+  }
+
+  .employee-table tbody td,
+  .contract-table tbody td,
+  .insurance-table tbody td,
+  .violation-table tbody td,
+  .project-table tbody td,
+  .work-table tbody td,
+  .daily-table tbody td,
+  .payroll-table tbody td,
+  .request-table tbody td,
+  .machine-table tbody td,
+  .purchase-table tbody td,
+  .recruitment-table tbody td {
+    grid-template-columns: minmax(96px, 38%) minmax(0, 1fr);
+    gap: 10px;
+    min-width: 0;
+    word-break: break-word;
+  }
+
+  .employee-chip,
+  .machine-name,
+  .purchase-code {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .employee-dialog,
+  .request-dialog,
+  .machine-dialog {
+    width: calc(100vw - 16px);
+    max-height: calc(100dvh - 16px);
+  }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding-left: 76px; }
+
+  .brand-mark,
+  .sidebar-collapsed .brand-mark {
+    width: 58px;
+  }
+
+  .app-dashboard h1 {
+    font-size: 19px;
+  }
+}

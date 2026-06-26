@@ -120,13 +120,31 @@
     ],
     "_notifications": [
         {
+            "id": "80b62bc9",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-06-26 08:08:15",
+            "read_at": null
+        },
+        {
+            "id": "05f7f1af",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-06-26 08:07:11",
+            "read_at": "2026-06-26 08:08:00"
+        },
+        {
             "id": "a4de19c2",
             "title": "Kho máy",
             "message": "Đã tạo phiếu chuyển kho cho Kho cty.",
             "href": "?route=machine-warehouses",
             "type": "info",
             "created_at": "2026-06-25 10:22:41",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "90706186",
@@ -135,7 +153,7 @@
             "href": "?route=machine-warehouses",
             "type": "info",
             "created_at": "2026-06-25 10:22:07",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "329497e4",
@@ -144,7 +162,7 @@
             "href": "?route=suppliers",
             "type": "info",
             "created_at": "2026-06-25 10:19:47",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "13abdc0c",
@@ -153,7 +171,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:17:32",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "4280ffa3",
@@ -162,7 +180,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:17:17",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "1cb1200f",
@@ -171,7 +189,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:17:03",
-            "read_at": null
+            "read_at": "2026-06-26 08:00:18"
         },
         {
             "id": "85a6bf74",
@@ -180,7 +198,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:16:30",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "7c58ae06",
@@ -189,7 +207,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:16:01",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "98edfdf7",
@@ -198,7 +216,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:14:17",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "1699060f",
@@ -207,7 +225,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:13:59",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "fb114d0e",
@@ -216,7 +234,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:13:53",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "f77969f4",
@@ -225,7 +243,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:13:42",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "58977a2f",
@@ -234,7 +252,7 @@
             "href": "?route=payrolls",
             "type": "info",
             "created_at": "2026-06-25 10:13:31",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "6dd984b9",
@@ -243,7 +261,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 09:54:55",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "4e37eb4e",
@@ -252,7 +270,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 09:54:27",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "1f029abe",
@@ -261,7 +279,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 09:54:26",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "77a4726e",
@@ -270,7 +288,7 @@
             "href": "?route=suppliers",
             "type": "info",
             "created_at": "2026-06-25 09:45:34",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "cc862381",
@@ -279,7 +297,7 @@
             "href": "?route=employees",
             "type": "info",
             "created_at": "2026-06-25 09:33:14",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "325489ef",
@@ -288,7 +306,7 @@
             "href": "?route=employees",
             "type": "info",
             "created_at": "2026-06-25 09:33:08",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "00832248",
@@ -297,7 +315,7 @@
             "href": "?route=employees",
             "type": "info",
             "created_at": "2026-06-25 09:33:02",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "3116f69d",
@@ -306,7 +324,7 @@
             "href": "?route=employees",
             "type": "info",
             "created_at": "2026-06-25 09:32:33",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "0246cd90",
@@ -315,7 +333,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:55:41",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "39eee111",
@@ -324,7 +342,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:55:38",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "90223bc0",
@@ -333,7 +351,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:54:39",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "814e023b",
@@ -342,7 +360,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:54:31",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "7ca176d7",
@@ -351,7 +369,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:54:24",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "2cdddb4c",
@@ -360,7 +378,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:51:03",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "d049d8f5",
@@ -369,7 +387,7 @@
             "href": "?route=purchasing",
             "type": "info",
             "created_at": "2026-06-25 08:50:38",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "a04705a4",
@@ -378,7 +396,7 @@
             "href": "?route=machine-warehouses",
             "type": "info",
             "created_at": "2026-06-25 08:49:39",
-            "read_at": null
+            "read_at": "2026-06-26 08:08:00"
         },
         {
             "id": "8330a407",
@@ -549,24 +567,6 @@
             "href": "?route=machine-warehouses",
             "type": "info",
             "created_at": "2026-06-24 08:47:14",
-            "read_at": "2026-06-25 08:18:48"
-        },
-        {
-            "id": "378877f6",
-            "title": "Dự án",
-            "message": "Đã cập nhật dự án Home 3DS.",
-            "href": "?route=projects",
-            "type": "info",
-            "created_at": "2026-06-24 08:44:27",
-            "read_at": "2026-06-25 08:18:48"
-        },
-        {
-            "id": "622365a7",
-            "title": "Nhân sự",
-            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
-            "href": "?route=employees",
-            "type": "info",
-            "created_at": "2026-06-24 08:40:09",
             "read_at": "2026-06-25 08:18:48"
         }
     ],
@@ -1823,13 +1823,13 @@
         }
     ],
     "_auth": {
-        "name": "Admin Novaone",
+        "name": "Admin",
         "phone": "912345789",
         "address": "",
         "birthday": "2000-02-07",
         "position": "Developer",
         "company": "bData co.,ltd",
-        "avatar": "public\/uploads\/profile\/avatar-68cee15e.jpg"
+        "avatar": "public\/uploads\/profile\/avatar-cb4f4ecb.jpg"
     },
     "machine_warehouses": [
         {
