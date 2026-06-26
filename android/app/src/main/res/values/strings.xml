@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Novaone</string>
+    <string name="title_activity_main">Novaone</string>
+    <string name="package_name">com.novaone.admin</string>
+    <string name="custom_url_scheme">com.novaone.admin</string>
+</resources>

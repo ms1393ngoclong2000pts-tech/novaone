@@ -1,0 +1,20 @@
+{
+  "name": "novaone",
+  "version": "1.0.0",
+  "description": "Ứng dụng quản trị doanh nghiệp viết bằng PHP thuần theo kiến trúc MVC nhẹ và module nghiệp vụ.",
+  "main": "index.js",
+  "scripts": {
+    "mobile:sync": "cap sync android",
+    "mobile:open": "cap open android",
+    "apk:debug": "cap sync android && cd android && gradlew.bat assembleDebug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^8.4.1",
+    "@capacitor/core": "^8.4.1"
+  }
+}

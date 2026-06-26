@@ -1,0 +1,27 @@
+.env
+node_modules/
+
+# Runtime and generated files
+storage/deploy/
+storage/report_render/
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Android local/build output
+android/.gradle/
+android/local.properties
+android/app/build/
+android/build/
+android/**/build/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+~$*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

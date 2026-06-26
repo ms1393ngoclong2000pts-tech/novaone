@@ -1,0 +1,9 @@
+{
+  "appId": "com.novaone.admin",
+  "appName": "Novaone",
+  "webDir": "mobile-www",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  }
+}

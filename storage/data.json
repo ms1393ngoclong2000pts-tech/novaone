@@ -1,0 +1,2084 @@
+{
+    "recruitment_requests": [
+        {
+            "id": "rr01",
+            "request_no": "1",
+            "request_date": "2020-07-20",
+            "cost": 200000,
+            "status": "approved",
+            "approver": "",
+            "candidate_total": 4,
+            "candidate_passed": 0,
+            "news_title": "Tuyển nhân sự kinh doanh",
+            "position": "Nhân viên kinh doanh",
+            "description": "Cần bổ sung nhân sự kinh doanh cho khu vực mới."
+        },
+        {
+            "id": "rr02",
+            "request_no": "2",
+            "request_date": "2020-10-11",
+            "cost": 1000000,
+            "status": "rejected",
+            "approver": "",
+            "candidate_total": 0,
+            "candidate_passed": 0,
+            "news_title": "Tuyển kế toán nội bộ",
+            "position": "Kế toán",
+            "description": "Phiếu chưa đủ ngân sách nên không được duyệt."
+        },
+        {
+            "id": "rr03",
+            "request_no": "3",
+            "request_date": "2020-09-03",
+            "cost": 1000000,
+            "status": "pending",
+            "approver": "bData co.,ltd",
+            "candidate_total": 0,
+            "candidate_passed": 0,
+            "news_title": "Tuyển lập trình viên",
+            "position": "Developer",
+            "description": "Tuyển bổ sung lập trình viên cho dự án ERP."
+        },
+        {
+            "id": "rr04",
+            "request_no": "4",
+            "request_date": "2021-11-11",
+            "cost": 1000000,
+            "status": "pending",
+            "approver": "",
+            "candidate_total": 0,
+            "candidate_passed": 0,
+            "news_title": "Tuyển hỗ trợ vận hành",
+            "position": "Operations",
+            "description": "Nhu cầu tạm hoãn."
+        },
+        {
+            "id": "rr05",
+            "request_no": "5",
+            "request_date": "2021-01-12",
+            "cost": 500000,
+            "status": "approved",
+            "approver": "",
+            "candidate_total": 3,
+            "candidate_passed": 0,
+            "news_title": "Tuyển chăm sóc khách hàng",
+            "position": "CSKH",
+            "description": "Tuyển đội chăm sóc khách hàng ca ngày."
+        },
+        {
+            "id": "rr06",
+            "request_no": "6",
+            "request_date": "2023-09-23",
+            "cost": 100000,
+            "status": "approved",
+            "approver": "bData co.,ltd",
+            "candidate_total": 1,
+            "candidate_passed": 0,
+            "news_title": "Tuyển thực tập sinh",
+            "position": "Thực tập sinh",
+            "description": "Thực tập sinh hỗ trợ nhập liệu."
+        },
+        {
+            "id": "rr07",
+            "request_no": "7",
+            "request_date": "2024-08-01",
+            "cost": 20000,
+            "status": "approved",
+            "approver": "bData co.,ltd",
+            "candidate_total": 0,
+            "candidate_passed": 0,
+            "news_title": "Tuyển admin",
+            "position": "Admin",
+            "description": "Bổ sung admin văn phòng."
+        },
+        {
+            "id": "rr08",
+            "request_no": "8",
+            "request_date": "2024-08-01",
+            "cost": 20000,
+            "status": "pending",
+            "approver": "bData co.,ltd",
+            "candidate_total": 1,
+            "candidate_passed": 0,
+            "news_title": "Tuyển kho vận",
+            "position": "Kho vận",
+            "description": "Nhân viên kho bán hàng."
+        },
+        {
+            "id": "rr09",
+            "request_no": "9",
+            "request_date": "2024-08-03",
+            "cost": 20000,
+            "status": "pending",
+            "approver": "",
+            "candidate_total": 0,
+            "candidate_passed": 0,
+            "news_title": "Tuyển thiết kế",
+            "position": "Designer",
+            "description": "Đang chờ duyệt ngân sách."
+        }
+    ],
+    "_notifications": [
+        {
+            "id": "a4de19c2",
+            "title": "Kho máy",
+            "message": "Đã tạo phiếu chuyển kho cho Kho cty.",
+            "href": "?route=machine-warehouses",
+            "type": "info",
+            "created_at": "2026-06-25 10:22:41",
+            "read_at": null
+        },
+        {
+            "id": "90706186",
+            "title": "Kho máy",
+            "message": "Đã cập nhật kho Hương Vân.",
+            "href": "?route=machine-warehouses",
+            "type": "info",
+            "created_at": "2026-06-25 10:22:07",
+            "read_at": null
+        },
+        {
+            "id": "329497e4",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp category.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "created_at": "2026-06-25 10:19:47",
+            "read_at": null
+        },
+        {
+            "id": "13abdc0c",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Test.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:17:32",
+            "read_at": null
+        },
+        {
+            "id": "4280ffa3",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương bảng lương test 1.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:17:17",
+            "read_at": null
+        },
+        {
+            "id": "1cb1200f",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Test.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:17:03",
+            "read_at": null
+        },
+        {
+            "id": "85a6bf74",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Nekoria.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:16:30",
+            "read_at": null
+        },
+        {
+            "id": "7c58ae06",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Lương tháng 12.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:16:01",
+            "read_at": null
+        },
+        {
+            "id": "98edfdf7",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Long Trần.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:14:17",
+            "read_at": null
+        },
+        {
+            "id": "1699060f",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Long Trần.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:13:59",
+            "read_at": null
+        },
+        {
+            "id": "fb114d0e",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Long Trần.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:13:53",
+            "read_at": null
+        },
+        {
+            "id": "f77969f4",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Long Trần.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:13:42",
+            "read_at": null
+        },
+        {
+            "id": "58977a2f",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Test1.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-06-25 10:13:31",
+            "read_at": null
+        },
+        {
+            "id": "6dd984b9",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #19.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 09:54:55",
+            "read_at": null
+        },
+        {
+            "id": "4e37eb4e",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #19.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 09:54:27",
+            "read_at": null
+        },
+        {
+            "id": "1f029abe",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #19.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 09:54:26",
+            "read_at": null
+        },
+        {
+            "id": "77a4726e",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp Nekoria.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "created_at": "2026-06-25 09:45:34",
+            "read_at": null
+        },
+        {
+            "id": "cc862381",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-06-25 09:33:14",
+            "read_at": null
+        },
+        {
+            "id": "325489ef",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-06-25 09:33:08",
+            "read_at": null
+        },
+        {
+            "id": "00832248",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-06-25 09:33:02",
+            "read_at": null
+        },
+        {
+            "id": "3116f69d",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-06-25 09:32:33",
+            "read_at": null
+        },
+        {
+            "id": "0246cd90",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #17.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:55:41",
+            "read_at": null
+        },
+        {
+            "id": "39eee111",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #17.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:55:38",
+            "read_at": null
+        },
+        {
+            "id": "90223bc0",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #14.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:54:39",
+            "read_at": null
+        },
+        {
+            "id": "814e023b",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #14.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:54:31",
+            "read_at": null
+        },
+        {
+            "id": "7ca176d7",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #14.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:54:24",
+            "read_at": null
+        },
+        {
+            "id": "2cdddb4c",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #14.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:51:03",
+            "read_at": null
+        },
+        {
+            "id": "d049d8f5",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #18.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 08:50:38",
+            "read_at": null
+        },
+        {
+            "id": "a04705a4",
+            "title": "Kho máy",
+            "message": "Đã cập nhật kho Phan Đình Phùng.",
+            "href": "?route=machine-warehouses",
+            "type": "info",
+            "created_at": "2026-06-25 08:49:39",
+            "read_at": null
+        },
+        {
+            "id": "8330a407",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #15.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 07:43:27",
+            "read_at": "2026-06-25 08:07:25"
+        },
+        {
+            "id": "01b93a64",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #15.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 07:38:40",
+            "read_at": "2026-06-25 08:07:24"
+        },
+        {
+            "id": "d811bbff",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #17.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 07:38:38",
+            "read_at": "2026-06-25 08:07:31"
+        },
+        {
+            "id": "1407ab7d",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #19.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 07:38:36",
+            "read_at": "2026-06-25 08:07:28"
+        },
+        {
+            "id": "4734f93f",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #19.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 07:38:34",
+            "read_at": "2026-06-25 08:07:26"
+        },
+        {
+            "id": "85e6695a",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #19.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-06-25 07:38:31",
+            "read_at": "2026-06-25 08:07:29"
+        },
+        {
+            "id": "1b8a90fa",
+            "title": "Mua sắm",
+            "message": "Đã xóa phiếu mua sắm #20.",
+            "href": "?route=purchasing",
+            "type": "danger",
+            "created_at": "2026-06-25 07:35:15",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "820f616a",
+            "title": "Mua sắm",
+            "message": "Đã tạo phiếu mua sắm #20.",
+            "href": "?route=purchasing",
+            "type": "success",
+            "created_at": "2026-06-25 07:35:15",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "a5f92006",
+            "title": "Loại thiết bị",
+            "message": "Đã thêm loại Laptop.",
+            "href": "?route=equipment-types",
+            "type": "success",
+            "created_at": "2026-06-25 07:13:01",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "5e61a6bf",
+            "title": "Loại thiết bị",
+            "message": "Đã cập nhật loại Chuột.",
+            "href": "?route=equipment-types",
+            "type": "info",
+            "created_at": "2026-06-25 07:12:47",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "f8bd94e7",
+            "title": "Loại thiết bị",
+            "message": "Đã xóa loại TEST_TYPE_8d89026d.",
+            "href": "?route=equipment-types",
+            "type": "danger",
+            "created_at": "2026-06-25 07:10:47",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "fe5a27f4",
+            "title": "Loại thiết bị",
+            "message": "Đã thêm loại TEST_TYPE_8d89026d.",
+            "href": "?route=equipment-types",
+            "type": "success",
+            "created_at": "2026-06-25 07:10:46",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "d24beda0",
+            "title": "Quản lý thiết bị",
+            "message": "Đã xóa thiết bị TEST_DEVICE_9e047d2a.",
+            "href": "?route=equipment-devices",
+            "type": "danger",
+            "created_at": "2026-06-25 07:03:48",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "7dc9d7f3",
+            "title": "Quản lý thiết bị",
+            "message": "Đã thêm thiết bị TEST_DEVICE_9e047d2a.",
+            "href": "?route=equipment-devices",
+            "type": "success",
+            "created_at": "2026-06-25 07:03:48",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "86cb00de",
+            "title": "Phiếu khen thưởng",
+            "message": "Đã lập phiếu khen thưởng cho Trần Ngọc Long.",
+            "href": "?route=rewards",
+            "type": "success",
+            "created_at": "2026-06-24 10:15:52",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "becde026",
+            "title": "Bảo hiểm xã hội",
+            "message": "Đã cập nhật BHXH của BData Co.,Ltd.",
+            "href": "?route=social-insurance",
+            "type": "info",
+            "created_at": "2026-06-24 09:56:40",
+            "read_at": "2026-06-24 10:08:59"
+        },
+        {
+            "id": "a9f30447",
+            "title": "Bảo hiểm xã hội",
+            "message": "Đã cập nhật BHXH của Hoàng Hữu Tài.",
+            "href": "?route=social-insurance",
+            "type": "info",
+            "created_at": "2026-06-24 09:56:31",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "2f1c8650",
+            "title": "Bảo hiểm xã hội",
+            "message": "Đã cập nhật BHXH của Trần Ngọc Long.",
+            "href": "?route=social-insurance",
+            "type": "info",
+            "created_at": "2026-06-24 09:55:35",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "af397e62",
+            "title": "Kho máy",
+            "message": "Đã cập nhật kho Cơ Khí.",
+            "href": "?route=machine-warehouses",
+            "type": "info",
+            "created_at": "2026-06-24 08:47:14",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "378877f6",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Home 3DS.",
+            "href": "?route=projects",
+            "type": "info",
+            "created_at": "2026-06-24 08:44:27",
+            "read_at": "2026-06-25 08:18:48"
+        },
+        {
+            "id": "622365a7",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-06-24 08:40:09",
+            "read_at": "2026-06-25 08:18:48"
+        }
+    ],
+    "_migrations": {
+        "supplier_sample_rows_v1": true,
+        "work_items_v1": true,
+        "violation_employee_links_v1": true
+    },
+    "suppliers": [
+        {
+            "id": "774b4c9b",
+            "code": "Dự án mẫu",
+            "name": "Công nghệ",
+            "category": "Công ty ABC",
+            "phone": "2026-07-01",
+            "email": "2026-12-31",
+            "address": "open",
+            "contact_person": "Minh Nguyen",
+            "debt": 500000000,
+            "status": "active",
+            "note": "Mô tả dự án"
+        },
+        {
+            "id": "2bcffdc8",
+            "code": "Neko",
+            "name": "category",
+            "category": "company",
+            "phone": "start_date",
+            "email": "end_date@gmail.com",
+            "address": "status",
+            "contact_person": "manager",
+            "debt": 0,
+            "status": "active",
+            "note": "description"
+        },
+        {
+            "id": "sp1",
+            "code": "BDATA",
+            "name": "bData co.,ltd",
+            "category": "Phần mềm",
+            "phone": "0901 111 222",
+            "email": "contact@bdata.vn",
+            "address": "TP. Hồ Chí Minh",
+            "contact_person": "Trần Ngọc Long",
+            "debt": 0,
+            "status": "active",
+            "note": "Đối tác triển khai hệ thống"
+        },
+        {
+            "id": "sp2",
+            "code": "NC 009",
+            "name": "CÔNG TY TNHH DIC (VIỆT NAM)",
+            "category": "Thiết bị",
+            "phone": "0902 333 444",
+            "email": "sales@dic.vn",
+            "address": "Hà Nội",
+            "contact_person": "Phòng kinh doanh",
+            "debt": 0,
+            "status": "active",
+            "note": "Nhà cung cấp thiết bị"
+        },
+        {
+            "id": "sp3",
+            "code": "112321312312",
+            "name": "Trần Ngọc Long",
+            "category": "Dịch vụ",
+            "phone": "0903 555 666",
+            "email": "long@example.com",
+            "address": "Đà Nẵng",
+            "contact_person": "Trần Ngọc Long",
+            "debt": 0,
+            "status": "active",
+            "note": "Nhà cung cấp cá nhân"
+        },
+        {
+            "id": "sp4",
+            "code": "123123123",
+            "name": "Nekoria",
+            "category": "Dịch vụ",
+            "phone": "0904 555 666",
+            "email": "long1@example.com",
+            "address": "TP. Hồ Chí Minh",
+            "contact_person": "Trần Ngọc Long",
+            "debt": 0,
+            "status": "active",
+            "note": "Dữ liệu mẫu"
+        }
+    ],
+    "projects": [
+        {
+            "id": "pr01",
+            "name": "Takashimaya",
+            "category": "Triển khai hệ thống",
+            "company": "Công ty TNHH Công nghệ Metatek",
+            "start_date": "2026-06-22",
+            "end_date": "2026-08-22",
+            "status": "open",
+            "manager": "Minh Nguyen",
+            "budget": 850000000,
+            "description": "Triển khai nền tảng quản trị vận hành."
+        },
+        {
+            "id": "pr02",
+            "name": "MPRO",
+            "category": "Phần mềm doanh nghiệp",
+            "company": "Công ty TNHH Thương mại & Kỹ thuật V.M.S",
+            "start_date": "2026-06-18",
+            "end_date": "2026-07-31",
+            "status": "in_progress",
+            "manager": "Quang Le",
+            "budget": 620000000,
+            "description": "Phát triển hệ thống quản lý bán hàng."
+        },
+        {
+            "id": "pr03",
+            "name": "Sàn Nông Sản Quốc Tế",
+            "category": "Thương mại điện tử",
+            "company": "Công ty Cổ phần Health Care Center APP",
+            "start_date": "2026-06-08",
+            "end_date": "2026-08-29",
+            "status": "open",
+            "manager": "Ha Pham",
+            "budget": 1200000000,
+            "description": "Xây dựng sàn kết nối nông sản."
+        },
+        {
+            "id": "pr04",
+            "name": "CMD ROYAL",
+            "category": "Dữ liệu",
+            "company": "Công ty TNHH MTV khai thác dữ liệu số bData",
+            "start_date": "2026-06-16",
+            "end_date": "2026-06-30",
+            "status": "completed",
+            "manager": "Quang Le",
+            "budget": 320000000,
+            "description": "Chuẩn hóa dữ liệu khách hàng."
+        },
+        {
+            "id": "pr05",
+            "name": "Green Pin",
+            "category": "Sản xuất",
+            "company": "Công ty TNHH Thương mại dịch vụ sản xuất P2D",
+            "start_date": "2026-04-01",
+            "end_date": "2026-06-30",
+            "status": "on_hold",
+            "manager": "Ha Pham",
+            "budget": 740000000,
+            "description": "Quản lý chuỗi cung ứng sản xuất."
+        },
+        {
+            "id": "pr06",
+            "name": "Home 3DS",
+            "category": "Thiết kế",
+            "company": "Công ty TNHH Thiết kế và xây dựng Home Design",
+            "start_date": "2026-06-16",
+            "end_date": "2026-09-15",
+            "status": "on_hold",
+            "manager": "Minh Nguyen",
+            "budget": 480000000,
+            "description": "Nền tảng quản lý thiết kế 3D."
+        },
+        {
+            "id": "pr07",
+            "name": "Happy C",
+            "category": "Marketing",
+            "company": "Công ty TNHH Happy Creative",
+            "start_date": "2026-06-01",
+            "end_date": "2026-12-31",
+            "status": "in_progress",
+            "manager": "Minh Nguyen",
+            "budget": 900000000,
+            "description": "Hệ thống quản lý chiến dịch marketing."
+        },
+        {
+            "id": "pr08",
+            "name": "BDATA-AI",
+            "category": "Trí tuệ nhân tạo",
+            "company": "Công ty TNHH MTV khai thác dữ liệu số bData",
+            "start_date": "2026-01-01",
+            "end_date": "2026-12-31",
+            "status": "in_progress",
+            "manager": "Quang Le",
+            "budget": 2500000000,
+            "description": "Nền tảng AI phân tích dữ liệu doanh nghiệp."
+        }
+    ],
+    "tasks": [
+        {
+            "id": "752928f0",
+            "title": "Test",
+            "project": "Green Pin",
+            "category": "Vận chuyển",
+            "hours": 3,
+            "assignee": "Trần Ngọc Long",
+            "start_date": "2026-06-23",
+            "completion_date": "2026-06-27",
+            "deadline": "2026-06-27",
+            "status": "in_progress",
+            "progress": 1,
+            "priority": "normal",
+            "description": ""
+        },
+        {
+            "id": "wi04",
+            "title": "Hoàn thiện giao diện quản lý dự án",
+            "project": "BDATA-AI",
+            "category": "Phát triển",
+            "hours": 24,
+            "assignee": "Quang Le",
+            "start_date": "2026-06-17",
+            "completion_date": "2026-06-25",
+            "deadline": "2026-06-25",
+            "status": "in_progress",
+            "progress": 65,
+            "priority": "high",
+            "description": "Hoàn thiện giao diện và kiểm thử responsive."
+        },
+        {
+            "id": "wi05",
+            "title": "Chuẩn bị dữ liệu khách hàng",
+            "project": "MPRO",
+            "category": "Dữ liệu",
+            "hours": 12,
+            "assignee": "Minh Nguyen",
+            "start_date": "2026-06-18",
+            "completion_date": "2026-06-24",
+            "deadline": "2026-06-24",
+            "status": "pending",
+            "progress": 20,
+            "priority": "normal",
+            "description": "Làm sạch dữ liệu trước khi import."
+        },
+        {
+            "id": "wi06",
+            "title": "Kiểm thử quy trình nhập kho",
+            "project": "Green Pin",
+            "category": "Kiểm thử",
+            "hours": 16,
+            "assignee": "Ha Pham",
+            "start_date": "2026-06-16",
+            "completion_date": "2026-06-22",
+            "deadline": "2026-06-22",
+            "status": "completed",
+            "progress": 100,
+            "priority": "high",
+            "description": "Kiểm thử và lập biên bản nghiệm thu."
+        },
+        {
+            "id": "wi07",
+            "title": "Thiết kế báo cáo doanh thu",
+            "project": "Happy C",
+            "category": "Báo cáo",
+            "hours": 20,
+            "assignee": "Minh Nguyen",
+            "start_date": "2026-06-20",
+            "completion_date": "2026-06-30",
+            "deadline": "2026-06-30",
+            "status": "in_progress",
+            "progress": 45,
+            "priority": "normal",
+            "description": "Xây dựng biểu đồ và bộ lọc báo cáo."
+        },
+        {
+            "id": "wi08",
+            "title": "Tài liệu hướng dẫn người dùng",
+            "project": "Home 3DS",
+            "category": "Tài liệu",
+            "hours": 8,
+            "assignee": "Quang Le",
+            "start_date": "2026-06-21",
+            "completion_date": "2026-06-28",
+            "deadline": "2026-06-28",
+            "status": "pending",
+            "progress": 10,
+            "priority": "low",
+            "description": "Biên soạn hướng dẫn sử dụng cho khách hàng."
+        }
+    ],
+    "daily_reports": [
+        {
+            "id": "dr01",
+            "project": "BDATA-AI",
+            "category": "Phát triển",
+            "employee": "Quang Le",
+            "details": "Hoàn thiện API phân tích dữ liệu và viết unit test.",
+            "hours": 7.5,
+            "report_date": "2026-06-21"
+        },
+        {
+            "id": "dr02",
+            "project": "MPRO",
+            "category": "Dữ liệu",
+            "employee": "Minh Nguyen",
+            "details": "Chuẩn hóa danh sách khách hàng trước khi import.",
+            "hours": 6,
+            "report_date": "2026-06-21"
+        },
+        {
+            "id": "dr03",
+            "project": "Green Pin",
+            "category": "Kiểm thử",
+            "employee": "Ha Pham",
+            "details": "Kiểm thử quy trình nhập kho và lập biên bản lỗi.",
+            "hours": 8,
+            "report_date": "2026-06-20"
+        },
+        {
+            "id": "dr04",
+            "project": "Happy C",
+            "category": "Báo cáo",
+            "employee": "Minh Nguyen",
+            "details": "Thiết kế biểu đồ doanh thu theo chiến dịch.",
+            "hours": 5.5,
+            "report_date": "2026-06-20"
+        },
+        {
+            "id": "dr05",
+            "project": "Home 3DS",
+            "category": "Tài liệu",
+            "employee": "Quang Le",
+            "details": "Soạn hướng dẫn sử dụng chức năng thiết kế.",
+            "hours": 4,
+            "report_date": "2026-06-19"
+        }
+    ],
+    "users": [
+        {
+            "id": "u1",
+            "name": "Admin Novaone",
+            "email": "admin@novaone.local",
+            "role": "Admin",
+            "status": "active"
+        },
+        {
+            "id": "u2",
+            "name": "Linh Tran",
+            "email": "linh.hr@novaone.local",
+            "role": "HR",
+            "status": "active"
+        }
+    ],
+    "employees": [
+        {
+            "id": "e1",
+            "name": "Minh Nguyen",
+            "department": "Kinh doanh",
+            "position": "Sales Lead",
+            "contract": "Chính thức",
+            "status": "active"
+        },
+        {
+            "id": "e2",
+            "name": "Ha Pham",
+            "department": "Kho vận",
+            "position": "Warehouse Admin",
+            "contract": "Chính thức",
+            "status": "active"
+        },
+        {
+            "id": "e3",
+            "name": "Quang Le",
+            "department": "Công nghệ",
+            "position": "Developer",
+            "contract": "Thử việc",
+            "status": "on_leave"
+        },
+        {
+            "id": "e_hr_101",
+            "attendance_code": "101",
+            "employee_code": "NV101",
+            "name": "Trần Xuân Quang",
+            "gender": "Nam",
+            "email": "quangtx@bdata.vn",
+            "position": "Nhân viên",
+            "department": "Lập Trình Viên",
+            "contract": "Chính thức",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_102",
+            "attendance_code": "102",
+            "employee_code": "NV102",
+            "name": "Lê Hoàng Minh Quý",
+            "gender": "Nam",
+            "email": "quylhm@bdata.vn",
+            "department": "Kinh doanh",
+            "position": "Nhân viên",
+            "contract": "Chính thức",
+            "status": "inactive"
+        },
+        {
+            "id": "e_hr_103",
+            "attendance_code": "103",
+            "employee_code": "NV103",
+            "name": "Võ Hoàng Phúc Thịnh",
+            "gender": "Nam",
+            "email": "thinhvhp@bdata.vn",
+            "position": "Nhân viên",
+            "department": "Kinh Doanh",
+            "contract": "Thử việc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_104",
+            "attendance_code": "104",
+            "employee_code": "NV104",
+            "name": "Lê Đức Khánh Duy",
+            "gender": "Nam",
+            "email": "duyldk@bdata.vn",
+            "position": "Nhân viên",
+            "department": "BACK OFFICE",
+            "contract": "Chính thức",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_105",
+            "attendance_code": "105",
+            "employee_code": "NV105",
+            "name": "Hoàng Hữu Tài",
+            "gender": "Nam",
+            "email": "taihh@bdata.vn",
+            "department": "Nhân sự",
+            "position": "Nhân viên",
+            "contract": "Chính thức",
+            "status": "on_leave"
+        },
+        {
+            "id": "e_hr_106",
+            "attendance_code": "106",
+            "employee_code": "NV106",
+            "name": "Võ Ngọc Nhật Quang",
+            "gender": "Nam",
+            "email": "quangvnn@bdata.vn",
+            "position": "Nhân viên",
+            "department": "Tuyển Dụng",
+            "contract": "Chính thức",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_107",
+            "attendance_code": "107",
+            "employee_code": "NV107",
+            "name": "Nguyễn Xuân Hùng",
+            "gender": "Nam",
+            "email": "hungnx@bdata.vn",
+            "position": "Nhân viên",
+            "department": "Lập Trình Viên",
+            "contract": "Chính thức",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_108",
+            "attendance_code": "108",
+            "employee_code": "NV108",
+            "name": "Trần Ngọc Long",
+            "gender": "Nam",
+            "email": "longtn@bdata.vn",
+            "position": "Quản lý",
+            "department": "Admin",
+            "contract": "Dài hạn",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_109",
+            "attendance_code": "109",
+            "employee_code": "NV109",
+            "name": "Nguyễn Thị Test Updated",
+            "gender": "Nữ",
+            "email": "testnt@bdata.vn",
+            "department": "Công nghệ",
+            "position": "Nhân viên",
+            "contract": "Thử việc",
+            "status": "on_leave"
+        },
+        {
+            "id": "e_hr_110",
+            "attendance_code": "110",
+            "employee_code": "NV110",
+            "name": "BData Co.,Ltd",
+            "gender": "Nam",
+            "email": "hr@bdata.vn",
+            "department": "Công nghệ",
+            "position": "Admin",
+            "contract": "Chính thức",
+            "status": "on_leave"
+        }
+    ],
+    "contracts": [
+        {
+            "id": "ct01",
+            "contract_code": "HDHV-2026-001",
+            "employee_name": "Minh Nguyen",
+            "salary": 6500000,
+            "start_date": "2026-06-01",
+            "end_date": "2026-07-31",
+            "contract_type": "hoc_viec",
+            "note": "Học việc khối kinh doanh"
+        },
+        {
+            "id": "ct02",
+            "contract_code": "HDHV-2026-002",
+            "employee_name": "Ha Pham",
+            "salary": 6000000,
+            "start_date": "2026-06-15",
+            "end_date": "2026-08-14",
+            "contract_type": "hoc_viec",
+            "note": "Học việc kho vận"
+        },
+        {
+            "id": "ct03",
+            "contract_code": "HDTV-2026-001",
+            "employee_name": "Quang Le",
+            "salary": 12000000,
+            "start_date": "2026-05-01",
+            "end_date": "2026-06-30",
+            "contract_type": "thu_viec",
+            "note": "Thử việc lập trình viên"
+        },
+        {
+            "id": "ct04",
+            "contract_code": "HDTV-2026-002",
+            "employee_name": "Linh Tran",
+            "salary": 11000000,
+            "start_date": "2026-05-15",
+            "end_date": "2026-07-14",
+            "contract_type": "thu_viec",
+            "note": "Thử việc phòng nhân sự"
+        },
+        {
+            "id": "ct05",
+            "contract_code": "HDCT-2026-001",
+            "employee_name": "Minh Nguyen",
+            "salary": 18000000,
+            "start_date": "2026-01-01",
+            "end_date": "2026-12-31",
+            "contract_type": "chinh_thuc",
+            "note": "Hợp đồng chính thức 12 tháng"
+        },
+        {
+            "id": "ct06",
+            "contract_code": "HDCT-2026-002",
+            "employee_name": "Ha Pham",
+            "salary": 15000000,
+            "start_date": "2026-02-01",
+            "end_date": "2027-01-31",
+            "contract_type": "chinh_thuc",
+            "note": "Hợp đồng chính thức 12 tháng"
+        },
+        {
+            "id": "ct07",
+            "contract_code": "HDDH-2025-001",
+            "employee_name": "Admin Novaone",
+            "salary": 32000000,
+            "start_date": "2025-01-01",
+            "end_date": "2028-12-31",
+            "contract_type": "dai_han",
+            "note": "Hợp đồng dài hạn"
+        },
+        {
+            "id": "ct08",
+            "contract_code": "HDDH-2025-002",
+            "employee_name": "Linh Tran",
+            "salary": 22000000,
+            "start_date": "2025-06-01",
+            "end_date": "2028-05-31",
+            "contract_type": "dai_han",
+            "note": "Hợp đồng dài hạn"
+        }
+    ],
+    "social_insurance": [
+        {
+            "id": "bh01",
+            "employee_name": "Minh Nguyen",
+            "employee_code": "NV001",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-010126001",
+            "salary": 18000000,
+            "contribution": 1890000,
+            "hospital": "Bệnh viện Đa khoa Hà Nội",
+            "note": "Tham gia đầy đủ"
+        },
+        {
+            "id": "bh02",
+            "employee_name": "Ha Pham",
+            "employee_code": "NV002",
+            "contract_start": "2026-02-01",
+            "contract_end": "2027-01-31",
+            "insurance_number": "BHXH-020226002",
+            "salary": 15000000,
+            "contribution": 1575000,
+            "hospital": "Bệnh viện Nhân Dân 115",
+            "note": "Tham gia đầy đủ"
+        },
+        {
+            "id": "bh03",
+            "employee_name": "Trần Ngọc Long",
+            "employee_code": "NV003",
+            "contract_start": "2026-05-01",
+            "contract_end": "2026-06-30",
+            "insurance_number": "BHXH-010526003",
+            "salary": 12000000,
+            "contribution": 1260000,
+            "hospital": "Bệnh viện Thống Nhất",
+            "note": "Đang thử việc"
+        },
+        {
+            "id": "bh04",
+            "employee_name": "Hoàng Hữu Tài",
+            "employee_code": "NV004",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-010126004",
+            "salary": 22000000,
+            "contribution": 2310000,
+            "hospital": "Bệnh viện Đại học Y Dược",
+            "note": "Tham gia đầy đủ"
+        },
+        {
+            "id": "bh05",
+            "employee_name": "BData Co.,Ltd",
+            "employee_code": "NV005",
+            "contract_start": "2026-06-01",
+            "contract_end": "2027-05-31",
+            "insurance_number": "BHXH-010626005",
+            "salary": 16000000,
+            "contribution": 1680000,
+            "hospital": "Bệnh viện Đa khoa Tâm Anh",
+            "note": "Mới đăng ký"
+        }
+    ],
+    "violations": [
+        {
+            "id": "59c2b38d",
+            "employee_name": "Trần Ngọc Long",
+            "violation_date": "2026-06-23",
+            "violation_type": "Vi phạm về thời gian làm việc",
+            "description": "nghỉ phép",
+            "penalty": 1600000,
+            "resolution": ""
+        },
+        {
+            "id": "vp01",
+            "employee_name": "Minh Nguyen",
+            "violation_date": "2026-06-19",
+            "violation_type": "Vi phạm về thời gian làm việc",
+            "description": "Đi làm muộn 35 phút không báo trước.",
+            "penalty": 200000,
+            "resolution": "Nhắc nhở và trừ KPI tháng"
+        },
+        {
+            "id": "vp02",
+            "employee_name": "Ha Pham",
+            "violation_date": "2026-06-19",
+            "violation_type": "Vi phạm quy trình kho",
+            "description": "Chưa hoàn tất biên bản bàn giao cuối ca.",
+            "penalty": 150000,
+            "resolution": "Bổ sung biên bản trong ngày"
+        },
+        {
+            "id": "vp03",
+            "employee_name": "Quang Le",
+            "violation_date": "2026-06-18",
+            "violation_type": "Vi phạm về thời gian làm việc",
+            "description": "Nộp báo cáo công việc trễ hạn.",
+            "penalty": 100000,
+            "resolution": "Nhắc nhở lần đầu"
+        },
+        {
+            "id": "vp04",
+            "employee_name": "Ha Pham",
+            "violation_date": "2026-06-16",
+            "violation_type": "Vi phạm nội quy",
+            "description": "Không đeo thẻ nhân viên trong giờ làm việc.",
+            "penalty": 50000,
+            "resolution": "Nhắc nhở"
+        },
+        {
+            "id": "vp05",
+            "employee_name": "Minh Nguyen",
+            "violation_date": "2026-06-15",
+            "violation_type": "Vi phạm bảo mật thông tin",
+            "description": "Để tài liệu nội bộ tại khu vực công cộng.",
+            "penalty": 500000,
+            "resolution": "Đào tạo lại quy định bảo mật"
+        },
+        {
+            "id": "vp06",
+            "employee_name": "Minh Nguyen",
+            "violation_date": "2026-05-28",
+            "violation_type": "Vi phạm về thời gian làm việc",
+            "description": "Vắng họp giao ban không có lý do.",
+            "penalty": 200000,
+            "resolution": "Trừ KPI tháng"
+        },
+        {
+            "id": "vp07",
+            "employee_name": "Ha Pham",
+            "violation_date": "2026-05-20",
+            "violation_type": "Vi phạm sử dụng tài sản",
+            "description": "Sử dụng thiết bị không đúng quy trình.",
+            "penalty": 300000,
+            "resolution": "Đào tạo lại quy trình thiết bị"
+        },
+        {
+            "id": "vp08",
+            "employee_name": "Quang Le",
+            "violation_date": "2026-05-10",
+            "violation_type": "Vi phạm nội quy",
+            "description": "Không cập nhật trạng thái công việc cuối ngày.",
+            "penalty": 100000,
+            "resolution": "Nhắc nhở lần đầu"
+        }
+    ],
+    "rewards": [
+        {
+            "id": "b1a965b5",
+            "employee_name": "Trần Ngọc Long",
+            "reward_date": "2026-06-24",
+            "reward_type": "Hoàn thành xuất sắc dự án",
+            "description": "",
+            "amount": 1500000,
+            "decision_number": "H45"
+        },
+        {
+            "id": "kt01",
+            "employee_name": "Minh Nguyen",
+            "reward_date": "2026-06-20",
+            "reward_type": "Khen thưởng nhân viên xuất sắc",
+            "description": "Vượt 125% chỉ tiêu doanh số tháng.",
+            "amount": 3000000,
+            "decision_number": "QDKT-2026-001"
+        },
+        {
+            "id": "kt02",
+            "employee_name": "Ha Pham",
+            "reward_date": "2026-06-15",
+            "reward_type": "Đóng góp ý tưởng sáng tạo",
+            "description": "Đề xuất quy trình kiểm kê giúp giảm thời gian xử lý.",
+            "amount": 1500000,
+            "decision_number": "QDKT-2026-002"
+        },
+        {
+            "id": "kt03",
+            "employee_name": "Quang Le",
+            "reward_date": "2026-06-10",
+            "reward_type": "Hoàn thành xuất sắc dự án",
+            "description": "Hoàn thành module báo cáo trước thời hạn.",
+            "amount": 2500000,
+            "decision_number": "QDKT-2026-003"
+        },
+        {
+            "id": "kt04",
+            "employee_name": "Minh Nguyen",
+            "reward_date": "2026-05-25",
+            "reward_type": "Khen thưởng nhân viên xuất sắc",
+            "description": "Duy trì chất lượng chăm sóc khách hàng tốt.",
+            "amount": 2000000,
+            "decision_number": "QDKT-2026-004"
+        },
+        {
+            "id": "kt05",
+            "employee_name": "Ha Pham",
+            "reward_date": "2026-05-12",
+            "reward_type": "Đóng góp ý tưởng sáng tạo",
+            "description": "Cải tiến cách bố trí hàng hóa trong kho.",
+            "amount": 1000000,
+            "decision_number": "QDKT-2026-005"
+        },
+        {
+            "id": "kt06",
+            "employee_name": "Quang Le",
+            "reward_date": "2026-04-30",
+            "reward_type": "Hỗ trợ đồng đội",
+            "description": "Hỗ trợ đào tạo người dùng hệ thống mới.",
+            "amount": 1000000,
+            "decision_number": "QDKT-2026-006"
+        }
+    ],
+    "training": [
+        {
+            "id": "tr1",
+            "course": "Onboarding nhân sự mới",
+            "employee": "Quang Le",
+            "trainer": "Linh Tran",
+            "progress": 75,
+            "status": "in_progress"
+        },
+        {
+            "id": "tr2",
+            "course": "Quy trình bán hàng B2B",
+            "employee": "Minh Nguyen",
+            "trainer": "Admin Novaone",
+            "progress": 100,
+            "status": "completed"
+        }
+    ],
+    "recruitments": [
+        {
+            "id": "r1",
+            "position": "Backend Laravel Developer",
+            "candidate": "Nam Ho",
+            "stage": "interview",
+            "owner": "Linh Tran"
+        },
+        {
+            "id": "r2",
+            "position": "Sales Executive",
+            "candidate": "Mai Do",
+            "stage": "offer",
+            "owner": "Linh Tran"
+        }
+    ],
+    "customers": [
+        {
+            "id": "c1",
+            "name": "Công ty An Phát",
+            "type": "customer",
+            "phone": "0901 111 222",
+            "owner": "Minh Nguyen",
+            "status": "vip"
+        },
+        {
+            "id": "c2",
+            "name": "Nhà cung cấp Sao Bắc",
+            "type": "supplier",
+            "phone": "0902 333 444",
+            "owner": "Ha Pham",
+            "status": "active"
+        }
+    ],
+    "services": [
+        {
+            "id": "sv1",
+            "name": "CRM Pro",
+            "package": "Doanh nghiệp",
+            "price": 58000000,
+            "status": "active"
+        },
+        {
+            "id": "sv2",
+            "name": "Tư vấn triển khai ERP",
+            "package": "Project",
+            "price": 120000000,
+            "status": "active"
+        }
+    ],
+    "sales": [
+        {
+            "id": "s1",
+            "code": "SO-1001",
+            "customer": "Công ty An Phát",
+            "product": "Gói CRM Pro",
+            "amount": 58000000,
+            "payment": "partial",
+            "status": "confirmed"
+        },
+        {
+            "id": "s2",
+            "code": "SO-1002",
+            "customer": "Minh Long",
+            "product": "Thiết bị kho",
+            "amount": 32000000,
+            "payment": "paid",
+            "status": "delivered"
+        }
+    ],
+    "pos": [
+        {
+            "id": "p1",
+            "invoice": "POS-0001",
+            "cashier": "Ha Pham",
+            "items": "Tem nhãn vận chuyển",
+            "amount": 1250000,
+            "payment_method": "cash",
+            "status": "paid"
+        },
+        {
+            "id": "p2",
+            "invoice": "POS-0002",
+            "cashier": "Minh Nguyen",
+            "items": "Máy quét barcode",
+            "amount": 4500000,
+            "payment_method": "card",
+            "status": "paid"
+        }
+    ],
+    "tickets": [
+        {
+            "id": "tk1",
+            "code": "TK-1001",
+            "customer": "Công ty An Phát",
+            "issue": "Cần hỗ trợ cấu hình phân quyền",
+            "owner": "Quang Le",
+            "status": "in_progress"
+        },
+        {
+            "id": "tk2",
+            "code": "TK-1002",
+            "customer": "Minh Long",
+            "issue": "Yêu cầu xuất báo cáo bán hàng",
+            "owner": "Minh Nguyen",
+            "status": "new"
+        }
+    ],
+    "inventory": [
+        {
+            "id": "i1",
+            "sku": "SKU-001",
+            "name": "Máy quét barcode",
+            "warehouse": "Kho Hà Nội",
+            "quantity": 24,
+            "min": 10,
+            "status": "available"
+        },
+        {
+            "id": "i2",
+            "sku": "SKU-014",
+            "name": "Tem nhãn vận chuyển",
+            "warehouse": "Kho TP.HCM",
+            "quantity": 6,
+            "min": 20,
+            "status": "low"
+        }
+    ],
+    "internal_assets": [
+        {
+            "id": "ia1",
+            "code": "AS-001",
+            "name": "Laptop Dell",
+            "assigned_to": "Quang Le",
+            "quantity": 1,
+            "status": "in_use"
+        },
+        {
+            "id": "ia2",
+            "code": "AS-002",
+            "name": "Máy chiếu phòng họp",
+            "assigned_to": "Phòng Hành chính",
+            "quantity": 1,
+            "status": "available"
+        }
+    ],
+    "kpi": [
+        {
+            "id": "k1",
+            "objective": "Tăng doanh thu quý",
+            "owner": "Minh Nguyen",
+            "metric": "1.8 tỷ VND",
+            "progress": 68,
+            "status": "on_track"
+        },
+        {
+            "id": "k2",
+            "objective": "Tuyển đủ team dev",
+            "owner": "Linh Tran",
+            "metric": "4 nhân sự",
+            "progress": 45,
+            "status": "risk"
+        }
+    ],
+    "okrs": [
+        {
+            "id": "o1",
+            "objective": "Chuẩn hóa vận hành NovaOne",
+            "key_result": "100% phân hệ core có quy trình",
+            "level": "company",
+            "owner": "Admin Novaone",
+            "progress": 62,
+            "status": "on_track"
+        },
+        {
+            "id": "o2",
+            "objective": "Nâng chất lượng CSKH",
+            "key_result": "90% ticket xử lý đúng hạn",
+            "level": "department",
+            "owner": "Minh Nguyen",
+            "progress": 48,
+            "status": "risk"
+        }
+    ],
+    "shipments": [
+        {
+            "id": "sh1",
+            "code": "SHP-7781",
+            "order": "SO-1001",
+            "carrier": "GHN",
+            "status": "shipping",
+            "eta": "2026-06-20"
+        },
+        {
+            "id": "sh2",
+            "code": "SHP-7782",
+            "order": "SO-1002",
+            "carrier": "Viettel Post",
+            "status": "delivered",
+            "eta": "2026-06-15"
+        }
+    ],
+    "calendar": [
+        {
+            "id": "cal1",
+            "title": "Họp triển khai giai đoạn 2",
+            "type": "meeting",
+            "owner": "Admin Novaone",
+            "date": "2026-06-22",
+            "status": "pending"
+        },
+        {
+            "id": "cal2",
+            "title": "Đào tạo người dùng kho",
+            "type": "internal_event",
+            "owner": "Ha Pham",
+            "date": "2026-06-24",
+            "status": "pending"
+        }
+    ],
+    "facilities": [
+        {
+            "id": "f1",
+            "code": "RM-01",
+            "name": "Phòng họp lớn",
+            "type": "meeting_room",
+            "location": "Tầng 3",
+            "status": "available"
+        },
+        {
+            "id": "f2",
+            "code": "VH-01",
+            "name": "Xe giao hàng",
+            "type": "vehicle",
+            "location": "Kho Hà Nội",
+            "status": "in_use"
+        }
+    ],
+    "permissions": [
+        {
+            "id": "pm1",
+            "role": "Admin",
+            "module": "Tất cả",
+            "can_view": "yes",
+            "can_create": "yes",
+            "can_update": "yes",
+            "can_delete": "yes"
+        },
+        {
+            "id": "pm2",
+            "role": "Sales",
+            "module": "CRM & Sales",
+            "can_view": "yes",
+            "can_create": "yes",
+            "can_update": "yes",
+            "can_delete": "no"
+        }
+    ],
+    "settings": [
+        {
+            "id": "set1",
+            "key": "company_name",
+            "value": "NovaOne",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set2",
+            "key": "low_stock_alert",
+            "value": "enabled",
+            "group": "system",
+            "status": "active"
+        }
+    ],
+    "payrolls": [
+        {
+            "id": "pl01",
+            "name": "Test1",
+            "department": "BACK OFFICE",
+            "applied_position": "BACK OFFICE",
+            "employee_scope": "Tất cả",
+            "total_salary": 5600000,
+            "created_date": "2026-06-15",
+            "status": "completed",
+            "salary_type": "fixed",
+            "note": "Bảng lương mẫu khối Back Office"
+        },
+        {
+            "id": "pl02",
+            "name": "Test",
+            "department": "REVILINK",
+            "applied_position": "REVILINK",
+            "employee_scope": "Tất cả",
+            "total_salary": 99999999000,
+            "created_date": "2026-06-15",
+            "status": "draft",
+            "salary_type": "shift",
+            "note": "Đang rà soát dữ liệu ca"
+        },
+        {
+            "id": "pl03",
+            "name": "Long Trần",
+            "department": "Kỹ Thuật",
+            "applied_position": "BACK OFFICE",
+            "employee_scope": "Tất cả",
+            "total_salary": 37010000,
+            "created_date": "2026-06-10",
+            "status": "draft",
+            "salary_type": "fixed",
+            "note": "Bảng lương cá nhân"
+        },
+        {
+            "id": "pl04",
+            "name": "Test",
+            "department": "Tuyển Dụng",
+            "applied_position": "Tuyển Dụng",
+            "employee_scope": "Tất cả",
+            "total_salary": 125000,
+            "created_date": "2026-06-08",
+            "status": "completed",
+            "salary_type": "fixed",
+            "note": "Bảng lương tuyển dụng"
+        },
+        {
+            "id": "pl05",
+            "name": "bảng lương test 1",
+            "department": "Tuyển Dụng",
+            "applied_position": "Tuyển Dụng",
+            "employee_scope": "Tất cả",
+            "total_salary": 10000,
+            "created_date": "2026-04-23",
+            "status": "completed",
+            "salary_type": "fixed",
+            "note": "Dữ liệu kiểm thử"
+        },
+        {
+            "id": "pl06",
+            "name": "Nekoria",
+            "department": "Kho vận",
+            "applied_position": "Kho",
+            "employee_scope": "Tất cả",
+            "total_salary": 22100000,
+            "created_date": "2024-07-22",
+            "status": "completed",
+            "salary_type": "fixed",
+            "note": "Dữ liệu lịch sử"
+        },
+        {
+            "id": "pl07",
+            "name": "Lương tháng 12",
+            "department": "",
+            "applied_position": "Lập trình viên",
+            "employee_scope": "Tất cả",
+            "total_salary": 48700000,
+            "created_date": "2024-02-27",
+            "status": "completed",
+            "salary_type": "shift",
+            "note": "Bảng lương tháng 12"
+        }
+    ],
+    "request_forms": [
+        {
+            "id": "930e3f1d",
+            "request_type": "reward",
+            "employee_name": "Trần Ngọc Long",
+            "department": "Admin",
+            "created_date": "2026-06-24",
+            "start_date": "2026-06-24",
+            "end_date": "2026-06-24",
+            "approval": "pending",
+            "amount": 0,
+            "detail": ""
+        },
+        {
+            "id": "rq01",
+            "request_type": "general",
+            "employee_name": "Minh Nguyen",
+            "department": "Lập Trình Viên",
+            "created_date": "2026-04-23",
+            "start_date": "2026-04-22",
+            "end_date": "2026-04-23",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Đề nghị tham gia hội nghị chuyên môn."
+        },
+        {
+            "id": "rq02",
+            "request_type": "leave",
+            "employee_name": "Ha Pham",
+            "department": "Công nghệ",
+            "created_date": "2024-08-02",
+            "start_date": "2024-08-06",
+            "end_date": "2024-08-24",
+            "approval": "rejected",
+            "amount": 0,
+            "detail": "Xin nghỉ phép dài ngày."
+        },
+        {
+            "id": "rq03",
+            "request_type": "overtime",
+            "employee_name": "Trần Ngọc Long",
+            "department": "Tuyển Dụng",
+            "created_date": "2024-08-01",
+            "start_date": "2024-08-05",
+            "end_date": "2024-08-05",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Nghỉ ốm có giấy xác nhận."
+        },
+        {
+            "id": "rq04",
+            "request_type": "sick",
+            "employee_name": "Ha Pham",
+            "department": "BACK OFFICE",
+            "created_date": "2024-08-01",
+            "start_date": "2024-08-05",
+            "end_date": "2024-08-23",
+            "approval": "rejected",
+            "amount": 0,
+            "detail": "Đề nghị điều dưỡng."
+        },
+        {
+            "id": "rq05",
+            "request_type": "sick",
+            "employee_name": "BData Co.,Ltd",
+            "department": "Kho vận",
+            "created_date": "2024-07-19",
+            "start_date": "2024-07-01",
+            "end_date": "2024-07-11",
+            "approval": "approved",
+            "amount": 45000,
+            "detail": "Nghỉ điều dưỡng sau ốm."
+        },
+        {
+            "id": "rq06",
+            "request_type": "sick",
+            "employee_name": "Quang Le",
+            "department": "Kỹ Thuật",
+            "created_date": "2024-07-19",
+            "start_date": "2024-07-01",
+            "end_date": "2024-07-26",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Nghỉ điều trị ngắn hạn."
+        },
+        {
+            "id": "rq07",
+            "request_type": "sick",
+            "employee_name": "Hoàng Hữu Tài",
+            "department": "Admin",
+            "created_date": "2024-07-19",
+            "start_date": "2024-07-08",
+            "end_date": "2024-08-02",
+            "approval": "rejected",
+            "amount": 0,
+            "detail": "Thời gian nghỉ vượt định mức."
+        }
+    ],
+    "_auth": {
+        "name": "Admin Novaone",
+        "phone": "912345789",
+        "address": "",
+        "birthday": "2000-02-07",
+        "position": "Developer",
+        "company": "bData co.,ltd",
+        "avatar": "public\/uploads\/profile\/avatar-68cee15e.jpg"
+    },
+    "machine_warehouses": [
+        {
+            "id": "mw01",
+            "name": "Kho cty",
+            "project": "Takashimaya",
+            "manager": "bData co.,ltd",
+            "keeper": "bData co.,ltd",
+            "address": "207 An Dương Vương",
+            "phone": "1234567897",
+            "note": "Kho chính công ty | Chuyển kho: Hương Vân"
+        },
+        {
+            "id": "mw02",
+            "name": "Phú an",
+            "project": "Happy C",
+            "manager": "bData co.,ltd",
+            "keeper": "",
+            "address": "abc",
+            "phone": "123456",
+            "note": "Kho khu vực"
+        },
+        {
+            "id": "mw03",
+            "name": "Phú Nam",
+            "project": "Takashimaya",
+            "manager": "bData co.,ltd",
+            "keeper": "",
+            "address": "abcd",
+            "phone": "1234567",
+            "note": "Kho khu vực"
+        },
+        {
+            "id": "mw04",
+            "name": "Cơ Khí",
+            "project": "CMD ROYAL",
+            "manager": "bData co.,ltd",
+            "keeper": "Trần Ngọc Long",
+            "address": "12345678",
+            "phone": "912345789",
+            "note": "Kho cơ khí"
+        },
+        {
+            "id": "mw05",
+            "name": "Hương Vân",
+            "project": "BDATA-AI",
+            "manager": "bData co.,ltd",
+            "keeper": "bData co.,ltd",
+            "address": "123456789",
+            "phone": "123456789",
+            "note": "Kho chi nhánh"
+        },
+        {
+            "id": "mw06",
+            "name": "Luật",
+            "project": "MPRO",
+            "manager": "bData co.,ltd",
+            "keeper": "",
+            "address": "123456",
+            "phone": "459",
+            "note": "Kho hồ sơ"
+        },
+        {
+            "id": "mw07",
+            "name": "Phan Đình Phùng",
+            "project": "Sàn Nông Sản Quốc Tế",
+            "manager": "bData co.,ltd",
+            "keeper": "Trần Ngọc Long",
+            "address": "12",
+            "phone": "23",
+            "note": "Kho điểm bán"
+        },
+        {
+            "id": "mw08",
+            "name": "Phú Bài",
+            "project": "Green Pin",
+            "manager": "bData co.,ltd",
+            "keeper": "",
+            "address": "abc",
+            "phone": "123456",
+            "note": "Kho khu vực"
+        }
+    ],
+    "equipment_devices": [
+        {
+            "id": "dv01",
+            "name": "Quạt hơi nước",
+            "code": "PS1",
+            "unit_price": 1000000,
+            "supplier": "bData co.,ltd",
+            "unit": "cái",
+            "note": "Thiết bị làm mát"
+        },
+        {
+            "id": "dv02",
+            "name": "Sạc",
+            "code": "SP128000",
+            "unit_price": 55000,
+            "supplier": "bData co.,ltd",
+            "unit": "cái",
+            "note": "Phụ kiện nguồn"
+        },
+        {
+            "id": "dv03",
+            "name": "Ram 8g",
+            "code": "SP126",
+            "unit_price": 100000,
+            "supplier": "bData co.,ltd",
+            "unit": "cái",
+            "note": "Linh kiện máy tính"
+        },
+        {
+            "id": "dv04",
+            "name": "Màn hình dell",
+            "code": "SP12789",
+            "unit_price": 155000,
+            "supplier": "bData co.,ltd",
+            "unit": "cái",
+            "note": "Màn hình văn phòng"
+        },
+        {
+            "id": "dv05",
+            "name": "Thiết bị chiếu sáng",
+            "code": "TB023111",
+            "unit_price": 500000,
+            "supplier": "bData co.,ltd",
+            "unit": "VND",
+            "note": "Thiết bị văn phòng"
+        },
+        {
+            "id": "dv06",
+            "name": "Tivi",
+            "code": "TV01",
+            "unit_price": 2000000,
+            "supplier": "bData co.,ltd",
+            "unit": "cái",
+            "note": "Thiết bị trình chiếu"
+        }
+    ],
+    "equipment_types": [
+        {
+            "id": "ffa42e1e",
+            "name": "Laptop",
+            "short_name": "LH",
+            "created_at": "2026-06-25 07:13:01"
+        },
+        {
+            "id": "et01",
+            "name": "Server BDATA.LINK",
+            "short_name": "DBA",
+            "created_at": "2026-06-12 04:22:00"
+        },
+        {
+            "id": "et02",
+            "name": "Máy tính",
+            "short_name": "MT",
+            "created_at": "2026-05-26 08:26:00"
+        },
+        {
+            "id": "et03",
+            "name": "Chuột",
+            "short_name": "CH",
+            "created_at": "2026-05-18 10:03:00"
+        }
+    ],
+    "purchase_requests": [
+        {
+            "id": "pr19",
+            "voucher_no": 19,
+            "requester": "BData Co.,Ltd",
+            "department": "Admin",
+            "status": "purchased",
+            "needed_date": "2026-05-26",
+            "receiver": "Trần Ngọc Long",
+            "approver": "Hoàng Hữu Tài",
+            "detail": "Yêu cầu bổ sung thiết bị văn phòng.",
+            "over_budget": false
+        },
+        {
+            "id": "pr18",
+            "voucher_no": 18,
+            "requester": "BData Co.,Ltd",
+            "department": "Admin",
+            "status": "new",
+            "needed_date": "2026-05-22",
+            "receiver": "Nguyễn Thị Test Updated",
+            "approver": "BData Co.,Ltd",
+            "detail": "Mua phụ kiện máy tính.",
+            "over_budget": false
+        },
+        {
+            "id": "pr17",
+            "voucher_no": 17,
+            "requester": "BData Co.,Ltd",
+            "department": "Công nghệ",
+            "status": "purchased",
+            "needed_date": "2026-05-21",
+            "receiver": "BData Co.,Ltd",
+            "approver": "Trần Thị Thu Nguyên",
+            "detail": "Thiết bị mạng nội bộ.",
+            "over_budget": false
+        },
+        {
+            "id": "pr16",
+            "voucher_no": 16,
+            "requester": "BData Co.,Ltd",
+            "department": "Công nghệ",
+            "status": "new",
+            "needed_date": "2026-05-20",
+            "receiver": "Nguyễn Xuân Hùng",
+            "approver": "BData Co.,Ltd",
+            "detail": "Thay thế màn hình hỏng.",
+            "over_budget": false
+        },
+        {
+            "id": "pr15",
+            "voucher_no": 15,
+            "requester": "BData Co.,Ltd",
+            "department": "Admin",
+            "status": "purchased",
+            "needed_date": "2026-04-30",
+            "receiver": "Nguyễn Xuân Hùng",
+            "approver": "Trần Thị Thu Nguyê",
+            "detail": "Mua vật tư phòng họp.",
+            "over_budget": false
+        },
+        {
+            "id": "pr14",
+            "voucher_no": 14,
+            "requester": "BData Co.,Ltd",
+            "department": "Admin",
+            "status": "received",
+            "needed_date": "2026-04-30",
+            "receiver": "Quang Le",
+            "approver": "Hoàng Hữu Tài",
+            "detail": "Mua sắm theo kế hoạch tháng.",
+            "over_budget": false
+        },
+        {
+            "id": "pr13",
+            "voucher_no": 13,
+            "requester": "BData Co.,Ltd",
+            "department": "Kinh doanh",
+            "status": "purchased",
+            "needed_date": "2026-04-30",
+            "receiver": "BData Co.,Ltd",
+            "approver": "BData Co.,Ltd",
+            "detail": "Thiết bị hỗ trợ bán hàng.",
+            "over_budget": true
+        }
+    ]
+}
