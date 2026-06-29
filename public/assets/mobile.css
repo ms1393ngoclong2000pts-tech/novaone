@@ -35,6 +35,8 @@
   .daily-panel,
   .payroll-panel,
   .request-panel,
+  .attendance-panel,
+  .sales-panel,
   .machine-panel,
   .recruitment-panel {
     max-width: 100vw;
@@ -346,6 +348,8 @@
   .daily-head,
   .payroll-head,
   .request-head,
+  .attendance-head,
+  .sales-head,
   .machine-head,
   .recruitment-panel .request-head,
   .panel-head {
@@ -372,6 +376,8 @@
   .daily-body,
   .payroll-body,
   .request-body,
+  .attendance-body,
+  .sales-body,
   .machine-body,
   .panel-body {
     padding: 14px;
@@ -389,6 +395,8 @@
   .daily-entry,
   .payroll-filter,
   .request-filter,
+  .attendance-filter,
+  .sales-filter,
   .purchase-filter,
   .machine-filter,
   .recruitment-filter,
@@ -415,6 +423,9 @@
   .daily-table-wrap,
   .payroll-table-wrap,
   .request-table-wrap,
+  .attendance-table-wrap,
+  .attendance-calendar-wrap,
+  .sales-table-wrap,
   .machine-table-wrap,
   .purchase-table-wrap,
   .recruitment-table-wrap {
@@ -431,6 +442,9 @@
   .daily-table,
   .payroll-table,
   .request-table,
+  .attendance-table,
+  .attendance-calendar,
+  .sales-table,
   .machine-table,
   .purchase-table,
   .recruitment-table {
@@ -514,6 +528,8 @@
   .daily-head,
   .payroll-head,
   .request-head,
+  .attendance-head,
+  .sales-head,
   .machine-head,
   .recruitment-panel .request-head,
   .panel-head {
@@ -549,6 +565,8 @@
   .daily-body,
   .payroll-body,
   .request-body,
+  .attendance-body,
+  .sales-body,
   .machine-body,
   .panel-body {
     padding: 12px;
@@ -566,6 +584,8 @@
   .daily-entry,
   .payroll-filter,
   .request-filter,
+  .attendance-filter,
+  .sales-filter,
   .purchase-filter,
   .machine-filter,
   .recruitment-filter,
@@ -584,6 +604,8 @@
   .daily-tools,
   .payroll-tools,
   .request-tools,
+  .attendance-tools,
+  .sales-tools,
   .machine-tools,
   .employee-pagination,
   .contract-pagination,
@@ -594,6 +616,8 @@
   .daily-pagination,
   .payroll-pagination,
   .request-pagination,
+  .attendance-pagination,
+  .sales-pagination,
   .machine-pagination {
     display: flex;
     align-items: stretch;
@@ -610,6 +634,8 @@
   .daily-tools input,
   .payroll-tools input,
   .request-tools input,
+  .attendance-tools input,
+  .sales-tools input,
   .machine-tools input,
   .employee-table-tools form,
   .request-tools form,
@@ -626,6 +652,8 @@
   .daily-table tbody td,
   .payroll-table tbody td,
   .request-table tbody td,
+  .attendance-table tbody td,
+  .sales-table tbody td,
   .machine-table tbody td,
   .purchase-table tbody td,
   .recruitment-table tbody td {
@@ -647,6 +675,169 @@
   .machine-dialog {
     width: calc(100vw - 16px);
     max-height: calc(100dvh - 16px);
+  }
+
+  .attendance-head-actions,
+  .attendance-title-row {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .attendance-head h2 {
+    font-size: 18px;
+  }
+
+  .attendance-head-actions > *,
+  .attendance-head-actions .employee-action {
+    flex: 1 1 auto;
+  }
+
+  .attendance-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .attendance-summary span {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .attendance-summary strong {
+    font-size: 18px;
+  }
+
+  .attendance-shifts {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .attendance-table,
+  .attendance-calendar {
+    min-width: 0;
+  }
+
+  .sales-stage-nav {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .stage-card {
+    grid-template-columns: 38px minmax(0, 1fr);
+    min-height: 54px;
+    border-radius: 10px;
+  }
+
+  .stage-card strong {
+    font-size: 19px;
+  }
+
+  .stage-card span {
+    min-height: 44px;
+    border-radius: 10px 0 0 10px;
+    font-size: 13px;
+    line-height: 1.15;
+    padding: 0 6px;
+    text-align: center;
+  }
+
+  .sales-head h2 {
+    font-size: 18px;
+  }
+
+  .sales-filter label {
+    min-height: 58px;
+    padding: 8px 12px;
+  }
+
+  .sales-filter span {
+    font-size: 12px;
+  }
+
+  .sales-filter input,
+  .sales-filter select {
+    font-size: 14px;
+  }
+
+  .sales-tools label,
+  .sales-tools input,
+  .sales-tools select {
+    font-size: 13px;
+  }
+
+  .sales-table {
+    min-width: 0;
+  }
+
+  .sales-table,
+  .sales-table tbody,
+  .sales-table tr,
+  .sales-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .sales-table thead {
+    display: none;
+  }
+
+  .sales-table tbody {
+    display: grid;
+    gap: 10px;
+  }
+
+  .sales-table tbody tr {
+    overflow: hidden;
+    border: 1px solid #dbe1e8;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .sales-table tbody td {
+    display: grid;
+    grid-template-columns: minmax(100px, 34%) minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    border: 0;
+    border-bottom: 1px solid #edf1f5;
+    text-align: left;
+  }
+
+  .sales-table tbody td:last-child {
+    border-bottom: 0;
+  }
+
+  .sales-table tbody td::before {
+    color: #687381;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .sales-table tbody td:nth-child(1)::before { content: "STT"; }
+  .sales-table tbody td:nth-child(2)::before { content: "Mã đơn"; }
+  .sales-table tbody td:nth-child(3)::before { content: "Tên"; }
+  .sales-table tbody td:nth-child(4)::before { content: "Giai đoạn"; }
+  .sales-table tbody td:nth-child(5)::before { content: "Liên hệ"; }
+  .sales-table tbody td:nth-child(6)::before { content: "Số tiền"; }
+  .sales-table tbody td:nth-child(7)::before { content: "Ngày tạo"; }
+  .sales-table tbody td:nth-child(8)::before { content: "Xóa"; }
+
+  .sales-link,
+  .sales-stage-badge,
+  .sales-delete {
+    justify-self: start;
+  }
+
+  .attendance-table th,
+  .attendance-table td,
+  .attendance-calendar th,
+  .attendance-calendar td,
+  .sales-table th,
+  .sales-table td {
+    padding: 8px 7px;
+    font-size: 12.5px;
   }
 }
 

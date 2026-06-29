@@ -10,6 +10,7 @@ $groups = [
         ['id' => 'employees', 'label' => 'Nhân sự', 'href' => '?route=employees', 'icon' => 'users', 'children' => [
             ['label' => 'Danh Sách Nhân Viên', 'href' => '?route=employees', 'route' => 'employees'],
             ['label' => 'Hợp Đồng Lao Động', 'href' => '?route=contracts', 'route' => 'contracts'],
+            ['label' => 'Chấm Công', 'href' => '?route=attendance', 'route' => 'attendance'],
             ['label' => 'Bảng Lương', 'href' => '?route=payrolls', 'route' => 'payrolls'],
             ['label' => 'Bảo Hiểm Xã Hội', 'href' => '?route=social-insurance', 'route' => 'social-insurance'],
             ['label' => 'Phiếu Yêu Cầu', 'href' => '?route=requests', 'route' => 'requests'],
@@ -24,6 +25,12 @@ $groups = [
     ],
     'KINH DOANH' => [
         ['id' => 'suppliers', 'label' => 'Nhà cung cấp', 'href' => '?route=suppliers', 'icon' => 'briefcase'],
+        ['id' => 'sales', 'label' => 'Bán hàng', 'href' => '?route=sales-orders', 'icon' => 'cart', 'children' => [
+            ['label' => 'Đơn Hàng', 'href' => '?route=sales-orders', 'route' => 'sales-orders'],
+            ['label' => 'Báo Giá', 'href' => '?route=sales-orders&stage=quote', 'route' => 'sales-orders.quote'],
+            ['label' => 'Hợp Đồng', 'href' => '?route=sales-orders&stage=contract', 'route' => 'sales-orders.contract'],
+            ['label' => 'Nghiệm Thu', 'href' => '?route=sales-orders&stage=paid', 'route' => 'sales-orders.paid'],
+        ]],
     ],
     'QUẢN LÝ KHO' => [
         ['id' => 'internal_assets', 'label' => 'Trang thiết bị', 'href' => '?route=machine-warehouses', 'icon' => 'briefcase', 'children' => [
@@ -79,7 +86,9 @@ $groups = [
                             <div class="nav-submenu">
                                 <?php foreach ($item['children'] as $child): ?>
                                     <?php
-                                    $childActive = ($_GET['route'] ?? '') === ($child['route'] ?? '');
+                                    $currentRoute = $_GET['route'] ?? '';
+                                    $childRoute = $child['route'] ?? '';
+                                    $childActive = $currentRoute === $childRoute || ($childRoute !== '' && str_starts_with((string) $currentRoute, (string) $childRoute . '.'));
                                     $childHref = $child['href'] ?? '#';
                                     ?>
                                     <a class="<?= $childActive ? 'active' : '' ?>" href="<?= e($childHref) ?>">- <span><?= e($child['label'] ?? '') ?></span></a>

@@ -33,6 +33,7 @@ final class SearchController
         return [
             ['label' => 'Nhân sự', 'group' => 'Quản lý nhân sự', 'icon' => 'users', 'href' => '?route=employees', 'keywords' => 'nhan vien ho so phong ban'],
             ['label' => 'Hợp đồng lao động', 'group' => 'Quản lý nhân sự', 'icon' => 'file', 'href' => '?route=contracts', 'keywords' => 'hop dong lao dong luong ngay bat dau ket thuc'],
+            ['label' => 'Chấm công', 'group' => 'Quản lý nhân sự', 'icon' => 'calendar', 'href' => '?route=attendance', 'keywords' => 'cham cong xu ly cong quan ly may tong cong vi pham'],
             ['label' => 'Bảng lương', 'group' => 'Quản lý nhân sự', 'icon' => 'file', 'href' => '?route=payrolls', 'keywords' => 'bang luong luong co dinh luong theo ca'],
             ['label' => 'Bảo hiểm xã hội', 'group' => 'Quản lý nhân sự', 'icon' => 'award', 'href' => '?route=social-insurance', 'keywords' => 'bao hiem xa hoi bhxh'],
             ['label' => 'Phiếu yêu cầu', 'group' => 'Quản lý nhân sự', 'icon' => 'file', 'href' => '?route=requests', 'keywords' => 'phieu yeu cau nghi phep ung tien tang ca'],
@@ -43,6 +44,7 @@ final class SearchController
             ['label' => 'Báo cáo hằng ngày', 'group' => 'Công việc', 'icon' => 'file', 'href' => '?route=daily-reports', 'keywords' => 'bao cao hang ngay gio lam chi tiet'],
             ['label' => 'Phiếu yêu cầu tuyển dụng', 'group' => 'Quản lý hệ thống', 'icon' => 'monitor', 'href' => '?route=recruitment-requests', 'keywords' => 'phieu yeu cau tuyen dung ung vien phe duyet chi phi'],
             ['label' => 'Nhà cung cấp', 'group' => 'Kinh doanh', 'icon' => 'briefcase', 'href' => '?route=suppliers', 'keywords' => 'nha cung cap doi tac cong no'],
+            ['label' => 'Đơn hàng', 'group' => 'Kinh doanh', 'icon' => 'cart', 'href' => '?route=sales-orders', 'keywords' => 'ban hang don hang bao gia hop dong nghiem thu co hoi'],
             ['label' => 'Kho máy', 'group' => 'Quản lý kho', 'icon' => 'briefcase', 'href' => '?route=machine-warehouses', 'keywords' => 'kho may kho noi bo trang thiet bi'],
             ['label' => 'Quản lý thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-devices', 'keywords' => 'thiet bi ten hang ma hang don gia nha cung cap'],
             ['label' => 'Loại thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-types', 'keywords' => 'loai thiet bi ten viet tat'],
