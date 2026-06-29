@@ -7,7 +7,7 @@ final class AuthController
     public function showLogin(array $config): void
     {
         if (is_logged_in()) {
-            redirect('dashboard');
+            redirect('home');
         }
 
         View::render('auth/login', ['config' => $config], 'layouts/guest');
@@ -40,7 +40,7 @@ final class AuthController
                 'company' => $auth['company'] ?? 'bData co.,ltd',
                 'avatar' => $auth['avatar'] ?? '',
             ];
-            redirect('dashboard');
+            redirect('home');
         }
 
         $this->recordFailedLogin();

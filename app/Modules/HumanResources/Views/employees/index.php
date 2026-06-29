@@ -22,7 +22,7 @@ $statusLabels = ['active' => 'Đang làm việc', 'on_leave' => 'Đang nghỉ ph
     <header class="employee-head">
         <h2>QUẢN LÝ NHÂN SỰ</h2>
         <div class="employee-head-actions">
-            <a class="employee-icon-btn" href="?route=dashboard" title="Quản lý ứng dụng"><?= ui_icon('command') ?></a>
+            <a class="employee-icon-btn" href="?route=home" title="Quản lý ứng dụng"><?= ui_icon('command') ?></a>
             <a class="employee-action blue" href="?route=employees.export">Xuất</a>
             <a class="employee-action violet" href="?route=employees.template">Tải file mẫu danh sách nhân sự</a>
             <button class="employee-action teal" type="button" data-dialog-open="employee-dialog">Thêm nhân sự</button>

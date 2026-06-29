@@ -2952,6 +2952,301 @@ th {
   margin-top: 18px;
 }
 
+/* Analytics dashboard */
+.analytics-dashboard {
+  position: relative;
+  min-height: calc(100vh - 132px);
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.analytics-card,
+.sales-summary-card {
+  overflow: hidden;
+  border: 1px solid #d8dee8;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+}
+
+.analytics-card header {
+  padding: 13px 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.task-card,
+.service-card,
+.customer-card {
+  grid-column: span 3;
+}
+
+.task-card header { background: #328cf4; }
+.service-card header { background: #35cc73; }
+.customer-card header { background: #ff845f; }
+.attendance-card header { background: #ff536b; }
+
+.analytics-card footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 0 12px 10px;
+  color: #777;
+  font-size: 13px;
+}
+
+.pie-wrap {
+  position: relative;
+  height: 250px;
+  display: grid;
+  place-items: center;
+}
+
+.task-pie {
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  background: conic-gradient(#07bd22 calc(var(--done) * 1%), #f04436 0);
+}
+
+.pie-label {
+  position: absolute;
+  color: #333;
+  font-size: 12px;
+  line-height: 1.15;
+}
+
+.pie-label.done { top: 28px; left: 34px; }
+.pie-label.progress { right: 16px; bottom: 42px; }
+.pie-label.done::after,
+.pie-label.progress::before {
+  content: "";
+  position: absolute;
+  width: 38px;
+  height: 1px;
+  background: currentColor;
+}
+.pie-label.done::after { top: 13px; right: -42px; transform: rotate(52deg); color: #f04436; }
+.pie-label.progress::before { top: -14px; left: -36px; transform: rotate(53deg); color: #07bd22; }
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot.red { background: #f04436; }
+.dot.green { background: #07bd22; }
+
+.line-chart {
+  position: relative;
+  height: 250px;
+  margin: 16px 16px 0 38px;
+  border-bottom: 2px solid #999;
+  border-left: 2px solid #999;
+}
+
+.grid-lines {
+  position: absolute;
+  inset: 0 0 26px 0;
+  background: repeating-linear-gradient(to bottom, transparent 0 46px, #999 47px 49px);
+}
+
+.axis-value {
+  position: absolute;
+  left: -28px;
+  color: #333;
+  font-size: 12px;
+}
+.axis-value.top { top: -4px; }
+.axis-value.mid { top: 92px; }
+.axis-value.low { bottom: 62px; }
+
+.month {
+  position: absolute;
+  bottom: 4px;
+  color: #777;
+  font-size: 13px;
+}
+.m1 { left: 2%; } .m2 { left: 18%; } .m3 { left: 35%; } .m4 { left: 53%; } .m5 { left: 70%; } .m6 { left: 87%; }
+
+.point {
+  position: absolute;
+  bottom: 24px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.point.product { left: 2%; background: #4f86c6; }
+.point.service { left: 10%; background: #c95858; }
+.legend { font-size: 13px; }
+.legend.blue { color: #4f86c6; }
+.legend.red { color: #c95858; }
+
+.bar-chart {
+  position: relative;
+  height: 250px;
+  margin: 34px 18px 18px 82px;
+  border-bottom: 2px solid #aaa;
+  border-left: 2px solid #aaa;
+  background: repeating-linear-gradient(to right, transparent 0 62px, #aaa 64px 67px);
+}
+
+.bar-label {
+  position: absolute;
+  left: -78px;
+  top: 92px;
+  color: #333;
+  font-size: 13px;
+}
+.bar {
+  position: absolute;
+  top: 84px;
+  left: 0;
+  height: 40px;
+  background: #4f83bd;
+}
+.bar-axis {
+  position: absolute;
+  left: 38%;
+  bottom: -34px;
+  color: #777;
+  font-weight: 800;
+}
+
+.module-wheel {
+  position: relative;
+  grid-column: span 3;
+  width: min(315px, 100%);
+  aspect-ratio: 1;
+  margin: 4px auto 0;
+  border-radius: 50%;
+  background: conic-gradient(#2da7d8 0 20%, #1eab9e 20% 40%, #f8874f 40% 60%, #965da2 60% 80%, #e73140 80% 100%);
+}
+
+.wheel-center {
+  position: absolute;
+  inset: 29%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+.mini-logo {
+  width: 36px;
+  height: 36px;
+  background: url("novaone-mark.svg") center/contain no-repeat;
+}
+
+.wheel-segment {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+}
+.wheel-segment { font-size: 14px; }
+.wheel-segment .ui-icon { display: block; width: 34px; height: 34px; margin: 6px auto 0; }
+.wheel-segment.crm { top: 16%; right: 14%; }
+.wheel-segment.hr { top: 46%; right: 8%; }
+.wheel-segment.work { bottom: 12%; left: 41%; }
+.wheel-segment.finance { left: 9%; top: 50%; }
+.wheel-segment.accounting { left: 16%; top: 17%; }
+
+.attendance-card {
+  grid-column: span 5;
+}
+
+.empty-chart {
+  position: relative;
+  height: 245px;
+  margin: 30px 18px 24px 44px;
+  border-bottom: 2px solid #999;
+  border-left: 2px solid #999;
+}
+.empty-chart .y-label {
+  position: absolute;
+  left: -38px;
+  top: 42%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #333;
+}
+.empty-chart strong {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  color: #1595bd;
+  font-size: 24px;
+}
+.empty-chart small {
+  position: absolute;
+  left: 22px;
+  bottom: 55px;
+  color: #777;
+}
+
+.sales-summary-card {
+  grid-column: span 4;
+}
+.sales-summary-card h3 {
+  margin: 0;
+  padding: 15px 12px;
+  color: #4b5563;
+  font-size: 18px;
+}
+.summary-block {
+  display: grid;
+  place-items: center;
+  min-height: 112px;
+  color: #fff;
+}
+.summary-block span {
+  align-self: start;
+  justify-self: stretch;
+  padding: 9px 20px;
+  font-weight: 900;
+}
+.summary-block strong {
+  font-size: 23px;
+  font-weight: 900;
+}
+.summary-block.total { background: #04c754; }
+.summary-block.total span { background: #069a42; }
+.summary-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.summary-block.quote { background: #4285ed; }
+.summary-block.quote span { background: #3368c0; }
+.summary-block.contract { background: #ff8908; }
+.summary-block.contract span { background: #d67200; }
+
+.dashboard-float {
+  position: fixed;
+  right: 28px;
+  bottom: 76px;
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #4387ed;
+  box-shadow: 0 12px 30px rgba(67, 135, 237, 0.35);
+}
+
 /* Employee directory */
 .employee-panel {
   overflow: hidden;

@@ -120,6 +120,24 @@
     ],
     "_notifications": [
         {
+            "id": "18336748",
+            "title": "Đơn hàng",
+            "message": "Đã cập nhật đơn hàng SH-2.",
+            "href": "?route=sales-orders",
+            "type": "info",
+            "created_at": "2026-06-29 08:49:32",
+            "read_at": null
+        },
+        {
+            "id": "beffaa6f",
+            "title": "Đơn hàng",
+            "message": "Đã tạo đơn hàng SH-2.",
+            "href": "?route=sales-orders",
+            "type": "success",
+            "created_at": "2026-06-29 08:49:06",
+            "read_at": null
+        },
+        {
             "id": "09d55873",
             "title": "Đơn hàng",
             "message": "Đã xóa đơn hàng 20250115001.",
@@ -550,24 +568,6 @@
             "type": "info",
             "created_at": "2026-06-25 07:38:34",
             "read_at": "2026-06-25 08:07:26"
-        },
-        {
-            "id": "85e6695a",
-            "title": "Mua sắm",
-            "message": "Đã cập nhật phê duyệt phiếu #19.",
-            "href": "?route=purchasing",
-            "type": "info",
-            "created_at": "2026-06-25 07:38:31",
-            "read_at": "2026-06-25 08:07:29"
-        },
-        {
-            "id": "1b8a90fa",
-            "title": "Mua sắm",
-            "message": "Đã xóa phiếu mua sắm #20.",
-            "href": "?route=purchasing",
-            "type": "danger",
-            "created_at": "2026-06-25 07:35:15",
-            "read_at": "2026-06-25 08:18:48"
         }
     ],
     "_migrations": {
@@ -4738,6 +4738,20 @@
         }
     ],
     "sales_orders": [
+        {
+            "id": "a6631aec",
+            "code": "SH-2",
+            "name": "Happy",
+            "stage": "quote",
+            "contact": "Trần Ngọc Long",
+            "contact_employee_id": "e_hr_108",
+            "amount": 9900000,
+            "unit": "VNĐ",
+            "created_date": "2026-06-29",
+            "customer": "Happy Creative",
+            "customer_group": "Doanh nghiệp",
+            "note": "hhhhhh"
+        },
         {
             "id": "3a587c9e",
             "code": "TEST-SO-EMP2",

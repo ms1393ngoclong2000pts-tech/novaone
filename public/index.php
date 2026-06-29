@@ -3,7 +3,7 @@
 require dirname(__DIR__) . '/app/bootstrap.php';
 
 $schemas = require BASE_PATH . '/app/module_schemas.php';
-$route = $_GET['route'] ?? (is_logged_in() ? 'dashboard' : 'login');
+$route = $_GET['route'] ?? (is_logged_in() ? 'home' : 'login');
 
 match ($route) {
     'login' => $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -16,6 +16,7 @@ match ($route) {
     'password' => $_SERVER['REQUEST_METHOD'] === 'POST'
         ? (new AuthController())->updatePassword($config, $store)
         : (new AuthController())->password(),
+    'home' => (new DashboardController())->home($store),
     'dashboard' => (new DashboardController())->index($store),
     'employees' => (new EmployeeController())->index($store),
     'employees.show' => (new EmployeeController())->show($store),
@@ -89,17 +90,17 @@ match ($route) {
     'recruitment-requests.save' => (new RecruitmentRequestController())->save($store),
     'recruitment-requests.approval' => (new RecruitmentRequestController())->approval($store),
     'recruitment-requests.delete' => (new RecruitmentRequestController())->delete($store),
-    'resource' => redirect('dashboard'),
+    'resource' => redirect('home'),
     'resource.save' => (new ResourceController())->save($store, $schemas),
     'resource.delete' => (new ResourceController())->delete($store, $schemas),
     'reset' => $_SERVER['REQUEST_METHOD'] === 'POST'
         ? (new ResourceController())->reset($store)
-        : redirect('dashboard'),
+        : redirect('home'),
     'tasks' => (new TaskController())->index($store),
     'reports' => (new ReportController())->index($store),
     'search' => (new SearchController())->index($store, $schemas),
-    'feature' => redirect('dashboard'),
+    'feature' => redirect('home'),
     'notification.read' => (new NotificationController())->read($store),
     'notification.readAll' => (new NotificationController())->readAll($store),
-    default => redirect('dashboard'),
+    default => redirect('home'),
 };

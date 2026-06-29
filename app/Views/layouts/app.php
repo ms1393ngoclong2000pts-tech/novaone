@@ -66,7 +66,7 @@ $groups = [
 </head>
 <body>
 <div class="app-shell">
-    <a class="brand-mark" href="?route=dashboard" aria-label="Novaone dashboard"></a>
+    <a class="brand-mark" href="?route=home" aria-label="Novaone home"></a>
     <aside class="sidebar">
         <nav class="nav">
             <?php foreach ($groups as $group => $items): ?>
@@ -104,7 +104,7 @@ $groups = [
         <header class="topbar">
             <div class="topbar-left">
                 <button class="top-icon sidebar-toggle" type="button" aria-label="Thu gọn menu"><?= ui_icon('menu') ?></button>
-                <a class="top-icon" href="?route=dashboard" aria-label="Màn hình"><?= ui_icon('monitor') ?></a>
+                <a class="top-icon" href="?route=home" aria-label="Màn hình"><?= ui_icon('monitor') ?></a>
             </div>
             <div class="topbar-right">
                 <form class="global-search" method="get" action="">
