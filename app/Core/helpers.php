@@ -69,6 +69,333 @@ function require_auth(): void
     }
 }
 
+function permission_modules(): array
+{
+    return [
+        'home' => ['label' => 'Quản lý ứng dụng', 'group' => 'Hệ thống'],
+        'dashboard' => ['label' => 'Dashboard', 'group' => 'Hệ thống'],
+        'employees' => ['label' => 'Danh sách nhân viên', 'group' => 'Nhân sự'],
+        'contracts' => ['label' => 'Hợp đồng lao động', 'group' => 'Nhân sự'],
+        'attendance' => ['label' => 'Chấm công', 'group' => 'Nhân sự'],
+        'payrolls' => ['label' => 'Bảng lương', 'group' => 'Nhân sự'],
+        'social_insurance' => ['label' => 'Bảo hiểm xã hội', 'group' => 'Nhân sự'],
+        'requests' => ['label' => 'Phiếu yêu cầu', 'group' => 'Nhân sự'],
+        'violations' => ['label' => 'Danh sách vi phạm', 'group' => 'Nhân sự'],
+        'rewards' => ['label' => 'Danh sách khen thưởng', 'group' => 'Nhân sự'],
+        'projects' => ['label' => 'Dự án', 'group' => 'Công việc'],
+        'work_items' => ['label' => 'Danh sách công việc', 'group' => 'Công việc'],
+        'daily_reports' => ['label' => 'Báo cáo hằng ngày', 'group' => 'Công việc'],
+        'suppliers' => ['label' => 'Nhà cung cấp', 'group' => 'Kinh doanh'],
+        'sales_orders' => ['label' => 'Đơn hàng', 'group' => 'Kinh doanh'],
+        'machine_warehouses' => ['label' => 'Kho máy', 'group' => 'Trang thiết bị'],
+        'equipment_devices' => ['label' => 'Quản lý thiết bị', 'group' => 'Trang thiết bị'],
+        'equipment_types' => ['label' => 'Loại thiết bị', 'group' => 'Trang thiết bị'],
+        'purchasing' => ['label' => 'Mua sắm', 'group' => 'Trang thiết bị'],
+        'recruitment_requests' => ['label' => 'Phiếu tuyển dụng', 'group' => 'Tuyển dụng'],
+        'reports' => ['label' => 'Báo cáo tổng hợp', 'group' => 'Báo cáo'],
+        'permissions' => ['label' => 'Phân quyền', 'group' => 'Hệ thống'],
+        'calls' => ['label' => 'Gọi điện', 'group' => 'CSKH'],
+    ];
+}
+
+function permission_route_map(): array
+{
+    return [
+        'home' => ['home', 'view'],
+        'dashboard' => ['dashboard', 'view'],
+        'employees' => ['employees', 'view'],
+        'employees.show' => ['employees', 'view'],
+        'employees.export' => ['employees', 'view'],
+        'employees.template' => ['employees', 'view'],
+        'employees.import' => ['employees', 'create'],
+        'contracts' => ['contracts', 'view'],
+        'contracts.save' => ['contracts', 'update'],
+        'contracts.delete' => ['contracts', 'delete'],
+        'contracts.export' => ['contracts', 'view'],
+        'attendance' => ['attendance', 'view'],
+        'attendance.process' => ['attendance', 'update'],
+        'attendance.process.generate' => ['attendance', 'create'],
+        'attendance.process.violation' => ['attendance', 'update'],
+        'attendance.manage' => ['attendance', 'update'],
+        'attendance.manage.save' => ['attendance', 'update'],
+        'attendance.manage.delete' => ['attendance', 'delete'],
+        'payrolls' => ['payrolls', 'view'],
+        'payrolls.save' => ['payrolls', 'create'],
+        'payrolls.complete' => ['payrolls', 'update'],
+        'payrolls.delete' => ['payrolls', 'delete'],
+        'payrolls.export' => ['payrolls', 'view'],
+        'social-insurance' => ['social_insurance', 'view'],
+        'social-insurance.save' => ['social_insurance', 'create'],
+        'social-insurance.delete' => ['social_insurance', 'delete'],
+        'requests' => ['requests', 'view'],
+        'requests.save' => ['requests', 'create'],
+        'requests.approval' => ['requests', 'update'],
+        'requests.delete' => ['requests', 'delete'],
+        'violations' => ['violations', 'view'],
+        'violations.save' => ['violations', 'create'],
+        'violations.delete' => ['violations', 'delete'],
+        'rewards' => ['rewards', 'view'],
+        'rewards.save' => ['rewards', 'create'],
+        'rewards.delete' => ['rewards', 'delete'],
+        'projects' => ['projects', 'view'],
+        'projects.save' => ['projects', 'create'],
+        'projects.delete' => ['projects', 'delete'],
+        'projects.template' => ['projects', 'view'],
+        'projects.import' => ['projects', 'create'],
+        'work-items' => ['work_items', 'view'],
+        'work-items.save' => ['work_items', 'create'],
+        'work-items.delete' => ['work_items', 'delete'],
+        'daily-reports' => ['daily_reports', 'view'],
+        'daily-reports.save' => ['daily_reports', 'create'],
+        'daily-reports.update' => ['daily_reports', 'update'],
+        'daily-reports.delete' => ['daily_reports', 'delete'],
+        'suppliers' => ['suppliers', 'view'],
+        'suppliers.save' => ['suppliers', 'create'],
+        'suppliers.delete' => ['suppliers', 'delete'],
+        'suppliers.import' => ['suppliers', 'create'],
+        'sales-orders' => ['sales_orders', 'view'],
+        'sales-orders.quote' => ['sales_orders', 'view'],
+        'sales-orders.contract' => ['sales_orders', 'view'],
+        'sales-orders.paid' => ['sales_orders', 'view'],
+        'sales-orders.save' => ['sales_orders', 'create'],
+        'sales-orders.delete' => ['sales_orders', 'delete'],
+        'machine-warehouses' => ['machine_warehouses', 'view'],
+        'machine-warehouses.save' => ['machine_warehouses', 'create'],
+        'machine-warehouses.transfer' => ['machine_warehouses', 'update'],
+        'machine-warehouses.delete' => ['machine_warehouses', 'delete'],
+        'equipment-devices' => ['equipment_devices', 'view'],
+        'equipment-devices.save' => ['equipment_devices', 'create'],
+        'equipment-devices.import' => ['equipment_devices', 'create'],
+        'equipment-devices.delete' => ['equipment_devices', 'delete'],
+        'equipment-types' => ['equipment_types', 'view'],
+        'equipment-types.save' => ['equipment_types', 'create'],
+        'equipment-types.delete' => ['equipment_types', 'delete'],
+        'purchasing' => ['purchasing', 'view'],
+        'purchasing.save' => ['purchasing', 'create'],
+        'purchasing.approval' => ['purchasing', 'update'],
+        'purchasing.delete' => ['purchasing', 'delete'],
+        'recruitment-requests' => ['recruitment_requests', 'view'],
+        'recruitment-requests.save' => ['recruitment_requests', 'create'],
+        'recruitment-requests.approval' => ['recruitment_requests', 'update'],
+        'recruitment-requests.delete' => ['recruitment_requests', 'delete'],
+        'tasks' => ['projects', 'view'],
+        'reports' => ['reports', 'view'],
+        'reports.export' => ['reports', 'view'],
+        'permissions' => ['permissions', 'view'],
+        'permissions.save' => ['permissions', 'update'],
+        'calls' => ['calls', 'view'],
+        'calls.save' => ['calls', 'create'],
+    ];
+}
+
+function current_user_role(): string
+{
+    return trim((string) ($_SESSION['user']['role'] ?? 'Guest')) ?: 'Guest';
+}
+
+function permission_data(): array
+{
+    $path = BASE_PATH . '/storage/data.json';
+    if (! file_exists($path)) {
+        return [];
+    }
+
+    $data = json_decode(file_get_contents($path) ?: '{}', true);
+    return is_array($data['permissions'] ?? null) ? $data['permissions'] : [];
+}
+
+function role_permissions(string $role): array
+{
+    $role = trim($role);
+    $rows = array_values(array_filter(permission_data(), fn (array $item): bool => strcasecmp((string) ($item['role'] ?? ''), $role) === 0));
+    $matrix = default_role_permissions($role);
+
+    foreach ($rows as $row) {
+        $module = permission_module_key((string) ($row['module'] ?? ''));
+        if ($module === 'all') {
+            foreach (array_keys(permission_modules()) as $moduleKey) {
+                $matrix[$moduleKey] = permission_row_to_actions($row);
+            }
+            continue;
+        }
+
+        if ($module !== '') {
+            $matrix[$module] = permission_row_to_actions($row);
+        }
+    }
+
+    return $matrix;
+}
+
+function default_role_permissions(string $role): array
+{
+    $role = strtolower(trim($role));
+    $modules = array_keys(permission_modules());
+    $matrix = [];
+
+    foreach ($modules as $module) {
+        $matrix[$module] = ['view' => false, 'create' => false, 'update' => false, 'delete' => false];
+    }
+
+    if ($role === 'admin') {
+        foreach ($modules as $module) {
+            $matrix[$module] = ['view' => true, 'create' => true, 'update' => true, 'delete' => true];
+        }
+        return $matrix;
+    }
+
+    $grant = function (array $moduleKeys, bool $write = false) use (&$matrix): void {
+        foreach ($moduleKeys as $module) {
+            if (! isset($matrix[$module])) {
+                continue;
+            }
+            $matrix[$module]['view'] = true;
+            if ($write) {
+                $matrix[$module]['create'] = true;
+                $matrix[$module]['update'] = true;
+            }
+        }
+    };
+
+    $grant(['home', 'dashboard', 'reports', 'calls']);
+    match ($role) {
+        'hr' => $grant(['employees', 'contracts', 'attendance', 'payrolls', 'social_insurance', 'requests', 'violations', 'rewards', 'recruitment_requests', 'daily_reports'], true),
+        'sales' => $grant(['suppliers', 'sales_orders', 'daily_reports'], true),
+        'warehouse' => $grant(['machine_warehouses', 'equipment_devices', 'equipment_types', 'purchasing', 'suppliers'], true),
+        'manager' => $grant(['employees', 'contracts', 'attendance', 'projects', 'work_items', 'daily_reports', 'suppliers', 'sales_orders', 'machine_warehouses', 'equipment_devices', 'recruitment_requests'], false),
+        default => null,
+    };
+
+    return $matrix;
+}
+
+function permission_module_key(string $module): string
+{
+    $module = trim($module);
+    if ($module === '') {
+        return '';
+    }
+
+    $normalized = strtolower(str_replace([' ', '-', '&'], ['_', '_', ''], $module));
+    $aliases = [
+        'tất_cả' => 'all',
+        'tat_ca' => 'all',
+        'crm__sales' => 'sales_orders',
+        'crm_sales' => 'sales_orders',
+        'nhan_su' => 'employees',
+        'nhân_sự' => 'employees',
+    ];
+
+    return $aliases[$normalized] ?? $normalized;
+}
+
+function permission_row_to_actions(array $row): array
+{
+    return [
+        'view' => ($row['can_view'] ?? 'no') === 'yes',
+        'create' => ($row['can_create'] ?? 'no') === 'yes',
+        'update' => ($row['can_update'] ?? 'no') === 'yes',
+        'delete' => ($row['can_delete'] ?? 'no') === 'yes',
+    ];
+}
+
+function can_access_module(string $module, string $action = 'view'): bool
+{
+    if (! is_logged_in()) {
+        return false;
+    }
+
+    $role = current_user_role();
+    if (strcasecmp($role, 'Admin') === 0) {
+        return true;
+    }
+
+    $permissions = role_permissions($role);
+    return (bool) ($permissions[$module][$action] ?? false);
+}
+
+function can_access_route(string $route): bool
+{
+    $publicRoutes = ['login', 'logout', 'profile', 'password', 'notification.read', 'notification.readAll', 'search'];
+    if (in_array($route, $publicRoutes, true)) {
+        return true;
+    }
+
+    $map = permission_route_map();
+    if (! isset($map[$route])) {
+        return true;
+    }
+
+    [$module, $action] = $map[$route];
+    return can_access_module($module, $action);
+}
+
+function enforce_route_permission(string $route): void
+{
+    if (! is_logged_in() || can_access_route($route)) {
+        return;
+    }
+
+    deny_permission(permission_route_map()[$route][0] ?? '', permission_route_map()[$route][1] ?? 'view');
+}
+
+function require_permission(string $module, string $action = 'view'): void
+{
+    if (! can_access_module($module, $action)) {
+        deny_permission($module, $action);
+    }
+}
+
+function deny_permission(string $module = '', string $action = 'view'): void
+{
+    http_response_code(403);
+    View::render('errors/403', [
+        'active' => 'forbidden',
+        'title' => 'Không có quyền',
+        'module' => $module,
+        'action' => $action,
+    ]);
+    exit;
+}
+
+function href_route(string $href): string
+{
+    $parts = parse_url(str_replace('&amp;', '&', $href));
+    parse_str((string) ($parts['query'] ?? ''), $query);
+    return (string) ($query['route'] ?? '');
+}
+
+function filter_nav_groups_by_permission(array $groups): array
+{
+    foreach ($groups as $group => $items) {
+        $filteredItems = [];
+        foreach ($items as $item) {
+            $children = $item['children'] ?? [];
+            if ($children !== []) {
+                $children = array_values(array_filter($children, fn (array $child): bool => can_access_route((string) ($child['route'] ?? href_route((string) ($child['href'] ?? ''))))));
+                $item['children'] = $children;
+            }
+
+            $route = href_route((string) ($item['href'] ?? ''));
+            $canOpenParent = $route === '' || can_access_route($route);
+            if ($children !== [] || $canOpenParent) {
+                if (! $canOpenParent && $children !== []) {
+                    $item['href'] = $children[0]['href'];
+                }
+                $filteredItems[] = $item;
+            }
+        }
+
+        if ($filteredItems === []) {
+            unset($groups[$group]);
+        } else {
+            $groups[$group] = $filteredItems;
+        }
+    }
+
+    return $groups;
+}
+
 function csrf_token(): string
 {
     if (empty($_SESSION['_token'])) {
@@ -215,6 +542,8 @@ function ui_icon(string $name): string
         'bell' => '<path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>',
         'mail' => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
         'phone' => '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.6 2.6a2 2 0 0 1-.45 2.11L8 9.7a16 16 0 0 0 6.3 6.3l1.27-1.27a2 2 0 0 1 2.11-.45c.83.28 1.7.48 2.6.6A2 2 0 0 1 22 16.92z"/>',
+        'headset' => '<path d="M3 11a9 9 0 0 1 18 0"/><path d="M21 17v-5a2 2 0 0 0-2-2h-1v7h3Z"/><path d="M3 17v-5a2 2 0 0 1 2-2h1v7H3Z"/><path d="M13 21h2a4 4 0 0 0 4-4"/><path d="M9 21h4"/>',
+        'backspace' => '<path d="M21 4H8l-6 8 6 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="m18 9-6 6"/><path d="m12 9 6 6"/>',
         'menu' => '<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/>',
         'key' => '<circle cx="7.5" cy="15.5" r="5.5"/><path d="m12 11 8-8"/><path d="m17 3 4 4"/><path d="m15 5 4 4"/>',
         'logout' => '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5"/><path d="M21 12H9"/>',

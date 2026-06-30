@@ -21,6 +21,7 @@ $tiles = [
     ['label' => 'VẬN CHUYỂN', 'href' => '?route=purchasing', 'icon' => 'truck', 'accent' => 'yellow'],
     ['label' => 'OKR', 'href' => '?route=projects', 'icon' => 'command', 'accent' => 'green-dark'],
 ];
+$tiles = array_values(array_filter($tiles, fn (array $tile): bool => can_access_route(href_route((string) ($tile['href'] ?? '')))));
 ?>
 
 <section class="app-dashboard">

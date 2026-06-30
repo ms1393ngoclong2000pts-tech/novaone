@@ -10,6 +10,7 @@ final class ResourceController
 
         $name = $_GET['name'] ?? 'employees';
         abort_unless(isset($schemas[$name]));
+        require_permission(permission_module_key((string) $name), 'view');
         $query = trim($_GET['q'] ?? '');
         $items = $store->get($name);
 
@@ -40,9 +41,11 @@ final class ResourceController
 
         $name = $_POST['_resource'] ?? '';
         abort_unless(isset($schemas[$name]));
+        $module = permission_module_key((string) $name);
 
         $items = $store->get($name);
         $id = $_POST['id'] ?? '';
+        require_permission($module, $id !== '' ? 'update' : 'create');
         $payload = ['id' => $id !== '' ? $id : uid()];
 
         foreach ($schemas[$name]['fields'] as $field) {
@@ -76,6 +79,7 @@ final class ResourceController
         $name = $_POST['_resource'] ?? '';
         $id = $_POST['id'] ?? '';
         abort_unless(isset($schemas[$name]));
+        require_permission(permission_module_key((string) $name), 'delete');
 
         $items = array_values(array_filter($store->get($name), fn ($item) => $item['id'] !== $id));
         $store->put($name, $items);
@@ -93,6 +97,7 @@ final class ResourceController
     {
         require_auth();
         verify_csrf();
+        require_permission('permissions', 'delete');
 
         $store->reset();
         redirect('dashboard');

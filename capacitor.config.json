@@ -3,7 +3,7 @@
   "appName": "Novaone",
   "webDir": "mobile-www",
   "server": {
-    "url": "https://notebooks-including-quiz-bread.trycloudflare.com",
+    "url": "https://contains-matters-breakdown-agents.trycloudflare.com/?route=home",
     "cleartext": false
   }
 }

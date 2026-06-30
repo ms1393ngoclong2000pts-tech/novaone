@@ -45,11 +45,13 @@ $groups = [
     ],
     'QUẢN LÝ HỆ THỐNG' => [
         ['id' => 'dashboard', 'label' => 'Dashboard', 'href' => '?route=dashboard', 'icon' => 'monitor'],
+        ['id' => 'permissions', 'label' => 'Phân quyền', 'href' => '?route=permissions', 'icon' => 'settings'],
         ['id' => 'recruitments', 'label' => 'Tuyển dụng', 'href' => '?route=recruitment-requests', 'icon' => 'monitor', 'children' => [
             ['label' => 'Phiếu Yêu Cầu Tuyển Dụng', 'href' => '?route=recruitment-requests', 'route' => 'recruitment-requests'],
         ]],
     ],
 ];
+$groups = filter_nav_groups_by_permission($groups);
 ?>
 <!doctype html>
 <html lang="vi">
@@ -152,7 +154,7 @@ $groups = [
                     </div>
                 </details>
                 <button class="top-icon" type="button" aria-label="Email"><?= ui_icon('mail') ?></button>
-                <button class="top-icon" type="button" aria-label="Điện thoại"><?= ui_icon('phone') ?></button>
+                <a class="top-icon" href="?route=calls" aria-label="Điện thoại"><?= ui_icon('phone') ?></a>
                 <details class="user-menu">
                     <summary class="user-chip">
                         <span class="avatar">

@@ -82,6 +82,128 @@
     justify-content: flex-end;
   }
 
+  .report-page {
+    gap: 12px;
+  }
+
+  .report-hero {
+    display: grid;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .report-hero h1 {
+    font-size: 22px;
+  }
+
+  .report-hero-actions,
+  .report-filter,
+  .report-section-head {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .report-filter {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .report-btn {
+    width: 100%;
+  }
+
+  .report-summary-grid,
+  .mini-report-grid,
+  .report-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-report-grid,
+  .report-bars,
+  .report-rank-list,
+  .report-activity-list {
+    padding: 12px;
+  }
+
+  .mini-report-items {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .report-bar-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .report-bar-row em {
+    text-align: left;
+  }
+
+  .permission-hero,
+  .permission-toolbar,
+  .permission-actions {
+    display: grid;
+    gap: 12px;
+  }
+
+  .permission-hero {
+    padding: 16px;
+  }
+
+  .permission-hero h1 {
+    font-size: 22px;
+  }
+
+  .permission-current,
+  .permission-toolbar label {
+    min-width: 0;
+  }
+
+  .permission-table th,
+  .permission-table td {
+    padding: 10px;
+    white-space: nowrap;
+  }
+
+  .permission-actions .report-btn {
+    width: 100%;
+  }
+
+  .call-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .call-dialer {
+    padding: 16px 10px 18px;
+  }
+
+  .call-number-label {
+    margin-bottom: 42px;
+    font-size: 24px;
+  }
+
+  .dialpad button {
+    min-height: 58px;
+    font-size: 24px;
+  }
+
+  .call-card h2 {
+    font-size: 18px;
+  }
+
+  .call-body,
+  .call-actions .call-body {
+    padding: 12px;
+  }
+
+  .call-content textarea {
+    min-height: 180px;
+  }
+
+  .call-save {
+    font-size: 15px;
+  }
+
   .top-icon {
     width: 34px;
     height: 34px;

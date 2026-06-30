@@ -9,7 +9,7 @@ final class SearchController
         require_auth();
 
         $query = trim((string) ($_GET['q'] ?? ''));
-        $features = $this->features();
+        $features = array_values(array_filter($this->features(), fn (array $feature): bool => can_access_route(href_route((string) ($feature['href'] ?? '')))));
         $results = $features;
 
         if ($query !== '') {
@@ -49,6 +49,7 @@ final class SearchController
             ['label' => 'Quản lý thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-devices', 'keywords' => 'thiet bi ten hang ma hang don gia nha cung cap'],
             ['label' => 'Loại thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-types', 'keywords' => 'loai thiet bi ten viet tat'],
             ['label' => 'Mua sắm', 'group' => 'Quản lý kho', 'icon' => 'cart', 'href' => '?route=purchasing', 'keywords' => 'mua sam yeu cau thiet bi phieu mua sam cong no thuc nhan'],
+            ['label' => 'Gọi điện', 'group' => 'CSKH', 'icon' => 'phone', 'href' => '?route=calls', 'keywords' => 'goi dien cuoc goi dien thoai lien he cham soc khach hang'],
             ['label' => 'Báo cáo', 'group' => 'Báo cáo', 'icon' => 'file', 'href' => '?route=reports', 'keywords' => 'report dashboard thong ke'],
         ];
     }

@@ -32,6 +32,8 @@ require BASE_PATH . '/app/Controllers/ReportController.php';
 require BASE_PATH . '/app/Controllers/SearchController.php';
 require BASE_PATH . '/app/Controllers/FeatureController.php';
 require BASE_PATH . '/app/Controllers/NotificationController.php';
+require BASE_PATH . '/app/Controllers/PermissionController.php';
+require BASE_PATH . '/app/Controllers/CallController.php';
 require BASE_PATH . '/app/Modules/HumanResources/bootstrap.php';
 require BASE_PATH . '/app/Modules/Work/bootstrap.php';
 require BASE_PATH . '/app/Modules/Business/bootstrap.php';

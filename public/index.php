@@ -4,6 +4,7 @@ require dirname(__DIR__) . '/app/bootstrap.php';
 
 $schemas = require BASE_PATH . '/app/module_schemas.php';
 $route = $_GET['route'] ?? (is_logged_in() ? 'home' : 'login');
+enforce_route_permission($route);
 
 match ($route) {
     'login' => $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -98,6 +99,11 @@ match ($route) {
         : redirect('home'),
     'tasks' => (new TaskController())->index($store),
     'reports' => (new ReportController())->index($store),
+    'reports.export' => (new ReportController())->export($store),
+    'permissions' => (new PermissionController())->index($store),
+    'permissions.save' => (new PermissionController())->save($store),
+    'calls' => (new CallController())->index($store),
+    'calls.save' => (new CallController())->save($store),
     'search' => (new SearchController())->index($store, $schemas),
     'feature' => redirect('home'),
     'notification.read' => (new NotificationController())->read($store),

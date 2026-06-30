@@ -99,6 +99,7 @@ return [
         ['id' => 'tk1', 'code' => 'TK-1001', 'customer' => 'Công ty An Phát', 'issue' => 'Cần hỗ trợ cấu hình phân quyền', 'owner' => 'Quang Le', 'status' => 'in_progress'],
         ['id' => 'tk2', 'code' => 'TK-1002', 'customer' => 'Minh Long', 'issue' => 'Yêu cầu xuất báo cáo bán hàng', 'owner' => 'Minh Nguyen', 'status' => 'new'],
     ],
+    'call_logs' => [],
     'inventory' => [
         ['id' => 'i1', 'sku' => 'SKU-001', 'name' => 'Máy quét barcode', 'warehouse' => 'Kho Hà Nội', 'quantity' => 24, 'min' => 10, 'status' => 'available'],
         ['id' => 'i2', 'sku' => 'SKU-014', 'name' => 'Tem nhãn vận chuyển', 'warehouse' => 'Kho TP.HCM', 'quantity' => 6, 'min' => 20, 'status' => 'low'],
