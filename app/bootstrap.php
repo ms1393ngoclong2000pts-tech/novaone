@@ -30,7 +30,6 @@ require BASE_PATH . '/app/Controllers/DashboardController.php';
 require BASE_PATH . '/app/Controllers/ResourceController.php';
 require BASE_PATH . '/app/Controllers/ReportController.php';
 require BASE_PATH . '/app/Controllers/SearchController.php';
-require BASE_PATH . '/app/Controllers/FeatureController.php';
 require BASE_PATH . '/app/Controllers/NotificationController.php';
 require BASE_PATH . '/app/Controllers/PermissionController.php';
 require BASE_PATH . '/app/Controllers/CallController.php';

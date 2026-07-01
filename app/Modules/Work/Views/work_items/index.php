@@ -18,24 +18,31 @@ $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string 
         <?php if (! empty($_SESSION['flash_error'])): ?><div class="alert"><?= e($_SESSION['flash_error']) ?></div><?php unset($_SESSION['flash_error']); endif; ?>
 
         <section class="work-filter-section">
-            <h3>LỌC</h3>
+            <h3>LỌC & TÌM KIẾM CÔNG VIỆC</h3>
             <form id="work-filter" method="get">
                 <input type="hidden" name="route" value="work-items"><input type="hidden" name="status_filter" value="1">
-                <strong>Lọc theo tùy chọn</strong>
+                <strong>Tìm kiếm và lọc theo tùy chọn</strong>
                 <div class="work-filter-grid">
-                    <label><span>Dự án</span><select name="project"><option value="">--- Dự án ---</option><?php foreach ($projects as $projectName): ?><option value="<?= e($projectName) ?>" <?= $project === $projectName ? 'selected' : '' ?>><?= e($projectName) ?></option><?php endforeach; ?></select></label>
-                    <label><span>Hạng mục</span><select name="category"><option value="">--- Hạng mục ---</option><?php foreach ($categories as $categoryName): ?><option value="<?= e($categoryName) ?>" <?= $category === $categoryName ? 'selected' : '' ?>><?= e($categoryName) ?></option><?php endforeach; ?></select></label>
+                    <label><span>Từ khóa</span><input type="text" name="q" value="<?= e($query) ?>" placeholder="Nhập từ khóa tìm kiếm..."></label>
+                    <label><span>Dự án</span><select name="project" onchange="this.form.submit()"><option value="">-- Tất cả dự án --</option><?php foreach ($projects as $projectName): ?><option value="<?= e($projectName) ?>" <?= $project === $projectName ? 'selected' : '' ?>><?= e($projectName) ?></option><?php endforeach; ?></select></label>
+                    <label><span>Hạng mục</span><select name="category" onchange="this.form.submit()"><option value="">-- Tất cả hạng mục --</option><?php foreach ($categories as $categoryName): ?><option value="<?= e($categoryName) ?>" <?= $category === $categoryName ? 'selected' : '' ?>><?= e($categoryName) ?></option><?php endforeach; ?></select></label>
                 </div>
                 <div class="work-status-filters">
-                    <?php foreach ($statuses as $value => $label): ?><label><input name="statuses[]" type="checkbox" value="<?= e($value) ?>" <?= in_array($value, $selectedStatuses, true) ? 'checked' : '' ?>><span><?= e($label) ?></span></label><?php endforeach; ?>
-                    <button type="submit">Áp dụng</button>
+                    <div class="status-checkboxes">
+                        <?php foreach ($statuses as $value => $label): ?><label><input name="statuses[]" type="checkbox" value="<?= e($value) ?>" <?= in_array($value, $selectedStatuses, true) ? 'checked' : '' ?>><span><?= e($label) ?></span></label><?php endforeach; ?>
+                    </div>
+                    <div class="filter-actions">
+                        <button type="submit">Áp dụng</button>
+                        <?php if ($project !== '' || $category !== '' || $query !== '' || $selectedStatuses !== ['pending', 'in_progress']): ?>
+                            <a href="?route=work-items" class="btn-clear-filter">Xóa bộ lọc</a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </form>
         </section>
 
         <div class="work-tools">
             <label>Hiển thị <select name="per_page" form="work-filter" onchange="this.form.submit()"><?php foreach ([10, 25, 50, 100] as $size): ?><option value="<?= $size ?>" <?= $perPage === $size ? 'selected' : '' ?>><?= $size ?></option><?php endforeach; ?></select> trên 1 trang</label>
-            <form method="get"><input type="hidden" name="route" value="work-items"><input name="q" value="<?= e($query) ?>" placeholder="Tìm kiếm"></form>
         </div>
 
         <div class="work-table-wrap"><table class="work-table">

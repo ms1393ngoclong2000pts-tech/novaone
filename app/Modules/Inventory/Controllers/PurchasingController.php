@@ -80,7 +80,7 @@ final class PurchasingController
         $receiver = $receiver === '' ? '' : ($this->employeeName($store, $receiver) ?? '');
         $approver = $approver === '' ? '' : ($this->employeeName($store, $approver) ?? '');
         if ($requester === '' || (trim((string) ($_POST['receiver'] ?? '')) !== '' && $receiver === '') || (trim((string) ($_POST['approver'] ?? '')) !== '' && $approver === '')) {
-            $_SESSION['flash_error'] = 'NgÆ°á»i yĂªu cáº§u, ngÆ°á»i nháº­n vĂ  ngÆ°á»i phĂª duyá»‡t pháº£i chá»n tá»« Danh SĂ¡ch NhĂ¢n ViĂªn.';
+            $_SESSION['flash_error'] = 'Người yêu cầu, người nhận và người phê duyệt phải chọn từ Danh Sách Nhân Viên.';
             redirect('purchasing');
         }
 

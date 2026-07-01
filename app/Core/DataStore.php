@@ -22,6 +22,16 @@ final class DataStore
         $json = file_get_contents($this->path);
         $data = json_decode($json ?: '{}', true);
 
+        if (is_array($data)) {
+            return $data;
+        }
+
+        $this->backupCorruptData();
+        $this->reset();
+
+        $json = file_get_contents($this->path);
+        $data = json_decode($json ?: '{}', true);
+
         return is_array($data) ? $data : [];
     }
 
@@ -51,5 +61,14 @@ final class DataStore
     {
         $seed = require $this->seedPath;
         $this->save($seed);
+    }
+
+    private function backupCorruptData(): void
+    {
+        if (! is_file($this->path)) {
+            return;
+        }
+
+        copy($this->path, $this->path . '.corrupt-' . date('Ymd-His') . '.bak');
     }
 }

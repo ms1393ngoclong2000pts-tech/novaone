@@ -25,6 +25,10 @@ $groups = [
     ],
     'KINH DOANH' => [
         ['id' => 'suppliers', 'label' => 'Nhà cung cấp', 'href' => '?route=suppliers', 'icon' => 'briefcase'],
+        ['id' => 'services', 'label' => 'Dịch vụ', 'href' => '?route=services', 'icon' => 'lifebuoy', 'children' => [
+            ['label' => 'Danh Sách Dịch Vụ', 'href' => '?route=services', 'route' => 'services'],
+            ['label' => 'Danh Sách Sản Phẩm', 'href' => '?route=products', 'route' => 'products'],
+        ]],
         ['id' => 'sales', 'label' => 'Bán hàng', 'href' => '?route=sales-orders', 'icon' => 'cart', 'children' => [
             ['label' => 'Đơn Hàng', 'href' => '?route=sales-orders', 'route' => 'sales-orders'],
             ['label' => 'Báo Giá', 'href' => '?route=sales-orders&stage=quote', 'route' => 'sales-orders.quote'],
@@ -57,7 +61,7 @@ $groups = filter_nav_groups_by_permission($groups);
 <html lang="vi">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Novaone</title>
     <link rel="icon" type="image/png" href="public/assets/novaone-logo.png">
     <link rel="icon" type="image/svg+xml" href="public/assets/novaone-mark.svg">
@@ -114,24 +118,24 @@ $groups = filter_nav_groups_by_permission($groups);
                     <input name="q" value="<?= e($_GET['q'] ?? '') ?>" placeholder="Tìm kiếm..." aria-label="Tìm kiếm">
                     <button class="top-icon" type="submit" aria-label="Tìm kiếm"><?= ui_icon('search') ?></button>
                 </form>
-                <details class="notification-menu">
-                    <summary class="top-icon has-badge" aria-label="Thông báo">
+                                                <details class="notification-menu">
+                    <summary class="top-icon has-badge" aria-label="Th&ocirc;ng b&aacute;o">
                         <?= ui_icon('bell') ?>
                         <?php if (count($unreadNotifications) > 0): ?><span><?= count($unreadNotifications) ?></span><?php endif; ?>
                     </summary>
                     <div class="notification-dropdown">
                         <div class="notification-head">
-                            <strong>Thông báo hoạt động</strong>
-                            <small><?= count($unreadNotifications) ?> mới / <?= count($allNotifications) ?> tất cả</small>
+                            <strong>Th&ocirc;ng b&aacute;o ho&#7841;t &#273;&#7897;ng</strong>
+                            <small><?= count($unreadNotifications) ?> m&#7899;i / <?= count($allNotifications) ?> t&#7845;t c&#7843;</small>
                         </div>
                         <?php if (count($allNotifications) === 0): ?>
-                            <div class="notification-empty">Chưa có thông báo hoạt động.</div>
+                            <div class="notification-empty">Ch&#432;a c&oacute; th&ocirc;ng b&aacute;o ho&#7841;t &#273;&#7897;ng.</div>
                         <?php endif; ?>
                         <?php foreach ($visibleNotifications as $notification): ?>
                             <a class="<?= empty($notification['read_at']) ? 'unread' : '' ?>" href="?route=notification.read&id=<?= e($notification['id']) ?>">
                                 <span class="activity-dot <?= e($notification['type'] ?? 'info') ?>"></span>
                                 <span>
-                                    <strong><?= e($notification['title'] ?? 'Thông báo') ?></strong>
+                                    <strong><?= e($notification['title'] ?? html_entity_decode('Th&ocirc;ng b&aacute;o', ENT_QUOTES, 'UTF-8')) ?></strong>
                                     <small><?= e($notification['message'] ?? '') ?></small>
                                 </span>
                             </a>
@@ -140,20 +144,20 @@ $groups = filter_nav_groups_by_permission($groups);
                             <a class="notification-extra <?= empty($notification['read_at']) ? 'unread' : '' ?>" href="?route=notification.read&id=<?= e($notification['id']) ?>">
                                 <span class="activity-dot <?= e($notification['type'] ?? 'info') ?>"></span>
                                 <span>
-                                    <strong><?= e($notification['title'] ?? 'Thông báo') ?></strong>
+                                    <strong><?= e($notification['title'] ?? html_entity_decode('Th&ocirc;ng b&aacute;o', ENT_QUOTES, 'UTF-8')) ?></strong>
                                     <small><?= e($notification['message'] ?? '') ?></small>
                                 </span>
                             </a>
                         <?php endforeach; ?>
                         <?php if ($hasMoreNotifications): ?>
-                            <button class="notification-show-all" type="button">Hiển thị tất cả thông báo</button>
+                            <button class="notification-show-all" type="button">Hi&#7875;n th&#7883; t&#7845;t c&#7843; th&ocirc;ng b&aacute;o</button>
                         <?php endif; ?>
                         <?php if (count($unreadNotifications) > 0): ?>
-                            <a class="notification-read-all" href="?route=notification.readAll">Đánh dấu đã đọc tất cả</a>
+                            <a class="notification-read-all" href="?route=notification.readAll">&#272;&aacute;nh d&#7845;u &#273;&atilde; &#273;&#7885;c t&#7845;t c&#7843;</a>
                         <?php endif; ?>
                     </div>
                 </details>
-                <button class="top-icon" type="button" aria-label="Email"><?= ui_icon('mail') ?></button>
+<button class="top-icon" type="button" aria-label="Email"><?= ui_icon('mail') ?></button>
                 <a class="top-icon" href="?route=calls" aria-label="Điện thoại"><?= ui_icon('phone') ?></a>
                 <details class="user-menu">
                     <summary class="user-chip">
