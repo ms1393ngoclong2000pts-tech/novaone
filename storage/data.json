@@ -39,6 +39,156 @@
             "position": "Developer",
             "contract": "Thử việc",
             "status": "on_leave"
+        },
+        {
+            "id": "e_hr_101",
+            "name": "Tran Ngoc Long",
+            "department": "Admin",
+            "position": "Manager",
+            "employee_code": "NV101",
+            "code": "NV101",
+            "gender": "Nam",
+            "email": "long@novaone.vn",
+            "phone": "0901000101",
+            "address": "207 An Duong Vuong",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_102",
+            "name": "Ho Viet Nhan",
+            "department": "Kinh doanh",
+            "position": "Nhan vien",
+            "employee_code": "NV102",
+            "code": "NV102",
+            "gender": "Nam",
+            "email": "nhanhv@novaone.vn",
+            "phone": "0901000102",
+            "address": "Quan 1, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_103",
+            "name": "Lam Quoc Tuan",
+            "department": "Cong nghe",
+            "position": "Developer",
+            "employee_code": "NV103",
+            "code": "NV103",
+            "gender": "Nam",
+            "email": "tuanlq@novaone.vn",
+            "phone": "0901000103",
+            "address": "Quan 3, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_104",
+            "name": "Nguyen Huu Phuong",
+            "department": "Cong nghe",
+            "position": "Developer",
+            "employee_code": "NV104",
+            "code": "NV104",
+            "gender": "Nam",
+            "email": "phuongnh@novaone.vn",
+            "phone": "0901000104",
+            "address": "Thu Duc, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_105",
+            "name": "Hoang Trong Tin",
+            "department": "Kinh doanh",
+            "position": "Sales Executive",
+            "employee_code": "NV105",
+            "code": "NV105",
+            "gender": "Nam",
+            "email": "tinht@novaone.vn",
+            "phone": "0901000105",
+            "address": "Binh Thanh, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_106",
+            "name": "Nguyen Khoa Anh Kinh",
+            "department": "Nhan su",
+            "position": "HR Executive",
+            "employee_code": "NV106",
+            "code": "NV106",
+            "gender": "Nam",
+            "email": "kinhnka@novaone.vn",
+            "phone": "0901000106",
+            "address": "Go Vap, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_107",
+            "name": "Vo Thuan",
+            "department": "Kho van",
+            "position": "Warehouse Staff",
+            "employee_code": "NV107",
+            "code": "NV107",
+            "gender": "Nam",
+            "email": "thuanv@novaone.vn",
+            "phone": "0901000107",
+            "address": "Tan Binh, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_108",
+            "name": "Tran Xuan Quang",
+            "department": "Ke toan",
+            "position": "Accountant",
+            "employee_code": "NV108",
+            "code": "NV108",
+            "gender": "Nam",
+            "email": "quangtx@novaone.vn",
+            "phone": "0901000108",
+            "address": "Phu Nhuan, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_109",
+            "name": "Le Hoang Minh Quy",
+            "department": "CSKH",
+            "position": "CSKH",
+            "employee_code": "NV109",
+            "code": "NV109",
+            "gender": "Nam",
+            "email": "quylhm@novaone.vn",
+            "phone": "0901000109",
+            "address": "Quan 7, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
+        },
+        {
+            "id": "e_hr_110",
+            "name": "Nguyen Xuan Hung",
+            "department": "Tuyen Dung",
+            "position": "Recruiter",
+            "employee_code": "NV110",
+            "code": "NV110",
+            "gender": "Nam",
+            "email": "hungnx@novaone.vn",
+            "phone": "0901000110",
+            "address": "Quan 10, TP.HCM",
+            "birth_date": "1995-07-02",
+            "contract": "Chinh thuc",
+            "status": "active"
         }
     ],
     "contracts": [
@@ -121,6 +271,28 @@
             "end_date": "2028-05-31",
             "contract_type": "dai_han",
             "note": "Hợp đồng dài hạn"
+        },
+        {
+            "id": "ct_sample_1",
+            "contract_code": "HD-2026-001",
+            "employee_name": "Tran Ngoc Long",
+            "employee_id": "e_hr_101",
+            "salary": 9900000,
+            "start_date": "2026-02-01",
+            "end_date": "2027-02-01",
+            "contract_type": "thu_viec",
+            "note": "Hop dong mau 1"
+        },
+        {
+            "id": "ct_sample_2",
+            "contract_code": "HD-2026-002",
+            "employee_name": "Ho Viet Nhan",
+            "employee_id": "e_hr_102",
+            "salary": 10800000,
+            "start_date": "2026-03-01",
+            "end_date": "2027-03-01",
+            "contract_type": "chinh_thuc",
+            "note": "Hop dong mau 2"
         }
     ],
     "social_insurance": [
@@ -183,6 +355,71 @@
             "contribution": 1680000,
             "hospital": "Bệnh viện Đa khoa Tâm Anh",
             "note": "Mới đăng ký"
+        },
+        {
+            "id": "bh_sample_1",
+            "employee_name": "Tran Ngoc Long",
+            "employee_id": "e_hr_101",
+            "employee_code": "long@novaone.vn",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-100001",
+            "salary": 9800000,
+            "contribution": 980000,
+            "hospital": "Benh vien Tam Anh",
+            "note": "Tham gia day du"
+        },
+        {
+            "id": "bh_sample_2",
+            "employee_name": "Ho Viet Nhan",
+            "employee_id": "e_hr_102",
+            "employee_code": "nhanhv@novaone.vn",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-100002",
+            "salary": 10600000,
+            "contribution": 1060000,
+            "hospital": "Benh vien Dai hoc Y Duoc",
+            "note": "Tham gia day du"
+        },
+        {
+            "id": "bh_sample_3",
+            "employee_name": "Lam Quoc Tuan",
+            "employee_id": "e_hr_103",
+            "employee_code": "tuanlq@novaone.vn",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-100003",
+            "salary": 11400000,
+            "contribution": 1140000,
+            "hospital": "Benh vien Thong Nhat",
+            "note": "Tham gia day du"
+        },
+        {
+            "id": "bh_sample_4",
+            "employee_name": "Nguyen Huu Phuong",
+            "employee_id": "e_hr_104",
+            "employee_code": "phuongnh@novaone.vn",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-100004",
+            "salary": 12200000,
+            "contribution": 1220000,
+            "hospital": "Benh vien Tam Anh",
+            "note": "Tham gia day du"
+        },
+        {
+            "id": "bh_sample_5",
+            "employee_name": "Hoang Trong Tin",
+            "employee_id": "e_hr_105",
+            "employee_code": "tinht@novaone.vn",
+            "contract_start": "2026-01-01",
+            "contract_end": "2026-12-31",
+            "insurance_number": "BHXH-100005",
+            "salary": 13000000,
+            "contribution": 1300000,
+            "hospital": "Benh vien Dai hoc Y Duoc",
+            "note": "Tham gia day du"
         }
     ],
     "violations": [
@@ -257,6 +494,26 @@
             "description": "Không cập nhật trạng thái công việc cuối ngày.",
             "penalty": 100000,
             "resolution": "Nhắc nhở lần đầu"
+        },
+        {
+            "id": "vp_sample_1",
+            "employee_name": "Tran Ngoc Long",
+            "employee_id": "e_hr_101",
+            "violation_date": "2026-06-11",
+            "violation_type": "Vi pham noi quy",
+            "description": "Phieu vi pham mau 1",
+            "penalty": 50000,
+            "resolution": "Nhac nho va theo doi"
+        },
+        {
+            "id": "vp_sample_2",
+            "employee_name": "Ho Viet Nhan",
+            "employee_id": "e_hr_102",
+            "violation_date": "2026-06-12",
+            "violation_type": "Vi pham quy trinh",
+            "description": "Phieu vi pham mau 2",
+            "penalty": 100000,
+            "resolution": "Nhac nho va theo doi"
         }
     ],
     "rewards": [
@@ -313,6 +570,46 @@
             "description": "Hỗ trợ đào tạo người dùng hệ thống mới.",
             "amount": 1000000,
             "decision_number": "QDKT-2026-006"
+        },
+        {
+            "id": "kt_sample_1",
+            "employee_name": "Tran Ngoc Long",
+            "employee_id": "e_hr_101",
+            "reward_date": "2026-06-06",
+            "reward_type": "Dong gop y tuong",
+            "description": "Phieu khen thuong mau 1",
+            "amount": 700000,
+            "decision_number": "QDKT-2026-001"
+        },
+        {
+            "id": "kt_sample_2",
+            "employee_name": "Ho Viet Nhan",
+            "employee_id": "e_hr_102",
+            "reward_date": "2026-06-07",
+            "reward_type": "Hoan thanh du an",
+            "description": "Phieu khen thuong mau 2",
+            "amount": 900000,
+            "decision_number": "QDKT-2026-002"
+        },
+        {
+            "id": "kt_sample_3",
+            "employee_name": "Lam Quoc Tuan",
+            "employee_id": "e_hr_103",
+            "reward_date": "2026-06-08",
+            "reward_type": "Nhan vien xuat sac",
+            "description": "Phieu khen thuong mau 3",
+            "amount": 1100000,
+            "decision_number": "QDKT-2026-003"
+        },
+        {
+            "id": "kt_sample_4",
+            "employee_name": "Nguyen Huu Phuong",
+            "employee_id": "e_hr_104",
+            "reward_date": "2026-06-09",
+            "reward_type": "Dong gop y tuong",
+            "description": "Phieu khen thuong mau 4",
+            "amount": 1300000,
+            "decision_number": "QDKT-2026-004"
         }
     ],
     "projects": [
@@ -411,6 +708,30 @@
             "manager": "Quang Le",
             "budget": 2500000000,
             "description": "Nền tảng AI phân tích dữ liệu doanh nghiệp."
+        },
+        {
+            "id": "pr_sample_1",
+            "name": "Takashimaya",
+            "category": "Phan mem",
+            "company": "bData co.,ltd",
+            "start_date": "2026-02-01",
+            "end_date": "2026-07-28",
+            "status": "in_progress",
+            "manager": "Tran Ngoc Long",
+            "budget": 250000000,
+            "description": "Du an mau 1"
+        },
+        {
+            "id": "pr_sample_2",
+            "name": "MPRO",
+            "category": "Du lieu",
+            "company": "CONG TY TNHH DIC VIET NAM",
+            "start_date": "2026-03-01",
+            "end_date": "2026-08-28",
+            "status": "completed",
+            "manager": "Ho Viet Nhan",
+            "budget": 300000000,
+            "description": "Du an mau 2"
         }
     ],
     "daily_reports": [
@@ -458,20 +779,70 @@
             "details": "Soạn hướng dẫn sử dụng chức năng thiết kế.",
             "hours": 4,
             "report_date": "2026-06-19"
+        },
+        {
+            "id": "dr_sample_1",
+            "project": "Takashimaya",
+            "category": "Kiem thu",
+            "employee": "Tran Ngoc Long",
+            "employee_id": "e_hr_101",
+            "details": "Bao cao cong viec hang ngay mau 1",
+            "hours": 5,
+            "report_date": "2026-06-11"
+        },
+        {
+            "id": "dr_sample_2",
+            "project": "MPRO",
+            "category": "Bao cao",
+            "employee": "Ho Viet Nhan",
+            "employee_id": "e_hr_102",
+            "details": "Bao cao cong viec hang ngay mau 2",
+            "hours": 6,
+            "report_date": "2026-06-12"
+        },
+        {
+            "id": "dr_sample_3",
+            "project": "San Nong San Quoc Te",
+            "category": "Tai lieu",
+            "employee": "Lam Quoc Tuan",
+            "employee_id": "e_hr_103",
+            "details": "Bao cao cong viec hang ngay mau 3",
+            "hours": 7,
+            "report_date": "2026-06-13"
+        },
+        {
+            "id": "dr_sample_4",
+            "project": "CMD ROYAL",
+            "category": "Phat trien",
+            "employee": "Nguyen Huu Phuong",
+            "employee_id": "e_hr_104",
+            "details": "Bao cao cong viec hang ngay mau 4",
+            "hours": 8,
+            "report_date": "2026-06-14"
+        },
+        {
+            "id": "dr_sample_5",
+            "project": "Green Pin",
+            "category": "Kiem thu",
+            "employee": "Hoang Trong Tin",
+            "employee_id": "e_hr_105",
+            "details": "Bao cao cong viec hang ngay mau 5",
+            "hours": 4,
+            "report_date": "2026-06-15"
         }
     ],
     "tasks": [
         {
             "id": "t1",
             "title": "Thiết kế database phase 1",
-            "project": "Core ERP",
-            "assignee": "Quang Le",
-            "status": "in_progress",
-            "deadline": "2026-06-25",
+            "project": "",
             "category": "Công việc chung",
             "hours": 0,
+            "assignee": "Quang Le",
             "start_date": "2026-07-01",
-            "completion_date": "2026-06-25",
+            "completion_date": "2026-07-25",
+            "deadline": "2026-07-25",
+            "status": "in_progress",
             "progress": 0,
             "priority": "normal",
             "description": ""
@@ -580,6 +951,32 @@
             "progress": 10,
             "priority": "low",
             "description": "Biên soạn hướng dẫn sử dụng cho khách hàng."
+        },
+        {
+            "id": "task_sample_1",
+            "title": "Cong viec mau 1",
+            "project": "Takashimaya",
+            "category": "Frontend",
+            "assignee": "Tran Ngoc Long",
+            "assignee_id": "e_hr_101",
+            "start_date": "2026-06-01",
+            "deadline": "2026-07-11",
+            "status": "in_progress",
+            "hours": 3,
+            "progress": 10
+        },
+        {
+            "id": "task_sample_2",
+            "title": "Cong viec mau 2",
+            "project": "MPRO",
+            "category": "Kiem thu",
+            "assignee": "Ho Viet Nhan",
+            "assignee_id": "e_hr_102",
+            "start_date": "2026-06-01",
+            "deadline": "2026-07-12",
+            "status": "completed",
+            "hours": 4,
+            "progress": 20
         }
     ],
     "training": [
@@ -598,6 +995,70 @@
             "trainer": "Admin Novaone",
             "progress": 100,
             "status": "completed"
+        },
+        {
+            "id": "tr_sample_1",
+            "course": "Khoa hoc mau 1",
+            "employee": "Tran Ngoc Long",
+            "trainer": "Ho Viet Nhan",
+            "progress": 10,
+            "status": "in_progress"
+        },
+        {
+            "id": "tr_sample_2",
+            "course": "Khoa hoc mau 2",
+            "employee": "Ho Viet Nhan",
+            "trainer": "Lam Quoc Tuan",
+            "progress": 20,
+            "status": "in_progress"
+        },
+        {
+            "id": "tr_sample_3",
+            "course": "Khoa hoc mau 3",
+            "employee": "Lam Quoc Tuan",
+            "trainer": "Nguyen Huu Phuong",
+            "progress": 30,
+            "status": "completed"
+        },
+        {
+            "id": "tr_sample_4",
+            "course": "Khoa hoc mau 4",
+            "employee": "Nguyen Huu Phuong",
+            "trainer": "Hoang Trong Tin",
+            "progress": 40,
+            "status": "in_progress"
+        },
+        {
+            "id": "tr_sample_5",
+            "course": "Khoa hoc mau 5",
+            "employee": "Hoang Trong Tin",
+            "trainer": "Nguyen Khoa Anh Kinh",
+            "progress": 50,
+            "status": "in_progress"
+        },
+        {
+            "id": "tr_sample_6",
+            "course": "Khoa hoc mau 6",
+            "employee": "Nguyen Khoa Anh Kinh",
+            "trainer": "Vo Thuan",
+            "progress": 60,
+            "status": "completed"
+        },
+        {
+            "id": "tr_sample_7",
+            "course": "Khoa hoc mau 7",
+            "employee": "Vo Thuan",
+            "trainer": "Tran Xuan Quang",
+            "progress": 70,
+            "status": "in_progress"
+        },
+        {
+            "id": "tr_sample_8",
+            "course": "Khoa hoc mau 8",
+            "employee": "Tran Xuan Quang",
+            "trainer": "Le Hoang Minh Quy",
+            "progress": 80,
+            "status": "in_progress"
         }
     ],
     "recruitments": [
@@ -614,6 +1075,62 @@
             "candidate": "Mai Do",
             "stage": "offer",
             "owner": "Linh Tran"
+        },
+        {
+            "id": "rec_sample_1",
+            "position": "Sales Executive",
+            "candidate": "Ung vien mau 1",
+            "stage": "interview",
+            "owner": "Tran Ngoc Long"
+        },
+        {
+            "id": "rec_sample_2",
+            "position": "HR Executive",
+            "candidate": "Ung vien mau 2",
+            "stage": "offer",
+            "owner": "Ho Viet Nhan"
+        },
+        {
+            "id": "rec_sample_3",
+            "position": "Accountant",
+            "candidate": "Ung vien mau 3",
+            "stage": "hired",
+            "owner": "Lam Quoc Tuan"
+        },
+        {
+            "id": "rec_sample_4",
+            "position": "Tester",
+            "candidate": "Ung vien mau 4",
+            "stage": "new",
+            "owner": "Nguyen Huu Phuong"
+        },
+        {
+            "id": "rec_sample_5",
+            "position": "Backend Developer",
+            "candidate": "Ung vien mau 5",
+            "stage": "interview",
+            "owner": "Hoang Trong Tin"
+        },
+        {
+            "id": "rec_sample_6",
+            "position": "Sales Executive",
+            "candidate": "Ung vien mau 6",
+            "stage": "offer",
+            "owner": "Nguyen Khoa Anh Kinh"
+        },
+        {
+            "id": "rec_sample_7",
+            "position": "HR Executive",
+            "candidate": "Ung vien mau 7",
+            "stage": "hired",
+            "owner": "Vo Thuan"
+        },
+        {
+            "id": "rec_sample_8",
+            "position": "Accountant",
+            "candidate": "Ung vien mau 8",
+            "stage": "new",
+            "owner": "Tran Xuan Quang"
         }
     ],
     "customers": [
@@ -632,6 +1149,70 @@
             "phone": "0902 333 444",
             "owner": "Ha Pham",
             "status": "active"
+        },
+        {
+            "id": "cus_sample_1",
+            "name": "Khach hang mau 1",
+            "type": "customer",
+            "phone": "0902100001",
+            "owner": "Tran Ngoc Long",
+            "status": "active"
+        },
+        {
+            "id": "cus_sample_2",
+            "name": "Khach hang mau 2",
+            "type": "customer",
+            "phone": "0902100002",
+            "owner": "Ho Viet Nhan",
+            "status": "vip"
+        },
+        {
+            "id": "cus_sample_3",
+            "name": "Khach hang mau 3",
+            "type": "customer",
+            "phone": "0902100003",
+            "owner": "Lam Quoc Tuan",
+            "status": "active"
+        },
+        {
+            "id": "cus_sample_4",
+            "name": "Khach hang mau 4",
+            "type": "customer",
+            "phone": "0902100004",
+            "owner": "Nguyen Huu Phuong",
+            "status": "vip"
+        },
+        {
+            "id": "cus_sample_5",
+            "name": "Khach hang mau 5",
+            "type": "customer",
+            "phone": "0902100005",
+            "owner": "Hoang Trong Tin",
+            "status": "active"
+        },
+        {
+            "id": "cus_sample_6",
+            "name": "Khach hang mau 6",
+            "type": "customer",
+            "phone": "0902100006",
+            "owner": "Nguyen Khoa Anh Kinh",
+            "status": "vip"
+        },
+        {
+            "id": "cus_sample_7",
+            "name": "Khach hang mau 7",
+            "type": "customer",
+            "phone": "0902100007",
+            "owner": "Vo Thuan",
+            "status": "active"
+        },
+        {
+            "id": "cus_sample_8",
+            "name": "Khach hang mau 8",
+            "type": "customer",
+            "phone": "0902100008",
+            "owner": "Tran Xuan Quang",
+            "status": "vip"
         }
     ],
     "suppliers": [
@@ -712,6 +1293,58 @@
             "debt": 0,
             "status": "active",
             "note": ""
+        },
+        {
+            "id": "sup_sample_1",
+            "code": "NCC001",
+            "name": "bData co.,ltd",
+            "category": "",
+            "phone": "0287000001",
+            "email": "supplier1@novaone.vn",
+            "address": "Dia chi nha cung cap 1",
+            "contact_person": "",
+            "debt": 0,
+            "status": "active",
+            "note": "Nha cung cap mau 1"
+        },
+        {
+            "id": "sup_sample_2",
+            "code": "NCC002",
+            "name": "CONG TY TNHH DIC VIET NAM",
+            "category": "",
+            "phone": "0287000002",
+            "email": "supplier2@novaone.vn",
+            "address": "Dia chi nha cung cap 2",
+            "contact_person": "",
+            "debt": 0,
+            "status": "active",
+            "note": "Nha cung cap mau 2"
+        },
+        {
+            "id": "sup_sample_3",
+            "code": "NCC003",
+            "name": "NovaTech",
+            "category": "",
+            "phone": "0287000003",
+            "email": "supplier3@novaone.vn",
+            "address": "Dia chi nha cung cap 3",
+            "contact_person": "",
+            "debt": 0,
+            "status": "active",
+            "note": "Nha cung cap mau 3"
+        },
+        {
+            "id": "sup_sample_4",
+            "code": "NCC004",
+            "name": "An Phat Supply",
+            "category": "",
+            "phone": "0287000004",
+            "email": "supplier4@novaone.vn",
+            "address": "Dia chi nha cung cap 4",
+            "contact_person": "",
+            "debt": 0,
+            "status": "active",
+            "note": "Nha cung cap mau 4"
         }
     ],
     "services": [
@@ -743,9 +1376,9 @@
             "id": "svc03",
             "name": "bFIN",
             "level": 1,
-            "parent": "",
+            "parent": "Phần mềm",
             "code": "BFIN",
-            "price": 0,
+            "price": 800000,
             "status": "active",
             "note": "Tài chính kế toán",
             "image": "",
@@ -796,8 +1429,8 @@
             "price": 15000000,
             "status": "active",
             "note": "Triển khai cơ bản",
-            "image": "",
-            "icon": ""
+            "image": "public\/uploads\/services\/image-20260702073144-4f682733.jpg",
+            "icon": "public\/uploads\/services\/icon-20260702073144-db15de98.jpg"
         },
         {
             "id": "svc08",
@@ -854,6 +1487,62 @@
             "amount": 32000000,
             "payment": "paid",
             "status": "delivered"
+        },
+        {
+            "id": "sale_sample_1",
+            "name": "Phieu ban hang 1",
+            "amount": 1500000,
+            "customer": "Khach hang mau 1",
+            "status": "paid"
+        },
+        {
+            "id": "sale_sample_2",
+            "name": "Phieu ban hang 2",
+            "amount": 2000000,
+            "customer": "Khach hang mau 2",
+            "status": "new"
+        },
+        {
+            "id": "sale_sample_3",
+            "name": "Phieu ban hang 3",
+            "amount": 2500000,
+            "customer": "Khach hang mau 3",
+            "status": "paid"
+        },
+        {
+            "id": "sale_sample_4",
+            "name": "Phieu ban hang 4",
+            "amount": 3000000,
+            "customer": "Khach hang mau 4",
+            "status": "new"
+        },
+        {
+            "id": "sale_sample_5",
+            "name": "Phieu ban hang 5",
+            "amount": 3500000,
+            "customer": "Khach hang mau 5",
+            "status": "paid"
+        },
+        {
+            "id": "sale_sample_6",
+            "name": "Phieu ban hang 6",
+            "amount": 4000000,
+            "customer": "Khach hang mau 6",
+            "status": "new"
+        },
+        {
+            "id": "sale_sample_7",
+            "name": "Phieu ban hang 7",
+            "amount": 4500000,
+            "customer": "Khach hang mau 7",
+            "status": "paid"
+        },
+        {
+            "id": "sale_sample_8",
+            "name": "Phieu ban hang 8",
+            "amount": 5000000,
+            "customer": "Khach hang mau 8",
+            "status": "new"
         }
     ],
     "pos": [
@@ -874,6 +1563,62 @@
             "amount": 4500000,
             "payment_method": "card",
             "status": "paid"
+        },
+        {
+            "id": "pos_sample_1",
+            "receipt": "POS-001",
+            "amount": 300000,
+            "cashier": "Tran Ngoc Long",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_2",
+            "receipt": "POS-002",
+            "amount": 400000,
+            "cashier": "Ho Viet Nhan",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_3",
+            "receipt": "POS-003",
+            "amount": 500000,
+            "cashier": "Lam Quoc Tuan",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_4",
+            "receipt": "POS-004",
+            "amount": 600000,
+            "cashier": "Nguyen Huu Phuong",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_5",
+            "receipt": "POS-005",
+            "amount": 700000,
+            "cashier": "Hoang Trong Tin",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_6",
+            "receipt": "POS-006",
+            "amount": 800000,
+            "cashier": "Nguyen Khoa Anh Kinh",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_7",
+            "receipt": "POS-007",
+            "amount": 900000,
+            "cashier": "Vo Thuan",
+            "status": "paid"
+        },
+        {
+            "id": "pos_sample_8",
+            "receipt": "POS-008",
+            "amount": 1000000,
+            "cashier": "Tran Xuan Quang",
+            "status": "paid"
         }
     ],
     "tickets": [
@@ -892,9 +1637,156 @@
             "issue": "Yêu cầu xuất báo cáo bán hàng",
             "owner": "Minh Nguyen",
             "status": "new"
+        },
+        {
+            "id": "ticket_sample_1",
+            "title": "Ticket ho tro 1",
+            "requester": "Tran Ngoc Long",
+            "status": "processing",
+            "priority": "medium"
+        },
+        {
+            "id": "ticket_sample_2",
+            "title": "Ticket ho tro 2",
+            "requester": "Ho Viet Nhan",
+            "status": "closed",
+            "priority": "high"
+        },
+        {
+            "id": "ticket_sample_3",
+            "title": "Ticket ho tro 3",
+            "requester": "Lam Quoc Tuan",
+            "status": "open",
+            "priority": "low"
+        },
+        {
+            "id": "ticket_sample_4",
+            "title": "Ticket ho tro 4",
+            "requester": "Nguyen Huu Phuong",
+            "status": "processing",
+            "priority": "medium"
+        },
+        {
+            "id": "ticket_sample_5",
+            "title": "Ticket ho tro 5",
+            "requester": "Hoang Trong Tin",
+            "status": "closed",
+            "priority": "high"
+        },
+        {
+            "id": "ticket_sample_6",
+            "title": "Ticket ho tro 6",
+            "requester": "Nguyen Khoa Anh Kinh",
+            "status": "open",
+            "priority": "low"
+        },
+        {
+            "id": "ticket_sample_7",
+            "title": "Ticket ho tro 7",
+            "requester": "Vo Thuan",
+            "status": "processing",
+            "priority": "medium"
+        },
+        {
+            "id": "ticket_sample_8",
+            "title": "Ticket ho tro 8",
+            "requester": "Tran Xuan Quang",
+            "status": "closed",
+            "priority": "high"
         }
     ],
-    "call_logs": [],
+    "call_logs": [
+        {
+            "id": "call_sample_1",
+            "phone": "0903100001",
+            "title": "Cuoc goi mau 1",
+            "content": "Noi dung cham soc khach hang mau 1",
+            "customer": "Khach hang mau 1",
+            "contact": "Tran Ngoc Long",
+            "created_at": "2026-07-02 09:01:00"
+        },
+        {
+            "id": "call_sample_2",
+            "phone": "0903100002",
+            "title": "Cuoc goi mau 2",
+            "content": "Noi dung cham soc khach hang mau 2",
+            "customer": "Khach hang mau 2",
+            "contact": "Ho Viet Nhan",
+            "created_at": "2026-07-02 09:02:00"
+        },
+        {
+            "id": "call_sample_3",
+            "phone": "0903100003",
+            "title": "Cuoc goi mau 3",
+            "content": "Noi dung cham soc khach hang mau 3",
+            "customer": "Khach hang mau 3",
+            "contact": "Lam Quoc Tuan",
+            "created_at": "2026-07-02 09:03:00"
+        },
+        {
+            "id": "call_sample_4",
+            "phone": "0903100004",
+            "title": "Cuoc goi mau 4",
+            "content": "Noi dung cham soc khach hang mau 4",
+            "customer": "Khach hang mau 4",
+            "contact": "Nguyen Huu Phuong",
+            "created_at": "2026-07-02 09:04:00"
+        },
+        {
+            "id": "call_sample_5",
+            "phone": "0903100005",
+            "title": "Cuoc goi mau 5",
+            "content": "Noi dung cham soc khach hang mau 5",
+            "customer": "Khach hang mau 5",
+            "contact": "Hoang Trong Tin",
+            "created_at": "2026-07-02 09:05:00"
+        },
+        {
+            "id": "call_sample_6",
+            "phone": "0903100006",
+            "title": "Cuoc goi mau 6",
+            "content": "Noi dung cham soc khach hang mau 6",
+            "customer": "Khach hang mau 6",
+            "contact": "Nguyen Khoa Anh Kinh",
+            "created_at": "2026-07-02 09:06:00"
+        },
+        {
+            "id": "call_sample_7",
+            "phone": "0903100007",
+            "title": "Cuoc goi mau 7",
+            "content": "Noi dung cham soc khach hang mau 7",
+            "customer": "Khach hang mau 7",
+            "contact": "Vo Thuan",
+            "created_at": "2026-07-02 09:07:00"
+        },
+        {
+            "id": "call_sample_8",
+            "phone": "0903100008",
+            "title": "Cuoc goi mau 8",
+            "content": "Noi dung cham soc khach hang mau 8",
+            "customer": "Khach hang mau 8",
+            "contact": "Tran Xuan Quang",
+            "created_at": "2026-07-02 09:08:00"
+        },
+        {
+            "id": "call_sample_9",
+            "phone": "0903100009",
+            "title": "Cuoc goi mau 9",
+            "content": "Noi dung cham soc khach hang mau 9",
+            "customer": "Khach hang mau 9",
+            "contact": "Le Hoang Minh Quy",
+            "created_at": "2026-07-02 09:09:00"
+        },
+        {
+            "id": "call_sample_10",
+            "phone": "0903100010",
+            "title": "Cuoc goi mau 10",
+            "content": "Noi dung cham soc khach hang mau 10",
+            "customer": "Khach hang mau 10",
+            "contact": "Nguyen Xuan Hung",
+            "created_at": "2026-07-02 09:10:00"
+        }
+    ],
     "inventory": [
         {
             "id": "i1",
@@ -913,6 +1805,70 @@
             "quantity": 6,
             "min": 20,
             "status": "low"
+        },
+        {
+            "id": "inv_sample_1",
+            "sku": "INV-001",
+            "name": "Hang ton mau 1",
+            "quantity": 21,
+            "warehouse": "Kho mau 1",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_2",
+            "sku": "INV-002",
+            "name": "Hang ton mau 2",
+            "quantity": 22,
+            "warehouse": "Kho mau 2",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_3",
+            "sku": "INV-003",
+            "name": "Hang ton mau 3",
+            "quantity": 23,
+            "warehouse": "Kho mau 3",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_4",
+            "sku": "INV-004",
+            "name": "Hang ton mau 4",
+            "quantity": 24,
+            "warehouse": "Kho mau 4",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_5",
+            "sku": "INV-005",
+            "name": "Hang ton mau 5",
+            "quantity": 25,
+            "warehouse": "Kho mau 5",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_6",
+            "sku": "INV-006",
+            "name": "Hang ton mau 6",
+            "quantity": 26,
+            "warehouse": "Kho mau 6",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_7",
+            "sku": "INV-007",
+            "name": "Hang ton mau 7",
+            "quantity": 27,
+            "warehouse": "Kho mau 7",
+            "status": "available"
+        },
+        {
+            "id": "inv_sample_8",
+            "sku": "INV-008",
+            "name": "Hang ton mau 8",
+            "quantity": 28,
+            "warehouse": "Kho mau 8",
+            "status": "available"
         }
     ],
     "internal_assets": [
@@ -930,6 +1886,62 @@
             "name": "Máy chiếu phòng họp",
             "assigned_to": "Phòng Hành chính",
             "quantity": 1,
+            "status": "available"
+        },
+        {
+            "id": "asset_sample_1",
+            "name": "Tai san noi bo 1",
+            "owner": "Tran Ngoc Long",
+            "department": "Admin",
+            "status": "using"
+        },
+        {
+            "id": "asset_sample_2",
+            "name": "Tai san noi bo 2",
+            "owner": "Ho Viet Nhan",
+            "department": "Kinh doanh",
+            "status": "available"
+        },
+        {
+            "id": "asset_sample_3",
+            "name": "Tai san noi bo 3",
+            "owner": "Lam Quoc Tuan",
+            "department": "Cong nghe",
+            "status": "using"
+        },
+        {
+            "id": "asset_sample_4",
+            "name": "Tai san noi bo 4",
+            "owner": "Nguyen Huu Phuong",
+            "department": "Cong nghe",
+            "status": "available"
+        },
+        {
+            "id": "asset_sample_5",
+            "name": "Tai san noi bo 5",
+            "owner": "Hoang Trong Tin",
+            "department": "Kinh doanh",
+            "status": "using"
+        },
+        {
+            "id": "asset_sample_6",
+            "name": "Tai san noi bo 6",
+            "owner": "Nguyen Khoa Anh Kinh",
+            "department": "Nhan su",
+            "status": "available"
+        },
+        {
+            "id": "asset_sample_7",
+            "name": "Tai san noi bo 7",
+            "owner": "Vo Thuan",
+            "department": "Kho van",
+            "status": "using"
+        },
+        {
+            "id": "asset_sample_8",
+            "name": "Tai san noi bo 8",
+            "owner": "Tran Xuan Quang",
+            "department": "Ke toan",
             "status": "available"
         }
     ],
@@ -949,6 +1961,70 @@
             "metric": "4 nhân sự",
             "progress": 45,
             "status": "risk"
+        },
+        {
+            "id": "kpi_sample_1",
+            "name": "Muc tieu KPI 1",
+            "owner": "Tran Ngoc Long",
+            "target": 110,
+            "current": 8,
+            "status": "active"
+        },
+        {
+            "id": "kpi_sample_2",
+            "name": "Muc tieu KPI 2",
+            "owner": "Ho Viet Nhan",
+            "target": 120,
+            "current": 16,
+            "status": "review"
+        },
+        {
+            "id": "kpi_sample_3",
+            "name": "Muc tieu KPI 3",
+            "owner": "Lam Quoc Tuan",
+            "target": 130,
+            "current": 24,
+            "status": "active"
+        },
+        {
+            "id": "kpi_sample_4",
+            "name": "Muc tieu KPI 4",
+            "owner": "Nguyen Huu Phuong",
+            "target": 140,
+            "current": 32,
+            "status": "review"
+        },
+        {
+            "id": "kpi_sample_5",
+            "name": "Muc tieu KPI 5",
+            "owner": "Hoang Trong Tin",
+            "target": 150,
+            "current": 40,
+            "status": "active"
+        },
+        {
+            "id": "kpi_sample_6",
+            "name": "Muc tieu KPI 6",
+            "owner": "Nguyen Khoa Anh Kinh",
+            "target": 160,
+            "current": 48,
+            "status": "review"
+        },
+        {
+            "id": "kpi_sample_7",
+            "name": "Muc tieu KPI 7",
+            "owner": "Vo Thuan",
+            "target": 170,
+            "current": 56,
+            "status": "active"
+        },
+        {
+            "id": "kpi_sample_8",
+            "name": "Muc tieu KPI 8",
+            "owner": "Tran Xuan Quang",
+            "target": 180,
+            "current": 64,
+            "status": "review"
         }
     ],
     "okrs": [
@@ -969,6 +2045,62 @@
             "owner": "Minh Nguyen",
             "progress": 48,
             "status": "risk"
+        },
+        {
+            "id": "okr_sample_1",
+            "objective": "Muc tieu OKR 1",
+            "owner": "Tran Ngoc Long",
+            "progress": 9,
+            "status": "active"
+        },
+        {
+            "id": "okr_sample_2",
+            "objective": "Muc tieu OKR 2",
+            "owner": "Ho Viet Nhan",
+            "progress": 18,
+            "status": "review"
+        },
+        {
+            "id": "okr_sample_3",
+            "objective": "Muc tieu OKR 3",
+            "owner": "Lam Quoc Tuan",
+            "progress": 27,
+            "status": "active"
+        },
+        {
+            "id": "okr_sample_4",
+            "objective": "Muc tieu OKR 4",
+            "owner": "Nguyen Huu Phuong",
+            "progress": 36,
+            "status": "review"
+        },
+        {
+            "id": "okr_sample_5",
+            "objective": "Muc tieu OKR 5",
+            "owner": "Hoang Trong Tin",
+            "progress": 45,
+            "status": "active"
+        },
+        {
+            "id": "okr_sample_6",
+            "objective": "Muc tieu OKR 6",
+            "owner": "Nguyen Khoa Anh Kinh",
+            "progress": 54,
+            "status": "review"
+        },
+        {
+            "id": "okr_sample_7",
+            "objective": "Muc tieu OKR 7",
+            "owner": "Vo Thuan",
+            "progress": 63,
+            "status": "active"
+        },
+        {
+            "id": "okr_sample_8",
+            "objective": "Muc tieu OKR 8",
+            "owner": "Tran Xuan Quang",
+            "progress": 72,
+            "status": "review"
         }
     ],
     "shipments": [
@@ -987,6 +2119,62 @@
             "carrier": "Viettel Post",
             "status": "delivered",
             "eta": "2026-06-15"
+        },
+        {
+            "id": "ship_sample_1",
+            "code": "VC0001",
+            "customer": "Khach hang mau 1",
+            "address": "Dia chi giao hang 1",
+            "status": "shipping"
+        },
+        {
+            "id": "ship_sample_2",
+            "code": "VC0002",
+            "customer": "Khach hang mau 2",
+            "address": "Dia chi giao hang 2",
+            "status": "done"
+        },
+        {
+            "id": "ship_sample_3",
+            "code": "VC0003",
+            "customer": "Khach hang mau 3",
+            "address": "Dia chi giao hang 3",
+            "status": "new"
+        },
+        {
+            "id": "ship_sample_4",
+            "code": "VC0004",
+            "customer": "Khach hang mau 4",
+            "address": "Dia chi giao hang 4",
+            "status": "shipping"
+        },
+        {
+            "id": "ship_sample_5",
+            "code": "VC0005",
+            "customer": "Khach hang mau 5",
+            "address": "Dia chi giao hang 5",
+            "status": "done"
+        },
+        {
+            "id": "ship_sample_6",
+            "code": "VC0006",
+            "customer": "Khach hang mau 6",
+            "address": "Dia chi giao hang 6",
+            "status": "new"
+        },
+        {
+            "id": "ship_sample_7",
+            "code": "VC0007",
+            "customer": "Khach hang mau 7",
+            "address": "Dia chi giao hang 7",
+            "status": "shipping"
+        },
+        {
+            "id": "ship_sample_8",
+            "code": "VC0008",
+            "customer": "Khach hang mau 8",
+            "address": "Dia chi giao hang 8",
+            "status": "done"
         }
     ],
     "calendar": [
@@ -1005,6 +2193,62 @@
             "owner": "Ha Pham",
             "date": "2026-06-24",
             "status": "pending"
+        },
+        {
+            "id": "cal_sample_1",
+            "title": "Lich lam viec 1",
+            "date": "2026-07-01",
+            "owner": "Tran Ngoc Long",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_2",
+            "title": "Lich lam viec 2",
+            "date": "2026-07-02",
+            "owner": "Ho Viet Nhan",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_3",
+            "title": "Lich lam viec 3",
+            "date": "2026-07-03",
+            "owner": "Lam Quoc Tuan",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_4",
+            "title": "Lich lam viec 4",
+            "date": "2026-07-04",
+            "owner": "Nguyen Huu Phuong",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_5",
+            "title": "Lich lam viec 5",
+            "date": "2026-07-05",
+            "owner": "Hoang Trong Tin",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_6",
+            "title": "Lich lam viec 6",
+            "date": "2026-07-06",
+            "owner": "Nguyen Khoa Anh Kinh",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_7",
+            "title": "Lich lam viec 7",
+            "date": "2026-07-07",
+            "owner": "Vo Thuan",
+            "type": "work"
+        },
+        {
+            "id": "cal_sample_8",
+            "title": "Lich lam viec 8",
+            "date": "2026-07-08",
+            "owner": "Tran Xuan Quang",
+            "type": "work"
         }
     ],
     "facilities": [
@@ -1023,6 +2267,54 @@
             "type": "vehicle",
             "location": "Kho Hà Nội",
             "status": "in_use"
+        },
+        {
+            "id": "fac_sample_1",
+            "name": "Co so vat chat 1",
+            "location": "Tang 1",
+            "status": "good"
+        },
+        {
+            "id": "fac_sample_2",
+            "name": "Co so vat chat 2",
+            "location": "Tang 2",
+            "status": "maintenance"
+        },
+        {
+            "id": "fac_sample_3",
+            "name": "Co so vat chat 3",
+            "location": "Tang 3",
+            "status": "good"
+        },
+        {
+            "id": "fac_sample_4",
+            "name": "Co so vat chat 4",
+            "location": "Tang 4",
+            "status": "maintenance"
+        },
+        {
+            "id": "fac_sample_5",
+            "name": "Co so vat chat 5",
+            "location": "Tang 5",
+            "status": "good"
+        },
+        {
+            "id": "fac_sample_6",
+            "name": "Co so vat chat 6",
+            "location": "Tang 6",
+            "status": "maintenance"
+        },
+        {
+            "id": "fac_sample_7",
+            "name": "Co so vat chat 7",
+            "location": "Tang 7",
+            "status": "good"
+        },
+        {
+            "id": "fac_sample_8",
+            "name": "Co so vat chat 8",
+            "location": "Tang 8",
+            "status": "maintenance"
         }
     ],
     "permissions": [
@@ -1449,6 +2741,20 @@
             "serial": "CDQ9182760081",
             "project": "Dự án Phú Đa",
             "note": "Máy nhà vườn"
+        },
+        {
+            "id": "am_sample_1",
+            "name": "May cham cong 1",
+            "serial": "SN2026000001",
+            "project": "Takashimaya",
+            "note": "May cham cong mau 1"
+        },
+        {
+            "id": "am_sample_2",
+            "name": "May cham cong 2",
+            "serial": "SN2026000002",
+            "project": "MPRO",
+            "note": "May cham cong mau 2"
         }
     ],
     "payrolls": [
@@ -1472,7 +2778,7 @@
             "employee_scope": "Tất cả",
             "total_salary": 0,
             "created_date": "2026-06-15",
-            "status": "draft",
+            "status": "completed",
             "salary_type": "shift",
             "note": "Đang rà soát dữ liệu ca"
         },
@@ -1535,6 +2841,42 @@
             "status": "completed",
             "salary_type": "shift",
             "note": "Bảng lương tháng 12"
+        },
+        {
+            "id": "pl_sample_1",
+            "name": "Bang luong mau 1",
+            "department": "Admin",
+            "applied_position": "Manager",
+            "employee_scope": "Tat ca",
+            "total_salary": 13500000,
+            "created_date": "2026-06-11",
+            "status": "completed",
+            "salary_type": "fixed",
+            "note": "Du lieu luong mau 1"
+        },
+        {
+            "id": "pl_sample_2",
+            "name": "Bang luong mau 2",
+            "department": "Kinh doanh",
+            "applied_position": "Nhan vien",
+            "employee_scope": "Ho Viet Nhan",
+            "total_salary": 15000000,
+            "created_date": "2026-06-12",
+            "status": "completed",
+            "salary_type": "shift",
+            "note": "Du lieu luong mau 2"
+        },
+        {
+            "id": "pl_sample_3",
+            "name": "Bang luong mau 3",
+            "department": "Cong nghe",
+            "applied_position": "Developer",
+            "employee_scope": "Tat ca",
+            "total_salary": 16500000,
+            "created_date": "2026-06-13",
+            "status": "draft",
+            "salary_type": "fixed",
+            "note": "Du lieu luong mau 3"
         }
     ],
     "products": [
@@ -1565,6 +2907,118 @@
             "status": "in_stock",
             "image": "",
             "note": "Sản phẩm mẫu"
+        },
+        {
+            "id": "prd_sample_1",
+            "name": "San pham mau 1",
+            "sku": "SKU-001",
+            "code": "SP0001",
+            "variant": "Tieu chuan",
+            "category": "Dich vu A",
+            "price": 1750000,
+            "quantity": 3,
+            "revenue": 1750000,
+            "status": "in_stock",
+            "image": "public\/assets\/sample-product-lotus.svg",
+            "note": "San pham mau 1"
+        },
+        {
+            "id": "prd_sample_2",
+            "name": "San pham mau 2",
+            "sku": "SKU-002",
+            "code": "SP0002",
+            "variant": "Cao cap",
+            "category": "Dich vu sua chua",
+            "price": 2500000,
+            "quantity": 6,
+            "revenue": 5000000,
+            "status": "in_stock",
+            "image": "",
+            "note": "San pham mau 2"
+        },
+        {
+            "id": "prd_sample_3",
+            "name": "San pham mau 3",
+            "sku": "SKU-003",
+            "code": "SP0003",
+            "variant": "Tieu chuan",
+            "category": "Phan mem",
+            "price": 3250000,
+            "quantity": 9,
+            "revenue": 9750000,
+            "status": "pending",
+            "image": "",
+            "note": "San pham mau 3"
+        },
+        {
+            "id": "prd_sample_4",
+            "name": "San pham mau 4",
+            "sku": "SKU-004",
+            "code": "SP0004",
+            "variant": "Cao cap",
+            "category": "bERP",
+            "price": 4000000,
+            "quantity": 12,
+            "revenue": 16000000,
+            "status": "in_stock",
+            "image": "",
+            "note": "San pham mau 4"
+        },
+        {
+            "id": "prd_sample_5",
+            "name": "San pham mau 5",
+            "sku": "SKU-005",
+            "code": "SP0005",
+            "variant": "Tieu chuan",
+            "category": "Dich vu A",
+            "price": 4750000,
+            "quantity": 15,
+            "revenue": 23750000,
+            "status": "in_stock",
+            "image": "",
+            "note": "San pham mau 5"
+        },
+        {
+            "id": "prd_sample_6",
+            "name": "San pham mau 6",
+            "sku": "SKU-006",
+            "code": "SP0006",
+            "variant": "Cao cap",
+            "category": "Dich vu sua chua",
+            "price": 5500000,
+            "quantity": 18,
+            "revenue": 33000000,
+            "status": "pending",
+            "image": "",
+            "note": "San pham mau 6"
+        },
+        {
+            "id": "prd_sample_7",
+            "name": "San pham mau 7",
+            "sku": "SKU-007",
+            "code": "SP0007",
+            "variant": "Tieu chuan",
+            "category": "Phan mem",
+            "price": 6250000,
+            "quantity": 21,
+            "revenue": 43750000,
+            "status": "in_stock",
+            "image": "",
+            "note": "San pham mau 7"
+        },
+        {
+            "id": "prd_sample_8",
+            "name": "San pham mau 8",
+            "sku": "SKU-008",
+            "code": "SP0008",
+            "variant": "Cao cap",
+            "category": "bERP",
+            "price": 7000000,
+            "quantity": 24,
+            "revenue": 56000000,
+            "status": "in_stock",
+            "image": "",
+            "note": "San pham mau 8"
         }
     ],
     "machine_warehouses": [
@@ -1647,6 +3101,26 @@
             "address": "abc",
             "phone": "123456",
             "note": "Kho khu vực"
+        },
+        {
+            "id": "mw_sample_1",
+            "name": "Kho mau 1",
+            "project": "Takashimaya",
+            "manager": "Tran Ngoc Long",
+            "keeper": "Ho Viet Nhan",
+            "address": "Dia chi kho 1",
+            "phone": "0912100001",
+            "note": "Kho may mau 1"
+        },
+        {
+            "id": "mw_sample_2",
+            "name": "Kho mau 2",
+            "project": "MPRO",
+            "manager": "Ho Viet Nhan",
+            "keeper": "Lam Quoc Tuan",
+            "address": "Dia chi kho 2",
+            "phone": "0912100002",
+            "note": "Kho may mau 2"
         }
     ],
     "equipment_devices": [
@@ -1703,11 +3177,48 @@
             "supplier": "bData co.,ltd",
             "unit": "cái",
             "note": "Thiết bị trình chiếu"
+        },
+        {
+            "id": "dv_sample_1",
+            "name": "Laptop Dell",
+            "code": "TB0001",
+            "unit_price": 550000,
+            "supplier": "bData co.,ltd",
+            "unit": "cai",
+            "note": "Thiet bi mau 1"
+        },
+        {
+            "id": "dv_sample_2",
+            "name": "May in",
+            "code": "TB0002",
+            "unit_price": 800000,
+            "supplier": "CONG TY TNHH DIC VIET NAM",
+            "unit": "cai",
+            "note": "Thiet bi mau 2"
+        },
+        {
+            "id": "dv_sample_3",
+            "name": "May chieu",
+            "code": "TB0003",
+            "unit_price": 1050000,
+            "supplier": "NovaTech",
+            "unit": "cai",
+            "note": "Thiet bi mau 3"
+        },
+        {
+            "id": "dv_sample_4",
+            "name": "Router Wifi",
+            "code": "TB0004",
+            "unit_price": 1300000,
+            "supplier": "An Phat Supply",
+            "unit": "cai",
+            "note": "Thiet bi mau 4"
         }
     ],
     "_migrations": {
         "supplier_sample_rows_v1": true,
-        "work_items_v1": true
+        "work_items_v1": true,
+        "violation_employee_links_v1": true
     },
     "sales_orders": [
         {
@@ -1761,6 +3272,90 @@
             "customer": "Happy Creative",
             "customer_group": "Doanh nghiệp",
             "note": "Đã thanh toán đủ"
+        },
+        {
+            "id": "so_sample_1",
+            "code": "2026SO0001",
+            "name": "Don hang mau 1",
+            "stage": "quote",
+            "contact": "Tran Ngoc Long",
+            "contact_employee_id": "e_hr_101",
+            "amount": 6500000,
+            "unit": "VND",
+            "created_date": "2026-06-06",
+            "customer": "Khach hang mau 1",
+            "customer_group": "Khach le",
+            "note": "Don hang mau 1"
+        },
+        {
+            "id": "so_sample_2",
+            "code": "2026SO0002",
+            "name": "Don hang mau 2",
+            "stage": "contract",
+            "contact": "Ho Viet Nhan",
+            "contact_employee_id": "e_hr_102",
+            "amount": 8000000,
+            "unit": "VND",
+            "created_date": "2026-06-07",
+            "customer": "Khach hang mau 2",
+            "customer_group": "Doanh nghiep",
+            "note": "Don hang mau 2"
+        },
+        {
+            "id": "so_sample_3",
+            "code": "2026SO0003",
+            "name": "Don hang mau 3",
+            "stage": "paid",
+            "contact": "Lam Quoc Tuan",
+            "contact_employee_id": "e_hr_103",
+            "amount": 9500000,
+            "unit": "VND",
+            "created_date": "2026-06-08",
+            "customer": "Khach hang mau 3",
+            "customer_group": "Khach le",
+            "note": "Don hang mau 3"
+        },
+        {
+            "id": "so_sample_4",
+            "code": "2026SO0004",
+            "name": "Don hang mau 4",
+            "stage": "init",
+            "contact": "Nguyen Huu Phuong",
+            "contact_employee_id": "e_hr_104",
+            "amount": 11000000,
+            "unit": "VND",
+            "created_date": "2026-06-09",
+            "customer": "Khach hang mau 4",
+            "customer_group": "Doanh nghiep",
+            "note": "Don hang mau 4"
+        },
+        {
+            "id": "so_sample_5",
+            "code": "2026SO0005",
+            "name": "Don hang mau 5",
+            "stage": "quote",
+            "contact": "Hoang Trong Tin",
+            "contact_employee_id": "e_hr_105",
+            "amount": 12500000,
+            "unit": "VND",
+            "created_date": "2026-06-10",
+            "customer": "Khach hang mau 5",
+            "customer_group": "Khach le",
+            "note": "Don hang mau 5"
+        },
+        {
+            "id": "so_sample_6",
+            "code": "2026SO0006",
+            "name": "Don hang mau 6",
+            "stage": "contract",
+            "contact": "Nguyen Khoa Anh Kinh",
+            "contact_employee_id": "e_hr_106",
+            "amount": 14000000,
+            "unit": "VND",
+            "created_date": "2026-06-11",
+            "customer": "Khach hang mau 6",
+            "customer_group": "Doanh nghiep",
+            "note": "Don hang mau 6"
         }
     ],
     "equipment_types": [
@@ -1781,6 +3376,48 @@
             "name": "Chuột",
             "short_name": "CH",
             "created_at": "2026-05-18 10:03:00"
+        },
+        {
+            "id": "et_sample_1",
+            "name": "May tinh",
+            "short_name": "MT",
+            "created_at": "2026-06-11 08:00:00"
+        },
+        {
+            "id": "et_sample_2",
+            "name": "Server",
+            "short_name": "SV",
+            "created_at": "2026-06-12 08:00:00"
+        },
+        {
+            "id": "et_sample_3",
+            "name": "Man hinh",
+            "short_name": "MH",
+            "created_at": "2026-06-13 08:00:00"
+        },
+        {
+            "id": "et_sample_4",
+            "name": "Thiet bi mang",
+            "short_name": "NET",
+            "created_at": "2026-06-14 08:00:00"
+        },
+        {
+            "id": "et_sample_5",
+            "name": "May in",
+            "short_name": "PR",
+            "created_at": "2026-06-15 08:00:00"
+        },
+        {
+            "id": "et_sample_6",
+            "name": "Phu kien",
+            "short_name": "PK",
+            "created_at": "2026-06-16 08:00:00"
+        },
+        {
+            "id": "et_sample_7",
+            "name": "Camera",
+            "short_name": "CAM",
+            "created_at": "2026-06-17 08:00:00"
         }
     ],
     "purchase_requests": [
@@ -1813,7 +3450,7 @@
             "voucher_no": 17,
             "requester": "bData co.,ltd",
             "department": "Công nghệ",
-            "status": "new",
+            "status": "purchased",
             "needed_date": "2026-05-21",
             "receiver": "bData co.,ltd",
             "approver": "Trần Thị Thu Nguyên",
@@ -1867,6 +3504,48 @@
             "approver": "bData co.,ltd",
             "detail": "Thiết bị hỗ trợ bán hàng.",
             "over_budget": true
+        },
+        {
+            "id": "pur_sample_1",
+            "voucher_no": 101,
+            "requester": "Tran Ngoc Long",
+            "department": "Admin",
+            "status": "purchased",
+            "needed_date": "2026-07-01",
+            "receiver": "Ho Viet Nhan",
+            "approver": "Lam Quoc Tuan",
+            "detail": "Yeu cau mua sam mau 1",
+            "over_budget": false
+        },
+        {
+            "id": "pur_sample_2",
+            "voucher_no": 102,
+            "requester": "Ho Viet Nhan",
+            "requester_id": "e_hr_102",
+            "department": "Kinh doanh",
+            "status": "purchased",
+            "needed_date": "2026-07-02",
+            "receiver": "Lam Quoc Tuan",
+            "receiver_id": "e_hr_103",
+            "approver": "Nguyen Huu Phuong",
+            "approver_id": "e_hr_104",
+            "detail": "Yeu cau mua sam mau 2",
+            "over_budget": false
+        },
+        {
+            "id": "pur_sample_3",
+            "voucher_no": 103,
+            "requester": "Lam Quoc Tuan",
+            "requester_id": "e_hr_103",
+            "department": "Cong nghe",
+            "status": "new",
+            "needed_date": "2026-07-03",
+            "receiver": "Nguyen Huu Phuong",
+            "receiver_id": "e_hr_104",
+            "approver": "Hoang Trong Tin",
+            "approver_id": "e_hr_105",
+            "detail": "Yeu cau mua sam mau 3",
+            "over_budget": false
         }
     ],
     "recruitment_requests": [
@@ -1876,7 +3555,7 @@
             "request_date": "2020-07-20",
             "cost": 200000,
             "status": "approved",
-            "approver": "",
+            "approver": "Vo Thuan",
             "candidate_total": 4,
             "candidate_passed": 0,
             "news_title": "Tuyển nhân sự kinh doanh",
@@ -1889,7 +3568,7 @@
             "request_date": "2020-10-11",
             "cost": 1000000,
             "status": "rejected",
-            "approver": "",
+            "approver": "bData co.,ltd",
             "candidate_total": 0,
             "candidate_passed": 0,
             "news_title": "Tuyển kế toán nội bộ",
@@ -1915,7 +3594,7 @@
             "request_date": "2021-11-11",
             "cost": 1000000,
             "status": "rejected",
-            "approver": "",
+            "approver": "Lam Quoc Tuan",
             "candidate_total": 0,
             "candidate_passed": 0,
             "news_title": "Tuyển hỗ trợ vận hành",
@@ -1928,7 +3607,7 @@
             "request_date": "2021-01-12",
             "cost": 500000,
             "status": "approved",
-            "approver": "",
+            "approver": "Nguyen Khoa Anh Kinh",
             "candidate_total": 3,
             "candidate_passed": 0,
             "news_title": "Tuyển chăm sóc khách hàng",
@@ -1980,12 +3659,582 @@
             "request_date": "2024-08-03",
             "cost": 20000,
             "status": "pending",
-            "approver": "",
+            "approver": "Vo Thuan",
             "candidate_total": 0,
             "candidate_passed": 0,
             "news_title": "Tuyển thiết kế",
             "position": "Designer",
             "description": "Đang chờ duyệt ngân sách."
+        },
+        {
+            "id": "rr_sample_1",
+            "request_no": "101",
+            "request_date": "2026-07-07",
+            "cost": 300000,
+            "status": "rejected",
+            "approver": "Tran Ngoc Long",
+            "candidate_total": 0,
+            "candidate_passed": 0,
+            "news_title": "",
+            "position": "",
+            "description": ""
+        }
+    ],
+    "_notifications": [
+        {
+            "id": "43e10359",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #17.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-07-02 09:25:07",
+            "read_at": null
+        },
+        {
+            "id": "93e56720",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #101.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-07-02 09:25:01",
+            "read_at": null
+        },
+        {
+            "id": "15418e68",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phê duyệt phiếu #101.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-07-02 09:24:56",
+            "read_at": null
+        },
+        {
+            "id": "a1ae3410",
+            "title": "Mua sắm",
+            "message": "Đã cập nhật phiếu mua sắm #101.",
+            "href": "?route=purchasing",
+            "type": "info",
+            "created_at": "2026-07-02 08:43:13",
+            "read_at": null
+        },
+        {
+            "id": "e7effa50",
+            "title": "Phiếu bán hàng",
+            "message": "Đã xóa phiếu 435.",
+            "href": "?route=sales-receipts",
+            "type": "danger",
+            "created_at": "2026-07-02 08:31:57",
+            "read_at": null
+        },
+        {
+            "id": "ccbf957c",
+            "title": "Chỉ tiêu tháng",
+            "message": "Đã thêm chỉ tiêu tháng 3\/2026.",
+            "href": "?route=sales-targets",
+            "type": "success",
+            "created_at": "2026-07-02 08:11:25",
+            "read_at": null
+        },
+        {
+            "id": "e2c66e62",
+            "title": "Chỉ tiêu tháng",
+            "message": "Đã thêm chỉ tiêu tháng 2\/2026.",
+            "href": "?route=sales-targets",
+            "type": "success",
+            "created_at": "2026-07-02 08:09:41",
+            "read_at": null
+        },
+        {
+            "id": "fcf69f45",
+            "title": "Chỉ tiêu tháng",
+            "message": "Đã thêm chỉ tiêu tháng 7\/2026.",
+            "href": "?route=sales-targets",
+            "type": "success",
+            "created_at": "2026-07-02 08:08:02",
+            "read_at": null
+        },
+        {
+            "id": "815a8da4",
+            "title": "Chỉ tiêu tháng",
+            "message": "Đã thêm chỉ tiêu tháng 1\/2025.",
+            "href": "?route=sales-targets",
+            "type": "success",
+            "created_at": "2026-07-02 08:05:52",
+            "read_at": null
+        },
+        {
+            "id": "643b5b6c",
+            "title": "Dịch vụ",
+            "message": "Đã cập nhật ngành hàng Dịch vụ A.",
+            "href": "?route=services",
+            "type": "info",
+            "created_at": "2026-07-02 07:31:44",
+            "read_at": null
+        },
+        {
+            "id": "742052ef",
+            "title": "Dịch vụ",
+            "message": "Đã cập nhật ngành hàng bFIN.",
+            "href": "?route=services",
+            "type": "info",
+            "created_at": "2026-07-02 07:15:33",
+            "read_at": null
+        },
+        {
+            "id": "f1171650",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #1.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-02 06:59:44",
+            "read_at": null
+        },
+        {
+            "id": "33b3f9e5",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #101.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-02 06:59:39",
+            "read_at": null
+        },
+        {
+            "id": "75b640f0",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #2.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-02 06:59:31",
+            "read_at": null
+        },
+        {
+            "id": "1e239ecc",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #5.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-02 06:59:25",
+            "read_at": null
+        },
+        {
+            "id": "12fa1cc0",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #4.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-02 06:59:20",
+            "read_at": null
+        },
+        {
+            "id": "3a6a9842",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #9.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-02 06:59:06",
+            "read_at": null
+        },
+        {
+            "id": "bf8fa1c3",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-07-02 06:58:47",
+            "read_at": null
+        },
+        {
+            "id": "c73c2ca2",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Thiết kế database phase 1.",
+            "href": "?route=work-items",
+            "type": "info",
+            "created_at": "2026-07-01 10:36:55",
+            "read_at": null
+        },
+        {
+            "id": "e9c6bbb0",
+            "title": "Phiếu yêu cầu",
+            "message": "Đã tạo phiếu yêu cầu cho Minh Nguyen.",
+            "href": "?route=requests",
+            "type": "success",
+            "created_at": "2026-07-01 10:29:26",
+            "read_at": null
+        },
+        {
+            "id": "f093cbb0",
+            "title": "Phiếu yêu cầu",
+            "message": "Đã tạo phiếu yêu cầu cho Quang Le.",
+            "href": "?route=requests",
+            "type": "success",
+            "created_at": "2026-07-01 10:28:53",
+            "read_at": null
+        },
+        {
+            "id": "8c7dbed9",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Takashimaya.",
+            "href": "?route=projects",
+            "type": "info",
+            "created_at": "2026-07-01 10:01:09",
+            "read_at": null
+        },
+        {
+            "id": "bc0e8a9e",
+            "title": "Bảng lương",
+            "message": "Đã cập nhật bảng lương Test1.",
+            "href": "?route=payrolls",
+            "type": "info",
+            "created_at": "2026-07-01 10:00:43",
+            "read_at": null
+        },
+        {
+            "id": "210bb4f0",
+            "title": "Hợp đồng lao động",
+            "message": "Đã cập nhật hợp đồng HDHV-2026-002 cho Ha Pham.",
+            "href": "?route=contracts&type=hoc_viec",
+            "type": "info",
+            "created_at": "2026-07-01 10:00:28",
+            "read_at": null
+        },
+        {
+            "id": "1d3cbabf",
+            "title": "Bảng lương",
+            "message": "Đã hoàn thành bảng lương Test.",
+            "href": "?route=payrolls",
+            "type": "success",
+            "created_at": "2026-07-01 09:55:48",
+            "read_at": null
+        },
+        {
+            "id": "noti_sample_1",
+            "title": "Thong bao mau 1",
+            "message": "Du lieu mau da san sang cho tinh nang 1.",
+            "href": "?route=home",
+            "type": "info",
+            "read": false,
+            "created_at": "2026-07-02 10:01:00"
+        },
+        {
+            "id": "noti_sample_2",
+            "title": "Thong bao mau 2",
+            "message": "Du lieu mau da san sang cho tinh nang 2.",
+            "href": "?route=home",
+            "type": "info",
+            "read": false,
+            "created_at": "2026-07-02 10:02:00"
+        },
+        {
+            "id": "noti_sample_3",
+            "title": "Thong bao mau 3",
+            "message": "Du lieu mau da san sang cho tinh nang 3.",
+            "href": "?route=home",
+            "type": "info",
+            "read": false,
+            "created_at": "2026-07-02 10:03:00"
+        }
+    ],
+    "request_forms": [
+        {
+            "id": "e9d8d9dd",
+            "request_type": "overtime",
+            "employee_name": "Minh Nguyen",
+            "department": "Công nghệ",
+            "created_date": "2026-07-01",
+            "start_date": "2026-07-01",
+            "end_date": "2026-07-01",
+            "approval": "approved",
+            "amount": 900000,
+            "detail": ""
+        },
+        {
+            "id": "2124a038",
+            "request_type": "reward",
+            "employee_name": "Quang Le",
+            "department": "Công nghệ",
+            "created_date": "2026-07-01",
+            "start_date": "2026-07-01",
+            "end_date": "2026-07-01",
+            "approval": "pending",
+            "amount": 0,
+            "detail": ""
+        },
+        {
+            "id": "rq01",
+            "request_type": "general",
+            "employee_name": "Minh Nguyen",
+            "department": "Lập Trình Viên",
+            "created_date": "2026-04-23",
+            "start_date": "2026-04-22",
+            "end_date": "2026-04-23",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Đề nghị tham gia hội nghị chuyên môn."
+        },
+        {
+            "id": "rq02",
+            "request_type": "leave",
+            "employee_name": "Ha Pham",
+            "department": "Admin",
+            "created_date": "2024-08-02",
+            "start_date": "2024-08-06",
+            "end_date": "2024-08-24",
+            "approval": "rejected",
+            "amount": 0,
+            "detail": "Xin nghỉ phép dài ngày."
+        },
+        {
+            "id": "rq03",
+            "request_type": "sick",
+            "employee_name": "Ha Pham",
+            "department": "Admin",
+            "created_date": "2024-08-01",
+            "start_date": "2024-08-05",
+            "end_date": "2024-08-05",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Nghỉ ốm có giấy xác nhận."
+        },
+        {
+            "id": "rq04",
+            "request_type": "sick",
+            "employee_name": "Ha Pham",
+            "department": "Admin",
+            "created_date": "2024-08-01",
+            "start_date": "2024-08-05",
+            "end_date": "2024-08-23",
+            "approval": "rejected",
+            "amount": 0,
+            "detail": "Đề nghị điều dưỡng."
+        },
+        {
+            "id": "rq05",
+            "request_type": "sick",
+            "employee_name": "Ha Pham",
+            "department": "Admin",
+            "created_date": "2024-07-19",
+            "start_date": "2024-07-01",
+            "end_date": "2024-07-11",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Nghỉ điều dưỡng sau ốm."
+        },
+        {
+            "id": "rq06",
+            "request_type": "sick",
+            "employee_name": "Quang Le",
+            "department": "Admin",
+            "created_date": "2024-07-19",
+            "start_date": "2024-07-01",
+            "end_date": "2024-07-26",
+            "approval": "approved",
+            "amount": 0,
+            "detail": "Nghỉ điều trị ngắn hạn."
+        },
+        {
+            "id": "rq07",
+            "request_type": "sick",
+            "employee_name": "Ha Pham",
+            "department": "Admin",
+            "created_date": "2024-07-19",
+            "start_date": "2024-07-08",
+            "end_date": "2024-08-02",
+            "approval": "rejected",
+            "amount": 0,
+            "detail": "Thời gian nghỉ vượt định mức."
+        },
+        {
+            "id": "rq_sample_1",
+            "type": "Ung tien",
+            "employee_name": "Tran Ngoc Long",
+            "employee_id": "e_hr_101",
+            "department": "Admin",
+            "created_date": "2026-06-02",
+            "start_date": "2026-06-03",
+            "end_date": "2026-06-04",
+            "approval": "approved",
+            "detail": "Phieu yeu cau mau 1"
+        }
+    ],
+    "_auth": {
+        "name": "Admin Novaone",
+        "phone": "",
+        "address": "",
+        "birthday": "",
+        "position": "",
+        "company": "bData co.,ltd",
+        "avatar": "public\/uploads\/profile\/avatar-76e6333a.jpg"
+    },
+    "sales_targets": [
+        {
+            "id": "78a33e8d",
+            "month": 3,
+            "year": 2026,
+            "revenue": 456,
+            "quantity": 345,
+            "created_date": "2026-07-07",
+            "customer": "bData co.,ltd",
+            "contract": "HVN",
+            "manager_id": "e_hr_104",
+            "manager": "Nguyen Huu Phuong",
+            "note": ""
+        },
+        {
+            "id": "2bb84062",
+            "month": 2,
+            "year": 2026,
+            "revenue": 112,
+            "quantity": 190,
+            "created_date": "2026-07-10",
+            "customer": "Happy Creative",
+            "contract": "Hđ-2",
+            "manager_id": "e_hr_102",
+            "manager": "Ho Viet Nhan",
+            "note": ""
+        },
+        {
+            "id": "d681e548",
+            "month": 7,
+            "year": 2026,
+            "revenue": 1111,
+            "quantity": 123,
+            "created_date": "2026-07-02",
+            "customer": "CÔNG TY TNHH DIC (VIỆT NAM)",
+            "contract": "Gói bảo trì",
+            "manager_id": "e_hr_107",
+            "manager": "Vo Thuan",
+            "note": ""
+        },
+        {
+            "id": "e04162e1",
+            "month": 1,
+            "year": 2025,
+            "revenue": 120,
+            "quantity": 12,
+            "created_date": "2025-01-18",
+            "customer": "KH-1",
+            "contract": "HĐ-1",
+            "manager_id": "e_hr_101",
+            "manager": "Tran Ngoc Long",
+            "note": ""
+        },
+        {
+            "id": "target01",
+            "month": 1,
+            "year": 2026,
+            "revenue": 200,
+            "quantity": 150,
+            "created_date": "2026-05-19",
+            "customer": "BDATA",
+            "contract": "",
+            "manager_id": "e1",
+            "manager": "Minh Nguyen",
+            "note": "Chỉ tiêu mẫu tháng 1"
+        },
+        {
+            "id": "target02",
+            "month": 1,
+            "year": 2026,
+            "revenue": 5000,
+            "quantity": 10000,
+            "created_date": "2026-04-28",
+            "customer": "BDATA",
+            "contract": "",
+            "manager_id": "e2",
+            "manager": "Ha Pham",
+            "note": "Chỉ tiêu mẫu doanh số"
+        }
+    ],
+    "sales_receipts": [
+        {
+            "id": "receipt445",
+            "code": "445",
+            "customer": "Tú UyênKhách hàng",
+            "created_date": "2026-06-17",
+            "address": "",
+            "phone": "0369852111",
+            "total": 12500000,
+            "note": "Phiếu bán hàng mẫu"
+        },
+        {
+            "id": "receipt442",
+            "code": "442",
+            "customer": "Trần NgọcLong",
+            "created_date": "2026-06-15",
+            "address": "",
+            "phone": "0768104432",
+            "total": 8600000,
+            "note": "Khách hàng mua thiết bị"
+        },
+        {
+            "id": "receipt441",
+            "code": "441",
+            "customer": "Trần NgọcLong",
+            "created_date": "2026-06-10",
+            "address": "",
+            "phone": "0768104432",
+            "total": 7200000,
+            "note": "Thanh toán sau"
+        },
+        {
+            "id": "receipt440",
+            "code": "440",
+            "customer": "thunguyễn",
+            "created_date": "2026-06-09",
+            "address": "gggg",
+            "phone": "0233222555",
+            "total": 3100000,
+            "note": "Giao trong ngày"
+        },
+        {
+            "id": "receipt439",
+            "code": "439",
+            "customer": "thunguyễn",
+            "created_date": "2026-06-10",
+            "address": "gggg",
+            "phone": "0233222555",
+            "total": 2800000,
+            "note": "Phiếu lặp lại"
+        },
+        {
+            "id": "receipt438",
+            "code": "438",
+            "customer": "hoamai",
+            "created_date": "2026-05-27",
+            "address": "huế",
+            "phone": "0369258852",
+            "total": 4500000,
+            "note": "Khách hàng tỉnh"
+        },
+        {
+            "id": "receipt437",
+            "code": "437",
+            "customer": "thunguyễn",
+            "created_date": "2026-06-15",
+            "address": "gggg",
+            "phone": "0233222555",
+            "total": 1900000,
+            "note": "Đã giao"
+        },
+        {
+            "id": "receipt436",
+            "code": "436",
+            "customer": "thiTami",
+            "created_date": "2026-06-15",
+            "address": "ggggggggg",
+            "phone": "0125444444",
+            "total": 3600000,
+            "note": "Cần xuất hóa đơn"
+        },
+        {
+            "id": "receipt434",
+            "code": "434",
+            "customer": "thunguyễn",
+            "created_date": "2026-06-09",
+            "address": "gggg",
+            "phone": "0233222555",
+            "total": 1750000,
+            "note": "Phiếu mẫu thứ 10"
         }
     ]
 }

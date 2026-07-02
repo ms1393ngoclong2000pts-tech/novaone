@@ -34,6 +34,8 @@ $groups = [
             ['label' => 'Báo Giá', 'href' => '?route=sales-orders&stage=quote', 'route' => 'sales-orders.quote'],
             ['label' => 'Hợp Đồng', 'href' => '?route=sales-orders&stage=contract', 'route' => 'sales-orders.contract'],
             ['label' => 'Nghiệm Thu', 'href' => '?route=sales-orders&stage=paid', 'route' => 'sales-orders.paid'],
+            ['label' => 'Chỉ Tiêu Tháng', 'href' => '?route=sales-targets', 'route' => 'sales-targets'],
+            ['label' => 'Phiếu Bán Hàng', 'href' => '?route=sales-receipts', 'route' => 'sales-receipts'],
         ]],
     ],
     'QUẢN LÝ KHO' => [

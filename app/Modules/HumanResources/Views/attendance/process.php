@@ -5,7 +5,7 @@ $weekLabels = ['CHỦ NHẬT', 'THỨ 2', 'THỨ 3', 'THỨ 4', 'THỨ 5', 'TH�
 <section class="attendance-panel">
     <header class="attendance-head">
         <div class="attendance-title-row">
-            <a class="back-button" href="?route=attendance" aria-label="Quay lại"><?= ui_icon('arrow') ?></a>
+            <?= back_link('attendance') ?>
             <h2>XỬ LÝ CHẤM CÔNG</h2>
         </div>
         <div class="attendance-head-actions">

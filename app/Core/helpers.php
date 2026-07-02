@@ -89,6 +89,8 @@ function permission_modules(): array
         'services' => ['label' => 'Dịch vụ', 'group' => 'Kinh doanh'],
         'products' => ['label' => 'Danh sách sản phẩm', 'group' => 'Kinh doanh'],
         'sales_orders' => ['label' => 'Đơn hàng', 'group' => 'Kinh doanh'],
+        'sales_targets' => ['label' => 'Chỉ tiêu tháng', 'group' => 'Kinh doanh'],
+        'sales_receipts' => ['label' => 'Phiếu bán hàng', 'group' => 'Kinh doanh'],
         'machine_warehouses' => ['label' => 'Kho máy', 'group' => 'Trang thiết bị'],
         'equipment_devices' => ['label' => 'Quản lý thiết bị', 'group' => 'Trang thiết bị'],
         'equipment_types' => ['label' => 'Loại thiết bị', 'group' => 'Trang thiết bị'],
@@ -171,6 +173,12 @@ function permission_route_map(): array
         'sales-orders.paid' => ['sales_orders', 'view'],
         'sales-orders.save' => ['sales_orders', 'create'],
         'sales-orders.delete' => ['sales_orders', 'delete'],
+        'sales-targets' => ['sales_targets', 'view'],
+        'sales-targets.save' => ['sales_targets', 'create'],
+        'sales-targets.delete' => ['sales_targets', 'delete'],
+        'sales-receipts' => ['sales_receipts', 'view'],
+        'sales-receipts.save' => ['sales_receipts', 'create'],
+        'sales-receipts.delete' => ['sales_receipts', 'delete'],
         'machine-warehouses' => ['machine_warehouses', 'view'],
         'machine-warehouses.save' => ['machine_warehouses', 'create'],
         'machine-warehouses.transfer' => ['machine_warehouses', 'update'],
@@ -272,7 +280,7 @@ function default_role_permissions(string $role): array
     $grant(['home', 'dashboard', 'reports', 'calls']);
     match ($role) {
         'hr' => $grant(['employees', 'contracts', 'attendance', 'payrolls', 'social_insurance', 'requests', 'violations', 'rewards', 'recruitment_requests', 'daily_reports'], true),
-        'sales' => $grant(['suppliers', 'services', 'products', 'sales_orders', 'daily_reports'], true),
+        'sales' => $grant(['suppliers', 'services', 'products', 'sales_orders', 'sales_targets', 'sales_receipts', 'daily_reports'], true),
         'warehouse' => $grant(['machine_warehouses', 'equipment_devices', 'equipment_types', 'purchasing', 'suppliers'], true),
         'manager' => $grant(['employees', 'contracts', 'attendance', 'projects', 'work_items', 'daily_reports', 'suppliers', 'sales_orders', 'machine_warehouses', 'equipment_devices', 'recruitment_requests'], false),
         default => null,
@@ -567,6 +575,13 @@ function ui_icon(string $name): string
     ];
 
     return '<svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true">' . ($icons[$name] ?? $icons['file']) . '</svg>';
+}
+
+function back_link(string $route, string $label = 'Quay lại', string $class = ''): string
+{
+    $class = trim('back-button ' . $class);
+
+    return '<a class="' . e($class) . '" href="?route=' . e($route) . '" aria-label="' . e($label) . '">' . ui_icon('arrow') . '</a>';
 }
 
 function notifications_data(): array

@@ -13,7 +13,7 @@ $queryUrl = function (array $changes = []): string {
 <section class="attendance-panel">
     <header class="attendance-head">
         <div class="attendance-title-row">
-            <a class="back-button" href="?route=attendance" aria-label="Quay lại"><?= ui_icon('arrow') ?></a>
+            <?= back_link('attendance') ?>
             <h2>QUẢN LÝ MÁY</h2>
         </div>
         <button class="employee-action blue" type="button" data-attendance-machine-open>Thêm mới</button>

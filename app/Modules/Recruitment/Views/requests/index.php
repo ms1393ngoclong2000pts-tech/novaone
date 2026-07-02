@@ -17,7 +17,7 @@ $formatDate = fn (string $date): string => $date !== '' ? date('d-m-Y', strtotim
 
 <section class="request-panel recruitment-panel">
     <header class="request-head">
-        <h2><a class="back-button" href="?route=dashboard" aria-label="Quay lại"><?= ui_icon('arrow') ?></a>DANH SÁCH PHIẾU TUYỂN DỤNG</h2>
+        <h2><?= back_link('dashboard') ?>DANH SÁCH PHIẾU TUYỂN DỤNG</h2>
         <div class="request-head-actions">
             <button class="request-action teal" type="button" data-recruitment-open>Tạo phiếu tuyển dụng</button>
         </div>

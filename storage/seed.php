@@ -1,139 +1,4317 @@
 <?php
 
 return [
-    'users' => [
-        ['id' => 'u1', 'name' => 'Admin Novaone', 'email' => 'admin@novaone.local', 'role' => 'Admin', 'status' => 'active'],
-        ['id' => 'u2', 'name' => 'Linh Tran', 'email' => 'linh.hr@novaone.local', 'role' => 'HR', 'status' => 'active'],
+  'users' => 
+  [
+    0 => 
+    [
+      'id' => 'u1',
+      'name' => 'Admin Novaone',
+      'email' => 'admin@novaone.local',
+      'role' => 'Admin',
+      'status' => 'active',
     ],
-    'employees' => [
-        ['id' => 'e1', 'name' => 'Minh Nguyen', 'department' => 'Kinh doanh', 'position' => 'Sales Lead', 'contract' => 'Chính thức', 'status' => 'active'],
-        ['id' => 'e2', 'name' => 'Ha Pham', 'department' => 'Kho vận', 'position' => 'Warehouse Admin', 'contract' => 'Chính thức', 'status' => 'active'],
-        ['id' => 'e3', 'name' => 'Quang Le', 'department' => 'Công nghệ', 'position' => 'Developer', 'contract' => 'Thử việc', 'status' => 'on_leave'],
+    1 => 
+    [
+      'id' => 'u2',
+      'name' => 'Linh Tran',
+      'email' => 'linh.hr@novaone.local',
+      'role' => 'HR',
+      'status' => 'active',
     ],
-    'contracts' => [
-        ['id' => 'ct01', 'contract_code' => 'HDHV-2026-001', 'employee_name' => 'Minh Nguyen', 'salary' => 6500000, 'start_date' => '2026-06-01', 'end_date' => '2026-07-31', 'contract_type' => 'hoc_viec', 'note' => 'Học việc khối kinh doanh'],
-        ['id' => 'ct02', 'contract_code' => 'HDHV-2026-002', 'employee_name' => 'Ha Pham', 'salary' => 6000000, 'start_date' => '2026-06-15', 'end_date' => '2026-08-14', 'contract_type' => 'hoc_viec', 'note' => 'Học việc kho vận'],
-        ['id' => 'ct03', 'contract_code' => 'HDTV-2026-001', 'employee_name' => 'Quang Le', 'salary' => 12000000, 'start_date' => '2026-05-01', 'end_date' => '2026-06-30', 'contract_type' => 'thu_viec', 'note' => 'Thử việc lập trình viên'],
-        ['id' => 'ct04', 'contract_code' => 'HDTV-2026-002', 'employee_name' => 'Linh Tran', 'salary' => 11000000, 'start_date' => '2026-05-15', 'end_date' => '2026-07-14', 'contract_type' => 'thu_viec', 'note' => 'Thử việc phòng nhân sự'],
-        ['id' => 'ct05', 'contract_code' => 'HDCT-2026-001', 'employee_name' => 'Minh Nguyen', 'salary' => 18000000, 'start_date' => '2026-01-01', 'end_date' => '2026-12-31', 'contract_type' => 'chinh_thuc', 'note' => 'Hợp đồng chính thức 12 tháng'],
-        ['id' => 'ct06', 'contract_code' => 'HDCT-2026-002', 'employee_name' => 'Ha Pham', 'salary' => 15000000, 'start_date' => '2026-02-01', 'end_date' => '2027-01-31', 'contract_type' => 'chinh_thuc', 'note' => 'Hợp đồng chính thức 12 tháng'],
-        ['id' => 'ct07', 'contract_code' => 'HDDH-2025-001', 'employee_name' => 'Admin Novaone', 'salary' => 32000000, 'start_date' => '2025-01-01', 'end_date' => '2028-12-31', 'contract_type' => 'dai_han', 'note' => 'Hợp đồng dài hạn'],
-        ['id' => 'ct08', 'contract_code' => 'HDDH-2025-002', 'employee_name' => 'Linh Tran', 'salary' => 22000000, 'start_date' => '2025-06-01', 'end_date' => '2028-05-31', 'contract_type' => 'dai_han', 'note' => 'Hợp đồng dài hạn'],
+  ],
+  'employees' => 
+  [
+    0 => 
+    [
+      'id' => 'e1',
+      'name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'contract' => 'Chính thức',
+      'status' => 'active',
     ],
-    'social_insurance' => [
-        ['id' => 'bh01', 'employee_name' => 'Minh Nguyen', 'employee_code' => 'NV001', 'contract_start' => '2026-01-01', 'contract_end' => '2026-12-31', 'insurance_number' => 'BHXH-010126001', 'salary' => 18000000, 'contribution' => 1890000, 'hospital' => 'Bệnh viện Đa khoa Hà Nội', 'note' => 'Tham gia đầy đủ'],
-        ['id' => 'bh02', 'employee_name' => 'Ha Pham', 'employee_code' => 'NV002', 'contract_start' => '2026-02-01', 'contract_end' => '2027-01-31', 'insurance_number' => 'BHXH-020226002', 'salary' => 15000000, 'contribution' => 1575000, 'hospital' => 'Bệnh viện Nhân Dân 115', 'note' => 'Tham gia đầy đủ'],
-        ['id' => 'bh03', 'employee_name' => 'Quang Le', 'employee_code' => 'NV003', 'contract_start' => '2026-05-01', 'contract_end' => '2026-06-30', 'insurance_number' => 'BHXH-010526003', 'salary' => 12000000, 'contribution' => 1260000, 'hospital' => 'Bệnh viện Thống Nhất', 'note' => 'Đang thử việc'],
-        ['id' => 'bh04', 'employee_name' => 'Linh Tran', 'employee_code' => 'NV004', 'contract_start' => '2026-01-01', 'contract_end' => '2026-12-31', 'insurance_number' => 'BHXH-010126004', 'salary' => 22000000, 'contribution' => 2310000, 'hospital' => 'Bệnh viện Đại học Y Dược', 'note' => 'Tham gia đầy đủ'],
-        ['id' => 'bh05', 'employee_name' => 'Long Trần', 'employee_code' => 'NV005', 'contract_start' => '2026-06-01', 'contract_end' => '2027-05-31', 'insurance_number' => 'BHXH-010626005', 'salary' => 16000000, 'contribution' => 1680000, 'hospital' => 'Bệnh viện Đa khoa Tâm Anh', 'note' => 'Mới đăng ký'],
+    1 => 
+    [
+      'id' => 'e2',
+      'name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'contract' => 'Chính thức',
+      'status' => 'active',
     ],
-    'violations' => [
-        ['id' => 'vp01', 'employee_name' => 'Minh Nguyen', 'violation_date' => '2026-06-19', 'violation_type' => 'Vi phạm về thời gian làm việc', 'description' => 'Đi làm muộn 35 phút không báo trước.', 'penalty' => 200000, 'resolution' => 'Nhắc nhở và trừ KPI tháng'],
-        ['id' => 'vp02', 'employee_name' => 'Ha Pham', 'violation_date' => '2026-06-19', 'violation_type' => 'Vi phạm quy trình kho', 'description' => 'Chưa hoàn tất biên bản bàn giao cuối ca.', 'penalty' => 150000, 'resolution' => 'Bổ sung biên bản trong ngày'],
-        ['id' => 'vp03', 'employee_name' => 'Quang Le', 'violation_date' => '2026-06-18', 'violation_type' => 'Vi phạm về thời gian làm việc', 'description' => 'Nộp báo cáo công việc trễ hạn.', 'penalty' => 100000, 'resolution' => 'Nhắc nhở lần đầu'],
-        ['id' => 'vp04', 'employee_name' => 'Ha Pham', 'violation_date' => '2026-06-16', 'violation_type' => 'Vi phạm nội quy', 'description' => 'Không đeo thẻ nhân viên trong giờ làm việc.', 'penalty' => 50000, 'resolution' => 'Nhắc nhở'],
-        ['id' => 'vp05', 'employee_name' => 'Minh Nguyen', 'violation_date' => '2026-06-15', 'violation_type' => 'Vi phạm bảo mật thông tin', 'description' => 'Để tài liệu nội bộ tại khu vực công cộng.', 'penalty' => 500000, 'resolution' => 'Đào tạo lại quy định bảo mật'],
-        ['id' => 'vp06', 'employee_name' => 'Minh Nguyen', 'violation_date' => '2026-05-28', 'violation_type' => 'Vi phạm về thời gian làm việc', 'description' => 'Vắng họp giao ban không có lý do.', 'penalty' => 200000, 'resolution' => 'Trừ KPI tháng'],
-        ['id' => 'vp07', 'employee_name' => 'Ha Pham', 'violation_date' => '2026-05-20', 'violation_type' => 'Vi phạm sử dụng tài sản', 'description' => 'Sử dụng thiết bị không đúng quy trình.', 'penalty' => 300000, 'resolution' => 'Đào tạo lại quy trình thiết bị'],
-        ['id' => 'vp08', 'employee_name' => 'Quang Le', 'violation_date' => '2026-05-10', 'violation_type' => 'Vi phạm nội quy', 'description' => 'Không cập nhật trạng thái công việc cuối ngày.', 'penalty' => 100000, 'resolution' => 'Nhắc nhở lần đầu'],
+    2 => 
+    [
+      'id' => 'e3',
+      'name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'contract' => 'Thử việc',
+      'status' => 'on_leave',
     ],
-    'rewards' => [
-        ['id' => 'kt01', 'employee_name' => 'Minh Nguyen', 'reward_date' => '2026-06-20', 'reward_type' => 'Khen thưởng nhân viên xuất sắc', 'description' => 'Vượt 125% chỉ tiêu doanh số tháng.', 'amount' => 3000000, 'decision_number' => 'QDKT-2026-001'],
-        ['id' => 'kt02', 'employee_name' => 'Ha Pham', 'reward_date' => '2026-06-15', 'reward_type' => 'Đóng góp ý tưởng sáng tạo', 'description' => 'Đề xuất quy trình kiểm kê giúp giảm thời gian xử lý.', 'amount' => 1500000, 'decision_number' => 'QDKT-2026-002'],
-        ['id' => 'kt03', 'employee_name' => 'Quang Le', 'reward_date' => '2026-06-10', 'reward_type' => 'Hoàn thành xuất sắc dự án', 'description' => 'Hoàn thành module báo cáo trước thời hạn.', 'amount' => 2500000, 'decision_number' => 'QDKT-2026-003'],
-        ['id' => 'kt04', 'employee_name' => 'Minh Nguyen', 'reward_date' => '2026-05-25', 'reward_type' => 'Khen thưởng nhân viên xuất sắc', 'description' => 'Duy trì chất lượng chăm sóc khách hàng tốt.', 'amount' => 2000000, 'decision_number' => 'QDKT-2026-004'],
-        ['id' => 'kt05', 'employee_name' => 'Ha Pham', 'reward_date' => '2026-05-12', 'reward_type' => 'Đóng góp ý tưởng sáng tạo', 'description' => 'Cải tiến cách bố trí hàng hóa trong kho.', 'amount' => 1000000, 'decision_number' => 'QDKT-2026-005'],
-        ['id' => 'kt06', 'employee_name' => 'Quang Le', 'reward_date' => '2026-04-30', 'reward_type' => 'Hỗ trợ đồng đội', 'description' => 'Hỗ trợ đào tạo người dùng hệ thống mới.', 'amount' => 1000000, 'decision_number' => 'QDKT-2026-006'],
+    3 => 
+    [
+      'id' => 'e_hr_101',
+      'name' => 'Tran Ngoc Long',
+      'department' => 'Admin',
+      'position' => 'Manager',
+      'employee_code' => 'NV101',
+      'code' => 'NV101',
+      'gender' => 'Nam',
+      'email' => 'long@novaone.vn',
+      'phone' => '0901000101',
+      'address' => '207 An Duong Vuong',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'projects' => [
-        ['id' => 'pr01', 'name' => 'Takashimaya', 'category' => 'Triển khai hệ thống', 'company' => 'Công ty TNHH Công nghệ Metatek', 'start_date' => '2026-06-22', 'end_date' => '2026-08-22', 'status' => 'open', 'manager' => 'Minh Nguyen', 'budget' => 850000000, 'description' => 'Triển khai nền tảng quản trị vận hành.'],
-        ['id' => 'pr02', 'name' => 'MPRO', 'category' => 'Phần mềm doanh nghiệp', 'company' => 'Công ty TNHH Thương mại & Kỹ thuật V.M.S', 'start_date' => '2026-06-18', 'end_date' => '2026-07-31', 'status' => 'in_progress', 'manager' => 'Quang Le', 'budget' => 620000000, 'description' => 'Phát triển hệ thống quản lý bán hàng.'],
-        ['id' => 'pr03', 'name' => 'Sàn Nông Sản Quốc Tế', 'category' => 'Thương mại điện tử', 'company' => 'Công ty Cổ phần Health Care Center APP', 'start_date' => '2026-06-08', 'end_date' => '2026-08-29', 'status' => 'open', 'manager' => 'Ha Pham', 'budget' => 1200000000, 'description' => 'Xây dựng sàn kết nối nông sản.'],
-        ['id' => 'pr04', 'name' => 'CMD ROYAL', 'category' => 'Dữ liệu', 'company' => 'Công ty TNHH MTV khai thác dữ liệu số bData', 'start_date' => '2026-06-16', 'end_date' => '2026-06-30', 'status' => 'completed', 'manager' => 'Quang Le', 'budget' => 320000000, 'description' => 'Chuẩn hóa dữ liệu khách hàng.'],
-        ['id' => 'pr05', 'name' => 'Green Pin', 'category' => 'Sản xuất', 'company' => 'Công ty TNHH Thương mại dịch vụ sản xuất P2D', 'start_date' => '2026-04-01', 'end_date' => '2026-06-30', 'status' => 'on_hold', 'manager' => 'Ha Pham', 'budget' => 740000000, 'description' => 'Quản lý chuỗi cung ứng sản xuất.'],
-        ['id' => 'pr06', 'name' => 'Home 3DS', 'category' => 'Thiết kế', 'company' => 'Công ty TNHH Thiết kế và xây dựng Home Design', 'start_date' => '2026-06-16', 'end_date' => '2026-09-15', 'status' => 'open', 'manager' => 'Minh Nguyen', 'budget' => 480000000, 'description' => 'Nền tảng quản lý thiết kế 3D.'],
-        ['id' => 'pr07', 'name' => 'Happy C', 'category' => 'Marketing', 'company' => 'Công ty TNHH Happy Creative', 'start_date' => '2026-06-01', 'end_date' => '2026-12-31', 'status' => 'in_progress', 'manager' => 'Minh Nguyen', 'budget' => 900000000, 'description' => 'Hệ thống quản lý chiến dịch marketing.'],
-        ['id' => 'pr08', 'name' => 'BDATA-AI', 'category' => 'Trí tuệ nhân tạo', 'company' => 'Công ty TNHH MTV khai thác dữ liệu số bData', 'start_date' => '2026-01-01', 'end_date' => '2026-12-31', 'status' => 'in_progress', 'manager' => 'Quang Le', 'budget' => 2500000000, 'description' => 'Nền tảng AI phân tích dữ liệu doanh nghiệp.'],
+    4 => 
+    [
+      'id' => 'e_hr_102',
+      'name' => 'Ho Viet Nhan',
+      'department' => 'Kinh doanh',
+      'position' => 'Nhan vien',
+      'employee_code' => 'NV102',
+      'code' => 'NV102',
+      'gender' => 'Nam',
+      'email' => 'nhanhv@novaone.vn',
+      'phone' => '0901000102',
+      'address' => 'Quan 1, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'daily_reports' => [
-        ['id' => 'dr01', 'project' => 'BDATA-AI', 'category' => 'Phát triển', 'employee' => 'Quang Le', 'details' => 'Hoàn thiện API phân tích dữ liệu và viết unit test.', 'hours' => 7.5, 'report_date' => '2026-06-21'],
-        ['id' => 'dr02', 'project' => 'MPRO', 'category' => 'Dữ liệu', 'employee' => 'Minh Nguyen', 'details' => 'Chuẩn hóa danh sách khách hàng trước khi import.', 'hours' => 6, 'report_date' => '2026-06-21'],
-        ['id' => 'dr03', 'project' => 'Green Pin', 'category' => 'Kiểm thử', 'employee' => 'Ha Pham', 'details' => 'Kiểm thử quy trình nhập kho và lập biên bản lỗi.', 'hours' => 8, 'report_date' => '2026-06-20'],
-        ['id' => 'dr04', 'project' => 'Happy C', 'category' => 'Báo cáo', 'employee' => 'Minh Nguyen', 'details' => 'Thiết kế biểu đồ doanh thu theo chiến dịch.', 'hours' => 5.5, 'report_date' => '2026-06-20'],
-        ['id' => 'dr05', 'project' => 'Home 3DS', 'category' => 'Tài liệu', 'employee' => 'Quang Le', 'details' => 'Soạn hướng dẫn sử dụng chức năng thiết kế.', 'hours' => 4, 'report_date' => '2026-06-19'],
+    5 => 
+    [
+      'id' => 'e_hr_103',
+      'name' => 'Lam Quoc Tuan',
+      'department' => 'Cong nghe',
+      'position' => 'Developer',
+      'employee_code' => 'NV103',
+      'code' => 'NV103',
+      'gender' => 'Nam',
+      'email' => 'tuanlq@novaone.vn',
+      'phone' => '0901000103',
+      'address' => 'Quan 3, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'tasks' => [
-        ['id' => 't1', 'title' => 'Thiết kế database phase 1', 'project' => 'Core ERP', 'assignee' => 'Quang Le', 'status' => 'in_progress', 'deadline' => '2026-06-25'],
-        ['id' => 't2', 'title' => 'Chuẩn hóa danh sách khách hàng', 'project' => 'CRM', 'assignee' => 'Minh Nguyen', 'status' => 'pending', 'deadline' => '2026-06-21'],
-        ['id' => 't3', 'title' => 'Kiểm kê tồn kho đầu kỳ', 'project' => 'Inventory', 'assignee' => 'Ha Pham', 'status' => 'completed', 'deadline' => '2026-06-18'],
+    6 => 
+    [
+      'id' => 'e_hr_104',
+      'name' => 'Nguyen Huu Phuong',
+      'department' => 'Cong nghe',
+      'position' => 'Developer',
+      'employee_code' => 'NV104',
+      'code' => 'NV104',
+      'gender' => 'Nam',
+      'email' => 'phuongnh@novaone.vn',
+      'phone' => '0901000104',
+      'address' => 'Thu Duc, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'training' => [
-        ['id' => 'tr1', 'course' => 'Onboarding nhân sự mới', 'employee' => 'Quang Le', 'trainer' => 'Linh Tran', 'progress' => 75, 'status' => 'in_progress'],
-        ['id' => 'tr2', 'course' => 'Quy trình bán hàng B2B', 'employee' => 'Minh Nguyen', 'trainer' => 'Admin Novaone', 'progress' => 100, 'status' => 'completed'],
+    7 => 
+    [
+      'id' => 'e_hr_105',
+      'name' => 'Hoang Trong Tin',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Executive',
+      'employee_code' => 'NV105',
+      'code' => 'NV105',
+      'gender' => 'Nam',
+      'email' => 'tinht@novaone.vn',
+      'phone' => '0901000105',
+      'address' => 'Binh Thanh, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'recruitments' => [
-        ['id' => 'r1', 'position' => 'Backend Laravel Developer', 'candidate' => 'Nam Ho', 'stage' => 'interview', 'owner' => 'Linh Tran'],
-        ['id' => 'r2', 'position' => 'Sales Executive', 'candidate' => 'Mai Do', 'stage' => 'offer', 'owner' => 'Linh Tran'],
+    8 => 
+    [
+      'id' => 'e_hr_106',
+      'name' => 'Nguyen Khoa Anh Kinh',
+      'department' => 'Nhan su',
+      'position' => 'HR Executive',
+      'employee_code' => 'NV106',
+      'code' => 'NV106',
+      'gender' => 'Nam',
+      'email' => 'kinhnka@novaone.vn',
+      'phone' => '0901000106',
+      'address' => 'Go Vap, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'customers' => [
-        ['id' => 'c1', 'name' => 'Công ty An Phát', 'type' => 'customer', 'phone' => '0901 111 222', 'owner' => 'Minh Nguyen', 'status' => 'vip'],
-        ['id' => 'c2', 'name' => 'Nhà cung cấp Sao Bắc', 'type' => 'supplier', 'phone' => '0902 333 444', 'owner' => 'Ha Pham', 'status' => 'active'],
+    9 => 
+    [
+      'id' => 'e_hr_107',
+      'name' => 'Vo Thuan',
+      'department' => 'Kho van',
+      'position' => 'Warehouse Staff',
+      'employee_code' => 'NV107',
+      'code' => 'NV107',
+      'gender' => 'Nam',
+      'email' => 'thuanv@novaone.vn',
+      'phone' => '0901000107',
+      'address' => 'Tan Binh, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'suppliers' => [
-        ['id' => 'sp1', 'name' => 'Sao Bắc Logistics', 'category' => 'Vận chuyển', 'phone' => '0902 333 444', 'debt' => 12000000, 'status' => 'active'],
-        ['id' => 'sp2', 'name' => 'Thiết Bị Việt', 'category' => 'Thiết bị kho', 'phone' => '0908 222 111', 'debt' => 0, 'status' => 'active'],
+    10 => 
+    [
+      'id' => 'e_hr_108',
+      'name' => 'Tran Xuan Quang',
+      'department' => 'Ke toan',
+      'position' => 'Accountant',
+      'employee_code' => 'NV108',
+      'code' => 'NV108',
+      'gender' => 'Nam',
+      'email' => 'quangtx@novaone.vn',
+      'phone' => '0901000108',
+      'address' => 'Phu Nhuan, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'services' => [
-        ['id' => 'sv1', 'name' => 'CRM Pro', 'package' => 'Doanh nghiệp', 'price' => 58000000, 'status' => 'active'],
-        ['id' => 'sv2', 'name' => 'Tư vấn triển khai ERP', 'package' => 'Project', 'price' => 120000000, 'status' => 'active'],
+    11 => 
+    [
+      'id' => 'e_hr_109',
+      'name' => 'Le Hoang Minh Quy',
+      'department' => 'CSKH',
+      'position' => 'CSKH',
+      'employee_code' => 'NV109',
+      'code' => 'NV109',
+      'gender' => 'Nam',
+      'email' => 'quylhm@novaone.vn',
+      'phone' => '0901000109',
+      'address' => 'Quan 7, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'sales' => [
-        ['id' => 's1', 'code' => 'SO-1001', 'customer' => 'Công ty An Phát', 'product' => 'Gói CRM Pro', 'amount' => 58000000, 'payment' => 'partial', 'status' => 'confirmed'],
-        ['id' => 's2', 'code' => 'SO-1002', 'customer' => 'Minh Long', 'product' => 'Thiết bị kho', 'amount' => 32000000, 'payment' => 'paid', 'status' => 'delivered'],
+    12 => 
+    [
+      'id' => 'e_hr_110',
+      'name' => 'Nguyen Xuan Hung',
+      'department' => 'Tuyen Dung',
+      'position' => 'Recruiter',
+      'employee_code' => 'NV110',
+      'code' => 'NV110',
+      'gender' => 'Nam',
+      'email' => 'hungnx@novaone.vn',
+      'phone' => '0901000110',
+      'address' => 'Quan 10, TP.HCM',
+      'birth_date' => '1995-07-02',
+      'contract' => 'Chinh thuc',
+      'status' => 'active',
     ],
-    'pos' => [
-        ['id' => 'p1', 'invoice' => 'POS-0001', 'cashier' => 'Ha Pham', 'items' => 'Tem nhãn vận chuyển', 'amount' => 1250000, 'payment_method' => 'cash', 'status' => 'paid'],
-        ['id' => 'p2', 'invoice' => 'POS-0002', 'cashier' => 'Minh Nguyen', 'items' => 'Máy quét barcode', 'amount' => 4500000, 'payment_method' => 'card', 'status' => 'paid'],
+  ],
+  'contracts' => 
+  [
+    0 => 
+    [
+      'id' => 'ct01',
+      'contract_code' => 'HDHV-2026-001',
+      'employee_name' => 'Minh Nguyen',
+      'salary' => 6500000,
+      'start_date' => '2026-06-01',
+      'end_date' => '2026-07-31',
+      'contract_type' => 'hoc_viec',
+      'note' => 'Học việc khối kinh doanh',
     ],
-    'tickets' => [
-        ['id' => 'tk1', 'code' => 'TK-1001', 'customer' => 'Công ty An Phát', 'issue' => 'Cần hỗ trợ cấu hình phân quyền', 'owner' => 'Quang Le', 'status' => 'in_progress'],
-        ['id' => 'tk2', 'code' => 'TK-1002', 'customer' => 'Minh Long', 'issue' => 'Yêu cầu xuất báo cáo bán hàng', 'owner' => 'Minh Nguyen', 'status' => 'new'],
+    1 => 
+    [
+      'id' => 'ct02',
+      'contract_code' => 'HDHV-2026-002',
+      'employee_name' => 'Ha Pham',
+      'salary' => 6000000,
+      'start_date' => '2026-06-15',
+      'end_date' => '2026-08-14',
+      'contract_type' => 'hoc_viec',
+      'note' => 'Học việc kho vận',
     ],
-    'call_logs' => [],
-    'inventory' => [
-        ['id' => 'i1', 'sku' => 'SKU-001', 'name' => 'Máy quét barcode', 'warehouse' => 'Kho Hà Nội', 'quantity' => 24, 'min' => 10, 'status' => 'available'],
-        ['id' => 'i2', 'sku' => 'SKU-014', 'name' => 'Tem nhãn vận chuyển', 'warehouse' => 'Kho TP.HCM', 'quantity' => 6, 'min' => 20, 'status' => 'low'],
+    2 => 
+    [
+      'id' => 'ct03',
+      'contract_code' => 'HDTV-2026-001',
+      'employee_name' => 'Quang Le',
+      'salary' => 12000000,
+      'start_date' => '2026-05-01',
+      'end_date' => '2026-06-30',
+      'contract_type' => 'thu_viec',
+      'note' => 'Thử việc lập trình viên',
     ],
-    'internal_assets' => [
-        ['id' => 'ia1', 'code' => 'AS-001', 'name' => 'Laptop Dell', 'assigned_to' => 'Quang Le', 'quantity' => 1, 'status' => 'in_use'],
-        ['id' => 'ia2', 'code' => 'AS-002', 'name' => 'Máy chiếu phòng họp', 'assigned_to' => 'Phòng Hành chính', 'quantity' => 1, 'status' => 'available'],
+    3 => 
+    [
+      'id' => 'ct04',
+      'contract_code' => 'HDTV-2026-002',
+      'employee_name' => 'Linh Tran',
+      'salary' => 11000000,
+      'start_date' => '2026-05-15',
+      'end_date' => '2026-07-14',
+      'contract_type' => 'thu_viec',
+      'note' => 'Thử việc phòng nhân sự',
     ],
-    'kpi' => [
-        ['id' => 'k1', 'objective' => 'Tăng doanh thu quý', 'owner' => 'Minh Nguyen', 'metric' => '1.8 tỷ VND', 'progress' => 68, 'status' => 'on_track'],
-        ['id' => 'k2', 'objective' => 'Tuyển đủ team dev', 'owner' => 'Linh Tran', 'metric' => '4 nhân sự', 'progress' => 45, 'status' => 'risk'],
+    4 => 
+    [
+      'id' => 'ct05',
+      'contract_code' => 'HDCT-2026-001',
+      'employee_name' => 'Minh Nguyen',
+      'salary' => 18000000,
+      'start_date' => '2026-01-01',
+      'end_date' => '2026-12-31',
+      'contract_type' => 'chinh_thuc',
+      'note' => 'Hợp đồng chính thức 12 tháng',
     ],
-    'okrs' => [
-        ['id' => 'o1', 'objective' => 'Chuẩn hóa vận hành NovaOne', 'key_result' => '100% phân hệ core có quy trình', 'level' => 'company', 'owner' => 'Admin Novaone', 'progress' => 62, 'status' => 'on_track'],
-        ['id' => 'o2', 'objective' => 'Nâng chất lượng CSKH', 'key_result' => '90% ticket xử lý đúng hạn', 'level' => 'department', 'owner' => 'Minh Nguyen', 'progress' => 48, 'status' => 'risk'],
+    5 => 
+    [
+      'id' => 'ct06',
+      'contract_code' => 'HDCT-2026-002',
+      'employee_name' => 'Ha Pham',
+      'salary' => 15000000,
+      'start_date' => '2026-02-01',
+      'end_date' => '2027-01-31',
+      'contract_type' => 'chinh_thuc',
+      'note' => 'Hợp đồng chính thức 12 tháng',
     ],
-    'shipments' => [
-        ['id' => 'sh1', 'code' => 'SHP-7781', 'order' => 'SO-1001', 'carrier' => 'GHN', 'status' => 'shipping', 'eta' => '2026-06-20'],
-        ['id' => 'sh2', 'code' => 'SHP-7782', 'order' => 'SO-1002', 'carrier' => 'Viettel Post', 'status' => 'delivered', 'eta' => '2026-06-15'],
+    6 => 
+    [
+      'id' => 'ct07',
+      'contract_code' => 'HDDH-2025-001',
+      'employee_name' => 'Admin Novaone',
+      'salary' => 32000000,
+      'start_date' => '2025-01-01',
+      'end_date' => '2028-12-31',
+      'contract_type' => 'dai_han',
+      'note' => 'Hợp đồng dài hạn',
     ],
-    'calendar' => [
-        ['id' => 'cal1', 'title' => 'Họp triển khai giai đoạn 2', 'type' => 'meeting', 'owner' => 'Admin Novaone', 'date' => '2026-06-22', 'status' => 'pending'],
-        ['id' => 'cal2', 'title' => 'Đào tạo người dùng kho', 'type' => 'internal_event', 'owner' => 'Ha Pham', 'date' => '2026-06-24', 'status' => 'pending'],
+    7 => 
+    [
+      'id' => 'ct08',
+      'contract_code' => 'HDDH-2025-002',
+      'employee_name' => 'Linh Tran',
+      'salary' => 22000000,
+      'start_date' => '2025-06-01',
+      'end_date' => '2028-05-31',
+      'contract_type' => 'dai_han',
+      'note' => 'Hợp đồng dài hạn',
     ],
-    'facilities' => [
-        ['id' => 'f1', 'code' => 'RM-01', 'name' => 'Phòng họp lớn', 'type' => 'meeting_room', 'location' => 'Tầng 3', 'status' => 'available'],
-        ['id' => 'f2', 'code' => 'VH-01', 'name' => 'Xe giao hàng', 'type' => 'vehicle', 'location' => 'Kho Hà Nội', 'status' => 'in_use'],
+    8 => 
+    [
+      'id' => 'ct_sample_1',
+      'contract_code' => 'HD-2026-001',
+      'employee_name' => 'Tran Ngoc Long',
+      'employee_id' => 'e_hr_101',
+      'salary' => 9900000,
+      'start_date' => '2026-02-01',
+      'end_date' => '2027-02-01',
+      'contract_type' => 'thu_viec',
+      'note' => 'Hop dong mau 1',
     ],
-    'permissions' => [
-        ['id' => 'pm1', 'role' => 'Admin', 'module' => 'Tất cả', 'can_view' => 'yes', 'can_create' => 'yes', 'can_update' => 'yes', 'can_delete' => 'yes'],
-        ['id' => 'pm2', 'role' => 'Sales', 'module' => 'CRM & Sales', 'can_view' => 'yes', 'can_create' => 'yes', 'can_update' => 'yes', 'can_delete' => 'no'],
+    9 => 
+    [
+      'id' => 'ct_sample_2',
+      'contract_code' => 'HD-2026-002',
+      'employee_name' => 'Ho Viet Nhan',
+      'employee_id' => 'e_hr_102',
+      'salary' => 10800000,
+      'start_date' => '2026-03-01',
+      'end_date' => '2027-03-01',
+      'contract_type' => 'chinh_thuc',
+      'note' => 'Hop dong mau 2',
     ],
-    'settings' => [
-        ['id' => 'set1', 'key' => 'company_name', 'value' => 'NovaOne', 'group' => 'company', 'status' => 'active'],
-        ['id' => 'set2', 'key' => 'low_stock_alert', 'value' => 'enabled', 'group' => 'system', 'status' => 'active'],
+  ],
+  'social_insurance' => 
+  [
+    0 => 
+    [
+      'id' => 'bh01',
+      'employee_name' => 'Minh Nguyen',
+      'employee_code' => 'NV001',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-010126001',
+      'salary' => 18000000,
+      'contribution' => 1890000,
+      'hospital' => 'Bệnh viện Đa khoa Hà Nội',
+      'note' => 'Tham gia đầy đủ',
     ],
+    1 => 
+    [
+      'id' => 'bh02',
+      'employee_name' => 'Ha Pham',
+      'employee_code' => 'NV002',
+      'contract_start' => '2026-02-01',
+      'contract_end' => '2027-01-31',
+      'insurance_number' => 'BHXH-020226002',
+      'salary' => 15000000,
+      'contribution' => 1575000,
+      'hospital' => 'Bệnh viện Nhân Dân 115',
+      'note' => 'Tham gia đầy đủ',
+    ],
+    2 => 
+    [
+      'id' => 'bh03',
+      'employee_name' => 'Quang Le',
+      'employee_code' => 'NV003',
+      'contract_start' => '2026-05-01',
+      'contract_end' => '2026-06-30',
+      'insurance_number' => 'BHXH-010526003',
+      'salary' => 12000000,
+      'contribution' => 1260000,
+      'hospital' => 'Bệnh viện Thống Nhất',
+      'note' => 'Đang thử việc',
+    ],
+    3 => 
+    [
+      'id' => 'bh04',
+      'employee_name' => 'Linh Tran',
+      'employee_code' => 'NV004',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-010126004',
+      'salary' => 22000000,
+      'contribution' => 2310000,
+      'hospital' => 'Bệnh viện Đại học Y Dược',
+      'note' => 'Tham gia đầy đủ',
+    ],
+    4 => 
+    [
+      'id' => 'bh05',
+      'employee_name' => 'Long Trần',
+      'employee_code' => 'NV005',
+      'contract_start' => '2026-06-01',
+      'contract_end' => '2027-05-31',
+      'insurance_number' => 'BHXH-010626005',
+      'salary' => 16000000,
+      'contribution' => 1680000,
+      'hospital' => 'Bệnh viện Đa khoa Tâm Anh',
+      'note' => 'Mới đăng ký',
+    ],
+    5 => 
+    [
+      'id' => 'bh_sample_1',
+      'employee_name' => 'Tran Ngoc Long',
+      'employee_id' => 'e_hr_101',
+      'employee_code' => 'long@novaone.vn',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-100001',
+      'salary' => 9800000,
+      'contribution' => 980000,
+      'hospital' => 'Benh vien Tam Anh',
+      'note' => 'Tham gia day du',
+    ],
+    6 => 
+    [
+      'id' => 'bh_sample_2',
+      'employee_name' => 'Ho Viet Nhan',
+      'employee_id' => 'e_hr_102',
+      'employee_code' => 'nhanhv@novaone.vn',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-100002',
+      'salary' => 10600000,
+      'contribution' => 1060000,
+      'hospital' => 'Benh vien Dai hoc Y Duoc',
+      'note' => 'Tham gia day du',
+    ],
+    7 => 
+    [
+      'id' => 'bh_sample_3',
+      'employee_name' => 'Lam Quoc Tuan',
+      'employee_id' => 'e_hr_103',
+      'employee_code' => 'tuanlq@novaone.vn',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-100003',
+      'salary' => 11400000,
+      'contribution' => 1140000,
+      'hospital' => 'Benh vien Thong Nhat',
+      'note' => 'Tham gia day du',
+    ],
+    8 => 
+    [
+      'id' => 'bh_sample_4',
+      'employee_name' => 'Nguyen Huu Phuong',
+      'employee_id' => 'e_hr_104',
+      'employee_code' => 'phuongnh@novaone.vn',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-100004',
+      'salary' => 12200000,
+      'contribution' => 1220000,
+      'hospital' => 'Benh vien Tam Anh',
+      'note' => 'Tham gia day du',
+    ],
+    9 => 
+    [
+      'id' => 'bh_sample_5',
+      'employee_name' => 'Hoang Trong Tin',
+      'employee_id' => 'e_hr_105',
+      'employee_code' => 'tinht@novaone.vn',
+      'contract_start' => '2026-01-01',
+      'contract_end' => '2026-12-31',
+      'insurance_number' => 'BHXH-100005',
+      'salary' => 13000000,
+      'contribution' => 1300000,
+      'hospital' => 'Benh vien Dai hoc Y Duoc',
+      'note' => 'Tham gia day du',
+    ],
+  ],
+  'violations' => 
+  [
+    0 => 
+    [
+      'id' => 'vp01',
+      'employee_name' => 'Minh Nguyen',
+      'violation_date' => '2026-06-19',
+      'violation_type' => 'Vi phạm về thời gian làm việc',
+      'description' => 'Đi làm muộn 35 phút không báo trước.',
+      'penalty' => 200000,
+      'resolution' => 'Nhắc nhở và trừ KPI tháng',
+    ],
+    1 => 
+    [
+      'id' => 'vp02',
+      'employee_name' => 'Ha Pham',
+      'violation_date' => '2026-06-19',
+      'violation_type' => 'Vi phạm quy trình kho',
+      'description' => 'Chưa hoàn tất biên bản bàn giao cuối ca.',
+      'penalty' => 150000,
+      'resolution' => 'Bổ sung biên bản trong ngày',
+    ],
+    2 => 
+    [
+      'id' => 'vp03',
+      'employee_name' => 'Quang Le',
+      'violation_date' => '2026-06-18',
+      'violation_type' => 'Vi phạm về thời gian làm việc',
+      'description' => 'Nộp báo cáo công việc trễ hạn.',
+      'penalty' => 100000,
+      'resolution' => 'Nhắc nhở lần đầu',
+    ],
+    3 => 
+    [
+      'id' => 'vp04',
+      'employee_name' => 'Ha Pham',
+      'violation_date' => '2026-06-16',
+      'violation_type' => 'Vi phạm nội quy',
+      'description' => 'Không đeo thẻ nhân viên trong giờ làm việc.',
+      'penalty' => 50000,
+      'resolution' => 'Nhắc nhở',
+    ],
+    4 => 
+    [
+      'id' => 'vp05',
+      'employee_name' => 'Minh Nguyen',
+      'violation_date' => '2026-06-15',
+      'violation_type' => 'Vi phạm bảo mật thông tin',
+      'description' => 'Để tài liệu nội bộ tại khu vực công cộng.',
+      'penalty' => 500000,
+      'resolution' => 'Đào tạo lại quy định bảo mật',
+    ],
+    5 => 
+    [
+      'id' => 'vp06',
+      'employee_name' => 'Minh Nguyen',
+      'violation_date' => '2026-05-28',
+      'violation_type' => 'Vi phạm về thời gian làm việc',
+      'description' => 'Vắng họp giao ban không có lý do.',
+      'penalty' => 200000,
+      'resolution' => 'Trừ KPI tháng',
+    ],
+    6 => 
+    [
+      'id' => 'vp07',
+      'employee_name' => 'Ha Pham',
+      'violation_date' => '2026-05-20',
+      'violation_type' => 'Vi phạm sử dụng tài sản',
+      'description' => 'Sử dụng thiết bị không đúng quy trình.',
+      'penalty' => 300000,
+      'resolution' => 'Đào tạo lại quy trình thiết bị',
+    ],
+    7 => 
+    [
+      'id' => 'vp08',
+      'employee_name' => 'Quang Le',
+      'violation_date' => '2026-05-10',
+      'violation_type' => 'Vi phạm nội quy',
+      'description' => 'Không cập nhật trạng thái công việc cuối ngày.',
+      'penalty' => 100000,
+      'resolution' => 'Nhắc nhở lần đầu',
+    ],
+    8 => 
+    [
+      'id' => 'vp_sample_1',
+      'employee_name' => 'Tran Ngoc Long',
+      'employee_id' => 'e_hr_101',
+      'violation_date' => '2026-06-11',
+      'violation_type' => 'Vi pham noi quy',
+      'description' => 'Phieu vi pham mau 1',
+      'penalty' => 50000,
+      'resolution' => 'Nhac nho va theo doi',
+    ],
+    9 => 
+    [
+      'id' => 'vp_sample_2',
+      'employee_name' => 'Ho Viet Nhan',
+      'employee_id' => 'e_hr_102',
+      'violation_date' => '2026-06-12',
+      'violation_type' => 'Vi pham quy trinh',
+      'description' => 'Phieu vi pham mau 2',
+      'penalty' => 100000,
+      'resolution' => 'Nhac nho va theo doi',
+    ],
+  ],
+  'rewards' => 
+  [
+    0 => 
+    [
+      'id' => 'kt01',
+      'employee_name' => 'Minh Nguyen',
+      'reward_date' => '2026-06-20',
+      'reward_type' => 'Khen thưởng nhân viên xuất sắc',
+      'description' => 'Vượt 125% chỉ tiêu doanh số tháng.',
+      'amount' => 3000000,
+      'decision_number' => 'QDKT-2026-001',
+    ],
+    1 => 
+    [
+      'id' => 'kt02',
+      'employee_name' => 'Ha Pham',
+      'reward_date' => '2026-06-15',
+      'reward_type' => 'Đóng góp ý tưởng sáng tạo',
+      'description' => 'Đề xuất quy trình kiểm kê giúp giảm thời gian xử lý.',
+      'amount' => 1500000,
+      'decision_number' => 'QDKT-2026-002',
+    ],
+    2 => 
+    [
+      'id' => 'kt03',
+      'employee_name' => 'Quang Le',
+      'reward_date' => '2026-06-10',
+      'reward_type' => 'Hoàn thành xuất sắc dự án',
+      'description' => 'Hoàn thành module báo cáo trước thời hạn.',
+      'amount' => 2500000,
+      'decision_number' => 'QDKT-2026-003',
+    ],
+    3 => 
+    [
+      'id' => 'kt04',
+      'employee_name' => 'Minh Nguyen',
+      'reward_date' => '2026-05-25',
+      'reward_type' => 'Khen thưởng nhân viên xuất sắc',
+      'description' => 'Duy trì chất lượng chăm sóc khách hàng tốt.',
+      'amount' => 2000000,
+      'decision_number' => 'QDKT-2026-004',
+    ],
+    4 => 
+    [
+      'id' => 'kt05',
+      'employee_name' => 'Ha Pham',
+      'reward_date' => '2026-05-12',
+      'reward_type' => 'Đóng góp ý tưởng sáng tạo',
+      'description' => 'Cải tiến cách bố trí hàng hóa trong kho.',
+      'amount' => 1000000,
+      'decision_number' => 'QDKT-2026-005',
+    ],
+    5 => 
+    [
+      'id' => 'kt06',
+      'employee_name' => 'Quang Le',
+      'reward_date' => '2026-04-30',
+      'reward_type' => 'Hỗ trợ đồng đội',
+      'description' => 'Hỗ trợ đào tạo người dùng hệ thống mới.',
+      'amount' => 1000000,
+      'decision_number' => 'QDKT-2026-006',
+    ],
+    6 => 
+    [
+      'id' => 'kt_sample_1',
+      'employee_name' => 'Tran Ngoc Long',
+      'employee_id' => 'e_hr_101',
+      'reward_date' => '2026-06-06',
+      'reward_type' => 'Dong gop y tuong',
+      'description' => 'Phieu khen thuong mau 1',
+      'amount' => 700000,
+      'decision_number' => 'QDKT-2026-001',
+    ],
+    7 => 
+    [
+      'id' => 'kt_sample_2',
+      'employee_name' => 'Ho Viet Nhan',
+      'employee_id' => 'e_hr_102',
+      'reward_date' => '2026-06-07',
+      'reward_type' => 'Hoan thanh du an',
+      'description' => 'Phieu khen thuong mau 2',
+      'amount' => 900000,
+      'decision_number' => 'QDKT-2026-002',
+    ],
+    8 => 
+    [
+      'id' => 'kt_sample_3',
+      'employee_name' => 'Lam Quoc Tuan',
+      'employee_id' => 'e_hr_103',
+      'reward_date' => '2026-06-08',
+      'reward_type' => 'Nhan vien xuat sac',
+      'description' => 'Phieu khen thuong mau 3',
+      'amount' => 1100000,
+      'decision_number' => 'QDKT-2026-003',
+    ],
+    9 => 
+    [
+      'id' => 'kt_sample_4',
+      'employee_name' => 'Nguyen Huu Phuong',
+      'employee_id' => 'e_hr_104',
+      'reward_date' => '2026-06-09',
+      'reward_type' => 'Dong gop y tuong',
+      'description' => 'Phieu khen thuong mau 4',
+      'amount' => 1300000,
+      'decision_number' => 'QDKT-2026-004',
+    ],
+  ],
+  'projects' => 
+  [
+    0 => 
+    [
+      'id' => 'pr01',
+      'name' => 'Takashimaya',
+      'category' => 'Triển khai hệ thống',
+      'company' => 'Công ty TNHH Công nghệ Metatek',
+      'start_date' => '2026-06-22',
+      'end_date' => '2026-08-22',
+      'status' => 'open',
+      'manager' => 'Minh Nguyen',
+      'budget' => 850000000,
+      'description' => 'Triển khai nền tảng quản trị vận hành.',
+    ],
+    1 => 
+    [
+      'id' => 'pr02',
+      'name' => 'MPRO',
+      'category' => 'Phần mềm doanh nghiệp',
+      'company' => 'Công ty TNHH Thương mại & Kỹ thuật V.M.S',
+      'start_date' => '2026-06-18',
+      'end_date' => '2026-07-31',
+      'status' => 'in_progress',
+      'manager' => 'Quang Le',
+      'budget' => 620000000,
+      'description' => 'Phát triển hệ thống quản lý bán hàng.',
+    ],
+    2 => 
+    [
+      'id' => 'pr03',
+      'name' => 'Sàn Nông Sản Quốc Tế',
+      'category' => 'Thương mại điện tử',
+      'company' => 'Công ty Cổ phần Health Care Center APP',
+      'start_date' => '2026-06-08',
+      'end_date' => '2026-08-29',
+      'status' => 'open',
+      'manager' => 'Ha Pham',
+      'budget' => 1200000000,
+      'description' => 'Xây dựng sàn kết nối nông sản.',
+    ],
+    3 => 
+    [
+      'id' => 'pr04',
+      'name' => 'CMD ROYAL',
+      'category' => 'Dữ liệu',
+      'company' => 'Công ty TNHH MTV khai thác dữ liệu số bData',
+      'start_date' => '2026-06-16',
+      'end_date' => '2026-06-30',
+      'status' => 'completed',
+      'manager' => 'Quang Le',
+      'budget' => 320000000,
+      'description' => 'Chuẩn hóa dữ liệu khách hàng.',
+    ],
+    4 => 
+    [
+      'id' => 'pr05',
+      'name' => 'Green Pin',
+      'category' => 'Sản xuất',
+      'company' => 'Công ty TNHH Thương mại dịch vụ sản xuất P2D',
+      'start_date' => '2026-04-01',
+      'end_date' => '2026-06-30',
+      'status' => 'on_hold',
+      'manager' => 'Ha Pham',
+      'budget' => 740000000,
+      'description' => 'Quản lý chuỗi cung ứng sản xuất.',
+    ],
+    5 => 
+    [
+      'id' => 'pr06',
+      'name' => 'Home 3DS',
+      'category' => 'Thiết kế',
+      'company' => 'Công ty TNHH Thiết kế và xây dựng Home Design',
+      'start_date' => '2026-06-16',
+      'end_date' => '2026-09-15',
+      'status' => 'open',
+      'manager' => 'Minh Nguyen',
+      'budget' => 480000000,
+      'description' => 'Nền tảng quản lý thiết kế 3D.',
+    ],
+    6 => 
+    [
+      'id' => 'pr07',
+      'name' => 'Happy C',
+      'category' => 'Marketing',
+      'company' => 'Công ty TNHH Happy Creative',
+      'start_date' => '2026-06-01',
+      'end_date' => '2026-12-31',
+      'status' => 'in_progress',
+      'manager' => 'Minh Nguyen',
+      'budget' => 900000000,
+      'description' => 'Hệ thống quản lý chiến dịch marketing.',
+    ],
+    7 => 
+    [
+      'id' => 'pr08',
+      'name' => 'BDATA-AI',
+      'category' => 'Trí tuệ nhân tạo',
+      'company' => 'Công ty TNHH MTV khai thác dữ liệu số bData',
+      'start_date' => '2026-01-01',
+      'end_date' => '2026-12-31',
+      'status' => 'in_progress',
+      'manager' => 'Quang Le',
+      'budget' => 2500000000,
+      'description' => 'Nền tảng AI phân tích dữ liệu doanh nghiệp.',
+    ],
+    8 => 
+    [
+      'id' => 'pr_sample_1',
+      'name' => 'Takashimaya',
+      'category' => 'Phan mem',
+      'company' => 'bData co.,ltd',
+      'start_date' => '2026-02-01',
+      'end_date' => '2026-07-28',
+      'status' => 'in_progress',
+      'manager' => 'Tran Ngoc Long',
+      'budget' => 250000000,
+      'description' => 'Du an mau 1',
+    ],
+    9 => 
+    [
+      'id' => 'pr_sample_2',
+      'name' => 'MPRO',
+      'category' => 'Du lieu',
+      'company' => 'CONG TY TNHH DIC VIET NAM',
+      'start_date' => '2026-03-01',
+      'end_date' => '2026-08-28',
+      'status' => 'completed',
+      'manager' => 'Ho Viet Nhan',
+      'budget' => 300000000,
+      'description' => 'Du an mau 2',
+    ],
+  ],
+  'daily_reports' => 
+  [
+    0 => 
+    [
+      'id' => 'dr01',
+      'project' => 'BDATA-AI',
+      'category' => 'Phát triển',
+      'employee' => 'Quang Le',
+      'details' => 'Hoàn thiện API phân tích dữ liệu và viết unit test.',
+      'hours' => 7.5,
+      'report_date' => '2026-06-21',
+    ],
+    1 => 
+    [
+      'id' => 'dr02',
+      'project' => 'MPRO',
+      'category' => 'Dữ liệu',
+      'employee' => 'Minh Nguyen',
+      'details' => 'Chuẩn hóa danh sách khách hàng trước khi import.',
+      'hours' => 6,
+      'report_date' => '2026-06-21',
+    ],
+    2 => 
+    [
+      'id' => 'dr03',
+      'project' => 'Green Pin',
+      'category' => 'Kiểm thử',
+      'employee' => 'Ha Pham',
+      'details' => 'Kiểm thử quy trình nhập kho và lập biên bản lỗi.',
+      'hours' => 8,
+      'report_date' => '2026-06-20',
+    ],
+    3 => 
+    [
+      'id' => 'dr04',
+      'project' => 'Happy C',
+      'category' => 'Báo cáo',
+      'employee' => 'Minh Nguyen',
+      'details' => 'Thiết kế biểu đồ doanh thu theo chiến dịch.',
+      'hours' => 5.5,
+      'report_date' => '2026-06-20',
+    ],
+    4 => 
+    [
+      'id' => 'dr05',
+      'project' => 'Home 3DS',
+      'category' => 'Tài liệu',
+      'employee' => 'Quang Le',
+      'details' => 'Soạn hướng dẫn sử dụng chức năng thiết kế.',
+      'hours' => 4,
+      'report_date' => '2026-06-19',
+    ],
+    5 => 
+    [
+      'id' => 'dr_sample_1',
+      'project' => 'Takashimaya',
+      'category' => 'Kiem thu',
+      'employee' => 'Tran Ngoc Long',
+      'employee_id' => 'e_hr_101',
+      'details' => 'Bao cao cong viec hang ngay mau 1',
+      'hours' => 5,
+      'report_date' => '2026-06-11',
+    ],
+    6 => 
+    [
+      'id' => 'dr_sample_2',
+      'project' => 'MPRO',
+      'category' => 'Bao cao',
+      'employee' => 'Ho Viet Nhan',
+      'employee_id' => 'e_hr_102',
+      'details' => 'Bao cao cong viec hang ngay mau 2',
+      'hours' => 6,
+      'report_date' => '2026-06-12',
+    ],
+    7 => 
+    [
+      'id' => 'dr_sample_3',
+      'project' => 'San Nong San Quoc Te',
+      'category' => 'Tai lieu',
+      'employee' => 'Lam Quoc Tuan',
+      'employee_id' => 'e_hr_103',
+      'details' => 'Bao cao cong viec hang ngay mau 3',
+      'hours' => 7,
+      'report_date' => '2026-06-13',
+    ],
+    8 => 
+    [
+      'id' => 'dr_sample_4',
+      'project' => 'CMD ROYAL',
+      'category' => 'Phat trien',
+      'employee' => 'Nguyen Huu Phuong',
+      'employee_id' => 'e_hr_104',
+      'details' => 'Bao cao cong viec hang ngay mau 4',
+      'hours' => 8,
+      'report_date' => '2026-06-14',
+    ],
+    9 => 
+    [
+      'id' => 'dr_sample_5',
+      'project' => 'Green Pin',
+      'category' => 'Kiem thu',
+      'employee' => 'Hoang Trong Tin',
+      'employee_id' => 'e_hr_105',
+      'details' => 'Bao cao cong viec hang ngay mau 5',
+      'hours' => 4,
+      'report_date' => '2026-06-15',
+    ],
+  ],
+  'tasks' => 
+  [
+    0 => 
+    [
+      'id' => 't1',
+      'title' => 'Thiết kế database phase 1',
+      'project' => '',
+      'category' => 'Công việc chung',
+      'hours' => 0,
+      'assignee' => 'Quang Le',
+      'start_date' => '2026-07-01',
+      'completion_date' => '2026-07-25',
+      'deadline' => '2026-07-25',
+      'status' => 'in_progress',
+      'progress' => 0,
+      'priority' => 'normal',
+      'description' => '',
+    ],
+    1 => 
+    [
+      'id' => 't2',
+      'title' => 'Chuẩn hóa danh sách khách hàng',
+      'project' => 'CRM',
+      'assignee' => 'Minh Nguyen',
+      'status' => 'pending',
+      'deadline' => '2026-06-21',
+      'category' => 'Công việc chung',
+      'hours' => 0,
+      'start_date' => '2026-07-01',
+      'completion_date' => '2026-06-21',
+      'progress' => 0,
+      'priority' => 'normal',
+      'description' => '',
+    ],
+    2 => 
+    [
+      'id' => 't3',
+      'title' => 'Kiểm kê tồn kho đầu kỳ',
+      'project' => 'Inventory',
+      'assignee' => 'Ha Pham',
+      'status' => 'completed',
+      'deadline' => '2026-06-18',
+      'category' => 'Công việc chung',
+      'hours' => 0,
+      'start_date' => '2026-07-01',
+      'completion_date' => '2026-06-18',
+      'progress' => 100,
+      'priority' => 'normal',
+      'description' => '',
+    ],
+    3 => 
+    [
+      'id' => 'wi04',
+      'title' => 'Hoàn thiện giao diện quản lý dự án',
+      'project' => 'BDATA-AI',
+      'category' => 'Phát triển',
+      'hours' => 24,
+      'assignee' => 'Quang Le',
+      'start_date' => '2026-06-17',
+      'completion_date' => '2026-06-25',
+      'deadline' => '2026-06-25',
+      'status' => 'in_progress',
+      'progress' => 65,
+      'priority' => 'high',
+      'description' => 'Hoàn thiện giao diện và kiểm thử responsive.',
+    ],
+    4 => 
+    [
+      'id' => 'wi05',
+      'title' => 'Chuẩn bị dữ liệu khách hàng',
+      'project' => 'MPRO',
+      'category' => 'Dữ liệu',
+      'hours' => 12,
+      'assignee' => 'Minh Nguyen',
+      'start_date' => '2026-06-18',
+      'completion_date' => '2026-06-24',
+      'deadline' => '2026-06-24',
+      'status' => 'pending',
+      'progress' => 20,
+      'priority' => 'normal',
+      'description' => 'Làm sạch dữ liệu trước khi import.',
+    ],
+    5 => 
+    [
+      'id' => 'wi06',
+      'title' => 'Kiểm thử quy trình nhập kho',
+      'project' => 'Green Pin',
+      'category' => 'Kiểm thử',
+      'hours' => 16,
+      'assignee' => 'Ha Pham',
+      'start_date' => '2026-06-16',
+      'completion_date' => '2026-06-22',
+      'deadline' => '2026-06-22',
+      'status' => 'completed',
+      'progress' => 100,
+      'priority' => 'high',
+      'description' => 'Kiểm thử và lập biên bản nghiệm thu.',
+    ],
+    6 => 
+    [
+      'id' => 'wi07',
+      'title' => 'Thiết kế báo cáo doanh thu',
+      'project' => 'Happy C',
+      'category' => 'Báo cáo',
+      'hours' => 20,
+      'assignee' => 'Minh Nguyen',
+      'start_date' => '2026-06-20',
+      'completion_date' => '2026-06-30',
+      'deadline' => '2026-06-30',
+      'status' => 'in_progress',
+      'progress' => 45,
+      'priority' => 'normal',
+      'description' => 'Xây dựng biểu đồ và bộ lọc báo cáo.',
+    ],
+    7 => 
+    [
+      'id' => 'wi08',
+      'title' => 'Tài liệu hướng dẫn người dùng',
+      'project' => 'Home 3DS',
+      'category' => 'Tài liệu',
+      'hours' => 8,
+      'assignee' => 'Quang Le',
+      'start_date' => '2026-06-21',
+      'completion_date' => '2026-06-28',
+      'deadline' => '2026-06-28',
+      'status' => 'pending',
+      'progress' => 10,
+      'priority' => 'low',
+      'description' => 'Biên soạn hướng dẫn sử dụng cho khách hàng.',
+    ],
+    8 => 
+    [
+      'id' => 'task_sample_1',
+      'title' => 'Cong viec mau 1',
+      'project' => 'Takashimaya',
+      'category' => 'Frontend',
+      'assignee' => 'Tran Ngoc Long',
+      'assignee_id' => 'e_hr_101',
+      'start_date' => '2026-06-01',
+      'deadline' => '2026-07-11',
+      'status' => 'in_progress',
+      'hours' => 3,
+      'progress' => 10,
+    ],
+    9 => 
+    [
+      'id' => 'task_sample_2',
+      'title' => 'Cong viec mau 2',
+      'project' => 'MPRO',
+      'category' => 'Kiem thu',
+      'assignee' => 'Ho Viet Nhan',
+      'assignee_id' => 'e_hr_102',
+      'start_date' => '2026-06-01',
+      'deadline' => '2026-07-12',
+      'status' => 'completed',
+      'hours' => 4,
+      'progress' => 20,
+    ],
+  ],
+  'training' => 
+  [
+    0 => 
+    [
+      'id' => 'tr1',
+      'course' => 'Onboarding nhân sự mới',
+      'employee' => 'Quang Le',
+      'trainer' => 'Linh Tran',
+      'progress' => 75,
+      'status' => 'in_progress',
+    ],
+    1 => 
+    [
+      'id' => 'tr2',
+      'course' => 'Quy trình bán hàng B2B',
+      'employee' => 'Minh Nguyen',
+      'trainer' => 'Admin Novaone',
+      'progress' => 100,
+      'status' => 'completed',
+    ],
+    2 => 
+    [
+      'id' => 'tr_sample_1',
+      'course' => 'Khoa hoc mau 1',
+      'employee' => 'Tran Ngoc Long',
+      'trainer' => 'Ho Viet Nhan',
+      'progress' => 10,
+      'status' => 'in_progress',
+    ],
+    3 => 
+    [
+      'id' => 'tr_sample_2',
+      'course' => 'Khoa hoc mau 2',
+      'employee' => 'Ho Viet Nhan',
+      'trainer' => 'Lam Quoc Tuan',
+      'progress' => 20,
+      'status' => 'in_progress',
+    ],
+    4 => 
+    [
+      'id' => 'tr_sample_3',
+      'course' => 'Khoa hoc mau 3',
+      'employee' => 'Lam Quoc Tuan',
+      'trainer' => 'Nguyen Huu Phuong',
+      'progress' => 30,
+      'status' => 'completed',
+    ],
+    5 => 
+    [
+      'id' => 'tr_sample_4',
+      'course' => 'Khoa hoc mau 4',
+      'employee' => 'Nguyen Huu Phuong',
+      'trainer' => 'Hoang Trong Tin',
+      'progress' => 40,
+      'status' => 'in_progress',
+    ],
+    6 => 
+    [
+      'id' => 'tr_sample_5',
+      'course' => 'Khoa hoc mau 5',
+      'employee' => 'Hoang Trong Tin',
+      'trainer' => 'Nguyen Khoa Anh Kinh',
+      'progress' => 50,
+      'status' => 'in_progress',
+    ],
+    7 => 
+    [
+      'id' => 'tr_sample_6',
+      'course' => 'Khoa hoc mau 6',
+      'employee' => 'Nguyen Khoa Anh Kinh',
+      'trainer' => 'Vo Thuan',
+      'progress' => 60,
+      'status' => 'completed',
+    ],
+    8 => 
+    [
+      'id' => 'tr_sample_7',
+      'course' => 'Khoa hoc mau 7',
+      'employee' => 'Vo Thuan',
+      'trainer' => 'Tran Xuan Quang',
+      'progress' => 70,
+      'status' => 'in_progress',
+    ],
+    9 => 
+    [
+      'id' => 'tr_sample_8',
+      'course' => 'Khoa hoc mau 8',
+      'employee' => 'Tran Xuan Quang',
+      'trainer' => 'Le Hoang Minh Quy',
+      'progress' => 80,
+      'status' => 'in_progress',
+    ],
+  ],
+  'recruitments' => 
+  [
+    0 => 
+    [
+      'id' => 'r1',
+      'position' => 'Backend Laravel Developer',
+      'candidate' => 'Nam Ho',
+      'stage' => 'interview',
+      'owner' => 'Linh Tran',
+    ],
+    1 => 
+    [
+      'id' => 'r2',
+      'position' => 'Sales Executive',
+      'candidate' => 'Mai Do',
+      'stage' => 'offer',
+      'owner' => 'Linh Tran',
+    ],
+    2 => 
+    [
+      'id' => 'rec_sample_1',
+      'position' => 'Sales Executive',
+      'candidate' => 'Ung vien mau 1',
+      'stage' => 'interview',
+      'owner' => 'Tran Ngoc Long',
+    ],
+    3 => 
+    [
+      'id' => 'rec_sample_2',
+      'position' => 'HR Executive',
+      'candidate' => 'Ung vien mau 2',
+      'stage' => 'offer',
+      'owner' => 'Ho Viet Nhan',
+    ],
+    4 => 
+    [
+      'id' => 'rec_sample_3',
+      'position' => 'Accountant',
+      'candidate' => 'Ung vien mau 3',
+      'stage' => 'hired',
+      'owner' => 'Lam Quoc Tuan',
+    ],
+    5 => 
+    [
+      'id' => 'rec_sample_4',
+      'position' => 'Tester',
+      'candidate' => 'Ung vien mau 4',
+      'stage' => 'new',
+      'owner' => 'Nguyen Huu Phuong',
+    ],
+    6 => 
+    [
+      'id' => 'rec_sample_5',
+      'position' => 'Backend Developer',
+      'candidate' => 'Ung vien mau 5',
+      'stage' => 'interview',
+      'owner' => 'Hoang Trong Tin',
+    ],
+    7 => 
+    [
+      'id' => 'rec_sample_6',
+      'position' => 'Sales Executive',
+      'candidate' => 'Ung vien mau 6',
+      'stage' => 'offer',
+      'owner' => 'Nguyen Khoa Anh Kinh',
+    ],
+    8 => 
+    [
+      'id' => 'rec_sample_7',
+      'position' => 'HR Executive',
+      'candidate' => 'Ung vien mau 7',
+      'stage' => 'hired',
+      'owner' => 'Vo Thuan',
+    ],
+    9 => 
+    [
+      'id' => 'rec_sample_8',
+      'position' => 'Accountant',
+      'candidate' => 'Ung vien mau 8',
+      'stage' => 'new',
+      'owner' => 'Tran Xuan Quang',
+    ],
+  ],
+  'customers' => 
+  [
+    0 => 
+    [
+      'id' => 'c1',
+      'name' => 'Công ty An Phát',
+      'type' => 'customer',
+      'phone' => '0901 111 222',
+      'owner' => 'Minh Nguyen',
+      'status' => 'vip',
+    ],
+    1 => 
+    [
+      'id' => 'c2',
+      'name' => 'Nhà cung cấp Sao Bắc',
+      'type' => 'supplier',
+      'phone' => '0902 333 444',
+      'owner' => 'Ha Pham',
+      'status' => 'active',
+    ],
+    2 => 
+    [
+      'id' => 'cus_sample_1',
+      'name' => 'Khach hang mau 1',
+      'type' => 'customer',
+      'phone' => '0902100001',
+      'owner' => 'Tran Ngoc Long',
+      'status' => 'active',
+    ],
+    3 => 
+    [
+      'id' => 'cus_sample_2',
+      'name' => 'Khach hang mau 2',
+      'type' => 'customer',
+      'phone' => '0902100002',
+      'owner' => 'Ho Viet Nhan',
+      'status' => 'vip',
+    ],
+    4 => 
+    [
+      'id' => 'cus_sample_3',
+      'name' => 'Khach hang mau 3',
+      'type' => 'customer',
+      'phone' => '0902100003',
+      'owner' => 'Lam Quoc Tuan',
+      'status' => 'active',
+    ],
+    5 => 
+    [
+      'id' => 'cus_sample_4',
+      'name' => 'Khach hang mau 4',
+      'type' => 'customer',
+      'phone' => '0902100004',
+      'owner' => 'Nguyen Huu Phuong',
+      'status' => 'vip',
+    ],
+    6 => 
+    [
+      'id' => 'cus_sample_5',
+      'name' => 'Khach hang mau 5',
+      'type' => 'customer',
+      'phone' => '0902100005',
+      'owner' => 'Hoang Trong Tin',
+      'status' => 'active',
+    ],
+    7 => 
+    [
+      'id' => 'cus_sample_6',
+      'name' => 'Khach hang mau 6',
+      'type' => 'customer',
+      'phone' => '0902100006',
+      'owner' => 'Nguyen Khoa Anh Kinh',
+      'status' => 'vip',
+    ],
+    8 => 
+    [
+      'id' => 'cus_sample_7',
+      'name' => 'Khach hang mau 7',
+      'type' => 'customer',
+      'phone' => '0902100007',
+      'owner' => 'Vo Thuan',
+      'status' => 'active',
+    ],
+    9 => 
+    [
+      'id' => 'cus_sample_8',
+      'name' => 'Khach hang mau 8',
+      'type' => 'customer',
+      'phone' => '0902100008',
+      'owner' => 'Tran Xuan Quang',
+      'status' => 'vip',
+    ],
+  ],
+  'suppliers' => 
+  [
+    0 => 
+    [
+      'id' => 'sp-bdata',
+      'code' => 'BDATA',
+      'name' => 'bData co.,ltd',
+      'category' => 'Phần mềm',
+      'phone' => '0901 111 222',
+      'email' => 'contact@bdata.vn',
+      'address' => 'TP. Hồ Chí Minh',
+      'contact_person' => 'Trần Ngọc Long',
+      'debt' => 0,
+      'status' => 'active',
+      'note' => 'Đối tác triển khai hệ thống',
+    ],
+    1 => 
+    [
+      'id' => 'sp-nc009',
+      'code' => 'NC 009',
+      'name' => 'CÔNG TY TNHH DIC (VIỆT NAM]',
+      'category' => 'Thiết bị',
+      'phone' => '0902 333 444',
+      'email' => 'sales@dic.vn',
+      'address' => 'Hà Nội',
+      'contact_person' => 'Phòng kinh doanh',
+      'debt' => 0,
+      'status' => 'active',
+      'note' => 'Nhà cung cấp thiết bị',
+    ],
+    2 => 
+    [
+      'id' => 'sp-long',
+      'code' => '112321312312',
+      'name' => 'Trần Ngọc Long',
+      'category' => 'Dịch vụ',
+      'phone' => '0903 555 666',
+      'email' => 'long@example.com',
+      'address' => 'Đà Nẵng',
+      'contact_person' => 'Trần Ngọc Long',
+      'debt' => 0,
+      'status' => 'active',
+      'note' => 'Nhà cung cấp cá nhân',
+    ],
+    3 => 
+    [
+      'id' => 'sp-long-1',
+      'code' => '123123123',
+      'name' => 'Trần Ngọc Long 1',
+      'category' => 'Dịch vụ',
+      'phone' => '0904 555 666',
+      'email' => 'long1@example.com',
+      'address' => 'TP. Hồ Chí Minh',
+      'contact_person' => 'Trần Ngọc Long',
+      'debt' => 0,
+      'status' => 'active',
+      'note' => 'Dữ liệu mẫu',
+    ],
+    4 => 
+    [
+      'id' => 'sp1',
+      'code' => 'NC 001',
+      'name' => 'Sao Bắc Logistics',
+      'category' => 'Vận chuyển',
+      'phone' => '0902 333 444',
+      'email' => '',
+      'address' => '',
+      'contact_person' => '',
+      'debt' => 12000000,
+      'status' => 'active',
+      'note' => '',
+    ],
+    5 => 
+    [
+      'id' => 'sp2',
+      'code' => 'NC 002',
+      'name' => 'Thiết Bị Việt',
+      'category' => 'Thiết bị kho',
+      'phone' => '0908 222 111',
+      'email' => '',
+      'address' => '',
+      'contact_person' => '',
+      'debt' => 0,
+      'status' => 'active',
+      'note' => '',
+    ],
+    6 => 
+    [
+      'id' => 'sup_sample_1',
+      'code' => 'NCC001',
+      'name' => 'bData co.,ltd',
+      'phone' => '0287000001',
+      'email' => 'supplier1@novaone.vn',
+      'address' => 'Dia chi nha cung cap 1',
+      'contact' => 'Tran Ngoc Long',
+      'note' => 'Nha cung cap mau 1',
+    ],
+    7 => 
+    [
+      'id' => 'sup_sample_2',
+      'code' => 'NCC002',
+      'name' => 'CONG TY TNHH DIC VIET NAM',
+      'phone' => '0287000002',
+      'email' => 'supplier2@novaone.vn',
+      'address' => 'Dia chi nha cung cap 2',
+      'contact' => 'Ho Viet Nhan',
+      'note' => 'Nha cung cap mau 2',
+    ],
+    8 => 
+    [
+      'id' => 'sup_sample_3',
+      'code' => 'NCC003',
+      'name' => 'NovaTech',
+      'phone' => '0287000003',
+      'email' => 'supplier3@novaone.vn',
+      'address' => 'Dia chi nha cung cap 3',
+      'contact' => 'Lam Quoc Tuan',
+      'note' => 'Nha cung cap mau 3',
+    ],
+    9 => 
+    [
+      'id' => 'sup_sample_4',
+      'code' => 'NCC004',
+      'name' => 'An Phat Supply',
+      'phone' => '0287000004',
+      'email' => 'supplier4@novaone.vn',
+      'address' => 'Dia chi nha cung cap 4',
+      'contact' => 'Nguyen Huu Phuong',
+      'note' => 'Nha cung cap mau 4',
+    ],
+  ],
+  'services' => 
+  [
+    0 => 
+    [
+      'id' => 'svc01',
+      'name' => 'Phần mềm',
+      'level' => 1,
+      'parent' => '',
+      'code' => 'PM',
+      'price' => 0,
+      'status' => 'inactive',
+      'note' => 'Nhóm phần mềm doanh nghiệp',
+      'image' => '',
+      'icon' => '',
+    ],
+    1 => 
+    [
+      'id' => 'svc02',
+      'name' => 'bERP',
+      'level' => 1,
+      'parent' => '',
+      'code' => 'BERP',
+      'price' => 0,
+      'status' => 'active',
+      'note' => 'Quản trị doanh nghiệp',
+      'image' => '',
+      'icon' => '',
+    ],
+    2 => 
+    [
+      'id' => 'svc03',
+      'name' => 'bFIN',
+      'level' => 1,
+      'parent' => '',
+      'code' => 'BFIN',
+      'price' => 0,
+      'status' => 'active',
+      'note' => 'Tài chính kế toán',
+      'image' => '',
+      'icon' => '',
+    ],
+    3 => 
+    [
+      'id' => 'svc04',
+      'name' => 'Mua bán Car',
+      'level' => 1,
+      'parent' => '',
+      'code' => 'CAR',
+      'price' => 0,
+      'status' => 'active',
+      'note' => 'Dịch vụ xe',
+      'image' => '',
+      'icon' => '',
+    ],
+    4 => 
+    [
+      'id' => 'svc05',
+      'name' => 'Dịch vụ sửa chữa',
+      'level' => 1,
+      'parent' => '',
+      'code' => 'SC',
+      'price' => 0,
+      'status' => 'active',
+      'note' => 'Nhóm sửa chữa',
+      'image' => '',
+      'icon' => '',
+    ],
+    5 => 
+    [
+      'id' => 'svc06',
+      'name' => 'Dịch vụ sửa chữa 1',
+      'level' => 1,
+      'parent' => '',
+      'code' => 'SC1',
+      'price' => 0,
+      'status' => 'active',
+      'note' => 'Nhóm sửa chữa cấp 1',
+      'image' => '',
+      'icon' => '',
+    ],
+    6 => 
+    [
+      'id' => 'svc07',
+      'name' => 'Dịch vụ A',
+      'level' => 2,
+      'parent' => 'bERP',
+      'code' => 'DVA',
+      'price' => 15000000,
+      'status' => 'active',
+      'note' => 'Triển khai cơ bản',
+      'image' => '',
+      'icon' => '',
+    ],
+    7 => 
+    [
+      'id' => 'svc08',
+      'name' => 'Dịch vụ B',
+      'level' => 2,
+      'parent' => 'bERP',
+      'code' => 'DVB',
+      'price' => 25000000,
+      'status' => 'active',
+      'note' => 'Triển khai nâng cao',
+      'image' => '',
+      'icon' => '',
+    ],
+    8 => 
+    [
+      'id' => 'svc09',
+      'name' => 'Dịch vụ C',
+      'level' => 2,
+      'parent' => 'bFIN',
+      'code' => 'DVC',
+      'price' => 18000000,
+      'status' => 'active',
+      'note' => 'Tư vấn vận hành',
+      'image' => '',
+      'icon' => '',
+    ],
+    9 => 
+    [
+      'id' => 'svc10',
+      'name' => 'Dịch vụ in ấn',
+      'level' => 3,
+      'parent' => 'Dịch vụ sửa chữa',
+      'code' => 'IN',
+      'price' => 3000000,
+      'status' => 'active',
+      'note' => 'In ấn tài liệu',
+      'image' => '',
+      'icon' => '',
+    ],
+  ],
+  'sales' => 
+  [
+    0 => 
+    [
+      'id' => 's1',
+      'code' => 'SO-1001',
+      'customer' => 'Công ty An Phát',
+      'product' => 'Gói CRM Pro',
+      'amount' => 58000000,
+      'payment' => 'partial',
+      'status' => 'confirmed',
+    ],
+    1 => 
+    [
+      'id' => 's2',
+      'code' => 'SO-1002',
+      'customer' => 'Minh Long',
+      'product' => 'Thiết bị kho',
+      'amount' => 32000000,
+      'payment' => 'paid',
+      'status' => 'delivered',
+    ],
+    2 => 
+    [
+      'id' => 'sale_sample_1',
+      'name' => 'Phieu ban hang 1',
+      'amount' => 1500000,
+      'customer' => 'Khach hang mau 1',
+      'status' => 'paid',
+    ],
+    3 => 
+    [
+      'id' => 'sale_sample_2',
+      'name' => 'Phieu ban hang 2',
+      'amount' => 2000000,
+      'customer' => 'Khach hang mau 2',
+      'status' => 'new',
+    ],
+    4 => 
+    [
+      'id' => 'sale_sample_3',
+      'name' => 'Phieu ban hang 3',
+      'amount' => 2500000,
+      'customer' => 'Khach hang mau 3',
+      'status' => 'paid',
+    ],
+    5 => 
+    [
+      'id' => 'sale_sample_4',
+      'name' => 'Phieu ban hang 4',
+      'amount' => 3000000,
+      'customer' => 'Khach hang mau 4',
+      'status' => 'new',
+    ],
+    6 => 
+    [
+      'id' => 'sale_sample_5',
+      'name' => 'Phieu ban hang 5',
+      'amount' => 3500000,
+      'customer' => 'Khach hang mau 5',
+      'status' => 'paid',
+    ],
+    7 => 
+    [
+      'id' => 'sale_sample_6',
+      'name' => 'Phieu ban hang 6',
+      'amount' => 4000000,
+      'customer' => 'Khach hang mau 6',
+      'status' => 'new',
+    ],
+    8 => 
+    [
+      'id' => 'sale_sample_7',
+      'name' => 'Phieu ban hang 7',
+      'amount' => 4500000,
+      'customer' => 'Khach hang mau 7',
+      'status' => 'paid',
+    ],
+    9 => 
+    [
+      'id' => 'sale_sample_8',
+      'name' => 'Phieu ban hang 8',
+      'amount' => 5000000,
+      'customer' => 'Khach hang mau 8',
+      'status' => 'new',
+    ],
+  ],
+  'pos' => 
+  [
+    0 => 
+    [
+      'id' => 'p1',
+      'invoice' => 'POS-0001',
+      'cashier' => 'Ha Pham',
+      'items' => 'Tem nhãn vận chuyển',
+      'amount' => 1250000,
+      'payment_method' => 'cash',
+      'status' => 'paid',
+    ],
+    1 => 
+    [
+      'id' => 'p2',
+      'invoice' => 'POS-0002',
+      'cashier' => 'Minh Nguyen',
+      'items' => 'Máy quét barcode',
+      'amount' => 4500000,
+      'payment_method' => 'card',
+      'status' => 'paid',
+    ],
+    2 => 
+    [
+      'id' => 'pos_sample_1',
+      'receipt' => 'POS-001',
+      'amount' => 300000,
+      'cashier' => 'Tran Ngoc Long',
+      'status' => 'paid',
+    ],
+    3 => 
+    [
+      'id' => 'pos_sample_2',
+      'receipt' => 'POS-002',
+      'amount' => 400000,
+      'cashier' => 'Ho Viet Nhan',
+      'status' => 'paid',
+    ],
+    4 => 
+    [
+      'id' => 'pos_sample_3',
+      'receipt' => 'POS-003',
+      'amount' => 500000,
+      'cashier' => 'Lam Quoc Tuan',
+      'status' => 'paid',
+    ],
+    5 => 
+    [
+      'id' => 'pos_sample_4',
+      'receipt' => 'POS-004',
+      'amount' => 600000,
+      'cashier' => 'Nguyen Huu Phuong',
+      'status' => 'paid',
+    ],
+    6 => 
+    [
+      'id' => 'pos_sample_5',
+      'receipt' => 'POS-005',
+      'amount' => 700000,
+      'cashier' => 'Hoang Trong Tin',
+      'status' => 'paid',
+    ],
+    7 => 
+    [
+      'id' => 'pos_sample_6',
+      'receipt' => 'POS-006',
+      'amount' => 800000,
+      'cashier' => 'Nguyen Khoa Anh Kinh',
+      'status' => 'paid',
+    ],
+    8 => 
+    [
+      'id' => 'pos_sample_7',
+      'receipt' => 'POS-007',
+      'amount' => 900000,
+      'cashier' => 'Vo Thuan',
+      'status' => 'paid',
+    ],
+    9 => 
+    [
+      'id' => 'pos_sample_8',
+      'receipt' => 'POS-008',
+      'amount' => 1000000,
+      'cashier' => 'Tran Xuan Quang',
+      'status' => 'paid',
+    ],
+  ],
+  'tickets' => 
+  [
+    0 => 
+    [
+      'id' => 'tk1',
+      'code' => 'TK-1001',
+      'customer' => 'Công ty An Phát',
+      'issue' => 'Cần hỗ trợ cấu hình phân quyền',
+      'owner' => 'Quang Le',
+      'status' => 'in_progress',
+    ],
+    1 => 
+    [
+      'id' => 'tk2',
+      'code' => 'TK-1002',
+      'customer' => 'Minh Long',
+      'issue' => 'Yêu cầu xuất báo cáo bán hàng',
+      'owner' => 'Minh Nguyen',
+      'status' => 'new',
+    ],
+    2 => 
+    [
+      'id' => 'ticket_sample_1',
+      'title' => 'Ticket ho tro 1',
+      'requester' => 'Tran Ngoc Long',
+      'status' => 'processing',
+      'priority' => 'medium',
+    ],
+    3 => 
+    [
+      'id' => 'ticket_sample_2',
+      'title' => 'Ticket ho tro 2',
+      'requester' => 'Ho Viet Nhan',
+      'status' => 'closed',
+      'priority' => 'high',
+    ],
+    4 => 
+    [
+      'id' => 'ticket_sample_3',
+      'title' => 'Ticket ho tro 3',
+      'requester' => 'Lam Quoc Tuan',
+      'status' => 'open',
+      'priority' => 'low',
+    ],
+    5 => 
+    [
+      'id' => 'ticket_sample_4',
+      'title' => 'Ticket ho tro 4',
+      'requester' => 'Nguyen Huu Phuong',
+      'status' => 'processing',
+      'priority' => 'medium',
+    ],
+    6 => 
+    [
+      'id' => 'ticket_sample_5',
+      'title' => 'Ticket ho tro 5',
+      'requester' => 'Hoang Trong Tin',
+      'status' => 'closed',
+      'priority' => 'high',
+    ],
+    7 => 
+    [
+      'id' => 'ticket_sample_6',
+      'title' => 'Ticket ho tro 6',
+      'requester' => 'Nguyen Khoa Anh Kinh',
+      'status' => 'open',
+      'priority' => 'low',
+    ],
+    8 => 
+    [
+      'id' => 'ticket_sample_7',
+      'title' => 'Ticket ho tro 7',
+      'requester' => 'Vo Thuan',
+      'status' => 'processing',
+      'priority' => 'medium',
+    ],
+    9 => 
+    [
+      'id' => 'ticket_sample_8',
+      'title' => 'Ticket ho tro 8',
+      'requester' => 'Tran Xuan Quang',
+      'status' => 'closed',
+      'priority' => 'high',
+    ],
+  ],
+  'call_logs' => 
+  [
+    0 => 
+    [
+      'id' => 'call_sample_1',
+      'phone' => '0903100001',
+      'title' => 'Cuoc goi mau 1',
+      'content' => 'Noi dung cham soc khach hang mau 1',
+      'customer' => 'Khach hang mau 1',
+      'contact' => 'Tran Ngoc Long',
+      'created_at' => '2026-07-02 09:01:00',
+    ],
+    1 => 
+    [
+      'id' => 'call_sample_2',
+      'phone' => '0903100002',
+      'title' => 'Cuoc goi mau 2',
+      'content' => 'Noi dung cham soc khach hang mau 2',
+      'customer' => 'Khach hang mau 2',
+      'contact' => 'Ho Viet Nhan',
+      'created_at' => '2026-07-02 09:02:00',
+    ],
+    2 => 
+    [
+      'id' => 'call_sample_3',
+      'phone' => '0903100003',
+      'title' => 'Cuoc goi mau 3',
+      'content' => 'Noi dung cham soc khach hang mau 3',
+      'customer' => 'Khach hang mau 3',
+      'contact' => 'Lam Quoc Tuan',
+      'created_at' => '2026-07-02 09:03:00',
+    ],
+    3 => 
+    [
+      'id' => 'call_sample_4',
+      'phone' => '0903100004',
+      'title' => 'Cuoc goi mau 4',
+      'content' => 'Noi dung cham soc khach hang mau 4',
+      'customer' => 'Khach hang mau 4',
+      'contact' => 'Nguyen Huu Phuong',
+      'created_at' => '2026-07-02 09:04:00',
+    ],
+    4 => 
+    [
+      'id' => 'call_sample_5',
+      'phone' => '0903100005',
+      'title' => 'Cuoc goi mau 5',
+      'content' => 'Noi dung cham soc khach hang mau 5',
+      'customer' => 'Khach hang mau 5',
+      'contact' => 'Hoang Trong Tin',
+      'created_at' => '2026-07-02 09:05:00',
+    ],
+    5 => 
+    [
+      'id' => 'call_sample_6',
+      'phone' => '0903100006',
+      'title' => 'Cuoc goi mau 6',
+      'content' => 'Noi dung cham soc khach hang mau 6',
+      'customer' => 'Khach hang mau 6',
+      'contact' => 'Nguyen Khoa Anh Kinh',
+      'created_at' => '2026-07-02 09:06:00',
+    ],
+    6 => 
+    [
+      'id' => 'call_sample_7',
+      'phone' => '0903100007',
+      'title' => 'Cuoc goi mau 7',
+      'content' => 'Noi dung cham soc khach hang mau 7',
+      'customer' => 'Khach hang mau 7',
+      'contact' => 'Vo Thuan',
+      'created_at' => '2026-07-02 09:07:00',
+    ],
+    7 => 
+    [
+      'id' => 'call_sample_8',
+      'phone' => '0903100008',
+      'title' => 'Cuoc goi mau 8',
+      'content' => 'Noi dung cham soc khach hang mau 8',
+      'customer' => 'Khach hang mau 8',
+      'contact' => 'Tran Xuan Quang',
+      'created_at' => '2026-07-02 09:08:00',
+    ],
+    8 => 
+    [
+      'id' => 'call_sample_9',
+      'phone' => '0903100009',
+      'title' => 'Cuoc goi mau 9',
+      'content' => 'Noi dung cham soc khach hang mau 9',
+      'customer' => 'Khach hang mau 9',
+      'contact' => 'Le Hoang Minh Quy',
+      'created_at' => '2026-07-02 09:09:00',
+    ],
+    9 => 
+    [
+      'id' => 'call_sample_10',
+      'phone' => '0903100010',
+      'title' => 'Cuoc goi mau 10',
+      'content' => 'Noi dung cham soc khach hang mau 10',
+      'customer' => 'Khach hang mau 10',
+      'contact' => 'Nguyen Xuan Hung',
+      'created_at' => '2026-07-02 09:10:00',
+    ],
+  ],
+  'inventory' => 
+  [
+    0 => 
+    [
+      'id' => 'i1',
+      'sku' => 'SKU-001',
+      'name' => 'Máy quét barcode',
+      'warehouse' => 'Kho Hà Nội',
+      'quantity' => 24,
+      'min' => 10,
+      'status' => 'available',
+    ],
+    1 => 
+    [
+      'id' => 'i2',
+      'sku' => 'SKU-014',
+      'name' => 'Tem nhãn vận chuyển',
+      'warehouse' => 'Kho TP.HCM',
+      'quantity' => 6,
+      'min' => 20,
+      'status' => 'low',
+    ],
+    2 => 
+    [
+      'id' => 'inv_sample_1',
+      'sku' => 'INV-001',
+      'name' => 'Hang ton mau 1',
+      'quantity' => 21,
+      'warehouse' => 'Kho mau 1',
+      'status' => 'available',
+    ],
+    3 => 
+    [
+      'id' => 'inv_sample_2',
+      'sku' => 'INV-002',
+      'name' => 'Hang ton mau 2',
+      'quantity' => 22,
+      'warehouse' => 'Kho mau 2',
+      'status' => 'available',
+    ],
+    4 => 
+    [
+      'id' => 'inv_sample_3',
+      'sku' => 'INV-003',
+      'name' => 'Hang ton mau 3',
+      'quantity' => 23,
+      'warehouse' => 'Kho mau 3',
+      'status' => 'available',
+    ],
+    5 => 
+    [
+      'id' => 'inv_sample_4',
+      'sku' => 'INV-004',
+      'name' => 'Hang ton mau 4',
+      'quantity' => 24,
+      'warehouse' => 'Kho mau 4',
+      'status' => 'available',
+    ],
+    6 => 
+    [
+      'id' => 'inv_sample_5',
+      'sku' => 'INV-005',
+      'name' => 'Hang ton mau 5',
+      'quantity' => 25,
+      'warehouse' => 'Kho mau 5',
+      'status' => 'available',
+    ],
+    7 => 
+    [
+      'id' => 'inv_sample_6',
+      'sku' => 'INV-006',
+      'name' => 'Hang ton mau 6',
+      'quantity' => 26,
+      'warehouse' => 'Kho mau 6',
+      'status' => 'available',
+    ],
+    8 => 
+    [
+      'id' => 'inv_sample_7',
+      'sku' => 'INV-007',
+      'name' => 'Hang ton mau 7',
+      'quantity' => 27,
+      'warehouse' => 'Kho mau 7',
+      'status' => 'available',
+    ],
+    9 => 
+    [
+      'id' => 'inv_sample_8',
+      'sku' => 'INV-008',
+      'name' => 'Hang ton mau 8',
+      'quantity' => 28,
+      'warehouse' => 'Kho mau 8',
+      'status' => 'available',
+    ],
+  ],
+  'internal_assets' => 
+  [
+    0 => 
+    [
+      'id' => 'ia1',
+      'code' => 'AS-001',
+      'name' => 'Laptop Dell',
+      'assigned_to' => 'Quang Le',
+      'quantity' => 1,
+      'status' => 'in_use',
+    ],
+    1 => 
+    [
+      'id' => 'ia2',
+      'code' => 'AS-002',
+      'name' => 'Máy chiếu phòng họp',
+      'assigned_to' => 'Phòng Hành chính',
+      'quantity' => 1,
+      'status' => 'available',
+    ],
+    2 => 
+    [
+      'id' => 'asset_sample_1',
+      'name' => 'Tai san noi bo 1',
+      'owner' => 'Tran Ngoc Long',
+      'department' => 'Admin',
+      'status' => 'using',
+    ],
+    3 => 
+    [
+      'id' => 'asset_sample_2',
+      'name' => 'Tai san noi bo 2',
+      'owner' => 'Ho Viet Nhan',
+      'department' => 'Kinh doanh',
+      'status' => 'available',
+    ],
+    4 => 
+    [
+      'id' => 'asset_sample_3',
+      'name' => 'Tai san noi bo 3',
+      'owner' => 'Lam Quoc Tuan',
+      'department' => 'Cong nghe',
+      'status' => 'using',
+    ],
+    5 => 
+    [
+      'id' => 'asset_sample_4',
+      'name' => 'Tai san noi bo 4',
+      'owner' => 'Nguyen Huu Phuong',
+      'department' => 'Cong nghe',
+      'status' => 'available',
+    ],
+    6 => 
+    [
+      'id' => 'asset_sample_5',
+      'name' => 'Tai san noi bo 5',
+      'owner' => 'Hoang Trong Tin',
+      'department' => 'Kinh doanh',
+      'status' => 'using',
+    ],
+    7 => 
+    [
+      'id' => 'asset_sample_6',
+      'name' => 'Tai san noi bo 6',
+      'owner' => 'Nguyen Khoa Anh Kinh',
+      'department' => 'Nhan su',
+      'status' => 'available',
+    ],
+    8 => 
+    [
+      'id' => 'asset_sample_7',
+      'name' => 'Tai san noi bo 7',
+      'owner' => 'Vo Thuan',
+      'department' => 'Kho van',
+      'status' => 'using',
+    ],
+    9 => 
+    [
+      'id' => 'asset_sample_8',
+      'name' => 'Tai san noi bo 8',
+      'owner' => 'Tran Xuan Quang',
+      'department' => 'Ke toan',
+      'status' => 'available',
+    ],
+  ],
+  'kpi' => 
+  [
+    0 => 
+    [
+      'id' => 'k1',
+      'objective' => 'Tăng doanh thu quý',
+      'owner' => 'Minh Nguyen',
+      'metric' => '1.8 tỷ VND',
+      'progress' => 68,
+      'status' => 'on_track',
+    ],
+    1 => 
+    [
+      'id' => 'k2',
+      'objective' => 'Tuyển đủ team dev',
+      'owner' => 'Linh Tran',
+      'metric' => '4 nhân sự',
+      'progress' => 45,
+      'status' => 'risk',
+    ],
+    2 => 
+    [
+      'id' => 'kpi_sample_1',
+      'name' => 'Muc tieu KPI 1',
+      'owner' => 'Tran Ngoc Long',
+      'target' => 110,
+      'current' => 8,
+      'status' => 'active',
+    ],
+    3 => 
+    [
+      'id' => 'kpi_sample_2',
+      'name' => 'Muc tieu KPI 2',
+      'owner' => 'Ho Viet Nhan',
+      'target' => 120,
+      'current' => 16,
+      'status' => 'review',
+    ],
+    4 => 
+    [
+      'id' => 'kpi_sample_3',
+      'name' => 'Muc tieu KPI 3',
+      'owner' => 'Lam Quoc Tuan',
+      'target' => 130,
+      'current' => 24,
+      'status' => 'active',
+    ],
+    5 => 
+    [
+      'id' => 'kpi_sample_4',
+      'name' => 'Muc tieu KPI 4',
+      'owner' => 'Nguyen Huu Phuong',
+      'target' => 140,
+      'current' => 32,
+      'status' => 'review',
+    ],
+    6 => 
+    [
+      'id' => 'kpi_sample_5',
+      'name' => 'Muc tieu KPI 5',
+      'owner' => 'Hoang Trong Tin',
+      'target' => 150,
+      'current' => 40,
+      'status' => 'active',
+    ],
+    7 => 
+    [
+      'id' => 'kpi_sample_6',
+      'name' => 'Muc tieu KPI 6',
+      'owner' => 'Nguyen Khoa Anh Kinh',
+      'target' => 160,
+      'current' => 48,
+      'status' => 'review',
+    ],
+    8 => 
+    [
+      'id' => 'kpi_sample_7',
+      'name' => 'Muc tieu KPI 7',
+      'owner' => 'Vo Thuan',
+      'target' => 170,
+      'current' => 56,
+      'status' => 'active',
+    ],
+    9 => 
+    [
+      'id' => 'kpi_sample_8',
+      'name' => 'Muc tieu KPI 8',
+      'owner' => 'Tran Xuan Quang',
+      'target' => 180,
+      'current' => 64,
+      'status' => 'review',
+    ],
+  ],
+  'okrs' => 
+  [
+    0 => 
+    [
+      'id' => 'o1',
+      'objective' => 'Chuẩn hóa vận hành NovaOne',
+      'key_result' => '100% phân hệ core có quy trình',
+      'level' => 'company',
+      'owner' => 'Admin Novaone',
+      'progress' => 62,
+      'status' => 'on_track',
+    ],
+    1 => 
+    [
+      'id' => 'o2',
+      'objective' => 'Nâng chất lượng CSKH',
+      'key_result' => '90% ticket xử lý đúng hạn',
+      'level' => 'department',
+      'owner' => 'Minh Nguyen',
+      'progress' => 48,
+      'status' => 'risk',
+    ],
+    2 => 
+    [
+      'id' => 'okr_sample_1',
+      'objective' => 'Muc tieu OKR 1',
+      'owner' => 'Tran Ngoc Long',
+      'progress' => 9,
+      'status' => 'active',
+    ],
+    3 => 
+    [
+      'id' => 'okr_sample_2',
+      'objective' => 'Muc tieu OKR 2',
+      'owner' => 'Ho Viet Nhan',
+      'progress' => 18,
+      'status' => 'review',
+    ],
+    4 => 
+    [
+      'id' => 'okr_sample_3',
+      'objective' => 'Muc tieu OKR 3',
+      'owner' => 'Lam Quoc Tuan',
+      'progress' => 27,
+      'status' => 'active',
+    ],
+    5 => 
+    [
+      'id' => 'okr_sample_4',
+      'objective' => 'Muc tieu OKR 4',
+      'owner' => 'Nguyen Huu Phuong',
+      'progress' => 36,
+      'status' => 'review',
+    ],
+    6 => 
+    [
+      'id' => 'okr_sample_5',
+      'objective' => 'Muc tieu OKR 5',
+      'owner' => 'Hoang Trong Tin',
+      'progress' => 45,
+      'status' => 'active',
+    ],
+    7 => 
+    [
+      'id' => 'okr_sample_6',
+      'objective' => 'Muc tieu OKR 6',
+      'owner' => 'Nguyen Khoa Anh Kinh',
+      'progress' => 54,
+      'status' => 'review',
+    ],
+    8 => 
+    [
+      'id' => 'okr_sample_7',
+      'objective' => 'Muc tieu OKR 7',
+      'owner' => 'Vo Thuan',
+      'progress' => 63,
+      'status' => 'active',
+    ],
+    9 => 
+    [
+      'id' => 'okr_sample_8',
+      'objective' => 'Muc tieu OKR 8',
+      'owner' => 'Tran Xuan Quang',
+      'progress' => 72,
+      'status' => 'review',
+    ],
+  ],
+  'shipments' => 
+  [
+    0 => 
+    [
+      'id' => 'sh1',
+      'code' => 'SHP-7781',
+      'order' => 'SO-1001',
+      'carrier' => 'GHN',
+      'status' => 'shipping',
+      'eta' => '2026-06-20',
+    ],
+    1 => 
+    [
+      'id' => 'sh2',
+      'code' => 'SHP-7782',
+      'order' => 'SO-1002',
+      'carrier' => 'Viettel Post',
+      'status' => 'delivered',
+      'eta' => '2026-06-15',
+    ],
+    2 => 
+    [
+      'id' => 'ship_sample_1',
+      'code' => 'VC0001',
+      'customer' => 'Khach hang mau 1',
+      'address' => 'Dia chi giao hang 1',
+      'status' => 'shipping',
+    ],
+    3 => 
+    [
+      'id' => 'ship_sample_2',
+      'code' => 'VC0002',
+      'customer' => 'Khach hang mau 2',
+      'address' => 'Dia chi giao hang 2',
+      'status' => 'done',
+    ],
+    4 => 
+    [
+      'id' => 'ship_sample_3',
+      'code' => 'VC0003',
+      'customer' => 'Khach hang mau 3',
+      'address' => 'Dia chi giao hang 3',
+      'status' => 'new',
+    ],
+    5 => 
+    [
+      'id' => 'ship_sample_4',
+      'code' => 'VC0004',
+      'customer' => 'Khach hang mau 4',
+      'address' => 'Dia chi giao hang 4',
+      'status' => 'shipping',
+    ],
+    6 => 
+    [
+      'id' => 'ship_sample_5',
+      'code' => 'VC0005',
+      'customer' => 'Khach hang mau 5',
+      'address' => 'Dia chi giao hang 5',
+      'status' => 'done',
+    ],
+    7 => 
+    [
+      'id' => 'ship_sample_6',
+      'code' => 'VC0006',
+      'customer' => 'Khach hang mau 6',
+      'address' => 'Dia chi giao hang 6',
+      'status' => 'new',
+    ],
+    8 => 
+    [
+      'id' => 'ship_sample_7',
+      'code' => 'VC0007',
+      'customer' => 'Khach hang mau 7',
+      'address' => 'Dia chi giao hang 7',
+      'status' => 'shipping',
+    ],
+    9 => 
+    [
+      'id' => 'ship_sample_8',
+      'code' => 'VC0008',
+      'customer' => 'Khach hang mau 8',
+      'address' => 'Dia chi giao hang 8',
+      'status' => 'done',
+    ],
+  ],
+  'calendar' => 
+  [
+    0 => 
+    [
+      'id' => 'cal1',
+      'title' => 'Họp triển khai giai đoạn 2',
+      'type' => 'meeting',
+      'owner' => 'Admin Novaone',
+      'date' => '2026-06-22',
+      'status' => 'pending',
+    ],
+    1 => 
+    [
+      'id' => 'cal2',
+      'title' => 'Đào tạo người dùng kho',
+      'type' => 'internal_event',
+      'owner' => 'Ha Pham',
+      'date' => '2026-06-24',
+      'status' => 'pending',
+    ],
+    2 => 
+    [
+      'id' => 'cal_sample_1',
+      'title' => 'Lich lam viec 1',
+      'date' => '2026-07-01',
+      'owner' => 'Tran Ngoc Long',
+      'type' => 'work',
+    ],
+    3 => 
+    [
+      'id' => 'cal_sample_2',
+      'title' => 'Lich lam viec 2',
+      'date' => '2026-07-02',
+      'owner' => 'Ho Viet Nhan',
+      'type' => 'work',
+    ],
+    4 => 
+    [
+      'id' => 'cal_sample_3',
+      'title' => 'Lich lam viec 3',
+      'date' => '2026-07-03',
+      'owner' => 'Lam Quoc Tuan',
+      'type' => 'work',
+    ],
+    5 => 
+    [
+      'id' => 'cal_sample_4',
+      'title' => 'Lich lam viec 4',
+      'date' => '2026-07-04',
+      'owner' => 'Nguyen Huu Phuong',
+      'type' => 'work',
+    ],
+    6 => 
+    [
+      'id' => 'cal_sample_5',
+      'title' => 'Lich lam viec 5',
+      'date' => '2026-07-05',
+      'owner' => 'Hoang Trong Tin',
+      'type' => 'work',
+    ],
+    7 => 
+    [
+      'id' => 'cal_sample_6',
+      'title' => 'Lich lam viec 6',
+      'date' => '2026-07-06',
+      'owner' => 'Nguyen Khoa Anh Kinh',
+      'type' => 'work',
+    ],
+    8 => 
+    [
+      'id' => 'cal_sample_7',
+      'title' => 'Lich lam viec 7',
+      'date' => '2026-07-07',
+      'owner' => 'Vo Thuan',
+      'type' => 'work',
+    ],
+    9 => 
+    [
+      'id' => 'cal_sample_8',
+      'title' => 'Lich lam viec 8',
+      'date' => '2026-07-08',
+      'owner' => 'Tran Xuan Quang',
+      'type' => 'work',
+    ],
+  ],
+  'facilities' => 
+  [
+    0 => 
+    [
+      'id' => 'f1',
+      'code' => 'RM-01',
+      'name' => 'Phòng họp lớn',
+      'type' => 'meeting_room',
+      'location' => 'Tầng 3',
+      'status' => 'available',
+    ],
+    1 => 
+    [
+      'id' => 'f2',
+      'code' => 'VH-01',
+      'name' => 'Xe giao hàng',
+      'type' => 'vehicle',
+      'location' => 'Kho Hà Nội',
+      'status' => 'in_use',
+    ],
+    2 => 
+    [
+      'id' => 'fac_sample_1',
+      'name' => 'Co so vat chat 1',
+      'location' => 'Tang 1',
+      'status' => 'good',
+    ],
+    3 => 
+    [
+      'id' => 'fac_sample_2',
+      'name' => 'Co so vat chat 2',
+      'location' => 'Tang 2',
+      'status' => 'maintenance',
+    ],
+    4 => 
+    [
+      'id' => 'fac_sample_3',
+      'name' => 'Co so vat chat 3',
+      'location' => 'Tang 3',
+      'status' => 'good',
+    ],
+    5 => 
+    [
+      'id' => 'fac_sample_4',
+      'name' => 'Co so vat chat 4',
+      'location' => 'Tang 4',
+      'status' => 'maintenance',
+    ],
+    6 => 
+    [
+      'id' => 'fac_sample_5',
+      'name' => 'Co so vat chat 5',
+      'location' => 'Tang 5',
+      'status' => 'good',
+    ],
+    7 => 
+    [
+      'id' => 'fac_sample_6',
+      'name' => 'Co so vat chat 6',
+      'location' => 'Tang 6',
+      'status' => 'maintenance',
+    ],
+    8 => 
+    [
+      'id' => 'fac_sample_7',
+      'name' => 'Co so vat chat 7',
+      'location' => 'Tang 7',
+      'status' => 'good',
+    ],
+    9 => 
+    [
+      'id' => 'fac_sample_8',
+      'name' => 'Co so vat chat 8',
+      'location' => 'Tang 8',
+      'status' => 'maintenance',
+    ],
+  ],
+  'permissions' => 
+  [
+    0 => 
+    [
+      'id' => 'pm1',
+      'role' => 'Admin',
+      'module' => 'Tất cả',
+      'can_view' => 'yes',
+      'can_create' => 'yes',
+      'can_update' => 'yes',
+      'can_delete' => 'yes',
+    ],
+    1 => 
+    [
+      'id' => 'pm2',
+      'role' => 'Sales',
+      'module' => 'CRM & Sales',
+      'can_view' => 'yes',
+      'can_create' => 'yes',
+      'can_update' => 'yes',
+      'can_delete' => 'no',
+    ],
+  ],
+  'settings' => 
+  [
+    0 => 
+    [
+      'id' => 'set1',
+      'key' => 'company_name',
+      'value' => 'NovaOne',
+      'group' => 'company',
+      'status' => 'active',
+    ],
+    1 => 
+    [
+      'id' => 'set2',
+      'key' => 'low_stock_alert',
+      'value' => 'enabled',
+      'group' => 'system',
+      'status' => 'active',
+    ],
+  ],
+  'attendance_records' => 
+  [
+    0 => 
+    [
+      'id' => '500caee5',
+      'date' => '2026-06-22',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Sáng',
+      'total_hours' => 3.5,
+      'shift' => 'morning',
+    ],
+    1 => 
+    [
+      'id' => 'fb9595fd',
+      'date' => '2026-06-22',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    2 => 
+    [
+      'id' => '09c95718',
+      'date' => '2026-06-22',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    3 => 
+    [
+      'id' => '7342dd3f',
+      'date' => '2026-06-22',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    4 => 
+    [
+      'id' => '45df967e',
+      'date' => '2026-06-22',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    5 => 
+    [
+      'id' => 'ee04b4cb',
+      'date' => '2026-06-22',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    6 => 
+    [
+      'id' => '6e26d386',
+      'date' => '2026-06-23',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    7 => 
+    [
+      'id' => '1133b787',
+      'date' => '2026-06-23',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    8 => 
+    [
+      'id' => 'a8b5467a',
+      'date' => '2026-06-23',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    9 => 
+    [
+      'id' => '96c3d477',
+      'date' => '2026-06-23',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    10 => 
+    [
+      'id' => '97dd9831',
+      'date' => '2026-06-23',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    11 => 
+    [
+      'id' => '212e334c',
+      'date' => '2026-06-23',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    12 => 
+    [
+      'id' => '9af3ed12',
+      'date' => '2026-06-24',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    13 => 
+    [
+      'id' => 'e3b0eabf',
+      'date' => '2026-06-24',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    14 => 
+    [
+      'id' => 'cac66531',
+      'date' => '2026-06-24',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    15 => 
+    [
+      'id' => 'b1a31c63',
+      'date' => '2026-06-24',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    16 => 
+    [
+      'id' => 'a9d33b04',
+      'date' => '2026-06-24',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    17 => 
+    [
+      'id' => '0f13370f',
+      'date' => '2026-06-24',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    18 => 
+    [
+      'id' => '6ea82cfd',
+      'date' => '2026-06-25',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    19 => 
+    [
+      'id' => '93308983',
+      'date' => '2026-06-25',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    20 => 
+    [
+      'id' => '306b812f',
+      'date' => '2026-06-25',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    21 => 
+    [
+      'id' => 'eb70bfc1',
+      'date' => '2026-06-25',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    22 => 
+    [
+      'id' => 'cbf72cf8',
+      'date' => '2026-06-25',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Sáng',
+      'total_hours' => 3.5,
+      'shift' => 'morning',
+    ],
+    23 => 
+    [
+      'id' => '0bf72fc4',
+      'date' => '2026-06-25',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    24 => 
+    [
+      'id' => '96eafef4',
+      'date' => '2026-06-26',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    25 => 
+    [
+      'id' => 'd099cbc8',
+      'date' => '2026-06-26',
+      'employee_id' => 'e1',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Kinh doanh',
+      'position' => 'Sales Lead',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    26 => 
+    [
+      'id' => '3c10e12f',
+      'date' => '2026-06-26',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Sáng',
+      'total_hours' => 3.5,
+      'shift' => 'morning',
+    ],
+    27 => 
+    [
+      'id' => '8fb51007',
+      'date' => '2026-06-26',
+      'employee_id' => 'e2',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Kho vận',
+      'position' => 'Warehouse Admin',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+    28 => 
+    [
+      'id' => '4e1d11d4',
+      'date' => '2026-06-26',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Sáng',
+      'total_hours' => 4,
+      'shift' => 'morning',
+    ],
+    29 => 
+    [
+      'id' => 'c7248bbe',
+      'date' => '2026-06-26',
+      'employee_id' => 'e3',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'position' => 'Developer',
+      'check_time' => 'Chiều',
+      'total_hours' => 4,
+      'shift' => 'afternoon',
+    ],
+  ],
+  'attendance_machines' => 
+  [
+    0 => 
+    [
+      'id' => 'am01',
+      'name' => 'Máy face 3',
+      'serial' => 'OVN7020067021400222',
+      'project' => 'Phú an',
+      'note' => 'Máy khu văn phòng',
+    ],
+    1 => 
+    [
+      'id' => 'am02',
+      'name' => 'Ngoại ngữ',
+      'serial' => 'CDQ9182760042',
+      'project' => 'Phú Nam',
+      'note' => 'Máy cổng chính',
+    ],
+    2 => 
+    [
+      'id' => 'am03',
+      'name' => 'Thủy Vân',
+      'serial' => '0335141000128',
+      'project' => 'Dự án hiệp thành',
+      'note' => 'Máy công trình',
+    ],
+    3 => 
+    [
+      'id' => 'am04',
+      'name' => 'Máy face 5',
+      'serial' => 'OVN7020067021400359',
+      'project' => 'Thủy châu',
+      'note' => 'Máy kho',
+    ],
+    4 => 
+    [
+      'id' => 'am05',
+      'name' => 'Máy face 4',
+      'serial' => 'OVN7020067021400400',
+      'project' => 'kho B',
+      'note' => 'Máy kho B',
+    ],
+    5 => 
+    [
+      'id' => 'am06',
+      'name' => 'Thủy Thanh',
+      'serial' => '0335134800080',
+      'project' => 'Dự án Phú Đa',
+      'note' => 'Máy công trình',
+    ],
+    6 => 
+    [
+      'id' => 'am07',
+      'name' => 'máy face 7',
+      'serial' => 'OVN7020067021400346',
+      'project' => 'Kho D',
+      'note' => 'Máy kho D',
+    ],
+    7 => 
+    [
+      'id' => 'am08',
+      'name' => 'Nhà vườn',
+      'serial' => 'CDQ9182760081',
+      'project' => 'Dự án Phú Đa',
+      'note' => 'Máy nhà vườn',
+    ],
+    8 => 
+    [
+      'id' => 'am_sample_1',
+      'name' => 'May cham cong 1',
+      'serial' => 'SN2026000001',
+      'project' => 'Takashimaya',
+      'note' => 'May cham cong mau 1',
+    ],
+    9 => 
+    [
+      'id' => 'am_sample_2',
+      'name' => 'May cham cong 2',
+      'serial' => 'SN2026000002',
+      'project' => 'MPRO',
+      'note' => 'May cham cong mau 2',
+    ],
+  ],
+  'payrolls' => 
+  [
+    0 => 
+    [
+      'id' => 'pl01',
+      'name' => 'Test1',
+      'department' => 'BACK OFFICE',
+      'applied_position' => 'BACK OFFICE',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 0,
+      'created_date' => '2026-06-15',
+      'status' => 'completed',
+      'salary_type' => 'fixed',
+      'note' => 'Bảng lương mẫu khối Back Office',
+    ],
+    1 => 
+    [
+      'id' => 'pl02',
+      'name' => 'Test',
+      'department' => 'REVILINK',
+      'applied_position' => 'REVILINK',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 0,
+      'created_date' => '2026-06-15',
+      'status' => 'completed',
+      'salary_type' => 'shift',
+      'note' => 'Đang rà soát dữ liệu ca',
+    ],
+    2 => 
+    [
+      'id' => 'pl03',
+      'name' => 'Long Trần',
+      'department' => '',
+      'applied_position' => '',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 37010000,
+      'created_date' => '2026-06-10',
+      'status' => 'completed',
+      'salary_type' => 'fixed',
+      'note' => 'Bảng lương cá nhân',
+    ],
+    3 => 
+    [
+      'id' => 'pl04',
+      'name' => 'Test',
+      'department' => 'Tuyển Dụng',
+      'applied_position' => 'Tuyển Dụng',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 0,
+      'created_date' => '2026-06-08',
+      'status' => 'completed',
+      'salary_type' => 'fixed',
+      'note' => 'Bảng lương tuyển dụng',
+    ],
+    4 => 
+    [
+      'id' => 'pl05',
+      'name' => 'bảng lương test 1',
+      'department' => 'Tuyển Dụng',
+      'applied_position' => 'Tuyển Dụng',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 0,
+      'created_date' => '2026-04-23',
+      'status' => 'completed',
+      'salary_type' => 'fixed',
+      'note' => 'Dữ liệu kiểm thử',
+    ],
+    5 => 
+    [
+      'id' => 'pl06',
+      'name' => 'ds',
+      'department' => '',
+      'applied_position' => '',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 22100045,
+      'created_date' => '2024-07-22',
+      'status' => 'completed',
+      'salary_type' => 'fixed',
+      'note' => 'Dữ liệu lịch sử',
+    ],
+    6 => 
+    [
+      'id' => 'pl07',
+      'name' => 'Lương tháng 12',
+      'department' => '',
+      'applied_position' => '',
+      'employee_scope' => 'Tất cả',
+      'total_salary' => 48700069,
+      'created_date' => '2024-02-27',
+      'status' => 'completed',
+      'salary_type' => 'shift',
+      'note' => 'Bảng lương tháng 12',
+    ],
+    7 => 
+    [
+      'id' => 'pl_sample_1',
+      'name' => 'Bang luong mau 1',
+      'department' => 'Admin',
+      'applied_position' => 'Manager',
+      'employee_scope' => 'Tat ca',
+      'total_salary' => 13500000,
+      'created_date' => '2026-06-11',
+      'status' => 'completed',
+      'salary_type' => 'fixed',
+      'note' => 'Du lieu luong mau 1',
+    ],
+    8 => 
+    [
+      'id' => 'pl_sample_2',
+      'name' => 'Bang luong mau 2',
+      'department' => 'Kinh doanh',
+      'applied_position' => 'Nhan vien',
+      'employee_scope' => 'Ho Viet Nhan',
+      'total_salary' => 15000000,
+      'created_date' => '2026-06-12',
+      'status' => 'completed',
+      'salary_type' => 'shift',
+      'note' => 'Du lieu luong mau 2',
+    ],
+    9 => 
+    [
+      'id' => 'pl_sample_3',
+      'name' => 'Bang luong mau 3',
+      'department' => 'Cong nghe',
+      'applied_position' => 'Developer',
+      'employee_scope' => 'Tat ca',
+      'total_salary' => 16500000,
+      'created_date' => '2026-06-13',
+      'status' => 'draft',
+      'salary_type' => 'fixed',
+      'note' => 'Du lieu luong mau 3',
+    ],
+  ],
+  'products' => 
+  [
+    0 => 
+    [
+      'id' => 'prd01',
+      'name' => 'sản phẩm AB',
+      'sku' => '-',
+      'code' => 'SP-AB',
+      'variant' => '-',
+      'category' => 'bERP',
+      'price' => 4000000,
+      'quantity' => 0,
+      'revenue' => 0,
+      'status' => 'in_stock',
+      'image' => 'public/assets/sample-product-lotus.svg',
+      'note' => 'Sản phẩm mẫu',
+    ],
+    1 => 
+    [
+      'id' => 'prd02',
+      'name' => 'Sản phẩm DBTG',
+      'sku' => '-',
+      'code' => 'SP-DBTG',
+      'variant' => '-',
+      'category' => 'Dịch vụ sửa chữa',
+      'price' => 10000000,
+      'quantity' => 0,
+      'revenue' => 0,
+      'status' => 'in_stock',
+      'image' => '',
+      'note' => 'Sản phẩm mẫu',
+    ],
+    2 => 
+    [
+      'id' => 'prd_sample_1',
+      'name' => 'San pham mau 1',
+      'sku' => 'SKU-001',
+      'code' => 'SP0001',
+      'variant' => 'Tieu chuan',
+      'category' => 'Dich vu A',
+      'price' => 1750000,
+      'quantity' => 3,
+      'revenue' => 1750000,
+      'status' => 'in_stock',
+      'image' => 'public/assets/sample-product-lotus.svg',
+      'note' => 'San pham mau 1',
+    ],
+    3 => 
+    [
+      'id' => 'prd_sample_2',
+      'name' => 'San pham mau 2',
+      'sku' => 'SKU-002',
+      'code' => 'SP0002',
+      'variant' => 'Cao cap',
+      'category' => 'Dich vu sua chua',
+      'price' => 2500000,
+      'quantity' => 6,
+      'revenue' => 5000000,
+      'status' => 'in_stock',
+      'image' => '',
+      'note' => 'San pham mau 2',
+    ],
+    4 => 
+    [
+      'id' => 'prd_sample_3',
+      'name' => 'San pham mau 3',
+      'sku' => 'SKU-003',
+      'code' => 'SP0003',
+      'variant' => 'Tieu chuan',
+      'category' => 'Phan mem',
+      'price' => 3250000,
+      'quantity' => 9,
+      'revenue' => 9750000,
+      'status' => 'pending',
+      'image' => '',
+      'note' => 'San pham mau 3',
+    ],
+    5 => 
+    [
+      'id' => 'prd_sample_4',
+      'name' => 'San pham mau 4',
+      'sku' => 'SKU-004',
+      'code' => 'SP0004',
+      'variant' => 'Cao cap',
+      'category' => 'bERP',
+      'price' => 4000000,
+      'quantity' => 12,
+      'revenue' => 16000000,
+      'status' => 'in_stock',
+      'image' => '',
+      'note' => 'San pham mau 4',
+    ],
+    6 => 
+    [
+      'id' => 'prd_sample_5',
+      'name' => 'San pham mau 5',
+      'sku' => 'SKU-005',
+      'code' => 'SP0005',
+      'variant' => 'Tieu chuan',
+      'category' => 'Dich vu A',
+      'price' => 4750000,
+      'quantity' => 15,
+      'revenue' => 23750000,
+      'status' => 'in_stock',
+      'image' => '',
+      'note' => 'San pham mau 5',
+    ],
+    7 => 
+    [
+      'id' => 'prd_sample_6',
+      'name' => 'San pham mau 6',
+      'sku' => 'SKU-006',
+      'code' => 'SP0006',
+      'variant' => 'Cao cap',
+      'category' => 'Dich vu sua chua',
+      'price' => 5500000,
+      'quantity' => 18,
+      'revenue' => 33000000,
+      'status' => 'pending',
+      'image' => '',
+      'note' => 'San pham mau 6',
+    ],
+    8 => 
+    [
+      'id' => 'prd_sample_7',
+      'name' => 'San pham mau 7',
+      'sku' => 'SKU-007',
+      'code' => 'SP0007',
+      'variant' => 'Tieu chuan',
+      'category' => 'Phan mem',
+      'price' => 6250000,
+      'quantity' => 21,
+      'revenue' => 43750000,
+      'status' => 'in_stock',
+      'image' => '',
+      'note' => 'San pham mau 7',
+    ],
+    9 => 
+    [
+      'id' => 'prd_sample_8',
+      'name' => 'San pham mau 8',
+      'sku' => 'SKU-008',
+      'code' => 'SP0008',
+      'variant' => 'Cao cap',
+      'category' => 'bERP',
+      'price' => 7000000,
+      'quantity' => 24,
+      'revenue' => 56000000,
+      'status' => 'in_stock',
+      'image' => '',
+      'note' => 'San pham mau 8',
+    ],
+  ],
+  'machine_warehouses' => 
+  [
+    0 => 
+    [
+      'id' => 'mw01',
+      'name' => 'Kho cty',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => 'bData co.,ltd',
+      'address' => '207 An Dương Vương',
+      'phone' => '1234567897',
+      'note' => 'Kho chính công ty',
+    ],
+    1 => 
+    [
+      'id' => 'mw02',
+      'name' => 'Phú an',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => 'abc',
+      'phone' => '123456',
+      'note' => 'Kho khu vực',
+    ],
+    2 => 
+    [
+      'id' => 'mw03',
+      'name' => 'Phú Nam',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => 'abcd',
+      'phone' => '1234567',
+      'note' => 'Kho khu vực',
+    ],
+    3 => 
+    [
+      'id' => 'mw04',
+      'name' => 'Cơ Khí',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => '12345678',
+      'phone' => '912345789',
+      'note' => 'Kho cơ khí',
+    ],
+    4 => 
+    [
+      'id' => 'mw05',
+      'name' => 'Hương Vân',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => '123456789',
+      'phone' => '123456789',
+      'note' => 'Kho chi nhánh',
+    ],
+    5 => 
+    [
+      'id' => 'mw06',
+      'name' => 'Luật',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => '123456',
+      'phone' => '459',
+      'note' => 'Kho hồ sơ',
+    ],
+    6 => 
+    [
+      'id' => 'mw07',
+      'name' => 'Phan Đình Phùng',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => '12',
+      'phone' => '23',
+      'note' => 'Kho điểm bán',
+    ],
+    7 => 
+    [
+      'id' => 'mw08',
+      'name' => 'Phú Bài',
+      'project' => '',
+      'manager' => 'bData co.,ltd',
+      'keeper' => '',
+      'address' => 'abc',
+      'phone' => '123456',
+      'note' => 'Kho khu vực',
+    ],
+    8 => 
+    [
+      'id' => 'mw_sample_1',
+      'name' => 'Kho mau 1',
+      'project' => 'Takashimaya',
+      'manager' => 'Tran Ngoc Long',
+      'keeper' => 'Ho Viet Nhan',
+      'address' => 'Dia chi kho 1',
+      'phone' => '0912100001',
+      'note' => 'Kho may mau 1',
+    ],
+    9 => 
+    [
+      'id' => 'mw_sample_2',
+      'name' => 'Kho mau 2',
+      'project' => 'MPRO',
+      'manager' => 'Ho Viet Nhan',
+      'keeper' => 'Lam Quoc Tuan',
+      'address' => 'Dia chi kho 2',
+      'phone' => '0912100002',
+      'note' => 'Kho may mau 2',
+    ],
+  ],
+  'equipment_devices' => 
+  [
+    0 => 
+    [
+      'id' => 'dv01',
+      'name' => 'Quạt hơi nước',
+      'code' => 'PS1',
+      'unit_price' => 1000000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'cái',
+      'note' => 'Thiết bị làm mát',
+    ],
+    1 => 
+    [
+      'id' => 'dv02',
+      'name' => 'Sạc',
+      'code' => 'SP128000',
+      'unit_price' => 55000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'cái',
+      'note' => 'Phụ kiện nguồn',
+    ],
+    2 => 
+    [
+      'id' => 'dv03',
+      'name' => 'Ram 8g',
+      'code' => 'SP126',
+      'unit_price' => 100000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'cái',
+      'note' => 'Linh kiện máy tính',
+    ],
+    3 => 
+    [
+      'id' => 'dv04',
+      'name' => 'Màn hình dell',
+      'code' => 'SP12789',
+      'unit_price' => 155000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'cái',
+      'note' => 'Màn hình văn phòng',
+    ],
+    4 => 
+    [
+      'id' => 'dv05',
+      'name' => 'Thiết bị chiếu sáng',
+      'code' => 'TB023111',
+      'unit_price' => 500000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'VND',
+      'note' => 'Thiết bị văn phòng',
+    ],
+    5 => 
+    [
+      'id' => 'dv06',
+      'name' => 'Tivi',
+      'code' => 'TV01',
+      'unit_price' => 2000000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'cái',
+      'note' => 'Thiết bị trình chiếu',
+    ],
+    6 => 
+    [
+      'id' => 'dv_sample_1',
+      'name' => 'Laptop Dell',
+      'code' => 'TB0001',
+      'unit_price' => 550000,
+      'supplier' => 'bData co.,ltd',
+      'unit' => 'cai',
+      'note' => 'Thiet bi mau 1',
+    ],
+    7 => 
+    [
+      'id' => 'dv_sample_2',
+      'name' => 'May in',
+      'code' => 'TB0002',
+      'unit_price' => 800000,
+      'supplier' => 'CONG TY TNHH DIC VIET NAM',
+      'unit' => 'cai',
+      'note' => 'Thiet bi mau 2',
+    ],
+    8 => 
+    [
+      'id' => 'dv_sample_3',
+      'name' => 'May chieu',
+      'code' => 'TB0003',
+      'unit_price' => 1050000,
+      'supplier' => 'NovaTech',
+      'unit' => 'cai',
+      'note' => 'Thiet bi mau 3',
+    ],
+    9 => 
+    [
+      'id' => 'dv_sample_4',
+      'name' => 'Router Wifi',
+      'code' => 'TB0004',
+      'unit_price' => 1300000,
+      'supplier' => 'An Phat Supply',
+      'unit' => 'cai',
+      'note' => 'Thiet bi mau 4',
+    ],
+  ],
+  '_migrations' => 
+  [
+    'supplier_sample_rows_v1' => true,
+    'work_items_v1' => true,
+  ],
+  'sales_orders' => 
+  [
+    0 => 
+    [
+      'id' => 'so01',
+      'code' => '20250115001',
+      'name' => 'HVN',
+      'stage' => 'init',
+      'contact' => '',
+      'amount' => 100000,
+      'unit' => 'VNĐ',
+      'created_date' => '2025-01-15',
+      'customer' => 'Khách hàng cá nhân',
+      'customer_group' => 'Khách lẻ',
+      'note' => 'Đơn mẫu khởi tạo',
+    ],
+    1 => 
+    [
+      'id' => 'so02',
+      'code' => '20250629001',
+      'name' => 'NovaOne CRM',
+      'stage' => 'quote',
+      'contact' => 'Trần Ngọc Long',
+      'amount' => 35000000,
+      'unit' => 'VNĐ',
+      'created_date' => '2026-06-29',
+      'customer' => 'bData co.,ltd',
+      'customer_group' => 'Doanh nghiệp',
+      'note' => 'Báo giá phần mềm',
+    ],
+    2 => 
+    [
+      'id' => 'so03',
+      'code' => '20250620002',
+      'name' => 'Triển khai thiết bị',
+      'stage' => 'contract',
+      'contact' => 'Phòng mua hàng',
+      'amount' => 82000000,
+      'unit' => 'VNĐ',
+      'created_date' => '2026-06-20',
+      'customer' => 'CÔNG TY TNHH DIC (VIỆT NAM]',
+      'customer_group' => 'Nhà máy',
+      'note' => 'Đang chờ ký hợp đồng',
+    ],
+    3 => 
+    [
+      'id' => 'so04',
+      'code' => '20250512003',
+      'name' => 'Gói bảo trì',
+      'stage' => 'paid',
+      'contact' => 'Minh Anh',
+      'amount' => 12000000,
+      'unit' => 'VNĐ',
+      'created_date' => '2026-05-12',
+      'customer' => 'Happy Creative',
+      'customer_group' => 'Doanh nghiệp',
+      'note' => 'Đã thanh toán đủ',
+    ],
+    4 => 
+    [
+      'id' => 'so_sample_1',
+      'code' => '2026SO0001',
+      'name' => 'Don hang mau 1',
+      'stage' => 'quote',
+      'contact' => 'Tran Ngoc Long',
+      'contact_employee_id' => 'e_hr_101',
+      'amount' => 6500000,
+      'unit' => 'VND',
+      'created_date' => '2026-06-06',
+      'customer' => 'Khach hang mau 1',
+      'customer_group' => 'Khach le',
+      'note' => 'Don hang mau 1',
+    ],
+    5 => 
+    [
+      'id' => 'so_sample_2',
+      'code' => '2026SO0002',
+      'name' => 'Don hang mau 2',
+      'stage' => 'contract',
+      'contact' => 'Ho Viet Nhan',
+      'contact_employee_id' => 'e_hr_102',
+      'amount' => 8000000,
+      'unit' => 'VND',
+      'created_date' => '2026-06-07',
+      'customer' => 'Khach hang mau 2',
+      'customer_group' => 'Doanh nghiep',
+      'note' => 'Don hang mau 2',
+    ],
+    6 => 
+    [
+      'id' => 'so_sample_3',
+      'code' => '2026SO0003',
+      'name' => 'Don hang mau 3',
+      'stage' => 'paid',
+      'contact' => 'Lam Quoc Tuan',
+      'contact_employee_id' => 'e_hr_103',
+      'amount' => 9500000,
+      'unit' => 'VND',
+      'created_date' => '2026-06-08',
+      'customer' => 'Khach hang mau 3',
+      'customer_group' => 'Khach le',
+      'note' => 'Don hang mau 3',
+    ],
+    7 => 
+    [
+      'id' => 'so_sample_4',
+      'code' => '2026SO0004',
+      'name' => 'Don hang mau 4',
+      'stage' => 'init',
+      'contact' => 'Nguyen Huu Phuong',
+      'contact_employee_id' => 'e_hr_104',
+      'amount' => 11000000,
+      'unit' => 'VND',
+      'created_date' => '2026-06-09',
+      'customer' => 'Khach hang mau 4',
+      'customer_group' => 'Doanh nghiep',
+      'note' => 'Don hang mau 4',
+    ],
+    8 => 
+    [
+      'id' => 'so_sample_5',
+      'code' => '2026SO0005',
+      'name' => 'Don hang mau 5',
+      'stage' => 'quote',
+      'contact' => 'Hoang Trong Tin',
+      'contact_employee_id' => 'e_hr_105',
+      'amount' => 12500000,
+      'unit' => 'VND',
+      'created_date' => '2026-06-10',
+      'customer' => 'Khach hang mau 5',
+      'customer_group' => 'Khach le',
+      'note' => 'Don hang mau 5',
+    ],
+    9 => 
+    [
+      'id' => 'so_sample_6',
+      'code' => '2026SO0006',
+      'name' => 'Don hang mau 6',
+      'stage' => 'contract',
+      'contact' => 'Nguyen Khoa Anh Kinh',
+      'contact_employee_id' => 'e_hr_106',
+      'amount' => 14000000,
+      'unit' => 'VND',
+      'created_date' => '2026-06-11',
+      'customer' => 'Khach hang mau 6',
+      'customer_group' => 'Doanh nghiep',
+      'note' => 'Don hang mau 6',
+    ],
+  ],
+  'equipment_types' => 
+  [
+    0 => 
+    [
+      'id' => 'et01',
+      'name' => 'Server BDATA.LINK',
+      'short_name' => 'DBA',
+      'created_at' => '2026-06-12 04:22:00',
+    ],
+    1 => 
+    [
+      'id' => 'et02',
+      'name' => 'Máy tính',
+      'short_name' => 'MT',
+      'created_at' => '2026-05-26 08:26:00',
+    ],
+    2 => 
+    [
+      'id' => 'et03',
+      'name' => 'Chuột',
+      'short_name' => 'CH',
+      'created_at' => '2026-05-18 10:03:00',
+    ],
+    3 => 
+    [
+      'id' => 'et_sample_1',
+      'name' => 'May tinh',
+      'short_name' => 'MT',
+      'created_at' => '2026-06-11 08:00:00',
+    ],
+    4 => 
+    [
+      'id' => 'et_sample_2',
+      'name' => 'Server',
+      'short_name' => 'SV',
+      'created_at' => '2026-06-12 08:00:00',
+    ],
+    5 => 
+    [
+      'id' => 'et_sample_3',
+      'name' => 'Man hinh',
+      'short_name' => 'MH',
+      'created_at' => '2026-06-13 08:00:00',
+    ],
+    6 => 
+    [
+      'id' => 'et_sample_4',
+      'name' => 'Thiet bi mang',
+      'short_name' => 'NET',
+      'created_at' => '2026-06-14 08:00:00',
+    ],
+    7 => 
+    [
+      'id' => 'et_sample_5',
+      'name' => 'May in',
+      'short_name' => 'PR',
+      'created_at' => '2026-06-15 08:00:00',
+    ],
+    8 => 
+    [
+      'id' => 'et_sample_6',
+      'name' => 'Phu kien',
+      'short_name' => 'PK',
+      'created_at' => '2026-06-16 08:00:00',
+    ],
+    9 => 
+    [
+      'id' => 'et_sample_7',
+      'name' => 'Camera',
+      'short_name' => 'CAM',
+      'created_at' => '2026-06-17 08:00:00',
+    ],
+  ],
+  'purchase_requests' => 
+  [
+    0 => 
+    [
+      'id' => 'pr19',
+      'voucher_no' => 19,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Admin',
+      'status' => 'new',
+      'needed_date' => '2026-05-26',
+      'receiver' => 'Trần Thị Thu Nguyên',
+      'approver' => 'Trần Thị Thu Nguyên',
+      'detail' => 'Yêu cầu bổ sung thiết bị văn phòng.',
+      'over_budget' => false,
+    ],
+    1 => 
+    [
+      'id' => 'pr18',
+      'voucher_no' => 18,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Admin',
+      'status' => 'new',
+      'needed_date' => '2026-05-22',
+      'receiver' => 'Trần Thị Thu Nguyên',
+      'approver' => 'bData co.,ltd',
+      'detail' => 'Mua phụ kiện máy tính.',
+      'over_budget' => false,
+    ],
+    2 => 
+    [
+      'id' => 'pr17',
+      'voucher_no' => 17,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Công nghệ',
+      'status' => 'new',
+      'needed_date' => '2026-05-21',
+      'receiver' => 'bData co.,ltd',
+      'approver' => 'Trần Thị Thu Nguyên',
+      'detail' => 'Thiết bị mạng nội bộ.',
+      'over_budget' => false,
+    ],
+    3 => 
+    [
+      'id' => 'pr16',
+      'voucher_no' => 16,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Công nghệ',
+      'status' => 'new',
+      'needed_date' => '2026-05-20',
+      'receiver' => 'Nguyễn Xuân Hùng',
+      'approver' => 'bData co.,ltd',
+      'detail' => 'Thay thế màn hình hỏng.',
+      'over_budget' => false,
+    ],
+    4 => 
+    [
+      'id' => 'pr15',
+      'voucher_no' => 15,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Admin',
+      'status' => 'new',
+      'needed_date' => '2026-04-30',
+      'receiver' => 'Nguyễn Xuân Hùng',
+      'approver' => 'Trần Thị Thu Nguyên',
+      'detail' => 'Mua vật tư phòng họp.',
+      'over_budget' => false,
+    ],
+    5 => 
+    [
+      'id' => 'pr14',
+      'voucher_no' => 14,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Admin',
+      'status' => 'new',
+      'needed_date' => '2026-04-30',
+      'receiver' => 'bData co.,ltd',
+      'approver' => 'Trần Thị Thu Nguyên',
+      'detail' => 'Mua sắm theo kế hoạch tháng.',
+      'over_budget' => false,
+    ],
+    6 => 
+    [
+      'id' => 'pr13',
+      'voucher_no' => 13,
+      'requester' => 'bData co.,ltd',
+      'department' => 'Kinh doanh',
+      'status' => 'purchased',
+      'needed_date' => '2026-04-30',
+      'receiver' => 'bData co.,ltd',
+      'approver' => 'bData co.,ltd',
+      'detail' => 'Thiết bị hỗ trợ bán hàng.',
+      'over_budget' => true,
+    ],
+    7 => 
+    [
+      'id' => 'pur_sample_1',
+      'voucher_no' => 101,
+      'requester' => 'Tran Ngoc Long',
+      'requester_id' => 'e_hr_101',
+      'department' => 'Admin',
+      'status' => 'approved',
+      'needed_date' => '2026-07-01',
+      'receiver' => 'Ho Viet Nhan',
+      'receiver_id' => 'e_hr_102',
+      'approver' => 'Lam Quoc Tuan',
+      'approver_id' => 'e_hr_103',
+      'detail' => 'Yeu cau mua sam mau 1',
+      'over_budget' => false,
+    ],
+    8 => 
+    [
+      'id' => 'pur_sample_2',
+      'voucher_no' => 102,
+      'requester' => 'Ho Viet Nhan',
+      'requester_id' => 'e_hr_102',
+      'department' => 'Kinh doanh',
+      'status' => 'purchased',
+      'needed_date' => '2026-07-02',
+      'receiver' => 'Lam Quoc Tuan',
+      'receiver_id' => 'e_hr_103',
+      'approver' => 'Nguyen Huu Phuong',
+      'approver_id' => 'e_hr_104',
+      'detail' => 'Yeu cau mua sam mau 2',
+      'over_budget' => false,
+    ],
+    9 => 
+    [
+      'id' => 'pur_sample_3',
+      'voucher_no' => 103,
+      'requester' => 'Lam Quoc Tuan',
+      'requester_id' => 'e_hr_103',
+      'department' => 'Cong nghe',
+      'status' => 'new',
+      'needed_date' => '2026-07-03',
+      'receiver' => 'Nguyen Huu Phuong',
+      'receiver_id' => 'e_hr_104',
+      'approver' => 'Hoang Trong Tin',
+      'approver_id' => 'e_hr_105',
+      'detail' => 'Yeu cau mua sam mau 3',
+      'over_budget' => false,
+    ],
+  ],
+  'recruitment_requests' => 
+  [
+    0 => 
+    [
+      'id' => 'rr01',
+      'request_no' => '1',
+      'request_date' => '2020-07-20',
+      'cost' => 200000,
+      'status' => 'approved',
+      'approver' => '',
+      'candidate_total' => 4,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển nhân sự kinh doanh',
+      'position' => 'Nhân viên kinh doanh',
+      'description' => 'Cần bổ sung nhân sự kinh doanh cho khu vực mới.',
+    ],
+    1 => 
+    [
+      'id' => 'rr02',
+      'request_no' => '2',
+      'request_date' => '2020-10-11',
+      'cost' => 1000000,
+      'status' => 'rejected',
+      'approver' => '',
+      'candidate_total' => 0,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển kế toán nội bộ',
+      'position' => 'Kế toán',
+      'description' => 'Phiếu chưa đủ ngân sách nên không được duyệt.',
+    ],
+    2 => 
+    [
+      'id' => 'rr03',
+      'request_no' => '3',
+      'request_date' => '2020-09-03',
+      'cost' => 1000000,
+      'status' => 'approved',
+      'approver' => 'bData co.,ltd',
+      'candidate_total' => 0,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển lập trình viên',
+      'position' => 'Developer',
+      'description' => 'Tuyển bổ sung lập trình viên cho dự án ERP.',
+    ],
+    3 => 
+    [
+      'id' => 'rr04',
+      'request_no' => '4',
+      'request_date' => '2021-11-11',
+      'cost' => 1000000,
+      'status' => 'rejected',
+      'approver' => '',
+      'candidate_total' => 0,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển hỗ trợ vận hành',
+      'position' => 'Operations',
+      'description' => 'Nhu cầu tạm hoãn.',
+    ],
+    4 => 
+    [
+      'id' => 'rr05',
+      'request_no' => '5',
+      'request_date' => '2021-01-12',
+      'cost' => 500000,
+      'status' => 'approved',
+      'approver' => '',
+      'candidate_total' => 3,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển chăm sóc khách hàng',
+      'position' => 'CSKH',
+      'description' => 'Tuyển đội chăm sóc khách hàng ca ngày.',
+    ],
+    5 => 
+    [
+      'id' => 'rr06',
+      'request_no' => '6',
+      'request_date' => '2023-09-23',
+      'cost' => 100000,
+      'status' => 'approved',
+      'approver' => 'bData co.,ltd',
+      'candidate_total' => 1,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển thực tập sinh',
+      'position' => 'Thực tập sinh',
+      'description' => 'Thực tập sinh hỗ trợ nhập liệu.',
+    ],
+    6 => 
+    [
+      'id' => 'rr07',
+      'request_no' => '7',
+      'request_date' => '2024-08-01',
+      'cost' => 20000,
+      'status' => 'approved',
+      'approver' => 'bData co.,ltd',
+      'candidate_total' => 0,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển admin',
+      'position' => 'Admin',
+      'description' => 'Bổ sung admin văn phòng.',
+    ],
+    7 => 
+    [
+      'id' => 'rr08',
+      'request_no' => '8',
+      'request_date' => '2024-08-01',
+      'cost' => 20000,
+      'status' => 'approved',
+      'approver' => 'bData co.,ltd',
+      'candidate_total' => 1,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển kho vận',
+      'position' => 'Kho vận',
+      'description' => 'Nhân viên kho bán hàng.',
+    ],
+    8 => 
+    [
+      'id' => 'rr09',
+      'request_no' => '9',
+      'request_date' => '2024-08-03',
+      'cost' => 20000,
+      'status' => 'pending',
+      'approver' => '',
+      'candidate_total' => 0,
+      'candidate_passed' => 0,
+      'news_title' => 'Tuyển thiết kế',
+      'position' => 'Designer',
+      'description' => 'Đang chờ duyệt ngân sách.',
+    ],
+    9 => 
+    [
+      'id' => 'rr_sample_1',
+      'request_no' => '101',
+      'time' => '2026-06-01',
+      'cost' => 300000,
+      'status' => 'rejected',
+      'approver' => 'Tran Ngoc Long',
+      'total_candidates' => 2,
+      'passed_candidates' => 1,
+      'news_info' => 'Tin tuyen dung mau 1',
+      'note' => 'Phieu tuyen dung mau 1',
+    ],
+  ],
+  '_notifications' => 
+  [
+    0 => 
+    [
+      'id' => 'c73c2ca2',
+      'title' => 'Công việc',
+      'message' => 'Đã cập nhật công việc Thiết kế database phase 1.',
+      'href' => '?route=work-items',
+      'type' => 'info',
+      'created_at' => '2026-07-01 10:36:55',
+      'read_at' => NULL,
+    ],
+    1 => 
+    [
+      'id' => 'e9c6bbb0',
+      'title' => 'Phiếu yêu cầu',
+      'message' => 'Đã tạo phiếu yêu cầu cho Minh Nguyen.',
+      'href' => '?route=requests',
+      'type' => 'success',
+      'created_at' => '2026-07-01 10:29:26',
+      'read_at' => NULL,
+    ],
+    2 => 
+    [
+      'id' => 'f093cbb0',
+      'title' => 'Phiếu yêu cầu',
+      'message' => 'Đã tạo phiếu yêu cầu cho Quang Le.',
+      'href' => '?route=requests',
+      'type' => 'success',
+      'created_at' => '2026-07-01 10:28:53',
+      'read_at' => NULL,
+    ],
+    3 => 
+    [
+      'id' => '8c7dbed9',
+      'title' => 'Dự án',
+      'message' => 'Đã cập nhật dự án Takashimaya.',
+      'href' => '?route=projects',
+      'type' => 'info',
+      'created_at' => '2026-07-01 10:01:09',
+      'read_at' => NULL,
+    ],
+    4 => 
+    [
+      'id' => 'bc0e8a9e',
+      'title' => 'Bảng lương',
+      'message' => 'Đã cập nhật bảng lương Test1.',
+      'href' => '?route=payrolls',
+      'type' => 'info',
+      'created_at' => '2026-07-01 10:00:43',
+      'read_at' => NULL,
+    ],
+    5 => 
+    [
+      'id' => '210bb4f0',
+      'title' => 'Hợp đồng lao động',
+      'message' => 'Đã cập nhật hợp đồng HDHV-2026-002 cho Ha Pham.',
+      'href' => '?route=contracts&type=hoc_viec',
+      'type' => 'info',
+      'created_at' => '2026-07-01 10:00:28',
+      'read_at' => NULL,
+    ],
+    6 => 
+    [
+      'id' => '1d3cbabf',
+      'title' => 'Bảng lương',
+      'message' => 'Đã hoàn thành bảng lương Test.',
+      'href' => '?route=payrolls',
+      'type' => 'success',
+      'created_at' => '2026-07-01 09:55:48',
+      'read_at' => NULL,
+    ],
+    7 => 
+    [
+      'id' => 'noti_sample_1',
+      'title' => 'Thong bao mau 1',
+      'message' => 'Du lieu mau da san sang cho tinh nang 1.',
+      'href' => '?route=home',
+      'type' => 'info',
+      'read' => false,
+      'created_at' => '2026-07-02 10:01:00',
+    ],
+    8 => 
+    [
+      'id' => 'noti_sample_2',
+      'title' => 'Thong bao mau 2',
+      'message' => 'Du lieu mau da san sang cho tinh nang 2.',
+      'href' => '?route=home',
+      'type' => 'info',
+      'read' => false,
+      'created_at' => '2026-07-02 10:02:00',
+    ],
+    9 => 
+    [
+      'id' => 'noti_sample_3',
+      'title' => 'Thong bao mau 3',
+      'message' => 'Du lieu mau da san sang cho tinh nang 3.',
+      'href' => '?route=home',
+      'type' => 'info',
+      'read' => false,
+      'created_at' => '2026-07-02 10:03:00',
+    ],
+  ],
+  'request_forms' => 
+  [
+    0 => 
+    [
+      'id' => 'e9d8d9dd',
+      'request_type' => 'overtime',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Công nghệ',
+      'created_date' => '2026-07-01',
+      'start_date' => '2026-07-01',
+      'end_date' => '2026-07-01',
+      'approval' => 'approved',
+      'amount' => 900000,
+      'detail' => '',
+    ],
+    1 => 
+    [
+      'id' => '2124a038',
+      'request_type' => 'reward',
+      'employee_name' => 'Quang Le',
+      'department' => 'Công nghệ',
+      'created_date' => '2026-07-01',
+      'start_date' => '2026-07-01',
+      'end_date' => '2026-07-01',
+      'approval' => 'pending',
+      'amount' => 0,
+      'detail' => '',
+    ],
+    2 => 
+    [
+      'id' => 'rq01',
+      'request_type' => 'general',
+      'employee_name' => 'Minh Nguyen',
+      'department' => 'Lập Trình Viên',
+      'created_date' => '2026-04-23',
+      'start_date' => '2026-04-22',
+      'end_date' => '2026-04-23',
+      'approval' => 'approved',
+      'amount' => 0,
+      'detail' => 'Đề nghị tham gia hội nghị chuyên môn.',
+    ],
+    3 => 
+    [
+      'id' => 'rq02',
+      'request_type' => 'leave',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Admin',
+      'created_date' => '2024-08-02',
+      'start_date' => '2024-08-06',
+      'end_date' => '2024-08-24',
+      'approval' => 'rejected',
+      'amount' => 0,
+      'detail' => 'Xin nghỉ phép dài ngày.',
+    ],
+    4 => 
+    [
+      'id' => 'rq03',
+      'request_type' => 'sick',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Admin',
+      'created_date' => '2024-08-01',
+      'start_date' => '2024-08-05',
+      'end_date' => '2024-08-05',
+      'approval' => 'approved',
+      'amount' => 0,
+      'detail' => 'Nghỉ ốm có giấy xác nhận.',
+    ],
+    5 => 
+    [
+      'id' => 'rq04',
+      'request_type' => 'sick',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Admin',
+      'created_date' => '2024-08-01',
+      'start_date' => '2024-08-05',
+      'end_date' => '2024-08-23',
+      'approval' => 'rejected',
+      'amount' => 0,
+      'detail' => 'Đề nghị điều dưỡng.',
+    ],
+    6 => 
+    [
+      'id' => 'rq05',
+      'request_type' => 'sick',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Admin',
+      'created_date' => '2024-07-19',
+      'start_date' => '2024-07-01',
+      'end_date' => '2024-07-11',
+      'approval' => 'approved',
+      'amount' => 0,
+      'detail' => 'Nghỉ điều dưỡng sau ốm.',
+    ],
+    7 => 
+    [
+      'id' => 'rq06',
+      'request_type' => 'sick',
+      'employee_name' => 'Quang Le',
+      'department' => 'Admin',
+      'created_date' => '2024-07-19',
+      'start_date' => '2024-07-01',
+      'end_date' => '2024-07-26',
+      'approval' => 'approved',
+      'amount' => 0,
+      'detail' => 'Nghỉ điều trị ngắn hạn.',
+    ],
+    8 => 
+    [
+      'id' => 'rq07',
+      'request_type' => 'sick',
+      'employee_name' => 'Ha Pham',
+      'department' => 'Admin',
+      'created_date' => '2024-07-19',
+      'start_date' => '2024-07-08',
+      'end_date' => '2024-08-02',
+      'approval' => 'rejected',
+      'amount' => 0,
+      'detail' => 'Thời gian nghỉ vượt định mức.',
+    ],
+    9 => 
+    [
+      'id' => 'rq_sample_1',
+      'type' => 'Ung tien',
+      'employee_name' => 'Tran Ngoc Long',
+      'employee_id' => 'e_hr_101',
+      'department' => 'Admin',
+      'created_date' => '2026-06-02',
+      'start_date' => '2026-06-03',
+      'end_date' => '2026-06-04',
+      'approval' => 'approved',
+      'detail' => 'Phieu yeu cau mau 1',
+    ],
+  ],
 ];

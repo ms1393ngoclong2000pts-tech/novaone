@@ -1174,7 +1174,7 @@
   }
 
   .topbar-right > .top-icon[aria-label="Email"],
-  .topbar-right > .top-icon[aria-label="Điện thoại"], {
+  .topbar-right > .top-icon[aria-label="Điện thoại"] {
     display: none !important;
   }
 
@@ -1493,6 +1493,36 @@
     min-height: 44px !important;
     width: 100% !important;
     border-radius: 10px !important;
+  }
+
+  .status-checkboxes {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 10px 14px !important;
+    padding: 0 !important;
+  }
+
+  .status-checkboxes label {
+    align-items: center !important;
+    display: inline-flex !important;
+    flex: 0 1 auto !important;
+    gap: 7px !important;
+    min-height: 28px !important;
+    width: auto !important;
+    white-space: nowrap !important;
+  }
+
+  .status-checkboxes input[type="checkbox"] {
+    flex: 0 0 16px !important;
+    width: 16px !important;
+    min-width: 16px !important;
+    max-width: 16px !important;
+    height: 16px !important;
+    min-height: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   textarea {
@@ -2123,5 +2153,501 @@
   .equipment-type-table td::before {
     display: none !important;
     content: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .service-panel {
+    overflow: visible !important;
+  }
+
+  .service-body {
+    padding: 10px !important;
+  }
+
+  .service-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .service-tree {
+    display: grid !important;
+    grid-auto-flow: column !important;
+    grid-auto-columns: minmax(148px, 74vw) !important;
+    grid-template-columns: none !important;
+    gap: 10px !important;
+    min-height: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 2px 2px 8px !important;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .service-column {
+    min-width: 0 !important;
+    max-height: 260px !important;
+    overflow: hidden !important;
+    border: 1px solid #e5eaf0 !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+    background: #fff !important;
+    scroll-snap-align: start;
+  }
+
+  .service-column h3 {
+    margin: 0 0 8px !important;
+    padding: 8px 10px !important;
+    border-radius: 9px !important;
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+  }
+
+  .service-column-list {
+    display: grid !important;
+    gap: 5px !important;
+    max-height: 198px !important;
+    overflow-y: auto !important;
+    padding: 0 4px 0 0 !important;
+  }
+
+  .service-node {
+    min-height: 34px !important;
+    padding: 6px 8px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  .service-node span {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .service-node b {
+    flex: 0 0 auto !important;
+    font-size: 16px !important;
+  }
+
+  .service-list {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .service-tools {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .service-tools label {
+    display: grid !important;
+    grid-template-columns: auto 72px 1fr !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+  }
+
+  .service-tools select,
+  .service-tools input,
+  .service-tools form {
+    width: 100% !important;
+    min-height: 40px !important;
+  }
+
+  .service-table-wrap {
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  .service-table {
+    display: grid !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+  }
+
+  .service-table thead {
+    display: none !important;
+  }
+
+  .service-table tbody {
+    display: grid !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  .service-table tr {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    width: 100% !important;
+    border: 1px solid #dbe3ec !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+    overflow: visible !important;
+  }
+
+  .service-table th,
+  .service-table td {
+    display: flex !important;
+    align-items: center !important;
+    width: auto !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 48px !important;
+    border: 0 !important;
+    padding: 8px 10px !important;
+    text-align: left !important;
+  }
+
+  .service-table td::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .service-table td:first-child {
+    overflow: hidden !important;
+  }
+
+  .service-table td:last-child {
+    justify-content: flex-end !important;
+    min-width: 98px !important;
+    border-left: 1px solid #eef2f6 !important;
+  }
+
+  .service-name {
+    max-width: 100% !important;
+    overflow: hidden !important;
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+  }
+
+  .service-name span:first-child,
+  .service-name {
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  .service-actions {
+    width: 86px !important;
+    max-width: 86px !important;
+    margin: 0 !important;
+  }
+
+  .service-actions summary {
+    min-width: 86px !important;
+    width: 86px !important;
+    height: 34px !important;
+    border-radius: 9px !important;
+    font-size: 13px !important;
+  }
+
+  .service-action-menu {
+    right: 0 !important;
+    top: 40px !important;
+    width: 168px !important;
+    padding: 8px 0 !important;
+  }
+
+  .service-action-menu button,
+  .service-action-menu a {
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .service-tree {
+    grid-auto-columns: minmax(142px, 78vw) !important;
+  }
+
+  .service-table tr {
+    grid-template-columns: minmax(0, 1fr) 92px !important;
+  }
+
+  .service-table td {
+    padding: 7px 8px !important;
+  }
+
+  .service-table td:last-child {
+    min-width: 92px !important;
+  }
+
+  .service-actions,
+  .service-actions summary {
+    width: 78px !important;
+    min-width: 78px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .monthly-target-panel {
+    margin: 14px 10px !important;
+    overflow: visible !important;
+  }
+
+  .monthly-target-head {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+  }
+
+  .monthly-target-head h2 {
+    font-size: 17px !important;
+  }
+
+  .monthly-target-body {
+    padding: 12px !important;
+  }
+
+  .monthly-target-filter {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    padding: 10px !important;
+  }
+
+  .monthly-target-filter label {
+    min-height: 58px !important;
+    padding: 8px 10px !important;
+  }
+
+  .monthly-target-tools {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .monthly-target-tools label,
+  .monthly-target-tools form,
+  .monthly-target-tools input {
+    width: 100% !important;
+  }
+
+  .monthly-target-table-wrap {
+    overflow: visible !important;
+  }
+
+  .monthly-target-table {
+    display: block !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  .monthly-target-table thead {
+    display: none !important;
+  }
+
+  .monthly-target-table tbody {
+    display: grid !important;
+    gap: 10px !important;
+  }
+
+  .monthly-target-table tr {
+    display: block !important;
+    border: 1px solid #dbe1e7 !important;
+    border-radius: 10px !important;
+    background: #fff !important;
+    overflow: hidden !important;
+  }
+
+  .monthly-target-table td {
+    display: grid !important;
+    grid-template-columns: 122px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-height: 42px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #edf1f5 !important;
+    padding: 9px 11px !important;
+    font-size: 14px !important;
+    text-align: left !important;
+  }
+
+  .monthly-target-table td:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .monthly-target-table td::before {
+    color: #50555b !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+  }
+
+  .monthly-target-table td:nth-child(1)::before { content: "Tháng"; }
+  .monthly-target-table td:nth-child(2)::before { content: "Năm"; }
+  .monthly-target-table td:nth-child(3)::before { content: "Doanh số"; }
+  .monthly-target-table td:nth-child(4)::before { content: "Sản lượng"; }
+  .monthly-target-table td:nth-child(5)::before { content: "Ngày tạo"; }
+  .monthly-target-table td:nth-child(6)::before { content: "Khách hàng"; }
+  .monthly-target-table td:nth-child(7)::before { content: "Hợp đồng"; }
+  .monthly-target-table td:nth-child(8)::before { content: "Quản lý"; }
+  .monthly-target-table td:nth-child(9)::before { content: "Xóa"; }
+
+  .monthly-target-pagination {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .app-back-button,
+  .back-button,
+  .service-back {
+    height: 36px !important;
+    min-width: 36px !important;
+    width: 36px !important;
+  }
+
+  .app-back-button .ui-icon,
+  .back-button .ui-icon,
+  .service-back .ui-icon {
+    height: 21px !important;
+    width: 21px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .monthly-target-table-wrap {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .monthly-target-table {
+    display: table !important;
+    min-width: 980px !important;
+    width: 980px !important;
+    border-collapse: collapse !important;
+  }
+
+  .monthly-target-table thead {
+    display: table-header-group !important;
+  }
+
+  .monthly-target-table tbody {
+    display: table-row-group !important;
+  }
+
+  .monthly-target-table tr {
+    display: table-row !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  .monthly-target-table th,
+  .monthly-target-table td {
+    display: table-cell !important;
+    width: auto !important;
+    min-height: 0 !important;
+    border: 1px solid #d8dee6 !important;
+    padding: 10px 9px !important;
+    font-size: 13px !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+    white-space: nowrap !important;
+  }
+
+  .monthly-target-table th {
+    background: #f0f3f7 !important;
+    color: #50555b !important;
+    font-weight: 800 !important;
+  }
+
+  .monthly-target-table td::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  .monthly-target-table td:nth-child(6),
+  .monthly-target-table td:nth-child(8) {
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .sales-receipt-panel {
+    margin: 14px 10px !important;
+    overflow: visible !important;
+  }
+
+  .sales-receipt-head {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    min-height: 0 !important;
+    padding: 14px !important;
+  }
+
+  .sales-receipt-head h2 {
+    font-size: 17px !important;
+  }
+
+  .sales-receipt-body {
+    padding: 12px !important;
+  }
+
+  .sales-receipt-tools {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .sales-receipt-tools label,
+  .sales-receipt-tools form,
+  .sales-receipt-tools input {
+    width: 100% !important;
+  }
+
+  .sales-receipt-table-wrap {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sales-receipt-table {
+    min-width: 980px !important;
+    width: 980px !important;
+  }
+
+  .sales-receipt-table th,
+  .sales-receipt-table td {
+    padding: 10px 8px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+
+  .sales-receipt-table td:nth-child(3),
+  .sales-receipt-table td:nth-child(5) {
+    white-space: normal !important;
+  }
+
+  .receipt-info,
+  .receipt-delete {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  .sales-receipt-pagination {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .receipt-detail-list {
+    grid-template-columns: 1fr !important;
   }
 }

@@ -8,7 +8,7 @@ if ($code === '') {
 
 <section class="service-detail-panel">
     <header class="service-detail-head">
-        <a class="service-back" href="?route=services" aria-label="Quay lại"><?= ui_icon('arrow') ?></a>
+        <?= back_link('services') ?>
         <h2>XEM CHI TIẾT NGÀNH HÀNG</h2>
         <a class="employee-action" href="?route=services.edit&id=<?= e($item['id'] ?? '') ?>">Sửa</a>
     </header>

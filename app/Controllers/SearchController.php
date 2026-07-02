@@ -45,6 +45,8 @@ final class SearchController
             ['label' => 'Phiếu yêu cầu tuyển dụng', 'group' => 'Quản lý hệ thống', 'icon' => 'monitor', 'href' => '?route=recruitment-requests', 'keywords' => 'phieu yeu cau tuyen dung ung vien phe duyet chi phi'],
             ['label' => 'Nhà cung cấp', 'group' => 'Kinh doanh', 'icon' => 'briefcase', 'href' => '?route=suppliers', 'keywords' => 'nha cung cap doi tac cong no'],
             ['label' => 'Đơn hàng', 'group' => 'Kinh doanh', 'icon' => 'cart', 'href' => '?route=sales-orders', 'keywords' => 'ban hang don hang bao gia hop dong nghiem thu co hoi'],
+            ['label' => 'Chỉ tiêu tháng', 'group' => 'Kinh doanh', 'icon' => 'cart', 'href' => '?route=sales-targets', 'keywords' => 'chi tieu thang doanh so san luong nhan vien quan ly'],
+            ['label' => 'Phiếu bán hàng', 'group' => 'Kinh doanh', 'icon' => 'cart', 'href' => '?route=sales-receipts', 'keywords' => 'phieu ban hang khach hang so dien thoai dia chi'],
             ['label' => 'Kho máy', 'group' => 'Quản lý kho', 'icon' => 'briefcase', 'href' => '?route=machine-warehouses', 'keywords' => 'kho may kho noi bo trang thiet bi'],
             ['label' => 'Quản lý thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-devices', 'keywords' => 'thiet bi ten hang ma hang don gia nha cung cap'],
             ['label' => 'Loại thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-types', 'keywords' => 'loai thiet bi ten viet tat'],

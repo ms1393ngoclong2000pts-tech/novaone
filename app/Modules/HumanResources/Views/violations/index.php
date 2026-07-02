@@ -15,7 +15,7 @@ $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string 
 
 <section class="violation-panel">
     <header class="violation-head">
-        <div><a class="violation-back" href="?route=employees" title="Quay lại">←</a><h2>DANH SÁCH PHIẾU VI PHẠM</h2></div>
+        <div><?= back_link('employees') ?><h2>DANH SÁCH PHIẾU VI PHẠM</h2></div>
         <button class="employee-action teal" type="button" data-violation-open>Lập phiếu</button>
     </header>
 

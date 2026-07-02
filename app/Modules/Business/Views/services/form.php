@@ -7,7 +7,7 @@ $heading = $isEdit ? 'CẬP NHẬT NGÀNH HÀNG' : 'THÊM MỚI NGÀNH HÀNG';
 
 <section class="service-form-panel">
     <header class="service-detail-head">
-        <a class="service-back" href="?route=services" aria-label="Quay lại"><?= ui_icon('arrow') ?></a>
+        <?= back_link('services') ?>
         <h2><?= e($heading) ?></h2>
     </header>
 

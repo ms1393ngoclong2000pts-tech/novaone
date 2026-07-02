@@ -15,7 +15,7 @@ $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string 
 
 <section class="project-panel">
     <header class="project-head">
-        <div><a class="violation-back" href="?route=tasks" title="Quay lại">←</a><h2>DANH SÁCH DỰ ÁN</h2></div>
+        <div><?= back_link('tasks') ?><h2>DANH SÁCH DỰ ÁN</h2></div>
         <div class="project-head-actions">
             <a class="employee-action blue" href="?route=projects.template">Tải mẫu</a>
             <form method="post" action="?route=projects.import" enctype="multipart/form-data">
