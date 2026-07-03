@@ -6083,6 +6083,18 @@ th {
   font-size: 12px;
 }
 
+.profile-field-icon {
+  display: none;
+}
+
+.mobile-home-logo {
+  display: none;
+}
+
+.profile-shortcut {
+  display: none;
+}
+
 .app-dashboard h1 {
   margin: 4px 0 46px;
   color: #666a73;
@@ -7656,9 +7668,27 @@ body.sidebar-collapsed .service-save-bar { left: var(--sidebar-collapsed-w, 92px
 
 .product-money .ui-icon {
   height: 16px;
-  margin-left: 4px;
   vertical-align: -3px;
   width: 16px;
+}
+
+.product-price-edit {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #111827;
+  cursor: pointer;
+  display: inline-flex;
+  height: 28px;
+  justify-content: center;
+  margin-left: 4px;
+  padding: 0;
+  vertical-align: middle;
+  width: 28px;
+}
+
+.product-price-edit:hover {
+  color: #2f8cff;
 }
 
 .product-actions .service-action-menu {

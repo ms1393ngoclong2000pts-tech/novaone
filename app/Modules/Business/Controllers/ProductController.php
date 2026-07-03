@@ -76,7 +76,7 @@ final class ProductController
             'name' => $name,
             'sku' => trim((string) ($_POST['sku'] ?? '')),
             'code' => trim((string) ($_POST['code'] ?? '')),
-            'variant' => trim((string) ($_POST['variant'] ?? '-')),
+            'variant' => trim((string) ($_POST['variant'] ?? '')),
             'category' => trim((string) ($_POST['category'] ?? '')),
             'price' => max(0, (float) ($_POST['price'] ?? 0)),
             'quantity' => max(0, (int) ($_POST['quantity'] ?? 0)),
@@ -97,6 +97,41 @@ final class ProductController
         $store->put('products', $items);
         add_notification($store, 'Sản phẩm', ($isUpdate ? 'Đã cập nhật sản phẩm ' : 'Đã thêm sản phẩm ') . $name . '.', '?route=products', $isUpdate ? 'info' : 'success');
         $_SESSION['flash_success'] = $isUpdate ? 'Đã cập nhật sản phẩm.' : 'Đã thêm sản phẩm mới.';
+        redirect('products');
+    }
+
+    public function updatePrice(DataStore $store): void
+    {
+        require_auth();
+        verify_csrf();
+
+        $id = trim((string) ($_POST['id'] ?? ''));
+        $price = max(0, (float) ($_POST['price'] ?? 0));
+        $updated = null;
+        $items = array_map(function (array $item) use ($id, $price, &$updated): array {
+            if (($item['id'] ?? '') !== $id) {
+                return $item;
+            }
+
+            $item['price'] = $price;
+            $updated = $item;
+            return $item;
+        }, $store->get('products'));
+
+        if ($updated === null) {
+            $_SESSION['flash_error'] = 'Không tìm thấy sản phẩm cần cập nhật giá.';
+            redirect('products');
+        }
+
+        $store->put('products', $items);
+        add_notification(
+            $store,
+            'Sản phẩm',
+            'Đã cập nhật giá sản phẩm ' . ($updated['name'] ?? '') . '.',
+            '?route=products',
+            'info'
+        );
+        $_SESSION['flash_success'] = 'Đã cập nhật giá sản phẩm.';
         redirect('products');
     }
 
@@ -149,11 +184,41 @@ final class ProductController
 
     private function categories(DataStore $store): array
     {
-        $services = array_map(fn (array $item): string => trim((string) ($item['name'] ?? '')), $store->get('services'));
-        $products = array_map(fn (array $item): string => trim((string) ($item['category'] ?? '')), $store->get('products'));
-        $categories = array_values(array_unique(array_filter(array_merge($services, $products))));
-        sort($categories);
-        return $categories;
+        $services = array_values(array_filter($store->get('services'), fn (array $item): bool => trim((string) ($item['name'] ?? '')) !== ''));
+        usort($services, fn (array $a, array $b): int => strnatcasecmp((string) ($a['name'] ?? ''), (string) ($b['name'] ?? '')));
+
+        $children = [];
+        foreach ($services as $item) {
+            $parent = trim((string) ($item['parent'] ?? ''));
+            $children[$parent][] = $item;
+        }
+
+        $result = [];
+        $walk = function (string $parent, int $depth) use (&$walk, &$children, &$result): void {
+            foreach ($children[$parent] ?? [] as $item) {
+                $name = trim((string) ($item['name'] ?? ''));
+                if ($name === '') {
+                    continue;
+                }
+
+                $result[] = [
+                    'value' => $name,
+                    'label' => str_repeat('— ', max(0, $depth - 1)) . $name,
+                ];
+                $walk($name, $depth + 1);
+            }
+        };
+
+        $walk('', 1);
+        $known = array_column($result, 'value');
+        foreach ($services as $item) {
+            $name = trim((string) ($item['name'] ?? ''));
+            if ($name !== '' && ! in_array($name, $known, true)) {
+                $result[] = ['value' => $name, 'label' => $name];
+            }
+        }
+
+        return $result;
     }
 
     private function statusLabels(): array

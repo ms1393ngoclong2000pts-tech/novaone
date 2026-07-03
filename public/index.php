@@ -78,6 +78,7 @@ match ($route) {
     'services.delete' => (new ServiceController())->delete($store),
     'products' => (new ProductController())->index($store),
     'products.save' => (new ProductController())->save($store),
+    'products.price' => (new ProductController())->updatePrice($store),
     'products.delete' => (new ProductController())->delete($store),
     'sales-orders' => (new SalesOrderController())->index($store),
     'sales-orders.save' => (new SalesOrderController())->save($store),

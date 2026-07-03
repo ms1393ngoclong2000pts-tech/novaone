@@ -1349,6 +1349,30 @@
     ],
     "services": [
         {
+            "id": "13b7efe1",
+            "name": "Công nghiệp",
+            "level": 4,
+            "parent": "Dịch vụ C",
+            "code": "CN-1",
+            "price": 0,
+            "status": "active",
+            "note": "",
+            "image": "",
+            "icon": ""
+        },
+        {
+            "id": "68e30807",
+            "name": "Notify Test",
+            "level": 3,
+            "parent": "Dịch vụ A",
+            "code": "Neko",
+            "price": 1000,
+            "status": "active",
+            "note": "",
+            "image": "",
+            "icon": ""
+        },
+        {
             "id": "svc01",
             "name": "Phần mềm",
             "level": 1,
@@ -1366,7 +1390,7 @@
             "level": 1,
             "parent": "",
             "code": "BERP",
-            "price": 0,
+            "price": 19000,
             "status": "active",
             "note": "Quản trị doanh nghiệp",
             "image": "",
@@ -1388,9 +1412,9 @@
             "id": "svc04",
             "name": "Mua bán Car",
             "level": 1,
-            "parent": "",
+            "parent": "Phần mềm",
             "code": "CAR",
-            "price": 0,
+            "price": 99000,
             "status": "active",
             "note": "Dịch vụ xe",
             "image": "",
@@ -1423,7 +1447,7 @@
         {
             "id": "svc07",
             "name": "Dịch vụ A",
-            "level": 2,
+            "level": 4,
             "parent": "bERP",
             "code": "DVA",
             "price": 15000000,
@@ -2881,11 +2905,25 @@
     ],
     "products": [
         {
+            "id": "da1740aa",
+            "name": "Test",
+            "sku": "-14",
+            "code": "BERP",
+            "variant": "-89",
+            "category": "Công nghiệp",
+            "price": 1500000,
+            "quantity": 89,
+            "revenue": 190,
+            "status": "pending",
+            "image": "",
+            "note": ""
+        },
+        {
             "id": "prd01",
             "name": "sản phẩm AB",
-            "sku": "-",
+            "sku": "-14",
             "code": "SP-AB",
-            "variant": "-",
+            "variant": "-12",
             "category": "bERP",
             "price": 4000000,
             "quantity": 0,
@@ -2915,7 +2953,7 @@
             "code": "SP0001",
             "variant": "Tieu chuan",
             "category": "Dich vu A",
-            "price": 1750000,
+            "price": 1756000,
             "quantity": 3,
             "revenue": 1750000,
             "status": "in_stock",
@@ -2928,12 +2966,12 @@
             "sku": "SKU-002",
             "code": "SP0002",
             "variant": "Cao cap",
-            "category": "Dich vu sua chua",
+            "category": "",
             "price": 2500000,
             "quantity": 6,
             "revenue": 5000000,
             "status": "in_stock",
-            "image": "",
+            "image": "public\/uploads\/products\/product-20260703083243-e9568039.jpg",
             "note": "San pham mau 2"
         },
         {
@@ -2942,12 +2980,12 @@
             "sku": "SKU-003",
             "code": "SP0003",
             "variant": "Tieu chuan",
-            "category": "Phan mem",
+            "category": "",
             "price": 3250000,
             "quantity": 9,
             "revenue": 9750000,
             "status": "pending",
-            "image": "",
+            "image": "public\/uploads\/products\/product-20260703083257-3b61e516.png",
             "note": "San pham mau 3"
         },
         {
@@ -2963,20 +3001,6 @@
             "status": "in_stock",
             "image": "",
             "note": "San pham mau 4"
-        },
-        {
-            "id": "prd_sample_5",
-            "name": "San pham mau 5",
-            "sku": "SKU-005",
-            "code": "SP0005",
-            "variant": "Tieu chuan",
-            "category": "Dich vu A",
-            "price": 4750000,
-            "quantity": 15,
-            "revenue": 23750000,
-            "status": "in_stock",
-            "image": "",
-            "note": "San pham mau 5"
         },
         {
             "id": "prd_sample_6",
@@ -3682,6 +3706,168 @@
     ],
     "_notifications": [
         {
+            "id": "22fbab2b",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật sản phẩm sản phẩm AB.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-03 08:33:37",
+            "read_at": null
+        },
+        {
+            "id": "b4a89324",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật sản phẩm San pham mau 3.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-03 08:32:57",
+            "read_at": null
+        },
+        {
+            "id": "83f6f6d6",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật sản phẩm San pham mau 2.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-03 08:32:43",
+            "read_at": null
+        },
+        {
+            "id": "d5cec7f4",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật giá sản phẩm San pham mau 1.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-03 08:32:19",
+            "read_at": null
+        },
+        {
+            "id": "293d8574",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật giá sản phẩm sản phẩm AB.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-03 08:31:31",
+            "read_at": null
+        },
+        {
+            "id": "5e79aca1",
+            "title": "Sản phẩm",
+            "message": "Đã xóa sản phẩm San pham mau 5.",
+            "href": "?route=products",
+            "type": "danger",
+            "created_at": "2026-07-03 08:10:58",
+            "read_at": null
+        },
+        {
+            "id": "46954453",
+            "title": "Sản phẩm",
+            "message": "Đã thêm sản phẩm Test.",
+            "href": "?route=products",
+            "type": "success",
+            "created_at": "2026-07-03 07:56:44",
+            "read_at": null
+        },
+        {
+            "id": "18875963",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật sản phẩm San pham mau 1.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-03 07:56:01",
+            "read_at": null
+        },
+        {
+            "id": "08b8810d",
+            "title": "Dịch vụ",
+            "message": "Đã thêm ngành hàng Công nghiệp.",
+            "href": "?route=services",
+            "type": "success",
+            "created_at": "2026-07-03 07:54:54",
+            "read_at": null
+        },
+        {
+            "id": "3f1a172b",
+            "title": "Dịch vụ",
+            "message": "Đã thêm ngành hàng Notify Test.",
+            "href": "?route=services",
+            "type": "success",
+            "created_at": "2026-07-03 07:53:35",
+            "read_at": null
+        },
+        {
+            "id": "6ba3f7bd",
+            "title": "Dịch vụ",
+            "message": "Đã cập nhật ngành hàng Mua bán Car.",
+            "href": "?route=services",
+            "type": "info",
+            "created_at": "2026-07-03 07:40:27",
+            "read_at": null
+        },
+        {
+            "id": "44a6f551",
+            "title": "Dịch vụ",
+            "message": "Đã cập nhật ngành hàng bERP.",
+            "href": "?route=services",
+            "type": "info",
+            "created_at": "2026-07-03 07:37:02",
+            "read_at": null
+        },
+        {
+            "id": "5acde170",
+            "title": "Dịch vụ",
+            "message": "Đã cập nhật ngành hàng Dịch vụ A.",
+            "href": "?route=services",
+            "type": "info",
+            "created_at": "2026-07-03 07:35:46",
+            "read_at": null
+        },
+        {
+            "id": "e1bd50a3",
+            "title": "Dịch vụ",
+            "message": "Đã cập nhật ngành hàng bERP.",
+            "href": "?route=services",
+            "type": "info",
+            "created_at": "2026-07-03 07:34:47",
+            "read_at": null
+        },
+        {
+            "id": "c1e468cd",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-07-03 06:46:01",
+            "read_at": "2026-07-03 06:46:39"
+        },
+        {
+            "id": "2d984cc3",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-07-02 10:56:12",
+            "read_at": null
+        },
+        {
+            "id": "741007f2",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-07-02 10:56:03",
+            "read_at": null
+        },
+        {
+            "id": "39ae472c",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-07-02 10:55:58",
+            "read_at": null
+        },
+        {
             "id": "43e10359",
             "title": "Mua sắm",
             "message": "Đã cập nhật phê duyệt phiếu #17.",
@@ -3724,7 +3910,7 @@
             "href": "?route=sales-receipts",
             "type": "danger",
             "created_at": "2026-07-02 08:31:57",
-            "read_at": null
+            "read_at": "2026-07-03 06:46:44"
         },
         {
             "id": "ccbf957c",
@@ -4058,10 +4244,10 @@
     ],
     "_auth": {
         "name": "Admin Novaone",
-        "phone": "",
-        "address": "",
-        "birthday": "",
-        "position": "",
+        "phone": "0768104432",
+        "address": "207 An Dương Vương",
+        "birthday": "2000-02-07",
+        "position": "Developer",
         "company": "bData co.,ltd",
         "avatar": "public\/uploads\/profile\/avatar-76e6333a.jpg"
     },

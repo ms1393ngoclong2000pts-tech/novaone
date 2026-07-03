@@ -12,6 +12,9 @@ $queryUrl = function (array $changes = []): string {
 $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string {
     return $queryUrl(['sort' => $column, 'dir' => $sort === $column && $direction === 'asc' ? 'desc' : 'asc']);
 };
+$treeColumns = $serviceTree['columns'] ?? [];
+$selectedIds = array_map('strval', $serviceTree['selectedIds'] ?? []);
+$allServiceItems = $allItems ?? $items;
 ?>
 
 <section class="service-panel">
@@ -40,12 +43,15 @@ $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string 
                     <section class="service-column level-<?= $levelNumber ?>">
                         <h3><?= e($label) ?></h3>
                         <div class="service-column-list">
-                            <?php foreach ($levels[$levelNumber] ?? [] as $node): ?>
+                            <?php foreach ($treeColumns[$levelNumber] ?? [] as $node): ?>
                                 <?php
-                                $childCount = count(array_filter($items, fn (array $item): bool => ($item['parent'] ?? '') === ($node['name'] ?? '')));
+                                $nodeId = (string) ($node['id'] ?? '');
+                                $nodeName = (string) ($node['name'] ?? '');
+                                $childCount = count(array_filter($allServiceItems, fn (array $item): bool => (string) ($item['parent'] ?? '') === $nodeName));
+                                $isSelected = in_array($nodeId, $selectedIds, true);
                                 ?>
-                                <a class="service-node <?= (int) ($node['level'] ?? 1) === $level ? 'current' : '' ?>" href="?route=services.edit&id=<?= e($node['id'] ?? '') ?>">
-                                    <span><?= e($node['name'] ?? '') ?> (<?= $childCount ?>)</span>
+                                <a class="service-node <?= $isSelected ? 'current' : '' ?>" href="<?= e($queryUrl(['selected_service' => $nodeId, 'page' => 1])) ?>">
+                                    <span><?= e($node['name'] ?? '') ?></span>
                                     <?php if ($childCount > 0): ?><b>›</b><?php endif; ?>
                                 </a>
                             <?php endforeach; ?>

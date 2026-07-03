@@ -61,8 +61,8 @@ foreach ($statusLabels as $key => $label) {
             <label>Lọc danh mục</label>
             <select name="category" onchange="this.form.submit()">
                 <option value="">--- Chọn danh mục sản phẩm ---</option>
-                <?php foreach ($categories as $categoryName): ?>
-                    <option value="<?= e($categoryName) ?>" <?= $category === $categoryName ? 'selected' : '' ?>><?= e($categoryName) ?></option>
+                <?php foreach ($categories as $categoryOption): ?>
+                    <option value="<?= e($categoryOption['value']) ?>" <?= $category === $categoryOption['value'] ? 'selected' : '' ?>><?= e($categoryOption['label']) ?></option>
                 <?php endforeach; ?>
             </select>
         </form>
@@ -116,10 +116,14 @@ foreach ($statusLabels as $key => $label) {
                             </td>
                             <td>
                                 <button class="product-name" type="button" data-product-view='<?= e(json_encode($item, JSON_UNESCAPED_UNICODE)) ?>'><?= e($item['name'] ?? '') ?></button>
-                                <small>SKU: <?= e($item['sku'] ?? '-') ?></small>
                             </td>
                             <td><?= e($item['variant'] ?? '-') ?></td>
-                            <td class="product-money">₫ <?= e(number_format((float) ($item['price'] ?? 0), 0, ',', '.')) ?> <?= ui_icon('edit') ?></td>
+                            <td class="product-money">
+                                <span>₫ <?= e(number_format((float) ($item['price'] ?? 0), 0, ',', '.')) ?></span>
+                                <button class="product-price-edit" type="button" data-product-price-edit='<?= e(json_encode($item, JSON_UNESCAPED_UNICODE)) ?>' aria-label="Chỉnh sửa giá">
+                                    <?= ui_icon('edit') ?>
+                                </button>
+                            </td>
                             <td class="product-number"><?= e((string) ((int) ($item['quantity'] ?? 0))) ?></td>
                             <td class="product-number"><?= e((string) ((int) ($item['revenue'] ?? 0))) ?></td>
                             <td>
@@ -166,9 +170,9 @@ foreach ($statusLabels as $key => $label) {
         <div class="employee-form-grid">
             <label><span>Tên sản phẩm</span><input name="name" required></label>
             <label><span>Mã sản phẩm</span><input name="code"></label>
-            <label><span>SKU</span><input name="sku" value="-"></label>
-            <label><span>Phân loại biến thể</span><input name="variant" value="-"></label>
-            <label><span>Danh mục</span><select name="category"><option value="">---</option><?php foreach ($categories as $categoryName): ?><option value="<?= e($categoryName) ?>"><?= e($categoryName) ?></option><?php endforeach; ?></select></label>
+            <label><span>SKU</span><input name="sku"></label>
+            <label><span>Phân loại biến thể</span><input name="variant"></label>
+            <label><span>Danh mục</span><select name="category"><option value="">Chọn danh mục sản phẩm</option><?php foreach ($categories as $categoryOption): ?><option value="<?= e($categoryOption['value']) ?>"><?= e($categoryOption['label']) ?></option><?php endforeach; ?></select></label>
             <label><span>Trạng thái</span><select name="status"><?php foreach ($statusLabels as $value => $label): ?><?php if ($value !== 'all'): ?><option value="<?= e($value) ?>"><?= e($label) ?></option><?php endif; ?><?php endforeach; ?></select></label>
             <label><span>Giá</span><input name="price" type="number" min="0" step="1000"></label>
             <label><span>Số lượng</span><input name="quantity" type="number" min="0" step="1"></label>
@@ -177,6 +181,19 @@ foreach ($statusLabels as $key => $label) {
             <label class="contract-note"><span>Ghi chú</span><textarea name="note" rows="3"></textarea></label>
         </div>
         <footer><button class="employee-action" type="button" data-product-close>Hủy</button><button class="employee-action teal" type="submit">Lưu sản phẩm</button></footer>
+    </form>
+</dialog>
+
+<dialog id="product-price-dialog" class="employee-dialog product-price-dialog">
+    <form method="post" action="?route=products.price" class="employee-dialog-form">
+        <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
+        <input type="hidden" name="id" value="">
+        <header><h3>Chỉnh sửa giá</h3><button type="button" data-product-price-close aria-label="Đóng">×</button></header>
+        <div class="employee-form-grid">
+            <label><span>Sản phẩm</span><input name="product_name" readonly></label>
+            <label><span>Giá</span><input name="price" type="number" min="0" step="1000" required></label>
+        </div>
+        <footer><button class="employee-action" type="button" data-product-price-close>Hủy</button><button class="employee-action teal" type="submit">Lưu giá</button></footer>
     </form>
 </dialog>
 
@@ -192,8 +209,10 @@ foreach ($statusLabels as $key => $label) {
 (() => {
     const dialog = document.getElementById('product-dialog');
     const viewDialog = document.getElementById('product-view-dialog');
-    if (!dialog || !viewDialog) return;
+    const priceDialog = document.getElementById('product-price-dialog');
+    if (!dialog || !viewDialog || !priceDialog) return;
     const form = dialog.querySelector('form');
+    const priceForm = priceDialog.querySelector('form');
     const details = viewDialog.querySelector('.product-detail-list');
     const statusMap = {
         in_stock: 'Còn hàng',
@@ -212,8 +231,9 @@ foreach ($statusLabels as $key => $label) {
     document.querySelector('[data-product-open]')?.addEventListener('click', () => {
         form.reset();
         form.elements.id.value = '';
-        form.elements.sku.value = '-';
-        form.elements.variant.value = '-';
+        form.elements.sku.value = '';
+        form.elements.variant.value = '';
+        form.elements.category.value = '';
         form.elements.status.value = 'in_stock';
         dialog.querySelector('h3').textContent = 'Thêm mới sản phẩm';
         dialog.showModal();
@@ -221,6 +241,16 @@ foreach ($statusLabels as $key => $label) {
 
     document.querySelectorAll('[data-product-close]').forEach(button => button.addEventListener('click', () => dialog.close()));
     document.querySelectorAll('[data-product-view-close]').forEach(button => button.addEventListener('click', () => viewDialog.close()));
+    document.querySelectorAll('[data-product-price-close]').forEach(button => button.addEventListener('click', () => priceDialog.close()));
+
+    document.querySelectorAll('[data-product-price-edit]').forEach(button => button.addEventListener('click', () => {
+        const item = JSON.parse(button.dataset.productPriceEdit);
+        priceForm.reset();
+        priceForm.elements.id.value = item.id || '';
+        priceForm.elements.product_name.value = item.name || '';
+        priceForm.elements.price.value = Number(item.price || 0);
+        priceDialog.showModal();
+    }));
 
     document.querySelectorAll('[data-product-edit]').forEach(button => button.addEventListener('click', () => {
         const item = JSON.parse(button.dataset.productEdit);
@@ -248,7 +278,7 @@ foreach ($statusLabels as $key => $label) {
                     <p>SKU: ${escapeHtml(item.sku || '-')}</p>
                     <dl>
                         <div><dt>Mã sản phẩm</dt><dd>${escapeHtml(item.code || '---')}</dd></div>
-                        <div><dt>Danh mục</dt><dd>${escapeHtml(item.category || '---')}</dd></div>
+                        <div><dt>Danh mục</dt><dd>${escapeHtml(item.category || 'Chưa chọn')}</dd></div>
                         <div><dt>Phân loại biến thể</dt><dd>${escapeHtml(item.variant || '-')}</dd></div>
                     </dl>
                 </div>

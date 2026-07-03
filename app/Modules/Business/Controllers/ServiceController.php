@@ -16,6 +16,8 @@ final class ServiceController
         $level = (int) ($_GET['level'] ?? 1);
         $level = in_array($level, [1, 2, 3, 4], true) ? $level : 1;
         $items = $this->filtered($store, $query);
+        $allItems = $store->get('services');
+        $selectedServiceId = trim((string) ($_GET['selected_service'] ?? ''));
 
         $sort = in_array($_GET['sort'] ?? '', self::SORTABLE, true) ? (string) $_GET['sort'] : 'name';
         $direction = ($_GET['dir'] ?? 'asc') === 'desc' ? 'desc' : 'asc';
@@ -38,7 +40,9 @@ final class ServiceController
             'active' => 'services',
             'title' => 'Danh sách dịch vụ',
             'items' => array_slice($items, ($page - 1) * $perPage, $perPage),
-            'levels' => $this->levels($store->get('services')),
+            'levels' => $this->levels($allItems),
+            'allItems' => $allItems,
+            'serviceTree' => $this->serviceTree($allItems, $selectedServiceId),
             'query' => $query,
             'level' => $level,
             'sort' => $sort,
@@ -261,6 +265,54 @@ final class ServiceController
         unset($levelItems);
 
         return $levels;
+    }
+
+    private function serviceTree(array $items, string $selectedId): array
+    {
+        $byId = [];
+        $byName = [];
+        foreach ($items as $item) {
+            $id = (string) ($item['id'] ?? '');
+            $name = (string) ($item['name'] ?? '');
+            if ($id !== '') {
+                $byId[$id] = $item;
+            }
+            if ($name !== '') {
+                $byName[$name] = $item;
+            }
+        }
+
+        $selected = isset($byId[$selectedId]) ? $byId[$selectedId] : null;
+        $chain = [];
+        $guard = 0;
+        while ($selected !== null && $guard < 8) {
+            array_unshift($chain, $selected);
+            $parent = (string) ($selected['parent'] ?? '');
+            $selected = $parent !== '' && isset($byName[$parent]) ? $byName[$parent] : null;
+            $guard++;
+        }
+
+        $parents = [''];
+        foreach (array_slice($chain, 0, 3) as $item) {
+            $parents[] = (string) ($item['name'] ?? '');
+        }
+
+        $columns = [];
+        for ($depth = 1; $depth <= 4; $depth++) {
+            $parentName = $parents[$depth - 1] ?? null;
+            if ($parentName === null) {
+                $columns[$depth] = [];
+                continue;
+            }
+
+            $columns[$depth] = array_values(array_filter($items, fn (array $item): bool => (string) ($item['parent'] ?? '') === $parentName));
+            usort($columns[$depth], fn (array $a, array $b): int => strnatcasecmp((string) ($a['name'] ?? ''), (string) ($b['name'] ?? '')));
+        }
+
+        return [
+            'columns' => $columns,
+            'selectedIds' => array_column($chain, 'id'),
+        ];
     }
 
     private function levelLabels(): array

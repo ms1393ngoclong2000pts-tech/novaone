@@ -6,6 +6,18 @@
         </div>
     </div>
     <div class="panel-body">
+        <div class="mobile-profile-summary">
+            <div class="mobile-profile-avatar">
+                <?php if (! empty($user['avatar'])): ?>
+                    <img src="<?= e($user['avatar']) ?>" alt="">
+                <?php else: ?>
+                    <?= e(first_character($user['name'] ?? 'A')) ?>
+                <?php endif; ?>
+            </div>
+            <h1><?= e($user['company'] ?? $user['name'] ?? 'Novaone') ?></h1>
+            <p>Đăng nhập với <?= e($user['role'] ?? 'admin') ?></p>
+        </div>
+        <h3 class="mobile-profile-section-title">Giới thiệu</h3>
         <?php if (! empty($_SESSION['flash_success'])): ?>
             <div class="alert success"><?= e($_SESSION['flash_success']) ?></div>
             <?php unset($_SESSION['flash_success']); ?>
@@ -31,36 +43,44 @@
                 </label>
             </div>
             <label class="field">
+                <span class="profile-field-icon"><?= ui_icon('users') ?></span>
                 <span>Họ tên</span>
                 <input name="name" value="<?= e($user['name'] ?? '') ?>" required>
             </label>
             <label class="field">
+                <span class="profile-field-icon"><?= ui_icon('mail') ?></span>
                 <span>Email</span>
                 <input value="<?= e($user['email'] ?? '') ?>" disabled>
             </label>
             <label class="field">
+                <span class="profile-field-icon"><?= ui_icon('phone') ?></span>
                 <span>Điện thoại</span>
                 <input name="phone" value="<?= e($user['phone'] ?? '') ?>">
             </label>
             <label class="field">
+                <span class="profile-field-icon"><?= ui_icon('briefcase') ?></span>
                 <span>Chức danh</span>
                 <input name="position" value="<?= e($user['position'] ?? '') ?>">
             </label>
             <label class="field">
+                <span class="profile-field-icon"><?= ui_icon('calendar') ?></span>
                 <span>Ngày sinh</span>
                 <input name="birthday" type="date" value="<?= e($user['birthday'] ?? '') ?>">
             </label>
             <label class="field">
+                <span class="profile-field-icon"><?= ui_icon('building') ?></span>
                 <span>Công ty</span>
                 <input name="company" value="<?= e($user['company'] ?? 'bData co.,ltd') ?>" required>
             </label>
             <label class="field span-2">
+                <span class="profile-field-icon"><?= ui_icon('map') ?></span>
                 <span>Địa chỉ</span>
                 <input name="address" value="<?= e($user['address'] ?? '') ?>">
             </label>
+            <h3 class="mobile-profile-section-title span-2">Cài đặt</h3>
             <div class="actions span-2">
-                <button class="btn primary" type="submit">Lưu thông tin</button>
-                <a class="btn" href="?route=dashboard">Quay lại</a>
+                <button class="btn primary" type="submit"><?= ui_icon('save') ?> Lưu thông tin</button>
+                <a class="btn" href="?route=dashboard"><?= ui_icon('arrow-left') ?> Quay lại</a>
             </div>
         </form>
     </div>

@@ -1,9 +1,9 @@
-{
-  "appId": "com.novaone.admin",
-  "appName": "Novaone",
-  "webDir": "mobile-www",
-  "server": {
-    "url": "https://termination-chains-determination-most.trycloudflare.com/?route=home",
-    "cleartext": false
-  }
+﻿{
+    "appId":  "com.novaone.admin",
+    "appName":  "Novaone",
+    "webDir":  "mobile-www",
+    "server":  {
+                   "url":  "https://celebrities-tue-optimum-seal.trycloudflare.com/?route=home",
+                   "cleartext":  false
+               }
 }

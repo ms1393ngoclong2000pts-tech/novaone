@@ -65,10 +65,9 @@ $groups = filter_nav_groups_by_permission($groups);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Novaone</title>
-    <link rel="icon" type="image/png" href="public/assets/novaone-logo.png">
-    <link rel="icon" type="image/svg+xml" href="public/assets/novaone-mark.svg">
-    <link rel="shortcut icon" href="public/assets/novaone-logo.png">
-    <link rel="apple-touch-icon" href="public/assets/novaone-logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/assets/novaone-logo.png?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
+    <link rel="shortcut icon" type="image/png" href="public/assets/novaone-logo.png?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
+    <link rel="apple-touch-icon" href="public/assets/novaone-logo.png?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
     <link rel="stylesheet" href="public/assets/app.css?v=<?= filemtime(BASE_PATH . '/public/assets/app.css') ?>">
     <link rel="stylesheet" href="public/assets/mobile.css?v=<?= filemtime(BASE_PATH . '/public/assets/mobile.css') ?>">
 </head>
@@ -112,8 +111,9 @@ $groups = filter_nav_groups_by_permission($groups);
         <header class="topbar">
             <div class="topbar-left">
                 <button class="top-icon sidebar-toggle" type="button" aria-label="Thu gọn menu"><?= ui_icon('menu') ?></button>
-                <a class="top-icon" href="?route=home" aria-label="Màn hình"><?= ui_icon('monitor') ?></a>
+                <a class="top-icon profile-shortcut" href="?route=profile" aria-label="Profile"><?= ui_icon('users') ?></a>
             </div>
+            <a class="mobile-home-logo" href="?route=home" aria-label="Trang chủ Novaone"></a>
             <div class="topbar-right">
                 <form class="global-search" method="get" action="">
                     <input type="hidden" name="route" value="search">
@@ -194,6 +194,7 @@ $groups = filter_nav_groups_by_permission($groups);
   const toggle = document.querySelector('.sidebar-toggle');
   if (!shell || !toggle) return;
   const notificationMenu = document.querySelector('.notification-menu');
+  const notificationDropdown = notificationMenu?.querySelector('.notification-dropdown');
   const notificationShowAll = document.querySelector('.notification-show-all');
 
   if (localStorage.getItem('novaone-sidebar-collapsed') === '1') {
@@ -221,17 +222,58 @@ $groups = filter_nav_groups_by_permission($groups);
   window.addEventListener('resize', () => {
     if (!isMobileNav()) {
       shell.classList.remove('sidebar-mobile-open');
+      notificationMenu?.classList.remove('mobile-open', 'show-all');
+      notificationDropdown?.classList.remove('mobile-floating', 'show-all');
+      if (notificationMenu && notificationDropdown && notificationDropdown.parentElement !== notificationMenu) {
+        notificationMenu.appendChild(notificationDropdown);
+      }
       document.body.classList.remove('notification-open');
-    } else if (notificationMenu?.open) {
+    } else if (notificationMenu?.classList.contains('mobile-open') || notificationMenu?.open) {
       document.body.classList.add('notification-open');
     }
   });
 
   if (notificationMenu) {
+    const notificationSummary = notificationMenu.querySelector('summary');
+    const closeMobileNotifications = () => {
+      notificationMenu.open = false;
+      notificationMenu.classList.remove('mobile-open', 'show-all');
+      notificationDropdown?.classList.remove('mobile-floating', 'show-all');
+      if (notificationDropdown && notificationDropdown.parentElement !== notificationMenu) {
+        notificationMenu.appendChild(notificationDropdown);
+      }
+      if (notificationShowAll) notificationShowAll.hidden = false;
+      document.body.classList.remove('notification-open');
+    };
+
+    const openMobileNotifications = () => {
+      notificationMenu.open = false;
+      if (notificationDropdown && notificationDropdown.parentElement !== document.body) {
+        document.body.appendChild(notificationDropdown);
+      }
+      notificationMenu.classList.add('mobile-open');
+      notificationDropdown?.classList.add('mobile-floating');
+      document.body.classList.add('notification-open');
+    };
+
+    notificationSummary?.addEventListener('click', (event) => {
+      if (!isMobileNav()) return;
+      event.preventDefault();
+      notificationMenu.classList.contains('mobile-open') ? closeMobileNotifications() : openMobileNotifications();
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!isMobileNav() || !notificationMenu.classList.contains('mobile-open')) return;
+      if (event.target.closest('.notification-dropdown') || event.target.closest('.notification-menu > summary')) return;
+      closeMobileNotifications();
+    });
+
     notificationMenu.addEventListener('toggle', () => {
+      if (isMobileNav() && notificationMenu.classList.contains('mobile-open')) return;
       document.body.classList.toggle('notification-open', notificationMenu.open && isMobileNav());
       if (!notificationMenu.open) {
         notificationMenu.classList.remove('show-all');
+        notificationDropdown?.classList.remove('show-all');
         if (notificationShowAll) notificationShowAll.hidden = false;
       }
     });
@@ -240,6 +282,7 @@ $groups = filter_nav_groups_by_permission($groups);
   if (notificationShowAll && notificationMenu) {
     notificationShowAll.addEventListener('click', () => {
       notificationMenu.classList.add('show-all');
+      notificationDropdown?.classList.add('show-all');
       notificationShowAll.hidden = true;
     });
   }
