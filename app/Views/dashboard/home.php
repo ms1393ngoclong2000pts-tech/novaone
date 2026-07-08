@@ -7,7 +7,6 @@ $tiles = [
     ['label' => 'BÁO CÁO NHÂN SỰ', 'href' => '?route=reports', 'icon' => 'users', 'accent' => 'pink'],
     ['label' => 'QUẢN LÝ KHO BÁN HÀNG', 'href' => '?route=products', 'icon' => 'settings', 'accent' => 'navy'],
     ['label' => 'TRANG THIẾT BỊ', 'href' => '?route=machine-warehouses', 'icon' => 'briefcase', 'accent' => 'yellow'],
-    ['label' => 'LỊCH', 'href' => '?route=attendance', 'icon' => 'calendar', 'accent' => 'green-dark'],
     ['label' => 'BÁN HÀNG', 'href' => '?route=sales-orders', 'icon' => 'cart', 'accent' => 'red'],
     ['label' => 'CÔNG VIỆC', 'href' => '?route=projects', 'icon' => 'check', 'accent' => 'green'],
     ['label' => 'TUYỂN DỤNG', 'href' => '?route=recruitment-requests', 'icon' => 'monitor', 'accent' => 'yellow'],

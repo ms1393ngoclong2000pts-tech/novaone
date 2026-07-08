@@ -19,9 +19,21 @@
             </label>
             <label class="field">
                 <span>Mật khẩu</span>
-                <input name="password" type="password" autocomplete="current-password" required>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                <button class="login-password-hint" type="button" data-login-password="<?= e($config['demo_user']['password']) ?>">
+                    G&#7907;i &#253; m&#7853;t kh&#7849;u: <strong><?= e($config['demo_user']['password']) ?></strong>
+                </button>
             </label>
             <button class="btn primary" type="submit">Đăng nhập</button>
         </form>
     </section>
 </main>
+
+<script>
+document.querySelector('[data-login-password]')?.addEventListener('click', (event) => {
+    const password = document.getElementById('login-password');
+    if (!password) return;
+    password.value = event.currentTarget.dataset.loginPassword || '';
+    password.focus();
+});
+</script>

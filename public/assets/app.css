@@ -2108,6 +2108,26 @@ button { cursor: pointer; }
 .hint, .muted, .panel-head p { color: var(--muted); }
 .hint { font-size: 13px; }
 
+.login-password-hint {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #287bd8;
+  background: #e8f3ff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.login-password-hint strong {
+  color: #0f5fbd;
+}
+
+.login-password-hint:hover {
+  background: #dcecff;
+}
+
 .alert {
   margin-bottom: 14px;
   border: 1px solid #fecaca;

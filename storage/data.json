@@ -42,33 +42,27 @@
         },
         {
             "id": "e_hr_101",
-            "name": "Tran Ngoc Long",
-            "department": "Admin",
-            "position": "Manager",
+            "attendance_code": "101",
             "employee_code": "NV101",
-            "code": "NV101",
+            "name": "Tran Ngoc Long",
             "gender": "Nam",
             "email": "long@novaone.vn",
-            "phone": "0901000101",
-            "address": "207 An Duong Vuong",
-            "birth_date": "1995-07-02",
-            "contract": "Chinh thuc",
-            "status": "active"
+            "department": "",
+            "position": "Manager",
+            "contract": "",
+            "status": "inactive"
         },
         {
             "id": "e_hr_102",
-            "name": "Ho Viet Nhan",
-            "department": "Kinh doanh",
-            "position": "Nhan vien",
+            "attendance_code": "102",
             "employee_code": "NV102",
-            "code": "NV102",
+            "name": "Ho Viet Nhan",
             "gender": "Nam",
             "email": "nhanhv@novaone.vn",
-            "phone": "0901000102",
-            "address": "Quan 1, TP.HCM",
-            "birth_date": "1995-07-02",
-            "contract": "Chinh thuc",
-            "status": "active"
+            "department": "Kinh doanh",
+            "position": "Nhan vien",
+            "contract": "",
+            "status": "on_leave"
         },
         {
             "id": "e_hr_103",
@@ -87,33 +81,27 @@
         },
         {
             "id": "e_hr_104",
-            "name": "Nguyen Huu Phuong",
-            "department": "Cong nghe",
-            "position": "Developer",
+            "attendance_code": "104",
             "employee_code": "NV104",
-            "code": "NV104",
+            "name": "Nguyen Huu Phuong",
             "gender": "Nam",
             "email": "phuongnh@novaone.vn",
-            "phone": "0901000104",
-            "address": "Thu Duc, TP.HCM",
-            "birth_date": "1995-07-02",
-            "contract": "Chinh thuc",
-            "status": "active"
+            "department": "",
+            "position": "Developer",
+            "contract": "",
+            "status": "inactive"
         },
         {
             "id": "e_hr_105",
-            "name": "Hoang Trong Tin",
-            "department": "Kinh doanh",
-            "position": "Sales Executive",
+            "attendance_code": "105",
             "employee_code": "NV105",
-            "code": "NV105",
+            "name": "Hoang Trong Tin",
             "gender": "Nam",
             "email": "tinht@novaone.vn",
-            "phone": "0901000105",
-            "address": "Binh Thanh, TP.HCM",
-            "birth_date": "1995-07-02",
-            "contract": "Chinh thuc",
-            "status": "active"
+            "department": "Kinh doanh",
+            "position": "Sales Executive",
+            "contract": "",
+            "status": "on_leave"
         },
         {
             "id": "e_hr_106",
@@ -147,33 +135,27 @@
         },
         {
             "id": "e_hr_108",
-            "name": "Tran Xuan Quang",
-            "department": "Ke toan",
-            "position": "Accountant",
+            "attendance_code": "108",
             "employee_code": "NV108",
-            "code": "NV108",
+            "name": "Tran Xuan Quang",
             "gender": "Nam",
             "email": "quangtx@novaone.vn",
-            "phone": "0901000108",
-            "address": "Phu Nhuan, TP.HCM",
-            "birth_date": "1995-07-02",
-            "contract": "Chinh thuc",
-            "status": "active"
+            "department": "",
+            "position": "Accountant",
+            "contract": "",
+            "status": "on_leave"
         },
         {
             "id": "e_hr_109",
-            "name": "Le Hoang Minh Quy",
-            "department": "CSKH",
-            "position": "CSKH",
+            "attendance_code": "109",
             "employee_code": "NV109",
-            "code": "NV109",
+            "name": "Le Hoang Minh Quy",
             "gender": "Nam",
             "email": "quylhm@novaone.vn",
-            "phone": "0901000109",
-            "address": "Quan 7, TP.HCM",
-            "birth_date": "1995-07-02",
-            "contract": "Chinh thuc",
-            "status": "active"
+            "department": "",
+            "position": "CSKH",
+            "contract": "",
+            "status": "on_leave"
         },
         {
             "id": "e_hr_110",
@@ -802,10 +784,9 @@
         },
         {
             "id": "dr_sample_3",
-            "project": "San Nong San Quoc Te",
+            "project": "Takashimaya",
             "category": "Tai lieu",
             "employee": "Lam Quoc Tuan",
-            "employee_id": "e_hr_103",
             "details": "Bao cao cong viec hang ngay mau 3",
             "hours": 7,
             "report_date": "2026-06-13"
@@ -837,13 +818,13 @@
             "title": "Thiết kế database phase 1",
             "project": "",
             "category": "Công việc chung",
-            "hours": 0,
+            "hours": 5.5,
             "assignee": "Quang Le",
             "start_date": "2026-07-01",
             "completion_date": "2026-07-25",
             "deadline": "2026-07-25",
             "status": "in_progress",
-            "progress": 0,
+            "progress": 100,
             "priority": "normal",
             "description": ""
         },
@@ -1311,11 +1292,11 @@
             "id": "sup_sample_2",
             "code": "NCC002",
             "name": "CONG TY TNHH DIC VIET NAM",
-            "category": "",
+            "category": "Phát triển",
             "phone": "0287000002",
             "email": "supplier2@novaone.vn",
             "address": "Dia chi nha cung cap 2",
-            "contact_person": "",
+            "contact_person": "Long Trần",
             "debt": 0,
             "status": "active",
             "note": "Nha cung cap mau 2"
@@ -1337,7 +1318,7 @@
             "id": "sup_sample_4",
             "code": "NCC004",
             "name": "An Phat Supply",
-            "category": "",
+            "category": "company",
             "phone": "0287000004",
             "email": "supplier4@novaone.vn",
             "address": "Dia chi nha cung cap 4",
@@ -1429,18 +1410,6 @@
             "price": 0,
             "status": "active",
             "note": "Nhóm sửa chữa",
-            "image": "",
-            "icon": ""
-        },
-        {
-            "id": "svc06",
-            "name": "Dịch vụ sửa chữa 1",
-            "level": 1,
-            "parent": "",
-            "code": "SC1",
-            "price": 0,
-            "status": "active",
-            "note": "Nhóm sửa chữa cấp 1",
             "image": "",
             "icon": ""
         },
@@ -2921,13 +2890,13 @@
         {
             "id": "prd01",
             "name": "sản phẩm AB",
-            "sku": "-14",
+            "sku": "14",
             "code": "SP-AB",
-            "variant": "-12",
+            "variant": "12",
             "category": "bERP",
             "price": 4000000,
-            "quantity": 0,
-            "revenue": 0,
+            "quantity": 10,
+            "revenue": 40,
             "status": "in_stock",
             "image": "public\/assets\/sample-product-lotus.svg",
             "note": "Sản phẩm mẫu"
@@ -2935,13 +2904,13 @@
         {
             "id": "prd02",
             "name": "Sản phẩm DBTG",
-            "sku": "-",
+            "sku": "45",
             "code": "SP-DBTG",
-            "variant": "-",
+            "variant": "75",
             "category": "Dịch vụ sửa chữa",
             "price": 10000000,
-            "quantity": 0,
-            "revenue": 0,
+            "quantity": 40,
+            "revenue": 10,
             "status": "in_stock",
             "image": "",
             "note": "Sản phẩm mẫu"
@@ -3706,6 +3675,150 @@
     ],
     "_notifications": [
         {
+            "id": "c96257ed",
+            "title": "Phiếu yêu cầu",
+            "message": "Đã tạo phiếu yêu cầu cho Tran Ngoc Long.",
+            "href": "?route=requests",
+            "type": "success",
+            "created_at": "2026-07-08 06:56:39",
+            "read_at": null
+        },
+        {
+            "id": "15de73a2",
+            "title": "Báo cáo hàng ngày",
+            "message": "Đã cập nhật báo cáo của Lam Quoc Tuan.",
+            "href": "?route=daily-reports",
+            "type": "info",
+            "created_at": "2026-07-06 10:48:00",
+            "read_at": null
+        },
+        {
+            "id": "9f53cd9e",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp CONG TY TNHH DIC VIET NAM.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "created_at": "2026-07-06 10:03:19",
+            "read_at": null
+        },
+        {
+            "id": "e27e24a3",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp An Phat Supply.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "created_at": "2026-07-06 10:02:35",
+            "read_at": null
+        },
+        {
+            "id": "a064d776",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật sản phẩm Sản phẩm DBTG.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-06 09:51:31",
+            "read_at": null
+        },
+        {
+            "id": "0382fbb8",
+            "title": "Sản phẩm",
+            "message": "Đã cập nhật sản phẩm sản phẩm AB.",
+            "href": "?route=products",
+            "type": "info",
+            "created_at": "2026-07-06 09:50:58",
+            "read_at": null
+        },
+        {
+            "id": "63b4ceaf",
+            "title": "Cá nhân",
+            "message": "Thông tin cá nhân vừa được cập nhật.",
+            "href": "?route=profile",
+            "type": "success",
+            "created_at": "2026-07-06 07:58:50",
+            "read_at": null
+        },
+        {
+            "id": "1b37d6d2",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Thiết kế database phase 1.",
+            "href": "?route=work-items",
+            "type": "info",
+            "created_at": "2026-07-03 10:47:40",
+            "read_at": null
+        },
+        {
+            "id": "53df8fa8",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Thiết kế database phase 1.",
+            "href": "?route=work-items",
+            "type": "info",
+            "created_at": "2026-07-03 10:47:30",
+            "read_at": null
+        },
+        {
+            "id": "0f981cad",
+            "title": "Dịch vụ",
+            "message": "Đã xóa ngành hàng Dịch vụ sửa chữa 1.",
+            "href": "?route=services",
+            "type": "danger",
+            "created_at": "2026-07-03 10:16:20",
+            "read_at": null
+        },
+        {
+            "id": "df267faf",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-07-03 09:04:10",
+            "read_at": null
+        },
+        {
+            "id": "37449ee1",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-07-03 09:04:04",
+            "read_at": null
+        },
+        {
+            "id": "c34d0c2c",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-07-03 09:03:53",
+            "read_at": null
+        },
+        {
+            "id": "c8c4b06f",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-07-03 09:03:41",
+            "read_at": null
+        },
+        {
+            "id": "e8fbfede",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-07-03 09:03:35",
+            "read_at": null
+        },
+        {
+            "id": "992b9a50",
+            "title": "Nhân sự",
+            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
+            "href": "?route=employees",
+            "type": "info",
+            "created_at": "2026-07-03 09:03:30",
+            "read_at": null
+        },
+        {
             "id": "22fbab2b",
             "title": "Sản phẩm",
             "message": "Đã cập nhật sản phẩm sản phẩm AB.",
@@ -4010,117 +4123,21 @@
             "type": "info",
             "created_at": "2026-07-02 06:59:20",
             "read_at": null
-        },
-        {
-            "id": "3a6a9842",
-            "title": "Phiếu tuyển dụng",
-            "message": "Đã cập nhật phiếu tuyển dụng #9.",
-            "href": "?route=recruitment-requests",
-            "type": "info",
-            "created_at": "2026-07-02 06:59:06",
-            "read_at": null
-        },
-        {
-            "id": "bf8fa1c3",
-            "title": "Cá nhân",
-            "message": "Thông tin cá nhân vừa được cập nhật.",
-            "href": "?route=profile",
-            "type": "success",
-            "created_at": "2026-07-02 06:58:47",
-            "read_at": null
-        },
-        {
-            "id": "c73c2ca2",
-            "title": "Công việc",
-            "message": "Đã cập nhật công việc Thiết kế database phase 1.",
-            "href": "?route=work-items",
-            "type": "info",
-            "created_at": "2026-07-01 10:36:55",
-            "read_at": null
-        },
-        {
-            "id": "e9c6bbb0",
-            "title": "Phiếu yêu cầu",
-            "message": "Đã tạo phiếu yêu cầu cho Minh Nguyen.",
-            "href": "?route=requests",
-            "type": "success",
-            "created_at": "2026-07-01 10:29:26",
-            "read_at": null
-        },
-        {
-            "id": "f093cbb0",
-            "title": "Phiếu yêu cầu",
-            "message": "Đã tạo phiếu yêu cầu cho Quang Le.",
-            "href": "?route=requests",
-            "type": "success",
-            "created_at": "2026-07-01 10:28:53",
-            "read_at": null
-        },
-        {
-            "id": "8c7dbed9",
-            "title": "Dự án",
-            "message": "Đã cập nhật dự án Takashimaya.",
-            "href": "?route=projects",
-            "type": "info",
-            "created_at": "2026-07-01 10:01:09",
-            "read_at": null
-        },
-        {
-            "id": "bc0e8a9e",
-            "title": "Bảng lương",
-            "message": "Đã cập nhật bảng lương Test1.",
-            "href": "?route=payrolls",
-            "type": "info",
-            "created_at": "2026-07-01 10:00:43",
-            "read_at": null
-        },
-        {
-            "id": "210bb4f0",
-            "title": "Hợp đồng lao động",
-            "message": "Đã cập nhật hợp đồng HDHV-2026-002 cho Ha Pham.",
-            "href": "?route=contracts&type=hoc_viec",
-            "type": "info",
-            "created_at": "2026-07-01 10:00:28",
-            "read_at": null
-        },
-        {
-            "id": "1d3cbabf",
-            "title": "Bảng lương",
-            "message": "Đã hoàn thành bảng lương Test.",
-            "href": "?route=payrolls",
-            "type": "success",
-            "created_at": "2026-07-01 09:55:48",
-            "read_at": null
-        },
-        {
-            "id": "noti_sample_1",
-            "title": "Thong bao mau 1",
-            "message": "Du lieu mau da san sang cho tinh nang 1.",
-            "href": "?route=home",
-            "type": "info",
-            "read": false,
-            "created_at": "2026-07-02 10:01:00"
-        },
-        {
-            "id": "noti_sample_2",
-            "title": "Thong bao mau 2",
-            "message": "Du lieu mau da san sang cho tinh nang 2.",
-            "href": "?route=home",
-            "type": "info",
-            "read": false,
-            "created_at": "2026-07-02 10:02:00"
-        },
-        {
-            "id": "noti_sample_3",
-            "title": "Thong bao mau 3",
-            "message": "Du lieu mau da san sang cho tinh nang 3.",
-            "href": "?route=home",
-            "type": "info",
-            "read": false,
-            "created_at": "2026-07-02 10:03:00"
         }
     ],
     "request_forms": [
+        {
+            "id": "48d1dfa0",
+            "request_type": "sick",
+            "employee_name": "Tran Ngoc Long",
+            "department": "Công nghệ",
+            "created_date": "2026-07-08",
+            "start_date": "2026-07-08",
+            "end_date": "2026-07-08",
+            "approval": "approved",
+            "amount": 1000000,
+            "detail": ""
+        },
         {
             "id": "e9d8d9dd",
             "request_type": "overtime",

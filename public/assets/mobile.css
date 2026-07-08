@@ -3055,6 +3055,40 @@
       linear-gradient(180deg, #02aee4, #0699c6);
   }
 
+  .app-dashboard::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -18px;
+    left: -18px;
+    z-index: 1;
+    height: 92px;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,0.95) 0 2px, transparent 3px),
+      radial-gradient(circle, rgba(255,255,255,0.65) 0 1.5px, transparent 2.5px),
+      radial-gradient(circle, rgba(255,255,255,0.42) 0 1px, transparent 2px);
+    background-position: 18px -10px, 72px -28px, 122px -16px;
+    background-size: 92px 92px, 118px 118px, 64px 64px;
+    animation: mobileSnowFall 7s linear infinite;
+    opacity: 0.9;
+  }
+
+  @keyframes mobileSnowFall {
+    from {
+      background-position: 18px -92px, 72px -118px, 122px -64px;
+    }
+    to {
+      background-position: 18px 92px, 72px 118px, 122px 64px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .app-dashboard::after {
+      animation: none !important;
+    }
+  }
+
   .app-dashboard h1 {
     position: absolute !important;
     top: 39px !important;
@@ -3345,6 +3379,80 @@
   .account-form .btn.primary {
     background: #e5fbfb !important;
     color: #48c8c9 !important;
+  }
+
+  .employee-action,
+  .request-action,
+  .contract-filter-button,
+  .service-level-action,
+  .report-btn,
+  .filter-actions button,
+  .violation-filter button,
+  .project-filter > button,
+  .daily-filter > button,
+  .service-actions summary,
+  .service-action-menu a,
+  .service-action-menu button,
+  .product-status-tabs a,
+  .sales-stage-nav a,
+  .stage-card span,
+  .sales-receipt-head-actions a,
+  .sales-receipt-head-actions button,
+  .machine-head-actions a,
+  .machine-head-actions button,
+  .request-head-actions a,
+  .request-head-actions button,
+  .service-head-actions a,
+  .service-head-actions button,
+  .project-head-actions a,
+  .project-head-actions button,
+  .employee-head-actions a,
+  .employee-head-actions button {
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: nowrap !important;
+    word-break: normal !important;
+  }
+
+  .employee-head-actions,
+  .request-head-actions,
+  .machine-head-actions,
+  .service-head-actions,
+  .project-head-actions,
+  .attendance-head-actions,
+  .sales-receipt-head-actions,
+  .filter-actions,
+  .product-status-tabs,
+  .sales-stage-nav {
+    flex-wrap: nowrap !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .employee-head-actions > *,
+  .request-head-actions > *,
+  .machine-head-actions > *,
+  .service-head-actions > *,
+  .project-head-actions > *,
+  .attendance-head-actions > *,
+  .sales-receipt-head-actions > *,
+  .filter-actions > *,
+  .product-status-tabs > *,
+  .sales-stage-nav > *,
+  .employee-action,
+  .request-action {
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+    width: auto !important;
+  }
+
+  .employee-dialog-form footer,
+  .account-form .actions,
+  .service-save-bar {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
