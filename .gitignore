@@ -18,6 +18,7 @@ android/**/build/
 *.log
 *.tmp
 *.bak
+storage/*.png
 ~$*
 
 # OS/editor

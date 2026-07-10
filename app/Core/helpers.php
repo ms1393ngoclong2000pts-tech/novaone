@@ -57,6 +57,25 @@ function redirect(string $route): never
     exit;
 }
 
+function asset_url(string $path): string
+{
+    $path = str_replace('\\', '/', trim($path));
+    if ($path === '') {
+        return '';
+    }
+
+    if (str_contains($path, '://') || str_starts_with($path, '//')) {
+        return $path;
+    }
+
+    $path = ltrim($path, '/');
+    if (str_starts_with($path, 'public/')) {
+        $path = substr($path, 7);
+    }
+
+    return $path;
+}
+
 function is_logged_in(): bool
 {
     return isset($_SESSION['user']);

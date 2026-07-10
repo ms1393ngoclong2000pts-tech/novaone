@@ -1,3 +1,7 @@
+<?php
+/** @var string $query */
+/** @var array<int, array{href: string, icon: string, label: string, group: string}> $results */
+?>
 <section class="panel search-panel">
     <div class="panel-head">
         <div>

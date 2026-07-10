@@ -1,4 +1,19 @@
 <?php
+/** @var string $field */
+/** @var string $query */
+/** @var string $category */
+/** @var string $status */
+/** @var int $perPage */
+/** @var string $sort */
+/** @var string $direction */
+/** @var array<int, array<string, mixed>> $allItems */
+/** @var array<int, array<string, mixed>> $items */
+/** @var array<string, string> $fieldLabels */
+/** @var array<string, string> $statusLabels */
+/** @var array<int, array{value: string, label: string}> $categories */
+/** @var int $total */
+/** @var int $page */
+/** @var int $pages */
 $queryUrl = function (array $changes = []) use ($field, $query, $category, $status, $perPage): string {
     $base = [
         'route' => 'products',
@@ -106,21 +121,25 @@ foreach ($statusLabels as $key => $label) {
                 </thead>
                 <tbody>
                     <?php foreach ($items as $item): ?>
+                        <?php
+                        $itemForUi = $item;
+                        $itemForUi['image_url'] = asset_url((string) ($item['image'] ?? ''));
+                        ?>
                         <tr>
                             <td>
                                 <?php if (! empty($item['image'])): ?>
-                                    <img class="product-thumb" src="<?= e($item['image']) ?>" alt="">
+                                    <img class="product-thumb" src="<?= e($itemForUi['image_url']) ?>" alt="">
                                 <?php else: ?>
                                     <span class="product-thumb placeholder"><span>▣</span></span>
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <button class="product-name" type="button" data-product-view='<?= e(json_encode($item, JSON_UNESCAPED_UNICODE)) ?>'><?= e($item['name'] ?? '') ?></button>
+                                <button class="product-name" type="button" data-product-view='<?= e(json_encode($itemForUi, JSON_UNESCAPED_UNICODE)) ?>'><?= e($item['name'] ?? '') ?></button>
                             </td>
                             <td><?= e($item['variant'] ?? '-') ?></td>
                             <td class="product-money">
                                 <span>₫ <?= e(number_format((float) ($item['price'] ?? 0), 0, ',', '.')) ?></span>
-                                <button class="product-price-edit" type="button" data-product-price-edit='<?= e(json_encode($item, JSON_UNESCAPED_UNICODE)) ?>' aria-label="Chỉnh sửa giá">
+                                <button class="product-price-edit" type="button" data-product-price-edit='<?= e(json_encode($itemForUi, JSON_UNESCAPED_UNICODE)) ?>' aria-label="Chỉnh sửa giá">
                                     <?= ui_icon('edit') ?>
                                 </button>
                             </td>
@@ -130,8 +149,8 @@ foreach ($statusLabels as $key => $label) {
                                 <details class="service-actions product-actions">
                                     <summary>Thao tác</summary>
                                     <div class="service-action-menu">
-                                        <button class="service-action-detail" type="button" data-product-view='<?= e(json_encode($item, JSON_UNESCAPED_UNICODE)) ?>'>Xem chi tiết</button>
-                                        <button class="service-action-edit" type="button" data-product-edit='<?= e(json_encode($item, JSON_UNESCAPED_UNICODE)) ?>'>Sửa</button>
+                                        <button class="service-action-detail" type="button" data-product-view='<?= e(json_encode($itemForUi, JSON_UNESCAPED_UNICODE)) ?>'>Xem chi tiết</button>
+                                        <button class="service-action-edit" type="button" data-product-edit='<?= e(json_encode($itemForUi, JSON_UNESCAPED_UNICODE)) ?>'>Sửa</button>
                                         <form method="post" action="?route=products.delete" onsubmit="return confirm('Xóa sản phẩm này?')">
                                             <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
                                             <input type="hidden" name="id" value="<?= e($item['id'] ?? '') ?>">
@@ -266,8 +285,8 @@ foreach ($statusLabels as $key => $label) {
         const item = JSON.parse(button.dataset.productView);
         const money = value => new Intl.NumberFormat('vi-VN').format(Number(value || 0)) + ' VND';
         const status = statusMap[item.status] || item.status || '---';
-        const image = item.image
-            ? `<img class="product-detail-image" src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name || '')}">`
+        const image = item.image_url || item.image
+            ? `<img class="product-detail-image" src="${escapeHtml(item.image_url || item.image)}" alt="${escapeHtml(item.name || '')}">`
             : '<span class="product-detail-image placeholder"><span>▣</span></span>';
         details.innerHTML = `
             <div class="product-detail-hero">

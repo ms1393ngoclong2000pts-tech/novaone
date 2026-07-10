@@ -1,4 +1,6 @@
 <?php
+/** @var string $content */
+/** @var string|null $active */
 $unreadNotifications = unread_notifications();
 $allNotifications = notifications_data();
 $visibleNotifications = array_slice($allNotifications, 0, 10);
@@ -65,11 +67,11 @@ $groups = filter_nav_groups_by_permission($groups);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Novaone</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="public/assets/novaone-logo.png?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
-    <link rel="shortcut icon" type="image/png" href="public/assets/novaone-logo.png?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
-    <link rel="apple-touch-icon" href="public/assets/novaone-logo.png?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
-    <link rel="stylesheet" href="public/assets/app.css?v=<?= filemtime(BASE_PATH . '/public/assets/app.css') ?>">
-    <link rel="stylesheet" href="public/assets/mobile.css?v=<?= filemtime(BASE_PATH . '/public/assets/mobile.css') ?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= e(asset_url('public/assets/novaone-logo.png')) ?>?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
+    <link rel="shortcut icon" type="image/png" href="<?= e(asset_url('public/assets/novaone-logo.png')) ?>?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
+    <link rel="apple-touch-icon" href="<?= e(asset_url('public/assets/novaone-logo.png')) ?>?v=<?= filemtime(BASE_PATH . '/public/assets/novaone-logo.png') ?>">
+    <link rel="stylesheet" href="<?= e(asset_url('public/assets/app.css')) ?>?v=<?= filemtime(BASE_PATH . '/public/assets/app.css') ?>">
+    <link rel="stylesheet" href="<?= e(asset_url('public/assets/mobile.css')) ?>?v=<?= filemtime(BASE_PATH . '/public/assets/mobile.css') ?>">
 </head>
 <body>
 <div class="app-shell">
@@ -165,7 +167,7 @@ $groups = filter_nav_groups_by_permission($groups);
                     <summary class="user-chip">
                         <span class="avatar">
                             <?php if (! empty($_SESSION['user']['avatar'])): ?>
-                                <img src="<?= e($_SESSION['user']['avatar']) ?>" alt="">
+                                <img src="<?= e(asset_url($_SESSION['user']['avatar'])) ?>" alt="">
                             <?php else: ?>
                                 <?= e(first_character($_SESSION['user']['name'] ?? 'A')) ?>
                             <?php endif; ?>

@@ -1,3 +1,6 @@
+<?php
+/** @var array<string, mixed> $user */
+?>
 <section class="panel account-panel">
     <div class="panel-head">
         <div>
@@ -9,7 +12,7 @@
         <div class="mobile-profile-summary">
             <div class="mobile-profile-avatar">
                 <?php if (! empty($user['avatar'])): ?>
-                    <img src="<?= e($user['avatar']) ?>" alt="">
+                    <img src="<?= e(asset_url($user['avatar'])) ?>" alt="">
                 <?php else: ?>
                     <?= e(first_character($user['name'] ?? 'A')) ?>
                 <?php endif; ?>
@@ -31,7 +34,7 @@
             <div class="profile-photo span-2">
                 <div class="profile-avatar">
                     <?php if (! empty($user['avatar'])): ?>
-                        <img src="<?= e($user['avatar']) ?>" alt="">
+                        <img src="<?= e(asset_url($user['avatar'])) ?>" alt="">
                     <?php else: ?>
                         <?= e(first_character($user['name'] ?? 'A')) ?>
                     <?php endif; ?>

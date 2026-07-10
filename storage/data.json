@@ -3219,7 +3219,8 @@
             "code": "20250115001",
             "name": "HVN",
             "stage": "init",
-            "contact": "",
+            "contact": "Tran Ngoc Long",
+            "contact_employee_id": "e_hr_101",
             "amount": 100000,
             "unit": "VNĐ",
             "created_date": "2025-01-15",
@@ -3653,8 +3654,8 @@
             "cost": 20000,
             "status": "pending",
             "approver": "Vo Thuan",
-            "candidate_total": 0,
-            "candidate_passed": 0,
+            "candidate_total": 9,
+            "candidate_passed": 5,
             "news_title": "Tuyển thiết kế",
             "position": "Designer",
             "description": "Đang chờ duyệt ngân sách."
@@ -3666,14 +3667,41 @@
             "cost": 300000,
             "status": "rejected",
             "approver": "Tran Ngoc Long",
-            "candidate_total": 0,
-            "candidate_passed": 0,
+            "candidate_total": 10,
+            "candidate_passed": 2,
             "news_title": "",
-            "position": "",
+            "position": "Học Việc",
             "description": ""
         }
     ],
     "_notifications": [
+        {
+            "id": "edebd53a",
+            "title": "Đơn hàng",
+            "message": "Đã cập nhật đơn hàng 20250115001.",
+            "href": "?route=sales-orders",
+            "type": "info",
+            "created_at": "2026-07-09 08:11:50",
+            "read_at": null
+        },
+        {
+            "id": "6fa08bc4",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #9.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-08 09:37:15",
+            "read_at": null
+        },
+        {
+            "id": "853fffb9",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #101.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-08 09:36:03",
+            "read_at": null
+        },
         {
             "id": "c96257ed",
             "title": "Phiếu yêu cầu",
@@ -3942,7 +3970,7 @@
             "href": "?route=services",
             "type": "info",
             "created_at": "2026-07-03 07:34:47",
-            "read_at": null
+            "read_at": "2026-07-09 10:03:37"
         },
         {
             "id": "c1e468cd",
@@ -4095,33 +4123,6 @@
             "href": "?route=recruitment-requests",
             "type": "info",
             "created_at": "2026-07-02 06:59:39",
-            "read_at": null
-        },
-        {
-            "id": "75b640f0",
-            "title": "Phiếu tuyển dụng",
-            "message": "Đã cập nhật phiếu tuyển dụng #2.",
-            "href": "?route=recruitment-requests",
-            "type": "info",
-            "created_at": "2026-07-02 06:59:31",
-            "read_at": null
-        },
-        {
-            "id": "1e239ecc",
-            "title": "Phiếu tuyển dụng",
-            "message": "Đã cập nhật phiếu tuyển dụng #5.",
-            "href": "?route=recruitment-requests",
-            "type": "info",
-            "created_at": "2026-07-02 06:59:25",
-            "read_at": null
-        },
-        {
-            "id": "12fa1cc0",
-            "title": "Phiếu tuyển dụng",
-            "message": "Đã cập nhật phiếu tuyển dụng #4.",
-            "href": "?route=recruitment-requests",
-            "type": "info",
-            "created_at": "2026-07-02 06:59:20",
             "read_at": null
         }
     ],

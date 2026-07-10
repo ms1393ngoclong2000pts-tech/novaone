@@ -1,3 +1,9 @@
+<?php
+/** @var string $name */
+/** @var string $query */
+/** @var array<string, mixed> $schema */
+/** @var array<int, array<string, mixed>> $items */
+?>
 <section class="panel">
     <div class="panel-head">
         <div>

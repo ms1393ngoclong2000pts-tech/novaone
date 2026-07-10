@@ -1,3 +1,8 @@
+<?php
+/** @var string $name */
+/** @var array<string, mixed> $schema */
+/** @var array<string, mixed>|null $editing */
+?>
 <form method="post" action="?route=resource.save" class="form-grid">
     <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
     <input type="hidden" name="_resource" value="<?= e($name) ?>">

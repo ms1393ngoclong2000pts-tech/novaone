@@ -19,7 +19,7 @@ if ($code === '') {
                 <h3>Ảnh đại diện sản phẩm</h3>
                 <div class="service-image-frame">
                     <?php if (! empty($item['image'])): ?>
-                        <img src="<?= e($item['image']) ?>" alt="">
+                        <img src="<?= e(asset_url($item['image'])) ?>" alt="">
                     <?php endif; ?>
                 </div>
             </section>
@@ -27,7 +27,7 @@ if ($code === '') {
                 <h3>Ảnh icon ngành hàng</h3>
                 <div class="service-image-frame service-icon-frame">
                     <?php if (! empty($item['icon'])): ?>
-                        <img src="<?= e($item['icon']) ?>" alt="">
+                        <img src="<?= e(asset_url($item['icon'])) ?>" alt="">
                     <?php endif; ?>
                 </div>
             </section>
