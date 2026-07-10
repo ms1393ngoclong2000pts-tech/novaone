@@ -93,6 +93,7 @@ function permission_modules(): array
     return [
         'home' => ['label' => 'Quản lý ứng dụng', 'group' => 'Hệ thống'],
         'dashboard' => ['label' => 'Dashboard', 'group' => 'Hệ thống'],
+        'settings' => ['label' => 'Quản lý thông tin', 'group' => 'Hệ thống'],
         'employees' => ['label' => 'Danh sách nhân viên', 'group' => 'Nhân sự'],
         'contracts' => ['label' => 'Hợp đồng lao động', 'group' => 'Nhân sự'],
         'attendance' => ['label' => 'Chấm công', 'group' => 'Nhân sự'],
@@ -104,6 +105,8 @@ function permission_modules(): array
         'projects' => ['label' => 'Dự án', 'group' => 'Công việc'],
         'work_items' => ['label' => 'Danh sách công việc', 'group' => 'Công việc'],
         'daily_reports' => ['label' => 'Báo cáo hằng ngày', 'group' => 'Công việc'],
+        'training' => ['label' => 'Đào tạo', 'group' => 'Nhân sự'],
+        'training_reports' => ['label' => 'Báo cáo đào tạo', 'group' => 'Báo cáo'],
         'suppliers' => ['label' => 'Nhà cung cấp', 'group' => 'Kinh doanh'],
         'services' => ['label' => 'Dịch vụ', 'group' => 'Kinh doanh'],
         'products' => ['label' => 'Danh sách sản phẩm', 'group' => 'Kinh doanh'],
@@ -126,6 +129,10 @@ function permission_route_map(): array
     return [
         'home' => ['home', 'view'],
         'dashboard' => ['dashboard', 'view'],
+        'settings' => ['settings', 'view'],
+        'settings.save' => ['settings', 'update'],
+        'training' => ['training', 'view'],
+        'training-reports' => ['training_reports', 'view'],
         'employees' => ['employees', 'view'],
         'employees.show' => ['employees', 'view'],
         'employees.export' => ['employees', 'view'],
@@ -297,9 +304,9 @@ function default_role_permissions(string $role): array
         }
     };
 
-    $grant(['home', 'dashboard', 'reports', 'calls']);
+    $grant(['home', 'dashboard', 'reports', 'training_reports', 'calls']);
     match ($role) {
-        'hr' => $grant(['employees', 'contracts', 'attendance', 'payrolls', 'social_insurance', 'requests', 'violations', 'rewards', 'recruitment_requests', 'daily_reports'], true),
+        'hr' => $grant(['employees', 'contracts', 'attendance', 'payrolls', 'social_insurance', 'requests', 'violations', 'rewards', 'training', 'recruitment_requests', 'daily_reports'], true),
         'sales' => $grant(['suppliers', 'services', 'products', 'sales_orders', 'sales_targets', 'sales_receipts', 'daily_reports'], true),
         'warehouse' => $grant(['machine_warehouses', 'equipment_devices', 'equipment_types', 'purchasing', 'suppliers'], true),
         'manager' => $grant(['employees', 'contracts', 'attendance', 'projects', 'work_items', 'daily_reports', 'suppliers', 'sales_orders', 'machine_warehouses', 'equipment_devices', 'recruitment_requests'], false),

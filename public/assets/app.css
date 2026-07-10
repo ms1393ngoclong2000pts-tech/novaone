@@ -2438,7 +2438,9 @@ button { cursor: pointer; }
 }
 
 .report-kpi.tone-green::before { background: #10b981; }
+.report-kpi.tone-blue::before { background: #3b82f6; }
 .report-kpi.tone-violet::before { background: #8b5cf6; }
+.report-kpi.tone-purple::before { background: #8b5cf6; }
 .report-kpi.tone-orange::before { background: #f59e0b; }
 .report-kpi.tone-teal::before { background: #14b8a6; }
 .report-kpi.tone-pink::before { background: #ec4899; }
@@ -2457,6 +2459,121 @@ button { cursor: pointer; }
   margin: 0;
   color: #3f4753;
   font-size: 18px;
+}
+
+.system-info-form {
+  display: grid;
+  gap: 16px;
+}
+
+.system-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.system-section-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #0e8faf;
+  background: #e6f7fb;
+}
+
+.system-section-icon .ui-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.system-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 18px;
+}
+
+.field textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--text);
+  background: #fff;
+  font: inherit;
+}
+
+.system-savebar {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 -10px 26px rgba(31, 41, 55, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.system-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding: 18px;
+}
+
+.system-directory-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+  background: #f8fafc;
+}
+
+.system-directory-card h3 {
+  margin: 0 0 12px;
+  color: #3f4753;
+  font-size: 15px;
+}
+
+.system-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.system-chip-list span,
+.system-chip-list em {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  border-radius: 999px;
+  padding: 5px 11px;
+  color: #2563eb;
+  background: #e6f1ff;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 750;
+}
+
+@media (max-width: 900px) {
+  .system-info-grid,
+  .system-directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .system-info-grid .span-2 {
+    grid-column: auto;
+  }
+
+  .system-savebar {
+    position: static;
+  }
 }
 
 .report-section-head > a {

@@ -24,6 +24,7 @@ $groups = [
             ['label' => 'Danh Sách Công Việc', 'href' => '?route=work-items', 'route' => 'work-items'],
             ['label' => 'Báo Cáo Hàng Ngày', 'href' => '?route=daily-reports', 'route' => 'daily-reports'],
         ]],
+        ['id' => 'training', 'label' => 'Đào tạo', 'href' => '?route=training', 'icon' => 'book'],
     ],
     'KINH DOANH' => [
         ['id' => 'suppliers', 'label' => 'Nhà cung cấp', 'href' => '?route=suppliers', 'icon' => 'briefcase'],
@@ -50,9 +51,11 @@ $groups = [
     ],
     'BÁO CÁO' => [
         ['id' => 'reports', 'label' => 'Báo cáo tổng hợp', 'href' => '?route=reports', 'icon' => 'file'],
+        ['id' => 'training_reports', 'label' => 'Báo cáo đào tạo', 'href' => '?route=training-reports', 'icon' => 'book'],
     ],
     'QUẢN LÝ HỆ THỐNG' => [
         ['id' => 'dashboard', 'label' => 'Dashboard', 'href' => '?route=dashboard', 'icon' => 'monitor'],
+        ['id' => 'settings', 'label' => 'Quản lý thông tin', 'href' => '?route=settings', 'icon' => 'info'],
         ['id' => 'permissions', 'label' => 'Phân quyền', 'href' => '?route=permissions', 'icon' => 'settings'],
         ['id' => 'recruitments', 'label' => 'Tuyển dụng', 'href' => '?route=recruitment-requests', 'icon' => 'monitor', 'children' => [
             ['label' => 'Phiếu Yêu Cầu Tuyển Dụng', 'href' => '?route=recruitment-requests', 'route' => 'recruitment-requests'],

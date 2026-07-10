@@ -9,6 +9,17 @@ final class ResourceController
         require_auth();
 
         $name = $_GET['name'] ?? 'employees';
+        $this->renderResource($store, $schemas, (string) $name, 'resource');
+    }
+
+    public function page(DataStore $store, array $schemas, string $name, string $route, ?string $active = null): void
+    {
+        require_auth();
+        $this->renderResource($store, $schemas, $name, $route, $active);
+    }
+
+    private function renderResource(DataStore $store, array $schemas, string $name, string $route, ?string $active = null): void
+    {
         abort_unless(isset($schemas[$name]));
         require_permission(permission_module_key((string) $name), 'view');
         $query = trim($_GET['q'] ?? '');
@@ -25,9 +36,10 @@ final class ResourceController
         }
 
         View::render('resources/index', [
-            'active' => $name,
+            'active' => $active ?? $name,
             'title' => $schemas[$name]['title'],
             'name' => $name,
+            'routeName' => $route,
             'schema' => $schemas[$name],
             'items' => $items,
             'query' => $query,
@@ -61,14 +73,16 @@ final class ResourceController
         }
 
         $store->put($name, $items);
+        $returnRoute = $this->safeReturnRoute((string) ($_POST['_return'] ?? ''));
+        $fallbackRoute = $name === 'employees' ? 'employees' : 'dashboard';
         add_notification(
             $store,
             $schemas[$name]['title'] ?? 'Dữ liệu',
             ($isUpdate ? 'Đã cập nhật' : 'Đã thêm mới') . ' một bản ghi trong ' . ($schemas[$name]['title'] ?? $name) . '.',
-            $name === 'employees' ? '?route=employees' : '?route=dashboard',
+            '?route=' . ($returnRoute !== '' ? $returnRoute : $fallbackRoute),
             $isUpdate ? 'info' : 'success'
         );
-        redirect($name === 'employees' ? 'employees' : 'dashboard');
+        redirect($returnRoute !== '' ? $returnRoute : $fallbackRoute);
     }
 
     public function delete(DataStore $store, array $schemas): void
@@ -83,14 +97,16 @@ final class ResourceController
 
         $items = array_values(array_filter($store->get($name), fn ($item) => $item['id'] !== $id));
         $store->put($name, $items);
+        $returnRoute = $this->safeReturnRoute((string) ($_POST['_return'] ?? ''));
+        $fallbackRoute = $name === 'employees' ? 'employees' : 'dashboard';
         add_notification(
             $store,
             $schemas[$name]['title'] ?? 'Dữ liệu',
             'Đã xóa một bản ghi trong ' . ($schemas[$name]['title'] ?? $name) . '.',
-            $name === 'employees' ? '?route=employees' : '?route=dashboard',
+            '?route=' . ($returnRoute !== '' ? $returnRoute : $fallbackRoute),
             'danger'
         );
-        redirect($name === 'employees' ? 'employees' : 'dashboard');
+        redirect($returnRoute !== '' ? $returnRoute : $fallbackRoute);
     }
 
     public function reset(DataStore $store): void
@@ -101,6 +117,11 @@ final class ResourceController
 
         $store->reset();
         redirect('dashboard');
+    }
+
+    private function safeReturnRoute(string $route): string
+    {
+        return preg_match('/^[a-zA-Z0-9_.-]+$/', $route) === 1 ? $route : '';
     }
 }
 

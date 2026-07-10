@@ -15,6 +15,58 @@ final class ReportController
         ]);
     }
 
+    public function training(DataStore $store): void
+    {
+        require_auth();
+
+        $query = trim((string) ($_GET['q'] ?? ''));
+        $status = trim((string) ($_GET['status'] ?? ''));
+        $items = $store->get('training');
+
+        if ($query !== '') {
+            $lower = fn (string $value): string => function_exists('mb_strtolower')
+                ? mb_strtolower($value, 'UTF-8')
+                : strtolower($value);
+            $items = array_values(array_filter($items, fn (array $item): bool => str_contains(
+                $lower(implode(' ', array_map('strval', $item))),
+                $lower($query)
+            )));
+        }
+
+        if ($status !== '') {
+            $items = array_values(array_filter($items, fn (array $item): bool => (string) ($item['status'] ?? '') === $status));
+        }
+
+        $allItems = $store->get('training');
+        $total = count($allItems);
+        $completed = count(array_filter($allItems, fn (array $item): bool => ($item['status'] ?? '') === 'completed'));
+        $inProgress = count(array_filter($allItems, fn (array $item): bool => ($item['status'] ?? '') === 'in_progress'));
+        $pending = count(array_filter($allItems, fn (array $item): bool => ($item['status'] ?? '') === 'pending'));
+        $averageProgress = $total > 0
+            ? array_sum(array_map(fn (array $item): float => (float) ($item['progress'] ?? 0), $allItems)) / $total
+            : 0;
+
+        View::render('reports/training', [
+            'active' => 'training_reports',
+            'title' => 'Báo cáo đào tạo',
+            'items' => $items,
+            'query' => $query,
+            'status' => $status,
+            'summary' => [
+                ['label' => 'Tổng bản ghi', 'value' => (string) $total, 'tone' => 'blue'],
+                ['label' => 'Hoàn thành', 'value' => (string) $completed, 'tone' => 'green'],
+                ['label' => 'Đang học', 'value' => (string) $inProgress, 'tone' => 'violet'],
+                ['label' => 'Chờ học', 'value' => (string) $pending, 'tone' => 'orange'],
+                ['label' => 'Tiến độ trung bình', 'value' => number_format($averageProgress, 1, ',', '.') . '%', 'tone' => 'teal'],
+            ],
+            'statusRows' => [
+                ['label' => 'Chờ học', 'status' => 'pending', 'count' => $pending],
+                ['label' => 'Đang học', 'status' => 'in_progress', 'count' => $inProgress],
+                ['label' => 'Hoàn thành', 'status' => 'completed', 'count' => $completed],
+            ],
+        ]);
+    }
+
     public function export(DataStore $store): void
     {
         require_auth();

@@ -1,8 +1,10 @@
 <?php
 /** @var string $name */
 /** @var string $query */
+/** @var string|null $routeName */
 /** @var array<string, mixed> $schema */
 /** @var array<int, array<string, mixed>> $items */
+$routeName = $routeName ?? 'resource';
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -14,8 +16,8 @@
     </div>
     <div class="panel-body">
         <form class="toolbar" method="get">
-            <input type="hidden" name="route" value="resource">
-            <input type="hidden" name="name" value="<?= e($name) ?>">
+            <input type="hidden" name="route" value="<?= e($routeName) ?>">
+            <?php if ($routeName === 'resource'): ?><input type="hidden" name="name" value="<?= e($name) ?>"><?php endif; ?>
             <input class="search-input" name="q" value="<?= e($query) ?>" placeholder="Tìm kiếm...">
             <button class="btn" type="submit">Lọc</button>
         </form>
@@ -52,6 +54,7 @@
                             <form method="post" action="?route=resource.delete" class="inline">
                                 <input type="hidden" name="_token" value="<?= e(csrf_token()) ?>">
                                 <input type="hidden" name="_resource" value="<?= e($name) ?>">
+                                <input type="hidden" name="_return" value="<?= e($routeName) ?>">
                                 <input type="hidden" name="id" value="<?= e($item['id']) ?>">
                                 <button class="btn danger" type="submit">Xóa</button>
                             </form>

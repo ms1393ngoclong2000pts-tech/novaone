@@ -33,13 +33,6 @@ Novaone/
 `-- router.php              # Router cho PHP built-in server
 ```
 
-Chi tiết cấu trúc xem tại [docs/CAU_TRUC_DU_AN.md](docs/CAU_TRUC_DU_AN.md).
-
-## Quy ước đặt tên
-
-Dự án dùng tên file, folder, class bằng tiếng Anh không dấu theo chuẩn PHP để chạy ổn định trên Windows, Linux hosting, Git và autoload sau này. Tên tiếng Việt được dùng ở giao diện, tài liệu và bản đồ chức năng.
-
-Chi tiết quy ước xem tại [docs/QUY_UOC_DAT_TEN.md](docs/QUY_UOC_DAT_TEN.md).
 
 ## Chạy dự án
 

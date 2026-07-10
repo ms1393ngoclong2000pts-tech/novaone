@@ -810,6 +810,15 @@
             "details": "Bao cao cong viec hang ngay mau 5",
             "hours": 4,
             "report_date": "2026-06-15"
+        },
+        {
+            "id": "77e90b1d",
+            "project": "CMD ROYAL",
+            "category": "Frontend",
+            "employee": "Tran Ngoc Long",
+            "details": "báo cáo công việc tuần 4",
+            "hours": 5.5,
+            "report_date": "2026-07-10"
         }
     ],
     "tasks": [
@@ -2339,10 +2348,157 @@
             "status": "active"
         },
         {
+            "id": "set_5842823d",
+            "key": "tax_code",
+            "value": "",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_ff1de4a8",
+            "key": "company_email",
+            "value": "contact@novaone.vn",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_695bb249",
+            "key": "company_phone",
+            "value": "0333870736",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_2b3a09e4",
+            "key": "company_address",
+            "value": "207 An Dương Vương",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_c9e81463",
+            "key": "website",
+            "value": "https:\/\/novaone.vn",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_0da64d4b",
+            "key": "representative",
+            "value": "Trần Ngọc Long",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_c4703799",
+            "key": "business_field",
+            "value": "Quản trị doanh nghiệp, nhân sự, kinh doanh, kho và báo cáo.",
+            "group": "company",
+            "status": "active"
+        },
+        {
+            "id": "set_cfd6a68e",
+            "key": "bank_name",
+            "value": "",
+            "group": "bank",
+            "status": "active"
+        },
+        {
+            "id": "set_542c6dd4",
+            "key": "bank_account",
+            "value": "",
+            "group": "bank",
+            "status": "active"
+        },
+        {
+            "id": "set_244504bd",
+            "key": "bank_account_name",
+            "value": "NovaOne",
+            "group": "bank",
+            "status": "active"
+        },
+        {
+            "id": "set_a04594e0",
+            "key": "bank_branch",
+            "value": "",
+            "group": "bank",
+            "status": "active"
+        },
+        {
+            "id": "set_14fdbafd",
+            "key": "timezone",
+            "value": "Asia\/Saigon",
+            "group": "system",
+            "status": "active"
+        },
+        {
+            "id": "set_9b545a7e",
+            "key": "currency",
+            "value": "VND",
+            "group": "system",
+            "status": "active"
+        },
+        {
+            "id": "set_9a606902",
+            "key": "language",
+            "value": "vi",
+            "group": "system",
+            "status": "active"
+        },
+        {
             "id": "set2",
             "key": "low_stock_alert",
             "value": "enabled",
             "group": "system",
+            "status": "active"
+        },
+        {
+            "id": "set_fe069dd4",
+            "key": "session_timeout",
+            "value": "120",
+            "group": "system",
+            "status": "active"
+        },
+        {
+            "id": "set_7cdad643",
+            "key": "maintenance_mode",
+            "value": "disabled",
+            "group": "system",
+            "status": "policy"
+        },
+        {
+            "id": "set_eb9c722b",
+            "key": "work_start",
+            "value": "08:00",
+            "group": "policy",
+            "status": "active"
+        },
+        {
+            "id": "set_c90cac60",
+            "key": "work_end",
+            "value": "17:30",
+            "group": "policy",
+            "status": "active"
+        },
+        {
+            "id": "set_a6a0b069",
+            "key": "work_days",
+            "value": "Thứ 2 - Thứ 7",
+            "group": "policy",
+            "status": "active"
+        },
+        {
+            "id": "set_c080c428",
+            "key": "default_contract",
+            "value": "official",
+            "group": "policy",
+            "status": "active"
+        },
+        {
+            "id": "set_1275ca36",
+            "key": "approval_flow",
+            "value": "Nhân viên tạo phiếu, quản lý duyệt, admin xác nhận và lưu lịch sử thao tác.",
+            "group": "policy",
             "status": "active"
         }
     ],
@@ -3626,7 +3782,7 @@
             "request_no": "7",
             "request_date": "2024-08-01",
             "cost": 20000,
-            "status": "approved",
+            "status": "pending",
             "approver": "bData co.,ltd",
             "candidate_total": 0,
             "candidate_passed": 0,
@@ -3675,6 +3831,42 @@
         }
     ],
     "_notifications": [
+        {
+            "id": "fc103057",
+            "title": "Đào tạo",
+            "message": "Đã cập nhật một bản ghi trong Đào tạo.",
+            "href": "?route=training",
+            "type": "info",
+            "created_at": "2026-07-10 08:11:27",
+            "read_at": null
+        },
+        {
+            "id": "a93cdd24",
+            "title": "Quản lý thông tin",
+            "message": "Đã cập nhật thông tin hệ thống và cấu hình vận hành.",
+            "href": "?route=settings",
+            "type": "success",
+            "created_at": "2026-07-10 08:03:59",
+            "read_at": null
+        },
+        {
+            "id": "5d720a84",
+            "title": "Báo cáo hàng ngày",
+            "message": "Đã thêm 1 dòng báo cáo công việc.",
+            "href": "?route=daily-reports",
+            "type": "success",
+            "created_at": "2026-07-10 07:10:53",
+            "read_at": null
+        },
+        {
+            "id": "fad6e2a7",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phê duyệt phiếu #7.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-10 06:59:02",
+            "read_at": null
+        },
         {
             "id": "edebd53a",
             "title": "Đơn hàng",
@@ -4087,42 +4279,6 @@
             "href": "?route=sales-targets",
             "type": "success",
             "created_at": "2026-07-02 08:05:52",
-            "read_at": null
-        },
-        {
-            "id": "643b5b6c",
-            "title": "Dịch vụ",
-            "message": "Đã cập nhật ngành hàng Dịch vụ A.",
-            "href": "?route=services",
-            "type": "info",
-            "created_at": "2026-07-02 07:31:44",
-            "read_at": null
-        },
-        {
-            "id": "742052ef",
-            "title": "Dịch vụ",
-            "message": "Đã cập nhật ngành hàng bFIN.",
-            "href": "?route=services",
-            "type": "info",
-            "created_at": "2026-07-02 07:15:33",
-            "read_at": null
-        },
-        {
-            "id": "f1171650",
-            "title": "Phiếu tuyển dụng",
-            "message": "Đã cập nhật phiếu tuyển dụng #1.",
-            "href": "?route=recruitment-requests",
-            "type": "info",
-            "created_at": "2026-07-02 06:59:44",
-            "read_at": null
-        },
-        {
-            "id": "33b3f9e5",
-            "title": "Phiếu tuyển dụng",
-            "message": "Đã cập nhật phiếu tuyển dụng #101.",
-            "href": "?route=recruitment-requests",
-            "type": "info",
-            "created_at": "2026-07-02 06:59:39",
             "read_at": null
         }
     ],

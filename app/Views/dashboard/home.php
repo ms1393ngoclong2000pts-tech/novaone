@@ -1,18 +1,18 @@
 <?php
 $tiles = [
     ['label' => 'NHÂN SỰ', 'href' => '?route=employees', 'icon' => 'users', 'accent' => 'yellow'],
-    ['label' => 'QUẢN LÝ THÔNG TIN', 'href' => '?route=permissions', 'icon' => 'info', 'accent' => 'green'],
+    ['label' => 'QUẢN LÝ THÔNG TIN', 'href' => '?route=settings', 'icon' => 'info', 'accent' => 'green'],
     ['label' => 'DỊCH VỤ', 'href' => '?route=services', 'icon' => 'lifebuoy', 'accent' => 'red'],
     ['label' => 'NHÀ CUNG CẤP', 'href' => '?route=suppliers', 'icon' => 'briefcase', 'accent' => 'purple'],
-    ['label' => 'BÁO CÁO NHÂN SỰ', 'href' => '?route=reports', 'icon' => 'users', 'accent' => 'pink'],
+    ['label' => 'BÁO CÁO NHÂN SỰ', 'href' => '?route=reports&module=human', 'icon' => 'users', 'accent' => 'pink'],
     ['label' => 'QUẢN LÝ KHO BÁN HÀNG', 'href' => '?route=products', 'icon' => 'settings', 'accent' => 'navy'],
     ['label' => 'TRANG THIẾT BỊ', 'href' => '?route=machine-warehouses', 'icon' => 'briefcase', 'accent' => 'yellow'],
     ['label' => 'BÁN HÀNG', 'href' => '?route=sales-orders', 'icon' => 'cart', 'accent' => 'red'],
     ['label' => 'CÔNG VIỆC', 'href' => '?route=projects', 'icon' => 'check', 'accent' => 'green'],
     ['label' => 'TUYỂN DỤNG', 'href' => '?route=recruitment-requests', 'icon' => 'monitor', 'accent' => 'yellow'],
-    ['label' => 'ĐÀO TẠO', 'href' => '?route=reports', 'icon' => 'file', 'accent' => 'purple'],
+    ['label' => 'ĐÀO TẠO', 'href' => '?route=training', 'icon' => 'book', 'accent' => 'purple'],
     ['label' => 'CSKH', 'href' => '?route=calls', 'icon' => 'phone', 'accent' => 'pink'],
-    ['label' => 'BÁO CÁO ĐÀO TẠO', 'href' => '?route=reports', 'icon' => 'file', 'accent' => 'navy'],
+    ['label' => 'BÁO CÁO ĐÀO TẠO', 'href' => '?route=training-reports', 'icon' => 'file', 'accent' => 'navy'],
 ];
 $tiles = array_values(array_filter($tiles, fn (array $tile): bool => can_access_route(href_route((string) ($tile['href'] ?? '')))));
 ?>

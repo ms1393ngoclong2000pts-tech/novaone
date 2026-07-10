@@ -28,6 +28,7 @@ require BASE_PATH . '/app/Core/XlsxReader.php';
 require BASE_PATH . '/app/Controllers/AuthController.php';
 require BASE_PATH . '/app/Controllers/DashboardController.php';
 require BASE_PATH . '/app/Controllers/ResourceController.php';
+require BASE_PATH . '/app/Controllers/SystemInfoController.php';
 require BASE_PATH . '/app/Controllers/ReportController.php';
 require BASE_PATH . '/app/Controllers/SearchController.php';
 require BASE_PATH . '/app/Controllers/NotificationController.php';

@@ -42,6 +42,8 @@ final class SearchController
             ['label' => 'Dự án', 'group' => 'Công việc', 'icon' => 'briefcase', 'href' => '?route=projects', 'keywords' => 'du an cong ty tien do'],
             ['label' => 'Danh sách công việc', 'group' => 'Công việc', 'icon' => 'check', 'href' => '?route=work-items', 'keywords' => 'task cong viec giao viec tien do'],
             ['label' => 'Báo cáo hằng ngày', 'group' => 'Công việc', 'icon' => 'file', 'href' => '?route=daily-reports', 'keywords' => 'bao cao hang ngay gio lam chi tiet'],
+            ['label' => 'Đào tạo', 'group' => 'Quản lý nhân sự', 'icon' => 'book', 'href' => '?route=training', 'keywords' => 'dao tao khoa hoc tai lieu hoc tap giang vien tien do'],
+            ['label' => 'Báo cáo đào tạo', 'group' => 'Báo cáo', 'icon' => 'file', 'href' => '?route=training-reports', 'keywords' => 'bao cao dao tao tien do khoa hoc hoan thanh'],
             ['label' => 'Phiếu yêu cầu tuyển dụng', 'group' => 'Quản lý hệ thống', 'icon' => 'monitor', 'href' => '?route=recruitment-requests', 'keywords' => 'phieu yeu cau tuyen dung ung vien phe duyet chi phi'],
             ['label' => 'Nhà cung cấp', 'group' => 'Kinh doanh', 'icon' => 'briefcase', 'href' => '?route=suppliers', 'keywords' => 'nha cung cap doi tac cong no'],
             ['label' => 'Đơn hàng', 'group' => 'Kinh doanh', 'icon' => 'cart', 'href' => '?route=sales-orders', 'keywords' => 'ban hang don hang bao gia hop dong nghiem thu co hoi'],
@@ -52,6 +54,7 @@ final class SearchController
             ['label' => 'Loại thiết bị', 'group' => 'Quản lý kho', 'icon' => 'box', 'href' => '?route=equipment-types', 'keywords' => 'loai thiet bi ten viet tat'],
             ['label' => 'Mua sắm', 'group' => 'Quản lý kho', 'icon' => 'cart', 'href' => '?route=purchasing', 'keywords' => 'mua sam yeu cau thiet bi phieu mua sam cong no thuc nhan'],
             ['label' => 'Gọi điện', 'group' => 'CSKH', 'icon' => 'phone', 'href' => '?route=calls', 'keywords' => 'goi dien cuoc goi dien thoai lien he cham soc khach hang'],
+            ['label' => 'Quản lý thông tin', 'group' => 'Hệ thống', 'icon' => 'info', 'href' => '?route=settings', 'keywords' => 'quan ly thong tin cong ty cau hinh tham so he thong'],
             ['label' => 'Báo cáo', 'group' => 'Báo cáo', 'icon' => 'file', 'href' => '?route=reports', 'keywords' => 'report dashboard thong ke'],
         ];
     }
