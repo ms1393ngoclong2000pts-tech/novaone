@@ -54,7 +54,29 @@ final class DataStore
             throw new RuntimeException('Không thể mã hóa dữ liệu lưu trữ.');
         }
 
-        file_put_contents($this->path, $json, LOCK_EX);
+        $directory = dirname($this->path);
+        if (! is_dir($directory)) {
+            mkdir($directory, 0775, true);
+        }
+
+        $temporary = tempnam($directory, 'novaone-data-');
+        if ($temporary === false) {
+            throw new RuntimeException('Unable to create a temporary data file.');
+        }
+
+        try {
+            if (file_put_contents($temporary, $json, LOCK_EX) === false) {
+                throw new RuntimeException('Unable to write application data.');
+            }
+
+            if (! rename($temporary, $this->path)) {
+                throw new RuntimeException('Unable to replace application data.');
+            }
+        } finally {
+            if (is_file($temporary)) {
+                @unlink($temporary);
+            }
+        }
     }
 
     public function reset(): void

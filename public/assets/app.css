@@ -2561,6 +2561,40 @@ button { cursor: pointer; }
   font-weight: 750;
 }
 
+.activity-filter {
+  grid-template-columns: minmax(220px, 1.2fr) minmax(160px, 0.8fr) minmax(160px, 0.8fr) auto auto;
+}
+
+.activity-table-wrap table td {
+  vertical-align: top;
+}
+
+.activity-table-wrap td small,
+.activity-table-wrap td p {
+  display: block;
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.activity-table-wrap td strong {
+  color: #1f2937;
+}
+
+@media (max-width: 900px) {
+  .activity-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-table-wrap {
+    overflow-x: auto;
+  }
+
+  .activity-table-wrap table {
+    min-width: 820px;
+  }
+}
+
 @media (max-width: 900px) {
   .system-info-grid,
   .system-directory-grid {
@@ -3255,6 +3289,10 @@ button { cursor: pointer; }
 .search-input {
   min-width: min(340px, 100%);
   flex: 1;
+}
+
+.search-group-select {
+  min-width: 190px;
 }
 
 .table-wrap { overflow-x: auto; }

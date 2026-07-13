@@ -9,12 +9,17 @@ final class SearchController
         require_auth();
 
         $query = trim((string) ($_GET['q'] ?? ''));
+        $group = trim((string) ($_GET['group'] ?? ''));
         $features = array_values(array_filter($this->features(), fn (array $feature): bool => can_access_route(href_route((string) ($feature['href'] ?? '')))));
         $results = $features;
 
+        if ($group !== '') {
+            $results = array_values(array_filter($results, fn (array $feature): bool => (string) ($feature['group'] ?? '') === $group));
+        }
+
         if ($query !== '') {
             $needle = $this->normalize($query);
-            $results = array_values(array_filter($features, fn ($feature) => str_contains(
+            $results = array_values(array_filter($results, fn ($feature) => str_contains(
                 $this->normalize($feature['label'] . ' ' . $feature['group'] . ' ' . $feature['keywords']),
                 $needle
             )));
@@ -24,6 +29,8 @@ final class SearchController
             'active' => 'search',
             'title' => 'Tìm kiếm',
             'query' => $query,
+            'group' => $group,
+            'groups' => $this->groups($features),
             'results' => $results,
         ]);
     }
@@ -55,6 +62,7 @@ final class SearchController
             ['label' => 'Mua sắm', 'group' => 'Quản lý kho', 'icon' => 'cart', 'href' => '?route=purchasing', 'keywords' => 'mua sam yeu cau thiet bi phieu mua sam cong no thuc nhan'],
             ['label' => 'Gọi điện', 'group' => 'CSKH', 'icon' => 'phone', 'href' => '?route=calls', 'keywords' => 'goi dien cuoc goi dien thoai lien he cham soc khach hang'],
             ['label' => 'Quản lý thông tin', 'group' => 'Hệ thống', 'icon' => 'info', 'href' => '?route=settings', 'keywords' => 'quan ly thong tin cong ty cau hinh tham so he thong'],
+            ['label' => 'Lịch sử thao tác', 'group' => 'Hệ thống', 'icon' => 'file', 'href' => '?route=activity-log', 'keywords' => 'lich su thao tac audit log nhat ky he thong'],
             ['label' => 'Báo cáo', 'group' => 'Báo cáo', 'icon' => 'file', 'href' => '?route=reports', 'keywords' => 'report dashboard thong ke'],
         ];
     }
@@ -72,6 +80,13 @@ final class SearchController
         }
 
         return preg_replace('/\s+/', ' ', $value) ?? $value;
+    }
+
+    private function groups(array $features): array
+    {
+        $groups = array_values(array_unique(array_map(fn (array $feature): string => (string) ($feature['group'] ?? ''), $features)));
+        sort($groups);
+        return $groups;
     }
 
 }

@@ -119,6 +119,7 @@ function permission_modules(): array
         'purchasing' => ['label' => 'Mua sắm', 'group' => 'Trang thiết bị'],
         'recruitment_requests' => ['label' => 'Phiếu tuyển dụng', 'group' => 'Tuyển dụng'],
         'reports' => ['label' => 'Báo cáo tổng hợp', 'group' => 'Báo cáo'],
+        'activity_log' => ['label' => 'Lịch sử thao tác', 'group' => 'Hệ thống'],
         'permissions' => ['label' => 'Phân quyền', 'group' => 'Hệ thống'],
         'calls' => ['label' => 'Gọi điện', 'group' => 'CSKH'],
     ];
@@ -228,10 +229,22 @@ function permission_route_map(): array
         'tasks' => ['projects', 'view'],
         'reports' => ['reports', 'view'],
         'reports.export' => ['reports', 'view'],
+        'activity-log' => ['activity_log', 'view'],
+        'activity-log.export' => ['activity_log', 'view'],
         'permissions' => ['permissions', 'view'],
         'permissions.save' => ['permissions', 'update'],
         'calls' => ['calls', 'view'],
         'calls.save' => ['calls', 'create'],
+        'logout' => ['home', 'view'],
+        'resource' => ['home', 'view'],
+        'resource.save' => ['home', 'view'],
+        'resource.delete' => ['home', 'view'],
+        'reset' => ['permissions', 'delete'],
+        'notification.read' => ['home', 'view'],
+        'notification.readAll' => ['home', 'view'],
+        'profile' => ['home', 'view'],
+        'password' => ['home', 'view'],
+        'search' => ['home', 'view'],
     ];
 }
 
@@ -363,14 +376,14 @@ function can_access_module(string $module, string $action = 'view'): bool
 
 function can_access_route(string $route): bool
 {
-    $publicRoutes = ['login', 'logout', 'profile', 'password', 'notification.read', 'notification.readAll', 'search'];
+    $publicRoutes = ['login'];
     if (in_array($route, $publicRoutes, true)) {
         return true;
     }
 
     $map = permission_route_map();
     if (! isset($map[$route])) {
-        return true;
+        return false;
     }
 
     [$module, $action] = $map[$route];
@@ -467,6 +480,84 @@ function verify_csrf(): void
     }
 }
 
+function request_method_is(string $method): bool
+{
+    return strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET')) === strtoupper($method);
+}
+
+function clean_text(mixed $value, int $maxLength = 255): string
+{
+    $value = trim(str_replace("\0", '', (string) $value));
+    if ($maxLength > 0 && strlen($value) > $maxLength) {
+        $value = substr($value, 0, $maxLength);
+    }
+
+    return $value;
+}
+
+function valid_date_or_empty(mixed $value): string
+{
+    $value = clean_text($value, 20);
+    if ($value === '') {
+        return '';
+    }
+
+    $date = DateTimeImmutable::createFromFormat('Y-m-d', $value);
+    return $date && $date->format('Y-m-d') === $value ? $value : '';
+}
+
+function store_uploaded_image(
+    string $field,
+    string $directory,
+    string $prefix,
+    array $allowedMime = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'],
+    int $maxBytes = 2097152
+): ?string {
+    $file = $_FILES[$field] ?? null;
+    if (! is_array($file) || ($file['error'] ?? UPLOAD_ERR_NO_FILE) === UPLOAD_ERR_NO_FILE) {
+        return null;
+    }
+
+    if (($file['error'] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_OK || ! is_uploaded_file((string) ($file['tmp_name'] ?? ''))) {
+        throw new RuntimeException('File upload is invalid.');
+    }
+
+    if (($file['size'] ?? 0) <= 0 || ($file['size'] ?? 0) > $maxBytes) {
+        throw new RuntimeException('File size is not allowed.');
+    }
+
+    $info = @getimagesize((string) $file['tmp_name']);
+    if ($info === false || empty($info['mime']) || ! isset($allowedMime[$info['mime']])) {
+        throw new RuntimeException('Only valid image files are allowed.');
+    }
+
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    $mime = $finfo->file((string) $file['tmp_name']);
+    if (! is_string($mime) || ! isset($allowedMime[$mime]) || $mime !== $info['mime']) {
+        throw new RuntimeException('Image content type is not valid.');
+    }
+
+    $relativeDir = trim(str_replace('\\', '/', $directory), '/');
+    if ($relativeDir === '' || str_contains($relativeDir, '..')) {
+        throw new RuntimeException('Upload directory is not valid.');
+    }
+
+    $absoluteDir = BASE_PATH . '/' . $relativeDir;
+    if (! is_dir($absoluteDir)) {
+        mkdir($absoluteDir, 0775, true);
+    }
+
+    $safePrefix = preg_replace('/[^a-zA-Z0-9_-]/', '-', $prefix) ?: 'upload';
+    $filename = $safePrefix . '-' . date('YmdHis') . '-' . bin2hex(random_bytes(8)) . '.' . $allowedMime[$mime];
+    $target = $absoluteDir . '/' . $filename;
+
+    if (! move_uploaded_file((string) $file['tmp_name'], $target)) {
+        throw new RuntimeException('Unable to store uploaded file.');
+    }
+
+    return $relativeDir . '/' . $filename;
+}
+
 function safe_internal_href(string $href, string $fallback = '?route=dashboard'): string
 {
     $href = str_replace(["\r", "\n"], '', trim($href));
@@ -538,6 +629,26 @@ function label_value(string $value): string
         'no' => 'Không',
         'policy' => 'Chính sách',
         'system' => 'Hệ thống',
+        'activity_log' => 'Lịch sử thao tác',
+        'social_insurance' => 'Bảo hiểm xã hội',
+        'work_items' => 'Danh sách công việc',
+        'daily_reports' => 'Báo cáo hằng ngày',
+        'sales_orders' => 'Đơn hàng',
+        'sales_targets' => 'Chỉ tiêu tháng',
+        'sales_receipts' => 'Phiếu bán hàng',
+        'machine_warehouses' => 'Kho máy',
+        'equipment_devices' => 'Quản lý thiết bị',
+        'equipment_types' => 'Loại thiết bị',
+        'recruitment_requests' => 'Phiếu tuyển dụng',
+        'create' => 'Thêm mới',
+        'update' => 'Cập nhật',
+        'delete' => 'Xóa',
+        'import' => 'Nhập dữ liệu',
+        'export' => 'Xuất dữ liệu',
+        'info' => 'Thông tin',
+        'warning' => 'Cảnh báo',
+        'danger' => 'Xóa',
+        'success' => 'Thành công',
     ];
 
     return $labels[$value] ?? $value;
@@ -545,8 +656,8 @@ function label_value(string $value): string
 
 function badge(string $value): string
 {
-    $good = ['active', 'vip', 'paid', 'delivered', 'completed', 'done', 'available', 'on_track', 'hired', 'yes'];
-    $bad = ['locked', 'inactive', 'canceled', 'out', 'rejected', 'delayed', 'no'];
+    $good = ['active', 'vip', 'paid', 'delivered', 'completed', 'done', 'available', 'on_track', 'hired', 'yes', 'create', 'update', 'import', 'export', 'success'];
+    $bad = ['locked', 'inactive', 'canceled', 'out', 'rejected', 'delayed', 'no', 'delete', 'danger'];
     $class = in_array($value, $good, true) ? 'good' : (in_array($value, $bad, true) ? 'bad' : 'warn');
 
     return '<span class="badge ' . $class . '">' . e(label_value($value)) . '</span>';
@@ -626,6 +737,33 @@ function notifications_data(): array
     return is_array($data['_notifications'] ?? null) ? $data['_notifications'] : [];
 }
 
+function activity_log_data(): array
+{
+    $path = BASE_PATH . '/storage/data.json';
+    if (! file_exists($path)) {
+        return [];
+    }
+
+    $data = json_decode(file_get_contents($path) ?: '{}', true);
+    if (is_array($data['_activity_log'] ?? null)) {
+        return $data['_activity_log'];
+    }
+
+    return array_map(fn (array $item): array => [
+        'id' => 'legacy_' . (string) ($item['id'] ?? uid()),
+        'title' => (string) ($item['title'] ?? 'Thông báo'),
+        'message' => (string) ($item['message'] ?? ''),
+        'href' => safe_internal_href((string) ($item['href'] ?? ''), '?route=dashboard'),
+        'type' => (string) ($item['type'] ?? 'info'),
+        'action' => activity_action_from_type((string) ($item['type'] ?? 'info'), (string) ($item['message'] ?? '')),
+        'module' => activity_module_from_href((string) ($item['href'] ?? ''), (string) ($item['title'] ?? 'Hệ thống')),
+        'user_name' => 'Hệ thống',
+        'user_role' => 'System',
+        'ip' => '',
+        'created_at' => (string) ($item['created_at'] ?? ''),
+    ], is_array($data['_notifications'] ?? null) ? $data['_notifications'] : []);
+}
+
 function unread_notifications(): array
 {
     return array_values(array_filter(notifications_data(), fn ($item) => empty($item['read_at'])));
@@ -640,16 +778,71 @@ function add_notification(DataStore $store, string $title, string $message, stri
 {
     $data = $store->all();
     $notifications = $data['_notifications'] ?? [];
+    $createdAt = date('Y-m-d H:i:s');
     array_unshift($notifications, [
         'id' => uid(),
         'title' => $title,
         'message' => $message,
         'href' => $href,
         'type' => $type,
-        'created_at' => date('Y-m-d H:i:s'),
+        'created_at' => $createdAt,
         'read_at' => null,
     ]);
 
     $data['_notifications'] = array_slice($notifications, 0, 50);
+
+    $activityLog = $data['_activity_log'] ?? [];
+    array_unshift($activityLog, [
+        'id' => 'act_' . uid(),
+        'title' => $title,
+        'message' => $message,
+        'href' => safe_internal_href($href, '?route=dashboard'),
+        'type' => $type,
+        'action' => activity_action_from_type($type, $message),
+        'module' => activity_module_from_href($href, $title),
+        'user_name' => $_SESSION['user']['name'] ?? 'Hệ thống',
+        'user_role' => $_SESSION['user']['role'] ?? 'System',
+        'ip' => $_SERVER['REMOTE_ADDR'] ?? '',
+        'created_at' => $createdAt,
+    ]);
+    $data['_activity_log'] = array_slice($activityLog, 0, 500);
     $store->save($data);
+}
+
+function activity_action_from_type(string $type, string $message): string
+{
+    $normalized = function_exists('mb_strtolower') ? mb_strtolower($message, 'UTF-8') : strtolower($message);
+    if (str_contains($normalized, 'xóa') || str_contains($normalized, 'xoá')) {
+        return 'delete';
+    }
+    if (str_contains($normalized, 'nhập') || str_contains($normalized, 'import')) {
+        return 'import';
+    }
+    if (str_contains($normalized, 'xuất') || str_contains($normalized, 'export')) {
+        return 'export';
+    }
+    if (str_contains($normalized, 'cập nhật') || str_contains($normalized, 'duyệt') || str_contains($normalized, 'hoàn thành')) {
+        return 'update';
+    }
+    if (str_contains($normalized, 'thêm') || str_contains($normalized, 'tạo')) {
+        return 'create';
+    }
+
+    return match ($type) {
+        'danger' => 'delete',
+        'warning' => 'warning',
+        'success' => 'create',
+        default => 'info',
+    };
+}
+
+function activity_module_from_href(string $href, string $fallback): string
+{
+    $route = href_route($href);
+    if ($route === '') {
+        return $fallback;
+    }
+
+    $map = permission_route_map();
+    return $map[$route][0] ?? $route;
 }

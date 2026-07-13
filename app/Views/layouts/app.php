@@ -56,6 +56,7 @@ $groups = [
     'QUẢN LÝ HỆ THỐNG' => [
         ['id' => 'dashboard', 'label' => 'Dashboard', 'href' => '?route=dashboard', 'icon' => 'monitor'],
         ['id' => 'settings', 'label' => 'Quản lý thông tin', 'href' => '?route=settings', 'icon' => 'info'],
+        ['id' => 'activity_log', 'label' => 'Lịch sử thao tác', 'href' => '?route=activity-log', 'icon' => 'file'],
         ['id' => 'permissions', 'label' => 'Phân quyền', 'href' => '?route=permissions', 'icon' => 'settings'],
         ['id' => 'recruitments', 'label' => 'Tuyển dụng', 'href' => '?route=recruitment-requests', 'icon' => 'monitor', 'children' => [
             ['label' => 'Phiếu Yêu Cầu Tuyển Dụng', 'href' => '?route=recruitment-requests', 'route' => 'recruitment-requests'],

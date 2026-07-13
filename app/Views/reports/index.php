@@ -172,7 +172,7 @@ $formatMoney = fn (float $value): string => number_format($value, 0, ',', '.') .
                     <h2>Hoạt động gần đây</h2>
                     <p>Các thông báo hệ thống mới nhất.</p>
                 </div>
-                <a href="?route=notification.readAll">Đánh dấu đã đọc</a>
+                <a href="?route=activity-log">Mở lịch sử</a>
             </div>
             <div class="report-activity-list">
                 <?php foreach ($recentActivities as $item): ?>

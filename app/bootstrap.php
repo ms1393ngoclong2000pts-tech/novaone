@@ -34,6 +34,7 @@ require BASE_PATH . '/app/Controllers/SearchController.php';
 require BASE_PATH . '/app/Controllers/NotificationController.php';
 require BASE_PATH . '/app/Controllers/PermissionController.php';
 require BASE_PATH . '/app/Controllers/CallController.php';
+require BASE_PATH . '/app/Controllers/ActivityLogController.php';
 require BASE_PATH . '/app/Modules/HumanResources/bootstrap.php';
 require BASE_PATH . '/app/Modules/Work/bootstrap.php';
 require BASE_PATH . '/app/Modules/Business/bootstrap.php';
@@ -44,6 +45,7 @@ header('X-Frame-Options: SAMEORIGIN');
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: same-origin');
 header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
+header("Content-Security-Policy: default-src 'self'; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'");
 
 $config = require BASE_PATH . '/config/app.php';
 if (! empty($config['debug'])) {

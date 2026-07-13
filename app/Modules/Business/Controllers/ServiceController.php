@@ -342,35 +342,18 @@ final class ServiceController
             return $current;
         }
 
-        if (($file['error'] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_OK || ! is_uploaded_file((string) ($file['tmp_name'] ?? ''))) {
-            $_SESSION['flash_error'] = 'Không thể tải ' . (self::IMAGE_FIELDS[$field] ?? 'hình ảnh') . '.';
+        try {
+            return store_uploaded_image(
+                $field,
+                'public/uploads/services',
+                $field,
+                ['image/jpeg' => 'jpg', 'image/png' => 'png'],
+                200 * 1024
+            ) ?? $current;
+        } catch (RuntimeException) {
+            $_SESSION['flash_error'] = (self::IMAGE_FIELDS[$field] ?? 'Hình ảnh') . ' không hợp lệ. Chỉ hỗ trợ JPG, PNG và tối đa 200KB.';
             $this->redirectToForm($id);
         }
-
-        if (($file['size'] ?? 0) > 200 * 1024) {
-            $_SESSION['flash_error'] = (self::IMAGE_FIELDS[$field] ?? 'Hình ảnh') . ' không được vượt quá 200KB.';
-            $this->redirectToForm($id);
-        }
-
-        $mime = mime_content_type((string) $file['tmp_name']);
-        $extensions = ['image/jpeg' => 'jpg', 'image/png' => 'png'];
-        if (! isset($extensions[$mime])) {
-            $_SESSION['flash_error'] = (self::IMAGE_FIELDS[$field] ?? 'Hình ảnh') . ' chỉ hỗ trợ jpg, jpeg, png.';
-            $this->redirectToForm($id);
-        }
-
-        $dir = BASE_PATH . '/public/uploads/services';
-        if (! is_dir($dir)) {
-            mkdir($dir, 0777, true);
-        }
-
-        $filename = $field . '-' . date('YmdHis') . '-' . uid() . '.' . $extensions[$mime];
-        if (! move_uploaded_file((string) $file['tmp_name'], $dir . '/' . $filename)) {
-            $_SESSION['flash_error'] = 'Không thể lưu ' . (self::IMAGE_FIELDS[$field] ?? 'hình ảnh') . '.';
-            $this->redirectToForm($id);
-        }
-
-        return 'public/uploads/services/' . $filename;
     }
 
     private function redirectToForm(string $id): never

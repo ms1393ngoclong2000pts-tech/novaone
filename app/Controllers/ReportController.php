@@ -343,12 +343,13 @@ final class ReportController
     private function recentActivities(array $data): array
     {
         $rows = [];
-        foreach (array_slice($data['_notifications'] ?? [], 0, 8) as $item) {
+        $source = $data['_activity_log'] ?? $data['_notifications'] ?? [];
+        foreach (array_slice($source, 0, 8) as $item) {
             $rows[] = [
                 'title' => (string) ($item['title'] ?? 'Thông báo'),
                 'message' => (string) ($item['message'] ?? ''),
                 'time' => (string) ($item['created_at'] ?? ''),
-                'type' => (string) ($item['type'] ?? 'info'),
+                'type' => (string) ($item['action'] ?? $item['type'] ?? 'info'),
             ];
         }
 

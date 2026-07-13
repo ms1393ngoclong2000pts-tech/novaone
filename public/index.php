@@ -3,8 +3,15 @@
 require dirname(__DIR__) . '/app/bootstrap.php';
 
 $schemas = require BASE_PATH . '/app/module_schemas.php';
-$route = $_GET['route'] ?? (is_logged_in() ? 'home' : 'login');
+$route = (string) ($_GET['route'] ?? (is_logged_in() ? 'home' : 'login'));
+if (preg_match('/^[a-zA-Z0-9_.-]+$/', $route) !== 1) {
+    $route = is_logged_in() ? 'home' : 'login';
+}
+
 enforce_route_permission($route);
+if (request_method_is('POST')) {
+    verify_csrf();
+}
 
 match ($route) {
     'login' => $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -121,6 +128,8 @@ match ($route) {
     'tasks' => (new TaskController())->index($store),
     'reports' => (new ReportController())->index($store),
     'reports.export' => (new ReportController())->export($store),
+    'activity-log' => (new ActivityLogController())->index($store),
+    'activity-log.export' => (new ActivityLogController())->export(),
     'permissions' => (new PermissionController())->index($store),
     'permissions.save' => (new PermissionController())->save($store),
     'calls' => (new CallController())->index($store),

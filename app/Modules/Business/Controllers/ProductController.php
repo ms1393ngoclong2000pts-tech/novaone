@@ -251,35 +251,12 @@ final class ProductController
             return $current;
         }
 
-        if (($file['error'] ?? UPLOAD_ERR_OK) !== UPLOAD_ERR_OK || ! is_uploaded_file((string) ($file['tmp_name'] ?? ''))) {
-            $_SESSION['flash_error'] = 'Không thể tải ảnh sản phẩm.';
+        try {
+            return store_uploaded_image('image', 'public/uploads/products', 'product') ?? $current;
+        } catch (RuntimeException) {
+            $_SESSION['flash_error'] = 'Ảnh sản phẩm không hợp lệ. Chỉ hỗ trợ JPG, PNG, WEBP và tối đa 2MB.';
             redirect('products');
         }
-
-        if (($file['size'] ?? 0) > 2 * 1024 * 1024) {
-            $_SESSION['flash_error'] = 'Ảnh sản phẩm không được vượt quá 2MB.';
-            redirect('products');
-        }
-
-        $mime = mime_content_type((string) $file['tmp_name']);
-        $extensions = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'];
-        if (! isset($extensions[$mime])) {
-            $_SESSION['flash_error'] = 'Ảnh sản phẩm chỉ hỗ trợ jpg, png hoặc webp.';
-            redirect('products');
-        }
-
-        $dir = BASE_PATH . '/public/uploads/products';
-        if (! is_dir($dir)) {
-            mkdir($dir, 0777, true);
-        }
-
-        $filename = 'product-' . date('YmdHis') . '-' . uid() . '.' . $extensions[$mime];
-        if (! move_uploaded_file((string) $file['tmp_name'], $dir . '/' . $filename)) {
-            $_SESSION['flash_error'] = 'Không thể lưu ảnh sản phẩm.';
-            redirect('products');
-        }
-
-        return 'public/uploads/products/' . $filename;
     }
 
     private function ensureSampleData(DataStore $store): void

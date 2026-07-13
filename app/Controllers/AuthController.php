@@ -19,7 +19,7 @@ final class AuthController
 
         $email = trim($_POST['email'] ?? '');
         $password = (string) ($_POST['password'] ?? '');
-        $this->assertLoginAllowed();
+        $this->assertLoginAllowed($store, $email);
 
         $demo = $config['demo_user'];
         $auth = $store->all()['_auth'] ?? [];
@@ -29,6 +29,7 @@ final class AuthController
             session_regenerate_id(true);
             rotate_csrf_token();
             unset($_SESSION['login_attempts'], $_SESSION['login_blocked_until']);
+            $this->clearFailedLogin($store, $email);
             $_SESSION['user'] = [
                 'name' => $auth['name'] ?? $demo['name'],
                 'email' => $demo['email'],
@@ -43,7 +44,7 @@ final class AuthController
             redirect('home');
         }
 
-        $this->recordFailedLogin();
+        $this->recordFailedLogin($store, $email);
         $_SESSION['error'] = 'Email hoặc mật khẩu không đúng.';
         redirect('login');
     }
@@ -87,45 +88,18 @@ final class AuthController
 
         $avatar = $_SESSION['user']['avatar'] ?? '';
         if (! empty($_FILES['avatar']['name'])) {
-            $upload = $_FILES['avatar'];
-
-            if (($upload['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
-                $_SESSION['flash_error'] = 'Không thể upload ảnh đại diện.';
+            try {
+                $avatar = store_uploaded_image(
+                    'avatar',
+                    'public/uploads/profile',
+                    'avatar',
+                    ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp'],
+                    2 * 1024 * 1024
+                ) ?? $avatar;
+            } catch (RuntimeException) {
+                $_SESSION['flash_error'] = 'Ảnh đại diện không hợp lệ. Chỉ hỗ trợ JPG, PNG, WEBP và tối đa 2MB.';
                 redirect('profile');
             }
-
-            if (($upload['size'] ?? 0) > 2 * 1024 * 1024) {
-                $_SESSION['flash_error'] = 'Ảnh đại diện không được vượt quá 2MB.';
-                redirect('profile');
-            }
-
-            $mime = mime_content_type($upload['tmp_name']);
-            $extensions = [
-                'image/jpeg' => 'jpg',
-                'image/png' => 'png',
-                'image/webp' => 'webp',
-                'image/gif' => 'gif',
-            ];
-
-            if (! isset($extensions[$mime])) {
-                $_SESSION['flash_error'] = 'Chỉ hỗ trợ ảnh JPG, PNG, WEBP hoặc GIF.';
-                redirect('profile');
-            }
-
-            $dir = BASE_PATH . '/public/uploads/profile';
-            if (! is_dir($dir)) {
-                mkdir($dir, 0777, true);
-            }
-
-            $filename = 'avatar-' . uid() . '.' . $extensions[$mime];
-            $target = $dir . '/' . $filename;
-
-            if (! move_uploaded_file($upload['tmp_name'], $target)) {
-                $_SESSION['flash_error'] = 'Không thể lưu ảnh đại diện.';
-                redirect('profile');
-            }
-
-            $avatar = 'public/uploads/profile/' . $filename;
         }
 
         $_SESSION['user']['name'] = $name;
@@ -203,16 +177,17 @@ final class AuthController
         redirect('password');
     }
 
-    private function assertLoginAllowed(): void
+    private function assertLoginAllowed(DataStore $store, string $email): void
     {
         $blockedUntil = (int) ($_SESSION['login_blocked_until'] ?? 0);
-        if ($blockedUntil > time()) {
+        $persistent = $this->loginThrottleRecord($store, $email);
+        if ($blockedUntil > time() || (int) ($persistent['blocked_until'] ?? 0) > time()) {
             $_SESSION['error'] = 'Bạn đã nhập sai quá nhiều lần. Vui lòng thử lại sau vài phút.';
             redirect('login');
         }
     }
 
-    private function recordFailedLogin(): void
+    private function recordFailedLogin(DataStore $store, string $email): void
     {
         $attempts = (array) ($_SESSION['login_attempts'] ?? []);
         $now = time();
@@ -223,6 +198,63 @@ final class AuthController
         if (count($attempts) >= 5) {
             $_SESSION['login_blocked_until'] = $now + 300;
         }
+
+        $data = $store->all();
+        $records = is_array($data['_login_attempts'] ?? null) ? $data['_login_attempts'] : [];
+        $key = $this->loginThrottleKey($email);
+        $record = is_array($records[$key] ?? null) ? $records[$key] : ['attempts' => []];
+        $persistentAttempts = array_values(array_filter(
+            array_map('intval', (array) ($record['attempts'] ?? [])),
+            fn (int $timestamp): bool => $timestamp > $now - 600
+        ));
+        $persistentAttempts[] = $now;
+        $records[$key] = [
+            'attempts' => $persistentAttempts,
+            'blocked_until' => count($persistentAttempts) >= 5 ? $now + 600 : (int) ($record['blocked_until'] ?? 0),
+            'last_email' => substr($email, 0, 160),
+            'last_ip' => $this->clientIp(),
+        ];
+
+        foreach ($records as $recordKey => $recordValue) {
+            $attemptTimes = array_map('intval', (array) ($recordValue['attempts'] ?? []));
+            $lastAttempt = $attemptTimes === [] ? 0 : max($attemptTimes);
+            $expiresAt = max((int) ($recordValue['blocked_until'] ?? 0), $lastAttempt);
+            if ($expiresAt < $now - 86400) {
+                unset($records[$recordKey]);
+            }
+        }
+
+        $data['_login_attempts'] = $records;
+        $store->save($data);
+    }
+
+    private function clearFailedLogin(DataStore $store, string $email): void
+    {
+        $data = $store->all();
+        $key = $this->loginThrottleKey($email);
+        if (isset($data['_login_attempts'][$key])) {
+            unset($data['_login_attempts'][$key]);
+            $store->save($data);
+        }
+    }
+
+    private function loginThrottleRecord(DataStore $store, string $email): array
+    {
+        $data = $store->all();
+        $records = is_array($data['_login_attempts'] ?? null) ? $data['_login_attempts'] : [];
+        $record = $records[$this->loginThrottleKey($email)] ?? [];
+
+        return is_array($record) ? $record : [];
+    }
+
+    private function loginThrottleKey(string $email): string
+    {
+        return hash('sha256', strtolower(trim($email)) . '|' . $this->clientIp());
+    }
+
+    private function clientIp(): string
+    {
+        return (string) ($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
     }
 
     private function isStrongPassword(string $password): bool

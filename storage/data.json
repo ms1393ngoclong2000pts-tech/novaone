@@ -602,7 +602,7 @@
             "company": "Công ty TNHH Công nghệ Metatek",
             "start_date": "2026-06-22",
             "end_date": "2026-08-22",
-            "status": "open",
+            "status": "completed",
             "manager": "Minh Nguyen",
             "budget": 850000000,
             "description": "Triển khai nền tảng quản trị vận hành."
@@ -626,7 +626,7 @@
             "company": "Công ty Cổ phần Health Care Center APP",
             "start_date": "2026-06-08",
             "end_date": "2026-08-29",
-            "status": "open",
+            "status": "completed",
             "manager": "Ha Pham",
             "budget": 1200000000,
             "description": "Xây dựng sàn kết nối nông sản."
@@ -698,7 +698,7 @@
             "company": "bData co.,ltd",
             "start_date": "2026-02-01",
             "end_date": "2026-07-28",
-            "status": "in_progress",
+            "status": "completed",
             "manager": "Tran Ngoc Long",
             "budget": 250000000,
             "description": "Du an mau 1"
@@ -840,15 +840,15 @@
         {
             "id": "t2",
             "title": "Chuẩn hóa danh sách khách hàng",
-            "project": "CRM",
-            "assignee": "Minh Nguyen",
-            "status": "pending",
-            "deadline": "2026-06-21",
+            "project": "",
             "category": "Công việc chung",
             "hours": 0,
+            "assignee": "Minh Nguyen",
             "start_date": "2026-07-01",
-            "completion_date": "2026-06-21",
-            "progress": 0,
+            "completion_date": "2026-08-30",
+            "deadline": "2026-08-30",
+            "status": "pending",
+            "progress": 70,
             "priority": "normal",
             "description": ""
         },
@@ -947,13 +947,15 @@
             "title": "Cong viec mau 1",
             "project": "Takashimaya",
             "category": "Frontend",
+            "hours": 3,
             "assignee": "Tran Ngoc Long",
-            "assignee_id": "e_hr_101",
             "start_date": "2026-06-01",
+            "completion_date": "2026-07-11",
             "deadline": "2026-07-11",
             "status": "in_progress",
-            "hours": 3,
-            "progress": 10
+            "progress": 100,
+            "priority": "normal",
+            "description": ""
         },
         {
             "id": "task_sample_2",
@@ -2469,7 +2471,7 @@
         {
             "id": "set_eb9c722b",
             "key": "work_start",
-            "value": "08:00",
+            "value": "15:43",
             "group": "policy",
             "status": "active"
         },
@@ -3832,6 +3834,60 @@
     ],
     "_notifications": [
         {
+            "id": "0462a989",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Cong viec mau 1.",
+            "href": "?route=work-items",
+            "type": "info",
+            "created_at": "2026-07-13 07:46:46",
+            "read_at": null
+        },
+        {
+            "id": "1c4836b0",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Chuẩn hóa danh sách khách hàng.",
+            "href": "?route=work-items",
+            "type": "info",
+            "created_at": "2026-07-13 07:46:35",
+            "read_at": null
+        },
+        {
+            "id": "049833c8",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Takashimaya.",
+            "href": "?route=projects",
+            "type": "info",
+            "created_at": "2026-07-13 07:45:46",
+            "read_at": null
+        },
+        {
+            "id": "f9b3e38c",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Sàn Nông Sản Quốc Tế.",
+            "href": "?route=projects",
+            "type": "info",
+            "created_at": "2026-07-13 07:45:41",
+            "read_at": null
+        },
+        {
+            "id": "9ce3f311",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Takashimaya.",
+            "href": "?route=projects",
+            "type": "info",
+            "created_at": "2026-07-13 07:45:35",
+            "read_at": null
+        },
+        {
+            "id": "8900b5df",
+            "title": "Quản lý thông tin",
+            "message": "Đã cập nhật thông tin hệ thống và cấu hình vận hành.",
+            "href": "?route=settings",
+            "type": "success",
+            "created_at": "2026-07-10 08:44:54",
+            "read_at": null
+        },
+        {
             "id": "fc103057",
             "title": "Đào tạo",
             "message": "Đã cập nhật một bản ghi trong Đào tạo.",
@@ -3874,7 +3930,7 @@
             "href": "?route=sales-orders",
             "type": "info",
             "created_at": "2026-07-09 08:11:50",
-            "read_at": null
+            "read_at": "2026-07-10 09:33:47"
         },
         {
             "id": "6fa08bc4",
@@ -4226,60 +4282,6 @@
             "type": "info",
             "created_at": "2026-07-02 09:24:56",
             "read_at": null
-        },
-        {
-            "id": "a1ae3410",
-            "title": "Mua sắm",
-            "message": "Đã cập nhật phiếu mua sắm #101.",
-            "href": "?route=purchasing",
-            "type": "info",
-            "created_at": "2026-07-02 08:43:13",
-            "read_at": null
-        },
-        {
-            "id": "e7effa50",
-            "title": "Phiếu bán hàng",
-            "message": "Đã xóa phiếu 435.",
-            "href": "?route=sales-receipts",
-            "type": "danger",
-            "created_at": "2026-07-02 08:31:57",
-            "read_at": "2026-07-03 06:46:44"
-        },
-        {
-            "id": "ccbf957c",
-            "title": "Chỉ tiêu tháng",
-            "message": "Đã thêm chỉ tiêu tháng 3\/2026.",
-            "href": "?route=sales-targets",
-            "type": "success",
-            "created_at": "2026-07-02 08:11:25",
-            "read_at": null
-        },
-        {
-            "id": "e2c66e62",
-            "title": "Chỉ tiêu tháng",
-            "message": "Đã thêm chỉ tiêu tháng 2\/2026.",
-            "href": "?route=sales-targets",
-            "type": "success",
-            "created_at": "2026-07-02 08:09:41",
-            "read_at": null
-        },
-        {
-            "id": "fcf69f45",
-            "title": "Chỉ tiêu tháng",
-            "message": "Đã thêm chỉ tiêu tháng 7\/2026.",
-            "href": "?route=sales-targets",
-            "type": "success",
-            "created_at": "2026-07-02 08:08:02",
-            "read_at": null
-        },
-        {
-            "id": "815a8da4",
-            "title": "Chỉ tiêu tháng",
-            "message": "Đã thêm chỉ tiêu tháng 1\/2025.",
-            "href": "?route=sales-targets",
-            "type": "success",
-            "created_at": "2026-07-02 08:05:52",
-            "read_at": null
         }
     ],
     "request_forms": [
@@ -4595,6 +4597,73 @@
             "phone": "0233222555",
             "total": 1750000,
             "note": "Phiếu mẫu thứ 10"
+        }
+    ],
+    "_activity_log": [
+        {
+            "id": "act_0b8d3a85",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Cong viec mau 1.",
+            "href": "?route=work-items",
+            "type": "info",
+            "action": "update",
+            "module": "work_items",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 07:46:46"
+        },
+        {
+            "id": "act_6a073adb",
+            "title": "Công việc",
+            "message": "Đã cập nhật công việc Chuẩn hóa danh sách khách hàng.",
+            "href": "?route=work-items",
+            "type": "info",
+            "action": "update",
+            "module": "work_items",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 07:46:35"
+        },
+        {
+            "id": "act_634172a9",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Takashimaya.",
+            "href": "?route=projects",
+            "type": "info",
+            "action": "update",
+            "module": "projects",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 07:45:46"
+        },
+        {
+            "id": "act_c3061365",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Sàn Nông Sản Quốc Tế.",
+            "href": "?route=projects",
+            "type": "info",
+            "action": "update",
+            "module": "projects",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 07:45:41"
+        },
+        {
+            "id": "act_8f7678c1",
+            "title": "Dự án",
+            "message": "Đã cập nhật dự án Takashimaya.",
+            "href": "?route=projects",
+            "type": "info",
+            "action": "update",
+            "module": "projects",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 07:45:35"
         }
     ]
 }
