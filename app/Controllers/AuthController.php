@@ -17,23 +17,26 @@ final class AuthController
     {
         verify_csrf();
 
-        $email = trim($_POST['email'] ?? '');
+        $email = strtolower(clean_text($_POST['email'] ?? '', 180));
         $password = (string) ($_POST['password'] ?? '');
         $this->assertLoginAllowed($store, $email);
 
         $demo = $config['demo_user'];
-        $auth = $store->all()['_auth'] ?? [];
-        $expectedHash = $auth['password_hash'] ?? password_hash($demo['password'], PASSWORD_DEFAULT);
+        $data = $store->all();
+        $auth = $data['_auth'] ?? [];
+        $user = $this->findLoginUser($data, $config, $email);
+        $expectedHash = $user['password_hash'] ?? $auth['password_hash'] ?? password_hash($demo['password'], PASSWORD_DEFAULT);
 
-        if ($email === $demo['email'] && password_verify($password, $expectedHash)) {
+        if ($user !== null && ($user['status'] ?? 'active') === 'active' && password_verify($password, $expectedHash)) {
             session_regenerate_id(true);
             rotate_csrf_token();
             unset($_SESSION['login_attempts'], $_SESSION['login_blocked_until']);
             $this->clearFailedLogin($store, $email);
             $_SESSION['user'] = [
-                'name' => $auth['name'] ?? $demo['name'],
-                'email' => $demo['email'],
-                'role' => $demo['role'],
+                'id' => $user['id'] ?? '',
+                'name' => $user['name'] ?? $auth['name'] ?? $demo['name'],
+                'email' => $user['email'] ?? $demo['email'],
+                'role' => $user['role'] ?? $demo['role'],
                 'phone' => $auth['phone'] ?? '',
                 'address' => $auth['address'] ?? '',
                 'birthday' => $auth['birthday'] ?? '',
@@ -255,6 +258,40 @@ final class AuthController
     private function clientIp(): string
     {
         return (string) ($_SERVER['REMOTE_ADDR'] ?? '0.0.0.0');
+    }
+
+    private function findLoginUser(array $data, array $config, string $email): ?array
+    {
+        $demo = $config['demo_user'];
+        $auth = $data['_auth'] ?? [];
+        foreach ((array) ($data['users'] ?? []) as $user) {
+            if (strtolower((string) ($user['email'] ?? '')) !== $email) {
+                continue;
+            }
+
+            if (empty($user['password_hash'])) {
+                $isDemoUser = $email === strtolower((string) ($demo['email'] ?? ''));
+                $fallbackPassword = (string) ($demo['password'] ?? 'admin123');
+                $user['password_hash'] = $isDemoUser && ! empty($auth['password_hash'])
+                    ? $auth['password_hash']
+                    : password_hash($fallbackPassword, PASSWORD_DEFAULT);
+            }
+
+            return is_array($user) ? $user : null;
+        }
+
+        if ($email === strtolower((string) ($demo['email'] ?? ''))) {
+            return [
+                'id' => 'u_admin',
+                'name' => $auth['name'] ?? $demo['name'],
+                'email' => $demo['email'],
+                'role' => $demo['role'],
+                'status' => 'active',
+                'password_hash' => $auth['password_hash'] ?? password_hash((string) ($demo['password'] ?? 'admin123'), PASSWORD_DEFAULT),
+            ];
+        }
+
+        return null;
     }
 
     private function isStrongPassword(string $password): bool

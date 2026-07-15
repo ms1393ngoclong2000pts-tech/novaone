@@ -94,6 +94,7 @@ function permission_modules(): array
         'home' => ['label' => 'Quản lý ứng dụng', 'group' => 'Hệ thống'],
         'dashboard' => ['label' => 'Dashboard', 'group' => 'Hệ thống'],
         'settings' => ['label' => 'Quản lý thông tin', 'group' => 'Hệ thống'],
+        'users' => ['label' => 'Tài khoản người dùng', 'group' => 'Hệ thống'],
         'employees' => ['label' => 'Danh sách nhân viên', 'group' => 'Nhân sự'],
         'contracts' => ['label' => 'Hợp đồng lao động', 'group' => 'Nhân sự'],
         'attendance' => ['label' => 'Chấm công', 'group' => 'Nhân sự'],
@@ -132,6 +133,9 @@ function permission_route_map(): array
         'dashboard' => ['dashboard', 'view'],
         'settings' => ['settings', 'view'],
         'settings.save' => ['settings', 'update'],
+        'users' => ['users', 'view'],
+        'users.save' => ['users', 'view'],
+        'users.delete' => ['users', 'delete'],
         'training' => ['training', 'view'],
         'training-reports' => ['training_reports', 'view'],
         'employees' => ['employees', 'view'],
@@ -229,6 +233,7 @@ function permission_route_map(): array
         'tasks' => ['projects', 'view'],
         'reports' => ['reports', 'view'],
         'reports.export' => ['reports', 'view'],
+        'reports.print' => ['reports', 'view'],
         'activity-log' => ['activity_log', 'view'],
         'activity-log.export' => ['activity_log', 'view'],
         'permissions' => ['permissions', 'view'],
@@ -242,9 +247,20 @@ function permission_route_map(): array
         'reset' => ['permissions', 'delete'],
         'notification.read' => ['home', 'view'],
         'notification.readAll' => ['home', 'view'],
+        'notifications.feed' => ['home', 'view'],
         'profile' => ['home', 'view'],
         'password' => ['home', 'view'],
         'search' => ['home', 'view'],
+        'calendar' => ['calendar', 'view'],
+        'customers' => ['customers', 'view'],
+        'facilities' => ['facilities', 'view'],
+        'internal-assets' => ['internal_assets', 'view'],
+        'inventory' => ['inventory', 'view'],
+        'kpi' => ['kpi', 'view'],
+        'okrs' => ['okrs', 'view'],
+        'pos' => ['pos', 'view'],
+        'shipments' => ['shipments', 'view'],
+        'tickets' => ['tickets', 'view'],
     ];
 }
 
@@ -376,7 +392,7 @@ function can_access_module(string $module, string $action = 'view'): bool
 
 function can_access_route(string $route): bool
 {
-    $publicRoutes = ['login'];
+    $publicRoutes = ['login', 'features', 'api.login', 'api.me', 'api.dashboard', 'api.resource', 'api.notifications'];
     if (in_array($route, $publicRoutes, true)) {
         return true;
     }

@@ -7,6 +7,23 @@ $formatMoney = fn (float $value): string => number_format($value, 0, ',', '.') .
 ?>
 
 <section class="analytics-dashboard">
+    <?php if (! empty($roleSummary)): ?>
+        <section class="role-dashboard">
+            <div>
+                <span><?= e($role ?? current_user_role()) ?></span>
+                <h2><?= e($roleSummary['title'] ?? 'Bảng điều hành') ?></h2>
+                <p><?= e($roleSummary['description'] ?? '') ?></p>
+            </div>
+            <div class="role-dashboard-items">
+                <?php foreach (($roleSummary['items'] ?? []) as $item): ?>
+                    <a href="<?= e($item['href'] ?? '?route=dashboard') ?>">
+                        <small><?= e($item['label'] ?? '') ?></small>
+                        <strong><?= e((string) ($item['value'] ?? 0)) ?></strong>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </section>
+    <?php endif; ?>
     <div class="analytics-grid">
         <article class="analytics-card task-card">
             <header>Công Việc Trên Hệ Thống</header>

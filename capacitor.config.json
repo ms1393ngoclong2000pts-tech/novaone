@@ -1,9 +1,9 @@
-﻿{
-    "appId":  "com.novaone.admin",
-    "appName":  "Novaone",
-    "webDir":  "mobile-www",
-    "server":  {
-                   "url":  "https://brands-wan-prairie-purposes.trycloudflare.com/?route=home",
-                   "cleartext":  false
-               }
+{
+  "appId": "com.novaone.admin",
+  "appName": "Novaone",
+  "webDir": "mobile-www",
+  "server": {
+    "url": "https://strings-marie-rocket-analysts.trycloudflare.com",
+    "cleartext": false
+  }
 }

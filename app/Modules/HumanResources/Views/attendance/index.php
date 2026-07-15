@@ -1,12 +1,26 @@
 <?php
-$queryUrl = function (array $changes = []): string {
-    $query = array_merge($_GET, $changes);
-    foreach ($query as $key => $value) {
-        if ($value === '' || $value === null) {
-            unset($query[$key]);
+$queryUrl = function (array $changes = []) use ($department, $position, $employeeId, $startDate, $endDate, $selectedShifts, $query, $perPage, $sort, $direction, $page): string {
+    $params = [
+        'route' => 'attendance',
+        'department' => $department,
+        'position' => $position,
+        'employee_id' => $employeeId,
+        'start_date' => $startDate,
+        'end_date' => $endDate,
+        'shift' => $selectedShifts,
+        'q' => $query,
+        'per_page' => $perPage,
+        'sort' => $sort,
+        'dir' => $direction,
+        'page' => $page,
+    ];
+    $params = array_merge($params, $changes);
+    foreach ($params as $key => $value) {
+        if ($value === '' || $value === null || $value === []) {
+            unset($params[$key]);
         }
     }
-    return '?' . http_build_query($query);
+    return '?' . http_build_query($params);
 };
 $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string {
     return $queryUrl(['sort' => $column, 'dir' => $sort === $column && $direction === 'asc' ? 'desc' : 'asc']);
@@ -34,6 +48,9 @@ $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string 
 
         <form id="attendance-filter" class="attendance-filter" method="get">
             <input type="hidden" name="route" value="attendance">
+            <input type="hidden" name="q" value="<?= e($query) ?>">
+            <input type="hidden" name="sort" value="<?= e($sort) ?>">
+            <input type="hidden" name="dir" value="<?= e($direction) ?>">
             <label><span>Bộ phận</span><select name="department" onchange="this.form.submit()"><option value="">--- ---</option><?php foreach ($departments as $item): ?><option value="<?= e($item) ?>" <?= $department === $item ? 'selected' : '' ?>><?= e($item) ?></option><?php endforeach; ?></select></label>
             <label><span>Chức danh</span><select name="position" onchange="this.form.submit()"><option value="">--- ---</option><?php foreach ($positions as $item): ?><option value="<?= e($item) ?>" <?= $position === $item ? 'selected' : '' ?>><?= e($item) ?></option><?php endforeach; ?></select></label>
             <label><span>Nhân viên</span><select name="employee_id" onchange="this.form.submit()"><option value="">--- ---</option><?php foreach ($employees as $employee): ?><option value="<?= e($employee['id'] ?? '') ?>" <?= $employeeId === ($employee['id'] ?? '') ? 'selected' : '' ?>><?= e($employee['name'] ?? '') ?></option><?php endforeach; ?></select></label>
@@ -58,6 +75,17 @@ $sortUrl = function (string $column) use ($queryUrl, $sort, $direction): string 
             </label>
             <form method="get">
                 <input type="hidden" name="route" value="attendance">
+                <input type="hidden" name="department" value="<?= e($department) ?>">
+                <input type="hidden" name="position" value="<?= e($position) ?>">
+                <input type="hidden" name="employee_id" value="<?= e($employeeId) ?>">
+                <input type="hidden" name="start_date" value="<?= e($startDate) ?>">
+                <input type="hidden" name="end_date" value="<?= e($endDate) ?>">
+                <input type="hidden" name="per_page" value="<?= e((string) $perPage) ?>">
+                <input type="hidden" name="sort" value="<?= e($sort) ?>">
+                <input type="hidden" name="dir" value="<?= e($direction) ?>">
+                <?php foreach ($selectedShifts as $selectedShift): ?>
+                    <input type="hidden" name="shift[]" value="<?= e($selectedShift) ?>">
+                <?php endforeach; ?>
                 <input name="q" value="<?= e($query) ?>" placeholder="Tìm Kiếm">
             </form>
         </div>

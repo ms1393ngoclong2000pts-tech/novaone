@@ -114,6 +114,17 @@ final class ReportController
         exit;
     }
 
+    public function print(DataStore $store): void
+    {
+        require_auth();
+
+        View::render('reports/print', [
+            'active' => 'reports',
+            'title' => 'Bản in báo cáo',
+            ...$this->buildReportData($store),
+        ], 'layouts/guest');
+    }
+
     private function buildReportData(DataStore $store): array
     {
         $data = $store->all();

@@ -26,6 +26,7 @@ $formatMoney = fn (float $value): string => number_format($value, 0, ',', '.') .
         </div>
         <div class="report-hero-actions">
             <a class="report-btn soft" href="?route=dashboard"><?= ui_icon('pie') ?> Dashboard</a>
+            <a class="report-btn soft" href="?route=reports.print&amp;from=<?= e($filters['from']) ?>&amp;to=<?= e($filters['to']) ?>&amp;module=<?= e($filters['module']) ?>" target="_blank"><?= ui_icon('file') ?> In/PDF</a>
             <a class="report-btn primary" href="<?= e($exportUrl) ?>"><?= ui_icon('file') ?> Xuất CSV</a>
         </div>
     </header>

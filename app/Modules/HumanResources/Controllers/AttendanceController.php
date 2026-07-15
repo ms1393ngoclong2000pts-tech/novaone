@@ -20,8 +20,8 @@ final class AttendanceController
         $department = trim((string) ($_GET['department'] ?? ''));
         $position = trim((string) ($_GET['position'] ?? ''));
         $employeeId = trim((string) ($_GET['employee_id'] ?? ''));
-        $startDate = trim((string) ($_GET['start_date'] ?? date('Y-m-d', strtotime('-7 days'))));
-        $endDate = trim((string) ($_GET['end_date'] ?? date('Y-m-d')));
+        $startDate = trim((string) ($_GET['start_date'] ?? ''));
+        $endDate = trim((string) ($_GET['end_date'] ?? ''));
         $query = trim((string) ($_GET['q'] ?? ''));
         $shifts = array_values(array_filter((array) ($_GET['shift'] ?? array_keys(self::SHIFTS)), fn ($value): bool => array_key_exists((string) $value, self::SHIFTS)));
         if ($shifts === []) {

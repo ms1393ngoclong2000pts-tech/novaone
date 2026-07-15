@@ -9,7 +9,7 @@ if (preg_match('/^[a-zA-Z0-9_.-]+$/', $route) !== 1) {
 }
 
 enforce_route_permission($route);
-if (request_method_is('POST')) {
+if (request_method_is('POST') && ! str_starts_with($route, 'api.')) {
     verify_csrf();
 }
 
@@ -25,10 +25,21 @@ match ($route) {
         ? (new AuthController())->updatePassword($config, $store)
         : (new AuthController())->password(),
     'home' => (new DashboardController())->home($store),
+    'features' => (new FeatureHubController())->show($store),
     'dashboard' => (new DashboardController())->index($store),
     'settings' => (new SystemInfoController())->index($store),
     'settings.save' => (new SystemInfoController())->save($store),
     'training' => (new ResourceController())->page($store, $schemas, 'training', 'training', 'training'),
+    'calendar' => (new ResourceController())->page($store, $schemas, 'calendar', 'calendar', 'calendar'),
+    'customers' => (new ResourceController())->page($store, $schemas, 'customers', 'customers', 'calls'),
+    'facilities' => (new ResourceController())->page($store, $schemas, 'facilities', 'facilities', 'facilities'),
+    'internal-assets' => (new ResourceController())->page($store, $schemas, 'internal_assets', 'internal-assets', 'internal_assets'),
+    'inventory' => (new ResourceController())->page($store, $schemas, 'inventory', 'inventory', 'products'),
+    'kpi' => (new ResourceController())->page($store, $schemas, 'kpi', 'kpi', 'kpi'),
+    'okrs' => (new ResourceController())->page($store, $schemas, 'okrs', 'okrs', 'okrs'),
+    'pos' => (new ResourceController())->page($store, $schemas, 'pos', 'pos', 'sales'),
+    'shipments' => (new ResourceController())->page($store, $schemas, 'shipments', 'shipments', 'shipments'),
+    'tickets' => (new ResourceController())->page($store, $schemas, 'tickets', 'tickets', 'calls'),
     'training-reports' => (new ReportController())->training($store),
     'employees' => (new EmployeeController())->index($store),
     'employees.show' => (new EmployeeController())->show($store),
@@ -128,8 +139,12 @@ match ($route) {
     'tasks' => (new TaskController())->index($store),
     'reports' => (new ReportController())->index($store),
     'reports.export' => (new ReportController())->export($store),
+    'reports.print' => (new ReportController())->print($store),
     'activity-log' => (new ActivityLogController())->index($store),
     'activity-log.export' => (new ActivityLogController())->export(),
+    'users' => (new UserController())->index($store),
+    'users.save' => (new UserController())->save($store),
+    'users.delete' => (new UserController())->delete($store),
     'permissions' => (new PermissionController())->index($store),
     'permissions.save' => (new PermissionController())->save($store),
     'calls' => (new CallController())->index($store),
@@ -137,5 +152,11 @@ match ($route) {
     'search' => (new SearchController())->index($store, $schemas),
     'notification.read' => (new NotificationController())->read($store),
     'notification.readAll' => (new NotificationController())->readAll($store),
+    'notifications.feed' => (new NotificationController())->feed($store),
+    'api.login' => (new ApiController())->login($config, $store),
+    'api.me' => (new ApiController())->me($store),
+    'api.dashboard' => (new ApiController())->dashboard($store),
+    'api.resource' => (new ApiController())->resource($store),
+    'api.notifications' => (new ApiController())->notifications($store),
     default => redirect('home'),
 };

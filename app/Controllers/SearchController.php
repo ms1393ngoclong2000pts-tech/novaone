@@ -62,6 +62,7 @@ final class SearchController
             ['label' => 'Mua sắm', 'group' => 'Quản lý kho', 'icon' => 'cart', 'href' => '?route=purchasing', 'keywords' => 'mua sam yeu cau thiet bi phieu mua sam cong no thuc nhan'],
             ['label' => 'Gọi điện', 'group' => 'CSKH', 'icon' => 'phone', 'href' => '?route=calls', 'keywords' => 'goi dien cuoc goi dien thoai lien he cham soc khach hang'],
             ['label' => 'Quản lý thông tin', 'group' => 'Hệ thống', 'icon' => 'info', 'href' => '?route=settings', 'keywords' => 'quan ly thong tin cong ty cau hinh tham so he thong'],
+            ['label' => 'Tài khoản người dùng', 'group' => 'Hệ thống', 'icon' => 'users', 'href' => '?route=users', 'keywords' => 'tai khoan nguoi dung user account mat khau vai tro khoa mo'],
             ['label' => 'Lịch sử thao tác', 'group' => 'Hệ thống', 'icon' => 'file', 'href' => '?route=activity-log', 'keywords' => 'lich su thao tac audit log nhat ky he thong'],
             ['label' => 'Báo cáo', 'group' => 'Báo cáo', 'icon' => 'file', 'href' => '?route=reports', 'keywords' => 'report dashboard thong ke'],
         ];

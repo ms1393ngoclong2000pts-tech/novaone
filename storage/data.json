@@ -1,11 +1,32 @@
 {
     "users": [
         {
+            "id": "u_1c7304aa",
+            "name": "Notify 100945",
+            "email": "long@gmail.com",
+            "role": "Warehouse",
+            "status": "active",
+            "updated_at": "2026-07-13 10:26:11",
+            "created_at": "2026-07-13 10:26:11",
+            "password_hash": "$2y$10$Zmn2\/tZwgJI1nuOXfwQVYOyx\/qIBfjv2Bg3NbAIK7C2SFsSqfRb9G"
+        },
+        {
+            "id": "u_8b5ac41b",
+            "name": "Notify Test",
+            "email": "ms1393.ngoclong2000.pts@gmail.com",
+            "role": "Sales",
+            "status": "active",
+            "updated_at": "2026-07-13 10:22:59",
+            "created_at": "2026-07-13 10:22:59",
+            "password_hash": "$2y$10$eCNFJthrei3I9..oBcRp2uyE7u0PFWVI8tdpbYsxJI.\/UPURBzB.K"
+        },
+        {
             "id": "u1",
             "name": "Admin Novaone",
             "email": "admin@novaone.local",
             "role": "Admin",
-            "status": "active"
+            "status": "active",
+            "password_hash": "$2y$10$PKAsufckYpezMKYlLJdt2O65F0JVAR1zk3R1\/885RtNsKLZHrbw7q"
         },
         {
             "id": "u2",
@@ -1279,10 +1300,10 @@
             "name": "Thiết Bị Việt",
             "category": "Thiết bị kho",
             "phone": "0908 222 111",
-            "email": "",
-            "address": "",
-            "contact_person": "",
-            "debt": 0,
+            "email": "quy@gmail.com",
+            "address": "huế",
+            "contact_person": "Quý",
+            "debt": 1000,
             "status": "active",
             "note": ""
         },
@@ -1333,7 +1354,7 @@
             "phone": "0287000004",
             "email": "supplier4@novaone.vn",
             "address": "Dia chi nha cung cap 4",
-            "contact_person": "",
+            "contact_person": "Long Trần",
             "debt": 0,
             "status": "active",
             "note": "Nha cung cap mau 4"
@@ -1641,62 +1662,6 @@
             "issue": "Yêu cầu xuất báo cáo bán hàng",
             "owner": "Minh Nguyen",
             "status": "new"
-        },
-        {
-            "id": "ticket_sample_1",
-            "title": "Ticket ho tro 1",
-            "requester": "Tran Ngoc Long",
-            "status": "processing",
-            "priority": "medium"
-        },
-        {
-            "id": "ticket_sample_2",
-            "title": "Ticket ho tro 2",
-            "requester": "Ho Viet Nhan",
-            "status": "closed",
-            "priority": "high"
-        },
-        {
-            "id": "ticket_sample_3",
-            "title": "Ticket ho tro 3",
-            "requester": "Lam Quoc Tuan",
-            "status": "open",
-            "priority": "low"
-        },
-        {
-            "id": "ticket_sample_4",
-            "title": "Ticket ho tro 4",
-            "requester": "Nguyen Huu Phuong",
-            "status": "processing",
-            "priority": "medium"
-        },
-        {
-            "id": "ticket_sample_5",
-            "title": "Ticket ho tro 5",
-            "requester": "Hoang Trong Tin",
-            "status": "closed",
-            "priority": "high"
-        },
-        {
-            "id": "ticket_sample_6",
-            "title": "Ticket ho tro 6",
-            "requester": "Nguyen Khoa Anh Kinh",
-            "status": "open",
-            "priority": "low"
-        },
-        {
-            "id": "ticket_sample_7",
-            "title": "Ticket ho tro 7",
-            "requester": "Vo Thuan",
-            "status": "processing",
-            "priority": "medium"
-        },
-        {
-            "id": "ticket_sample_8",
-            "title": "Ticket ho tro 8",
-            "requester": "Tran Xuan Quang",
-            "status": "closed",
-            "priority": "high"
         }
     ],
     "call_logs": [
@@ -2049,62 +2014,6 @@
             "owner": "Minh Nguyen",
             "progress": 48,
             "status": "risk"
-        },
-        {
-            "id": "okr_sample_1",
-            "objective": "Muc tieu OKR 1",
-            "owner": "Tran Ngoc Long",
-            "progress": 9,
-            "status": "active"
-        },
-        {
-            "id": "okr_sample_2",
-            "objective": "Muc tieu OKR 2",
-            "owner": "Ho Viet Nhan",
-            "progress": 18,
-            "status": "review"
-        },
-        {
-            "id": "okr_sample_3",
-            "objective": "Muc tieu OKR 3",
-            "owner": "Lam Quoc Tuan",
-            "progress": 27,
-            "status": "active"
-        },
-        {
-            "id": "okr_sample_4",
-            "objective": "Muc tieu OKR 4",
-            "owner": "Nguyen Huu Phuong",
-            "progress": 36,
-            "status": "review"
-        },
-        {
-            "id": "okr_sample_5",
-            "objective": "Muc tieu OKR 5",
-            "owner": "Hoang Trong Tin",
-            "progress": 45,
-            "status": "active"
-        },
-        {
-            "id": "okr_sample_6",
-            "objective": "Muc tieu OKR 6",
-            "owner": "Nguyen Khoa Anh Kinh",
-            "progress": 54,
-            "status": "review"
-        },
-        {
-            "id": "okr_sample_7",
-            "objective": "Muc tieu OKR 7",
-            "owner": "Vo Thuan",
-            "progress": 63,
-            "status": "active"
-        },
-        {
-            "id": "okr_sample_8",
-            "objective": "Muc tieu OKR 8",
-            "owner": "Tran Xuan Quang",
-            "progress": 72,
-            "status": "review"
         }
     ],
     "shipments": [
@@ -2201,9 +2110,10 @@
         {
             "id": "cal_sample_1",
             "title": "Lich lam viec 1",
-            "date": "2026-07-01",
+            "type": "meeting",
             "owner": "Tran Ngoc Long",
-            "type": "work"
+            "date": "2026-07-01",
+            "status": "completed"
         },
         {
             "id": "cal_sample_2",
@@ -3786,8 +3696,8 @@
             "cost": 20000,
             "status": "pending",
             "approver": "bData co.,ltd",
-            "candidate_total": 0,
-            "candidate_passed": 0,
+            "candidate_total": 3,
+            "candidate_passed": 1,
             "news_title": "Tuyển admin",
             "position": "Admin",
             "description": "Bổ sung admin văn phòng."
@@ -3833,6 +3743,204 @@
         }
     ],
     "_notifications": [
+        {
+            "id": "537cc390",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:15",
+            "read_at": null
+        },
+        {
+            "id": "3903873a",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:15",
+            "read_at": null
+        },
+        {
+            "id": "fe14d721",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:14",
+            "read_at": null
+        },
+        {
+            "id": "ebbc44f9",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:13",
+            "read_at": null
+        },
+        {
+            "id": "c4d4bb08",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:12",
+            "read_at": null
+        },
+        {
+            "id": "7584fd5f",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:11",
+            "read_at": null
+        },
+        {
+            "id": "5b39a105",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:10",
+            "read_at": null
+        },
+        {
+            "id": "b316e740",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "created_at": "2026-07-15 07:49:08",
+            "read_at": null
+        },
+        {
+            "id": "d65526de",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:22",
+            "read_at": null
+        },
+        {
+            "id": "c07e1978",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:21",
+            "read_at": null
+        },
+        {
+            "id": "891e6a8f",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:20",
+            "read_at": null
+        },
+        {
+            "id": "a5da3959",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:19",
+            "read_at": null
+        },
+        {
+            "id": "b4a0f323",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:17",
+            "read_at": null
+        },
+        {
+            "id": "a6364810",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:15",
+            "read_at": null
+        },
+        {
+            "id": "38da0659",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:14",
+            "read_at": null
+        },
+        {
+            "id": "e487a8aa",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "created_at": "2026-07-15 07:45:12",
+            "read_at": null
+        },
+        {
+            "id": "085e83cc",
+            "title": "Lịch làm việc",
+            "message": "Đã cập nhật một bản ghi trong Lịch làm việc.",
+            "href": "?route=calendar",
+            "type": "info",
+            "created_at": "2026-07-15 07:43:55",
+            "read_at": null
+        },
+        {
+            "id": "d9a996fd",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #7.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "created_at": "2026-07-14 09:39:51",
+            "read_at": null
+        },
+        {
+            "id": "cb7cbdbb",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp Thiết Bị Việt.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "created_at": "2026-07-14 07:35:39",
+            "read_at": null
+        },
+        {
+            "id": "1b2532a4",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp An Phat Supply.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "created_at": "2026-07-14 07:34:10",
+            "read_at": null
+        },
+        {
+            "id": "eecbb1f2",
+            "title": "Tài khoản",
+            "message": "Đã tạo tài khoản Notify 100945.",
+            "href": "?route=users",
+            "type": "success",
+            "created_at": "2026-07-13 10:26:11",
+            "read_at": null
+        },
+        {
+            "id": "a3a60bd2",
+            "title": "Tài khoản",
+            "message": "Đã tạo tài khoản Notify Test.",
+            "href": "?route=users",
+            "type": "success",
+            "created_at": "2026-07-13 10:22:59",
+            "read_at": null
+        },
         {
             "id": "0462a989",
             "title": "Công việc",
@@ -4083,204 +4191,6 @@
             "href": "?route=employees",
             "type": "info",
             "created_at": "2026-07-03 09:03:35",
-            "read_at": null
-        },
-        {
-            "id": "992b9a50",
-            "title": "Nhân sự",
-            "message": "Đã cập nhật một bản ghi trong Nhân sự.",
-            "href": "?route=employees",
-            "type": "info",
-            "created_at": "2026-07-03 09:03:30",
-            "read_at": null
-        },
-        {
-            "id": "22fbab2b",
-            "title": "Sản phẩm",
-            "message": "Đã cập nhật sản phẩm sản phẩm AB.",
-            "href": "?route=products",
-            "type": "info",
-            "created_at": "2026-07-03 08:33:37",
-            "read_at": null
-        },
-        {
-            "id": "b4a89324",
-            "title": "Sản phẩm",
-            "message": "Đã cập nhật sản phẩm San pham mau 3.",
-            "href": "?route=products",
-            "type": "info",
-            "created_at": "2026-07-03 08:32:57",
-            "read_at": null
-        },
-        {
-            "id": "83f6f6d6",
-            "title": "Sản phẩm",
-            "message": "Đã cập nhật sản phẩm San pham mau 2.",
-            "href": "?route=products",
-            "type": "info",
-            "created_at": "2026-07-03 08:32:43",
-            "read_at": null
-        },
-        {
-            "id": "d5cec7f4",
-            "title": "Sản phẩm",
-            "message": "Đã cập nhật giá sản phẩm San pham mau 1.",
-            "href": "?route=products",
-            "type": "info",
-            "created_at": "2026-07-03 08:32:19",
-            "read_at": null
-        },
-        {
-            "id": "293d8574",
-            "title": "Sản phẩm",
-            "message": "Đã cập nhật giá sản phẩm sản phẩm AB.",
-            "href": "?route=products",
-            "type": "info",
-            "created_at": "2026-07-03 08:31:31",
-            "read_at": null
-        },
-        {
-            "id": "5e79aca1",
-            "title": "Sản phẩm",
-            "message": "Đã xóa sản phẩm San pham mau 5.",
-            "href": "?route=products",
-            "type": "danger",
-            "created_at": "2026-07-03 08:10:58",
-            "read_at": null
-        },
-        {
-            "id": "46954453",
-            "title": "Sản phẩm",
-            "message": "Đã thêm sản phẩm Test.",
-            "href": "?route=products",
-            "type": "success",
-            "created_at": "2026-07-03 07:56:44",
-            "read_at": null
-        },
-        {
-            "id": "18875963",
-            "title": "Sản phẩm",
-            "message": "Đã cập nhật sản phẩm San pham mau 1.",
-            "href": "?route=products",
-            "type": "info",
-            "created_at": "2026-07-03 07:56:01",
-            "read_at": null
-        },
-        {
-            "id": "08b8810d",
-            "title": "Dịch vụ",
-            "message": "Đã thêm ngành hàng Công nghiệp.",
-            "href": "?route=services",
-            "type": "success",
-            "created_at": "2026-07-03 07:54:54",
-            "read_at": null
-        },
-        {
-            "id": "3f1a172b",
-            "title": "Dịch vụ",
-            "message": "Đã thêm ngành hàng Notify Test.",
-            "href": "?route=services",
-            "type": "success",
-            "created_at": "2026-07-03 07:53:35",
-            "read_at": null
-        },
-        {
-            "id": "6ba3f7bd",
-            "title": "Dịch vụ",
-            "message": "Đã cập nhật ngành hàng Mua bán Car.",
-            "href": "?route=services",
-            "type": "info",
-            "created_at": "2026-07-03 07:40:27",
-            "read_at": null
-        },
-        {
-            "id": "44a6f551",
-            "title": "Dịch vụ",
-            "message": "Đã cập nhật ngành hàng bERP.",
-            "href": "?route=services",
-            "type": "info",
-            "created_at": "2026-07-03 07:37:02",
-            "read_at": null
-        },
-        {
-            "id": "5acde170",
-            "title": "Dịch vụ",
-            "message": "Đã cập nhật ngành hàng Dịch vụ A.",
-            "href": "?route=services",
-            "type": "info",
-            "created_at": "2026-07-03 07:35:46",
-            "read_at": null
-        },
-        {
-            "id": "e1bd50a3",
-            "title": "Dịch vụ",
-            "message": "Đã cập nhật ngành hàng bERP.",
-            "href": "?route=services",
-            "type": "info",
-            "created_at": "2026-07-03 07:34:47",
-            "read_at": "2026-07-09 10:03:37"
-        },
-        {
-            "id": "c1e468cd",
-            "title": "Cá nhân",
-            "message": "Thông tin cá nhân vừa được cập nhật.",
-            "href": "?route=profile",
-            "type": "success",
-            "created_at": "2026-07-03 06:46:01",
-            "read_at": "2026-07-03 06:46:39"
-        },
-        {
-            "id": "2d984cc3",
-            "title": "Cá nhân",
-            "message": "Thông tin cá nhân vừa được cập nhật.",
-            "href": "?route=profile",
-            "type": "success",
-            "created_at": "2026-07-02 10:56:12",
-            "read_at": null
-        },
-        {
-            "id": "741007f2",
-            "title": "Cá nhân",
-            "message": "Thông tin cá nhân vừa được cập nhật.",
-            "href": "?route=profile",
-            "type": "success",
-            "created_at": "2026-07-02 10:56:03",
-            "read_at": null
-        },
-        {
-            "id": "39ae472c",
-            "title": "Cá nhân",
-            "message": "Thông tin cá nhân vừa được cập nhật.",
-            "href": "?route=profile",
-            "type": "success",
-            "created_at": "2026-07-02 10:55:58",
-            "read_at": null
-        },
-        {
-            "id": "43e10359",
-            "title": "Mua sắm",
-            "message": "Đã cập nhật phê duyệt phiếu #17.",
-            "href": "?route=purchasing",
-            "type": "info",
-            "created_at": "2026-07-02 09:25:07",
-            "read_at": null
-        },
-        {
-            "id": "93e56720",
-            "title": "Mua sắm",
-            "message": "Đã cập nhật phê duyệt phiếu #101.",
-            "href": "?route=purchasing",
-            "type": "info",
-            "created_at": "2026-07-02 09:25:01",
-            "read_at": null
-        },
-        {
-            "id": "15418e68",
-            "title": "Mua sắm",
-            "message": "Đã cập nhật phê duyệt phiếu #101.",
-            "href": "?route=purchasing",
-            "type": "info",
-            "created_at": "2026-07-02 09:24:56",
             "read_at": null
         }
     ],
@@ -4600,6 +4510,292 @@
         }
     ],
     "_activity_log": [
+        {
+            "id": "act_9a36b18f",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:15"
+        },
+        {
+            "id": "act_560eab66",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:15"
+        },
+        {
+            "id": "act_eb0ea661",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:14"
+        },
+        {
+            "id": "act_c67acdf8",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:13"
+        },
+        {
+            "id": "act_96d497ed",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:12"
+        },
+        {
+            "id": "act_a219a7c3",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:11"
+        },
+        {
+            "id": "act_7dd6c5c5",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:10"
+        },
+        {
+            "id": "act_eb903532",
+            "title": "OKR",
+            "message": "Đã xóa một bản ghi trong OKR.",
+            "href": "?route=okrs",
+            "type": "danger",
+            "action": "delete",
+            "module": "okrs",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:49:08"
+        },
+        {
+            "id": "act_ba1e02b8",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:22"
+        },
+        {
+            "id": "act_dc146261",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:21"
+        },
+        {
+            "id": "act_e7036b04",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:20"
+        },
+        {
+            "id": "act_aef0e7c9",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:19"
+        },
+        {
+            "id": "act_a0b41a95",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:17"
+        },
+        {
+            "id": "act_413d2aba",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:15"
+        },
+        {
+            "id": "act_af20e9fa",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:14"
+        },
+        {
+            "id": "act_1c6cd7a8",
+            "title": "Chăm sóc khách hàng",
+            "message": "Đã xóa một bản ghi trong Chăm sóc khách hàng.",
+            "href": "?route=tickets",
+            "type": "danger",
+            "action": "delete",
+            "module": "tickets",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:45:12"
+        },
+        {
+            "id": "act_9f3a6fbb",
+            "title": "Lịch làm việc",
+            "message": "Đã cập nhật một bản ghi trong Lịch làm việc.",
+            "href": "?route=calendar",
+            "type": "info",
+            "action": "update",
+            "module": "calendar",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-15 07:43:55"
+        },
+        {
+            "id": "act_ac686d14",
+            "title": "Phiếu tuyển dụng",
+            "message": "Đã cập nhật phiếu tuyển dụng #7.",
+            "href": "?route=recruitment-requests",
+            "type": "info",
+            "action": "update",
+            "module": "recruitment_requests",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-14 09:39:51"
+        },
+        {
+            "id": "act_ab7f6e08",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp Thiết Bị Việt.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "action": "update",
+            "module": "suppliers",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-14 07:35:39"
+        },
+        {
+            "id": "act_904e0e32",
+            "title": "Nhà cung cấp",
+            "message": "Đã cập nhật nhà cung cấp An Phat Supply.",
+            "href": "?route=suppliers",
+            "type": "info",
+            "action": "update",
+            "module": "suppliers",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-14 07:34:10"
+        },
+        {
+            "id": "act_1ad7f08b",
+            "title": "Tài khoản",
+            "message": "Đã tạo tài khoản Notify 100945.",
+            "href": "?route=users",
+            "type": "success",
+            "action": "create",
+            "module": "users",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 10:26:11"
+        },
+        {
+            "id": "act_92892bdf",
+            "title": "Tài khoản",
+            "message": "Đã tạo tài khoản Notify Test.",
+            "href": "?route=users",
+            "type": "success",
+            "action": "create",
+            "module": "users",
+            "user_name": "Admin Novaone",
+            "user_role": "Admin",
+            "ip": "127.0.0.1",
+            "created_at": "2026-07-13 10:22:59"
+        },
         {
             "id": "act_0b8d3a85",
             "title": "Công việc",
